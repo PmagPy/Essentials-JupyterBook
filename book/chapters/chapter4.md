@@ -308,7 +308,7 @@ $$ (eq:self)
 
 Note that the demagnetizing energy in [Equation %s](#eq:ed) has a uniaxial form, directionally dependent only on $\theta$, with the constant of uniaxial anisotropy $K_u = \frac{1}{2} \Delta N \mu_o M^2$. $\Delta N$ is the difference between the largest and smallest values of the demagnetizing tensor $N_c-N_a$.
 
-For a prolate ellipsoid $N_c=N_b$ and choosing for example $c/a = 1.5$ we find that $N_a-N_c \approx 0.16$. The magnetization of magnetite is 480 kAm$^{-1}$, so $K_u \simeq$ 2.7 × 10$^4$ Jm$^{-3}$. This is somewhat larger than the absolute value of $K_1$ for magnetocrystalline anisotropy in magnetite ($K_1$= −1.35 × 10$^{4}$ Jm$^{-3}$), so the magnetization for even slightly elongate grains will be dominated by uniaxial anisotropy controlled by shape. Minerals with low saturation magnetizations (like hematite) will not be prone to shape dominated magnetic anisotropy, however.
+For a prolate ellipsoid $N_c=N_b$ and choosing for example $a/c = 1.5$ we find that $N_a-N_c \approx 0.16$. The magnetization of magnetite is 480 kAm$^{-1}$, so $K_u \simeq$ 2.7 × 10$^4$ Jm$^{-3}$. This is somewhat larger than the absolute value of $K_1$ for magnetocrystalline anisotropy in magnetite ($K_1$= −1.35 × 10$^{4}$ Jm$^{-3}$), so the magnetization for even slightly elongate grains will be dominated by uniaxial anisotropy controlled by shape. Minerals with low saturation magnetizations (like hematite) will not be prone to shape dominated magnetic anisotropy, however.
 
 :::{figure} ../figures/chapter4/micromag.png
 :name: fig:nonuniform
