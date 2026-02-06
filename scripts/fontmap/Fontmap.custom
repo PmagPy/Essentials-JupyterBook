@@ -1,0 +1,35 @@
+% Custom Fontmap for Essentials-JupyterBook figure conversion
+% Maps Comic Sans and other fonts to Source Sans Pro
+%
+% Syntax: /PostScriptFontName (TrueType-font-file) ;
+% Or: /PostScriptFontName /AliasToAnotherFont ;
+%
+% Note: This may not affect embedded font subsets in Adobe Illustrator EPS files.
+% For files with embedded fonts, alternative approaches may be needed.
+
+% Comic Sans MS mappings
+/ComicSansMS                /SourceSansPro-Regular ;
+/ComicSansMS-Regular        /SourceSansPro-Regular ;
+/ComicSansMS-Bold           /SourceSansPro-Bold ;
+
+% Arial mappings
+/Arial                      /SourceSansPro-Regular ;
+/ArialMT                    /SourceSansPro-Regular ;
+/Arial-Bold                 /SourceSansPro-Bold ;
+/Arial-BoldMT               /SourceSansPro-Bold ;
+/Arial-Italic               /SourceSansPro-It ;
+/Arial-ItalicMT             /SourceSansPro-It ;
+
+% Helvetica mappings (optional - Helvetica is often acceptable)
+% Uncomment these lines if you want Helvetica replaced too:
+% /Helvetica                /SourceSansPro-Regular ;
+% /Helvetica-Bold           /SourceSansPro-Bold ;
+% /Helvetica-Oblique        /SourceSansPro-It ;
+
+% Define Source Sans Pro font family using OTF files
+% These paths are for macOS with fonts installed in ~/Library/Fonts/
+/SourceSansPro-Regular      (/Users/unimos/Library/Fonts/SourceSansPro-Regular.otf) ;
+/SourceSansPro-Bold         (/Users/unimos/Library/Fonts/SourceSansPro-Bold.otf) ;
+/SourceSansPro-It           (/Users/unimos/Library/Fonts/SourceSansPro-It.otf) ;
+/SourceSansPro-Light        (/Users/unimos/Library/Fonts/SourceSansPro-Light.otf) ;
+/SourceSansPro-Semibold     (/Users/unimos/Library/Fonts/SourceSansPro-Semibold.otf) ;

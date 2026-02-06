@@ -1,0 +1,20 @@
+# JupyterBook / MyST build output
+_build/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# macOS
+.DS_Store
+
+# Environment
+.env
+*.egg
+
+# Node (JupyterBook v2 uses Node.js internally)
+node_modules/

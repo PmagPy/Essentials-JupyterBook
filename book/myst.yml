@@ -1,0 +1,77 @@
+version: 1
+
+project:
+  title: Essentials of Paleomagnetism
+  description: >
+    A modern, interactive version of "Essentials of Paleomagnetism"
+    by Lisa Tauxe
+  keywords:
+    - paleomagnetism
+    - earth science
+    - geophysics
+    - magnetism
+    - rock magnetism
+  license:
+    content: CC-BY-4.0
+  authors:
+    - name: Lisa Tauxe
+      affiliation: Scripps Institution of Oceanography, UC San Diego
+    - name: Nicholas Swanson-Hysell
+      affiliation: Institute for Rock Magnetism, University of Minnesota
+  github: unimos/Essentials-JupyterBook
+  subject: Earth Science
+
+  # Bibliography
+  bibliography:
+    - references.bib
+
+  # Abbreviations
+  abbreviations:
+    SD: Single Domain
+    PSD: Pseudo-Single Domain
+    MD: Multi-Domain
+    SP: Superparamagnetic
+    TRM: Thermoremanent Magnetization
+    NRM: Natural Remanent Magnetization
+    VRM: Viscous Remanent Magnetization
+    CRM: Chemical Remanent Magnetization
+    DRM: Depositional Remanent Magnetization
+    IRM: Isothermal Remanent Magnetization
+    ARM: Anhysteretic Remanent Magnetization
+    GAD: Geocentric Axial Dipole
+    APWP: Apparent Polar Wander Path
+    LTD: Low-Temperature Demagnetization
+    MFM: Magnetic Force Microscopy
+    MOKE: Magneto-Optical Kerr Effect
+    AF: Alternating Field
+
+  # Table of contents
+  toc:
+    - file: index.md
+    - title: Chapters
+      children:
+        - file: chapters/chapter4.md
+        - file: chapters/chapter5.md
+        - file: chapters/chapter6.md
+        - file: chapters/chapter7.md
+
+  # Math macros (adapted from the LaTeX source mydefs.tex)
+  math:
+    # Bold vector notation macros
+    '\M': '\mathbf{M}'
+    '\B': '\mathbf{B}'
+    '\H': '\mathbf{H}'
+    '\S': '\mathbf{S}'
+    '\m': '\mathbf{m}'
+    '\J': '\mathbf{J}'
+    '\R': '\mathbf{R}'
+    '\X': '\mathbf{X}'
+    '\V': '\mathbf{V}'
+    '\E': '\mathbf{E}'
+
+site:
+  template: book-theme
+  options:
+    logo: _static/logo_placeholder.png
+    hide_toc: false
+    numbered_references: true

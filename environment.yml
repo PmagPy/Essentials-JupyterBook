@@ -1,0 +1,17 @@
+name: ess-jbook
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - numpy
+  - matplotlib
+  - plotly
+  - ipywidgets
+  - jupyterlab
+  - notebook
+  - ghostscript
+  - pip
+  - pip:
+    - jupyter-book>=2.0
+    - mystmd
