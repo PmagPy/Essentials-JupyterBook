@@ -285,6 +285,229 @@ Here the magnetocrystalline constants have been designated $K_{u1}, K_{u2}$ to d
 
 An example of a mineral dominated by uniaxial anisotropy is hematite. The magnetization of hematite is complicated, as we shall learn in Chapters 6 and 7, but one source of magnetization is spin-canting (see Chapter 3) within the basal plane. The uniaxial anisotropy perpendicular to the basal plane is very strong ($K_{u1} < 0$), confining the magnetization to the easy plane. Within the basal plane, the anisotropy is orders of magnitude weaker so the magnetization theoretically wanders fairly freely. In reality, stress anisotropy from defects and internal strain (see next section) pins the magnetization direction within the basal plane much more effectively than magnetocrystalline anisotropy alone would predict.
 
+**The interactive visualization below** demonstrates the energy landscape for hematite's uniaxial anisotropy. The perpendicular anisotropy constant is K₁ = -1.2 × 10⁶ J/m³ {cite}`dunlop1997`, while the in-plane anisotropy is much weaker at 0-13 J/m³ {cite}`martin-hernandez2012`. The energy surface shows high energy along the c-axis (hard direction) and low energy in the basal plane (easy directions).
+
+```{code-cell} python
+:tags: [remove-input]
+
+import plotly.graph_objects as go
+import numpy as np
+
+def plot_hematite_anisotropy(K1, K3, radius_nm, temperature):
+    """Plot 3D hematite magnetocrystalline anisotropy energy surface.
+
+    Creates an interactive 3D visualization showing the energy landscape for
+    hematite's uniaxial anisotropy with easy plane behavior.
+
+    Args:
+        K1 (float): Perpendicular anisotropy constant (J/m³). Use negative for easy plane.
+        K3 (float): In-plane (basal plane) anisotropy constant (J/m³).
+        radius_nm (float): Grain radius in nanometers.
+        temperature (float): Temperature in Kelvin.
+
+    Returns:
+        tuple: (fig, energy_max) - Plotly figure and maximum energy value
+    """
+
+    exaggeration = 1.8  # Geometric distortion factor (increased to show energy variations)
+    crystal_scale = 2.0   # Reference crystal size (increased for visibility)
+
+    # --- 1. MATH: Energy Surface ---
+    phi = np.linspace(0, 2 * np.pi, 100)
+    theta = np.linspace(0, np.pi, 100)
+    phi_grid, theta_grid = np.meshgrid(phi, theta)
+
+    # Hematite anisotropy energy
+    # Hematite is rhombohedral (R3̄c) but conventionally indexed on hexagonal axes
+    #
+    # K1 = -1.2e6 J/m³: c-axis perpendicular anisotropy (Dunlop & Özdemir 1997, Table 3.1)
+    #     Sign convention: negative means easy plane (basal plane is energetically favorable)
+    # K3 = 13 J/m³: maximum triaxial in-plane anisotropy (Martín-Hernández & Guerrero-Suárez 2012)
+    #     This is ~5 orders of magnitude smaller than |K1|
+    #
+    # The 6-fold cos(6φ) term reflects the trigonal symmetry of the basal plane
+    # projected onto the hexagonal setting
+    E_density = K1 * np.sin(theta_grid)**2 + K3 * np.sin(theta_grid)**4 * np.cos(6 * phi_grid)
+
+    # Convert to Total Energy (J) and Normalize
+    r_particle = radius_nm * 1e-9
+    Volume = (4/3) * np.pi * r_particle**3
+    E_total = E_density * Volume
+    E_norm = E_total - E_total.min()
+    energy_max = E_norm.max()
+
+    # Map energy to radius (Geometric Scaling)
+    r_blob = 1.0 + (exaggeration * (E_norm / energy_max))
+
+    x_blob = r_blob * np.sin(theta_grid) * np.cos(phi_grid)
+    y_blob = r_blob * np.sin(theta_grid) * np.sin(phi_grid)
+    z_blob = r_blob * np.cos(theta_grid)
+
+    # --- 2. GEOMETRY: Hexagonal Plate ---
+    # Hematite has rhombohedral symmetry (space group R3̄c) but commonly forms
+    # hexagonal plate crystals (platy habit) due to strong easy-plane anisotropy
+    # Create hexagonal plate with c-axis vertical (short axis)
+
+    # Scale factor
+    r_hex = 0.9 * crystal_scale  # radius of hexagonal plate
+    c_height = 0.15 * crystal_scale  # height along c-axis (very short for platy habit)
+
+    # Create 6 vertices for hexagonal outline
+    angles_hex = np.linspace(0, 2*np.pi, 7)[:-1]  # 6 vertices, evenly spaced
+
+    x_hex = []
+    y_hex = []
+    z_hex = []
+
+    # Bottom hexagon (6 vertices)
+    for angle in angles_hex:
+        x_hex.append(r_hex * np.cos(angle))
+        y_hex.append(r_hex * np.sin(angle))
+        z_hex.append(-c_height/2)
+
+    # Top hexagon (6 vertices)
+    for angle in angles_hex:
+        x_hex.append(r_hex * np.cos(angle))
+        y_hex.append(r_hex * np.sin(angle))
+        z_hex.append(c_height/2)
+
+    # Define triangular faces
+    # 12 vertices total: 0-5 bottom hexagon, 6-11 top hexagon
+    i_ind = []
+    j_ind = []
+    k_ind = []
+
+    # Bottom cap (6 triangles forming hexagon)
+    for i in range(6):
+        i_next = (i + 1) % 6
+        i_ind.append(0)
+        j_ind.append(i)
+        k_ind.append(i_next)
+
+    # Top cap (6 triangles forming hexagon)
+    for i in range(6):
+        i_next = (i + 1) % 6
+        i_ind.append(6)
+        j_ind.append(6 + i)
+        k_ind.append(6 + i_next)
+
+    # Side faces (12 triangles, 2 per rectangular face)
+    for i in range(6):
+        i_next = (i + 1) % 6
+        # Two triangles per side face
+        i_ind.extend([i, i_next])
+        j_ind.extend([6+i, 6+i_next])
+        k_ind.extend([i_next, 6+i])
+
+    # --- 3. PLOTTING ---
+    fig = go.Figure()
+
+    # TRACE 0: Energy Surface
+    fig.add_trace(go.Surface(
+        z=z_blob, x=x_blob, y=y_blob,
+        surfacecolor=E_norm,
+        cmin=0,
+        colorscale='plasma',
+        colorbar=dict(title='Energy<br>Barrier (J)', len=0.5, thickness=15, x=0.9, exponentformat='e'),
+        opacity=1.0,
+        hoverinfo='none',
+        contours_x=dict(highlight=False), contours_y=dict(highlight=False), contours_z=dict(highlight=False),
+        name='Energy'
+    ))
+
+    # TRACE 1: Hexagonal Plate
+    fig.add_trace(go.Mesh3d(
+        x=x_hex, y=y_hex, z=z_hex, i=i_ind, j=j_ind, k=k_ind,
+        color='lightcoral', opacity=0.9, flatshading=True,
+        lighting=dict(ambient=0.5, diffuse=0.8),
+        hoverinfo='skip', visible=False, name='Crystal'
+    ))
+
+    # --- 4. AXIS GENERATION ---
+    max_extent = max(1.0 + exaggeration, r_hex, c_height/2)
+    axis_scale = max_extent + 0.3  # Reduced to keep c-axis label visible
+
+    # For hematite: c-axis is hard (red), basal plane is easy (blue)
+    hard_color = 'red'
+    easy_color = 'blue'
+
+    # Hard axis along z (c-axis)
+    fig.add_trace(go.Scatter3d(x=[0, 0], y=[0, 0], z=[-axis_scale, axis_scale],
+                               mode='lines', line=dict(color=hard_color, width=5, dash='dash'),
+                               hoverinfo='skip', showlegend=False))
+    fig.add_trace(go.Scatter3d(x=[0], y=[0], z=[axis_scale], mode='text',
+                               text=['c-axis<br>(hard)'], textfont=dict(color=hard_color, size=12),
+                               hoverinfo='skip', showlegend=False))
+
+    # Easy directions in basal plane (6-fold symmetry from hexagonal setting)
+    basal_angles = np.linspace(0, 2*np.pi, 6, endpoint=False)
+    for angle in basal_angles:
+        x_end = axis_scale * 0.7 * np.cos(angle)
+        y_end = axis_scale * 0.7 * np.sin(angle)
+        fig.add_trace(go.Scatter3d(x=[0, x_end], y=[0, y_end], z=[0, 0],
+                                   mode='lines', line=dict(color=easy_color, width=4),
+                                   hoverinfo='skip', showlegend=False))
+
+    # --- 5. LAYOUT ---
+    n_traces = len(fig.data)
+    vis_energy = [True, False] + [True] * (n_traces - 2)
+    vis_crystal = [False, True] + [True] * (n_traces - 2)
+
+    # Format anisotropy constants for display
+    K1_abs = abs(K1)
+    K3_val = K3
+
+    fig.update_layout(
+        width=650, height=470,
+        margin=dict(r=180, b=0, l=10, t=0),
+        title=dict(text=f'Hematite uniaxial anisotropy — easy plane (diameter = {radius_nm*2} nm; temp = {temperature} K)',
+                   x=0.0, y=0.99, font=dict(size=13)),
+        hovermode=False,
+        annotations=[
+            dict(
+                text=f'K<sub>u1</sub> = {K1_abs:.1e} J/m³ (c-axis, hard); in-plane K₃ ≈ 0–{K3_val:.0f} J/m³',
+                xref='paper', yref='paper',
+                x=0.5, y=0.06,
+                xanchor='center', yanchor='top',
+                showarrow=False,
+                font=dict(size=10, color='rgba(0,0,0,0.6)'),
+                bgcolor='rgba(255,255,255,0.8)',
+                borderpad=4
+            )
+        ],
+        updatemenus=[dict(
+            type="buttons", direction="left", x=0.5, xanchor="center", y=0.0, yanchor="top",
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            pad=dict(t=0, b=2, l=0, r=0),
+            font=dict(size=11),
+            buttons=list([
+                dict(label="Energy Landscape", method="update",
+                     args=[{"visible": vis_energy},
+                           {"title": f"Hematite Energy Surface (diameter = {radius_nm*2} nm; temp = {temperature} K)"}]),
+                dict(label="Hematite Crystal", method="update",
+                     args=[{"visible": vis_crystal},
+                           {"title": f"Hematite Crystal (platy habit, diameter = {radius_nm*2} nm)"}]),
+            ]),
+        )],
+        scene=dict(xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False),
+            aspectmode='data', camera=dict(eye=dict(x=1.8, y=1.0, z=1.3)), dragmode='orbit'),
+    )
+
+    return fig, energy_max
+
+# --- Generate hematite visualization ---
+# K1 = 1.2e6 J/m³ (Dunlop & Özdemir 1997, Table 3.1)
+# Use negative sign for easy plane behavior (sin²θ energy form)
+# K3 = 13 J/m³ (Martín-Hernández & Guerrero-Suárez 2012)
+fig_hematite, _ = plot_hematite_anisotropy(
+    K1=-1.2e6,   # J/m³ (negative for easy plane)
+    K3=13,       # J/m³ (in-plane anisotropy)
+    radius_nm=200,
+    temperature=300
+)
+fig_hematite.show()
+```
+
 ### Magnetostriction — stress anisotropy
 
 Exchange energy depends strongly on the details of the physical interaction between orbitals in neighboring atoms with respect to one another, hence changing the positions of these atoms will affect that interaction. Put another way, straining a crystal will alter its magnetic behavior. Similarly, changes in the magnetization can change the shape of the crystal by altering the shapes of the orbitals. This is the phenomenon of *magnetostriction*. The magnetic energy density caused by the application of stress to a crystal can be approximated by:
@@ -384,11 +607,15 @@ respectively (see {cite}`dunlop1997` for a more complete derivation). For elonga
 
 So far we have been discussing hypothetical magnetic particles that are uniformly magnetized. Particles with strong magnetizations (like magnetite) have self energies that quickly become quite large because of the dependence on the square of the magnetization. We have been learning about several mechanisms that tend to align magnetic spins. In very small particles of magnetite (less than 60 nm for equant grains {cite}`nagy2017`), exchange energy dominates and the spins are uniformly aligned — the particle is single domain (SD). In larger particles, the self energy increasingly competes with the exchange and magnetocrystalline energies, and crystals develop distinctly non-uniform states of magnetization.
 
-:::{figure} ../figures/chapter4/micromag.png
+:::{figure} ../figures/chapter4/vortex.png
 :name: fig:nonuniform
 :width: 80%
 
-Micromagnetic simulations of remanent domain states in truncated-octahedral magnetite as a function of equivalent spherical volume diameter (ESVD) and axial ratio (AR), computed using MERRILL ({cite}`williams2024`). Top row: prolate particles (AR = 2.25); bottom row: equant particles (AR = 1.00). (a,d) Single domain. (e) Flower/vortex transition. (b,c,f) Single-vortex states. Arrows show local magnetization direction; colors indicate alignment with magnetocrystalline easy axes. For equant grains, flower states emerge above ~60 nm and vortex states above ~80 nm ({cite}`nagy2017`; {cite}`williams2024`); elongation shifts both thresholds to larger sizes.pro [From {cite}`williams2024`.] 
+Micromagnetic simulations of remanent domain states in magnetite computed using MERRILL ({cite}`williams2024`). The elongate particles have an aspect ratio (c/a) of 2.25 while the equant particles are equidimensional. The numbers above the grains correspond to the equivalent spherical volume diameters (which is effectively the diameter for the equant ones; and a way to succinctly summarize the grain length for the elongate ones). The arrows show local magnetization direction while the colors indicate alignment with magnetocrystalline easy axes. For the elongate grains, the 90 nm grain has single-domain behavoir 
+
+The 80 nm equant grain is in a single-domain state, while the For the equant grains, we see dominantly single-domain behavoir in the  flower states emerge above ~60 nm and vortex states above ~80 nm ({cite}`nagy2017`; {cite}`williams2024`)
+
+(a,d) Single domain. (e) Flower/vortex transition. (b,c,f) Single-vortex states. . ; elongation shifts both thresholds to larger sizes.pro [From {cite}`williams2024`.] 
 :::
 
 There are multiple strategies for magnetic particles to reduce self energy. Numerical models (called *micromagnetic models*) can find internal magnetization configurations that minimize the energies discussed in the preceding sections. Modern micromagnetic codes such as MERRILL ({cite}`oconbhui2018`) allow us to peer into the state of magnetization inside magnetic particles. [](#fig:nonuniform) shows the progression of remanent states as particle size increases, computed using MERRILL ({cite}`williams2024`). In the smallest grains, the exchange energy overwhelms the self energy and the magnetization is nearly uniform — the SD state. As equant grains grow beyond about 60 nm, the self energy becomes large enough to perturb the magnetization near particle surfaces, causing spins at the edges to splay outward while the interior remains broadly aligned. This is the *flower state* ([](#fig:nonuniform)e), so named because the fanning spins at the surface resemble the opening of a flower. By about 80 nm, the self energy is large enough that the magnetization curls into a closed loop, forming a *vortex state* ([](#fig:nonuniform)b,c,f) with a narrow core of spins ({cite}`nagy2017`). The net remanent moment of a vortex particle is carried almost entirely by this core, since the curling spins surrounding it largely cancel. In elongated grains, shape anisotropy aligns both the vortex core and the overall remanence along the long axis of the particle ([](#fig:nonuniform)a–c). The curling magnetization dramatically reduces the external field of the particle (and hence its self energy), while the exchange energy cost remains modest because neighboring spins change direction only gradually. In the smallest particles, the spins would have to curl too tightly and the exchange energy cost keeps them uniformly magnetized in the SD state. Particles with vortex cores share many properties of SD grains — in particular, they can carry extremely stable magnetic remanence with relaxation times exceeding the age of the Solar System ({cite}`nagy2017`) — which has led to them being termed *pseudo-single domain* (PSD) particles.
@@ -397,7 +624,7 @@ As particles grow larger (>~200 nm), they break into multiple magnetic domains, 
 
 :::{figure} ../figures/chapter4/domains.png
 :name: fig:domains
-:width: 100%
+:width: 80%
 
 A variety of domain structures of a given particle. a) Uniformly magnetized (single domain). [Adapted from {cite}`tipler1999`.] b) Two domains. c) Four domains in a lamellar pattern. d) Essentially two domains with two closure domains.
 :::
@@ -421,7 +648,7 @@ In [](#fig:energies) we plot the self energy ([Equation %s](#eq:self)) and the w
 
 :::{figure} ../figures/chapter4/energies.png
 :name: fig:energies
-:width: 70%
+:width: 50%
 
 Comparison of "self" energy versus the energy of the domain wall in magnetite spheres as a function of particle size.
 :::
@@ -450,13 +677,6 @@ $$
 
 We know from statistical mechanics that the probability $P$ of finding a grain with a given thermal energy sufficient to overcome some anisotropy energy $E_a$ and change from one easy axis to another is $P=\exp (-E_a/E_T )$. Depending on the temperature, such grains may be quite rare, and we may have to wait some time $t$ for a particle to work itself up to jumping over the energy barrier.
 
-:::{figure} ../figures/chapter4/tauvd.png
-:name: fig:tauvd
-:width: 70%
-
-Relaxation time in magnetite ellipsoids as a function of grain width in nanometers (all length to width ratios of 1.3:1.)
-:::
-
 Imagine a block of material containing a random assemblage of magnetic particles that are for simplicity uniformly magnetized and dominated by uniaxial anisotropy. Suppose that this block has some initial magnetization $M_o$ and is placed in an environment with no ambient magnetic field. Anisotropy energy will tend to keep each tiny magnetic moment in its original direction and the magnetization will not change over time. At some temperature, certain grains will have sufficient energy to overcome the anisotropy energy and flip their moments to the other easy axis. As a result, over time, the magnetic moments will become random. Therefore, the magnetization as a function of time in this simple scenario will decay to zero. The equation governing this decay is:
 
 $$
@@ -473,7 +693,19 @@ where $C$ is a frequency factor with a value of something like $10^{10}$ s$^{-1}
 
 Thus, the relaxation time is proportional to anisotropy constant and volume, and is inversely related to temperature. Relaxation time $\tau$ varies rapidly with small changes in $v$ and $T$. To see how this works, we can take $K_u$ for slightly elongate cuboids of magnetite (length to width ratio of 1.3 to 1) and evaluate relaxation time as a function of particle width (see [](#fig:tauvd)). There is a sharp transition between grains with virtually no stability ($\tau$ is on the order of seconds) and grains with stabilities of billions of years.
 
+:::{figure} ../figures/chapter4/tauvd.png
+:name: fig:tauvd
+:width: 70%
+
+Relaxation time in magnetite ellipsoids as a function of grain width in nanometers (all length to width ratios of 1.3:1.)
+:::
+
 Grains with $\tau \simeq 10^2 - 10^3$ seconds have sufficient thermal energy to overcome the anisotropy energy frequently and are unstable on a laboratory time scale. In zero field, these grain moments will tend to rapidly become random, and in an applied field, also tend to align rapidly with the field. The net magnetization is related to the field by a Langevin function (see Chapter 3). Therefore, this behavior is quite similar to paramagnetism, hence these grains are called *superparamagnetic* (SP). Such grains can be distinguished from paramagnets, however, because the field required to saturate the moments is typically much less than a tesla, whereas that for paramagnets can exceed hundreds of tesla.
+
+## Putting it all together
+
+We are now in a position to pull together all the threads we have considered in this chapter and make a plot of what sort of magnetic particles behave as superparamagnets, which should be single domain and which should be multi-domain according to our simple theories. We can estimate the superparamagnetic to single domain threshold for magnetite as a function of particle shape by finding the length (2a) that gives a relaxation time of 100 seconds as a function of width-to-length ratio ($b/a$) for parallelepipeds of magnetite (heavy blue line in [](#fig:butban)). To do this, we follow the logic of {cite}`evans1969` and {cite}`butler1975`. In this *Evans diagram*, we estimated relaxation time using [Equation %s](#eq:tau), plugging in values of $K$ as either the magnetocrystalline effective anisotropy constant ($\frac{1}{12}K_1$) or the shape anisotropy constant ($\frac{1}{2} \Delta N \mu_o M^2$), whichever was less. We also show the curve at which relaxation time is equal to 1 Gyr, reinforcing the point that very small changes in crystal size and shape make profound differences in relaxation time.
+The figure also predicts the boundary between the single domain field and the two domain field, when the energy of a domain wall is less than the self energy of a particle that is uniformly magnetized. This can be done by evaluating wall energy with [Equation %s](#eq:wall) for a wall along the length of a parallelepiped and area ($4ab$) as compared to the self energy ($\frac{1}{2} \mu_o N_a M^2v$) for a given length and width-to-length ratio. When the wall energy is less than the self energy, we are in the two domain field.
 
 :::{figure} ../figures/chapter4/butban.png
 :name: fig:butban
@@ -481,11 +713,6 @@ Grains with $\tau \simeq 10^2 - 10^3$ seconds have sufficient thermal energy to 
 
 Expected domain states for various sizes and shapes of parallelepipeds of magnetite at room temperature. The parameters $a$ and $b$ are as in [](#fig:demagfield)e. Heavy blue (thin green) line is the superparamagnetic threshold assuming a relaxation time of 100s (1 Gyr). Dashed red line marks the SD/MD threshold size. Calculations done using assumptions and parameters described in the text.
 :::
-
-## Putting it all together
-
-We are now in a position to pull together all the threads we have considered in this chapter and make a plot of what sort of magnetic particles behave as superparamagnets, which should be single domain and which should be multi-domain according to our simple theories. We can estimate the superparamagnetic to single domain threshold for magnetite as a function of particle shape by finding the length (2a) that gives a relaxation time of 100 seconds as a function of width-to-length ratio ($b/a$) for parallelepipeds of magnetite (heavy blue line in [](#fig:butban)). To do this, we follow the logic of {cite}`evans1969` and {cite}`butler1975`. In this *Evans diagram*, we estimated relaxation time using [Equation %s](#eq:tau), plugging in values of $K$ as either the magnetocrystalline effective anisotropy constant ($\frac{1}{12}K_1$) or the shape anisotropy constant ($\frac{1}{2} \Delta N \mu_o M^2$), whichever was less. We also show the curve at which relaxation time is equal to 1 Gyr, reinforcing the point that very small changes in crystal size and shape make profound differences in relaxation time.
-The figure also predicts the boundary between the single domain field and the two domain field, when the energy of a domain wall is less than the self energy of a particle that is uniformly magnetized. This can be done by evaluating wall energy with [Equation %s](#eq:wall) for a wall along the length of a parallelepiped and area ($4ab$) as compared to the self energy ($\frac{1}{2} \mu_o N_a M^2v$) for a given length and width-to-length ratio. When the wall energy is less than the self energy, we are in the two domain field.
 
 [](#fig:butban) suggests that there is virtually no SD stability field for equant magnetite; particles are either SP or MD (multi-domain). As the width-to-length ratio decreases (the particle gets longer), the stability field for SD magnetite expands. Of course micromagnetic modelling shows that there are several transitional states between uniform magnetization (SD) and MD, i.e. the flower and vortex remanent states (see {cite}`fabian1996`), but [](#fig:butban) has enormous predictive power and the version of {cite}`butler1975` (which is slightly different in detail) continues to be used extensively. It is worth pointing out however, that the size at which domain walls appear in magnetite is poorly constrained because it depends critically on the exact shape of the particle, its state of stress and even its history of exposure to past fields. Estimates in the literature range from as small as 20 nm to much larger (up to 100 nm) depending on how the estimates are made. Nonetheless, it is probably true that truly single domain magnetite is quite rare in nature, yet more complicated states are difficult to treat theoretically. Therefore most paleomagnetic studies rely on predictions made for single domain particles.
 
