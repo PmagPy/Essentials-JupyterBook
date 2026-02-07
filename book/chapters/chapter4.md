@@ -273,17 +273,17 @@ The combined effect of these transitions on magnetization is illustrated in [](#
 The magnetization of magnetite-bearing basaltic dike specimen that was given a saturating isothermal remanent magnetization at room temperature (RTSIRM) before being cooled to 10 K and warmed back up to 300 K. On cooling, the magnetization decreases through the isotropic point (~130 K) and drops sharply at the Verwey transition (~120 K). On rewarming, only partial recovery occurs — the difference is the multidomain remanence lost during LTD. Data from {cite}`swanson-hysell2021` available in the MagIC database https://earthref.org/MagIC/20213.
 :::
 
-### Uniaxial magnetocrystalline anisotropy
+#### Uniaxial magnetocrystalline anisotropy
 
-Cubic symmetry (as in the case of magnetite) is just one of many types of crystal symmetries. One other very important form is the uniaxial symmetry which can arise from crystal shape or structure. The energy density for uniaxial magnetic anisotropy is:
+Cubic symmetry (as in the case of magnetite) is just one of many types of crystal symmetries. Another important form is uniaxial symmetry which can arise from crystal shape or structure. The energy density for uniaxial magnetic anisotropy is:
 
 $$
 \epsilon_a  = K_{u1} \sin^2 \theta + K_{u2} \sin^4 \theta + \ldots
 $$ (eq:Ku)
 
-Here the magnetocrystalline constants have been designated $K_{u1}, K_{u2}$ to distinguish them from $K_1, K_2$ used before. In this equation, when the largest *uniaxial anisotropy constant*, $K_{u1}$, is negative, the magnetization is constrained to lie perpendicular to the axis of symmetry. When $K_{u1}>0$, the magnetization lies parallel to it.
+Here the magnetocrystalline constants have been designated $K_{u1}, K_{u2}$ to distinguish them from $K_1, K_2$ used before. When $K_{u1} > 0$, the symmetry axis itself is the easy direction — an *easy axis*. When $K_{u1}$ is negative, the symmetry axis is energetically unfavorable and the magnetization is confined to the plane perpendicular to it — an *easy plane*.
 
-An example of a mineral dominated by uniaxial symmetry is hematite, a mineral with hexagonal crystal symmetry. The magnetization of hematite is complicated, as we shall learn in Chapters 6 and 7, but one source of magnetization is spin-canting (see Chapter 3) within the basal plane of the hexagonal crystal. Within the basal plane, the anisotropy constant is very low and the magnetization wanders fairly freely. However, the anisotropy energy away from the basal plane is strong, so the magnetization is constrained to lie within the basal plane.
+An example of a mineral dominated by uniaxial anisotropy is hematite. The magnetization of hematite is complicated, as we shall learn in Chapters 6 and 7, but one source of magnetization is spin-canting (see Chapter 3) within the basal plane. The uniaxial anisotropy perpendicular to the basal plane is very strong ($K_{u1} < 0$), confining the magnetization to the easy plane. Within the basal plane, the anisotropy is orders of magnitude weaker so the magnetization theoretically wanders fairly freely. In reality, stress anisotropy from defects and internal strain (see next section) pins the magnetization direction within the basal plane much more effectively than magnetocrystalline anisotropy alone would predict.
 
 ### Magnetostriction — stress anisotropy
 
@@ -293,20 +293,13 @@ $$
 \epsilon_{\sigma} = \frac{3}{2} \bar{\lambda} \sigma \sin^2 \theta,
 $$
 
-where $\bar{\lambda}$ is an experimentally derived constant, $\sigma$ is the stress, and $\theta$ is the angle of the stress with respect to the $c$ crystallographic axis. {cite}`moskowitz1993` measured the magnetostriction constants parallel to [111] and [100] in magnetite and found $\lambda_{111}$ and $\lambda_{100}$ to be $78.2 \times 10^{-6}$ and $-21.8 \times 10^{-6}$, respectively.. $\bar{\lambda}$ is given by:
+where $\bar{\lambda}$ is an experimentally derived constant, $\sigma$ is the stress, and $\theta$ is the angle of the stress with respect to the $c$ crystallographic axis. {cite}`moskowitz1993` measured the magnetostriction constants parallel to [111] and [100] in magnetite and found $\lambda_{111}$ and $\lambda_{100}$ to be $78.2 \times 10^{-6}$ and $-21.8 \times 10^{-6}$, respectively. $\bar{\lambda}$ is given by:
 
 $$
 \bar{\lambda} = \frac{2}{5} \lambda_{100} + \frac{3}{5} \lambda_{111},
 $$
 
 so $\bar{\lambda}$ for magnetite is about 38 × 10$^{-6}$. Stress has units of Nm$^{-2}$ which have the same fundamental units as Jm$^{-3}$, so $\bar{\lambda}$ is dimensionless. Note the similarity in form of magnetostriction and uniaxial anisotropy giving rise to a single "easy axis" within the crystal.
-
-:::{figure} ../figures/chapter4/demagfield.png
-:name: fig:demagfield
-:width: 100%
-
-a) Internal magnetizations within a ferromagnetic crystal. b) Generation of an identical external field from a series of surface monopoles. c) The internal "demagnetizing" field resulting from the surface monopoles. [Redrawn from {cite}`oreilly1984`.] d) Surface monopoles on a sphere. e) Surface monopoles on an ellipse, with the magnetization parallel to the elongation. f) Demagnetizing field $\mathbf{H}_d$ resulting from magnetization $M$ at angle $\theta$ from $a$ axis in prolate ellipsoid.
-:::
 
 ### Magnetostatic (shape) anisotropy
 (sect:shape)=
@@ -318,6 +311,13 @@ $$
 $$
 
 where $N$ is a *demagnetizing factor* determined by the shape. In fact, the demagnetizing factor depends on the orientation of $\mathbf{M}$ within the crystal and therefore is a tensor (see Appendix for review of tensors). The more general equation is $\mathbf{H}_d = \mathbf{N} \cdot \mathbf{M}$ where $\mathbf{H}_d$ and $\mathbf{M}$ are vectors and $\mathbf{N}$ is a 3 × 3 tensor. For now, we will simplify things by considering the isotropic case of a sphere in which $\mathbf{N}$ reduces to the single value scalar quantity $N$.
+
+:::{figure} ../figures/chapter4/demagfield.png
+:name: fig:demagfield
+:width: 100%
+
+a) Internal magnetizations within a ferromagnetic crystal. b) Generation of an identical external field from a series of surface monopoles. c) The internal "demagnetizing" field resulting from the surface monopoles. [Redrawn from {cite}`oreilly1984`.] d) Surface monopoles on a sphere. e) Surface monopoles on an ellipse, with the magnetization parallel to the elongation. f) Demagnetizing field $\mathbf{H}_d$ resulting from magnetization $M$ at angle $\theta$ from $a$ axis in prolate ellipsoid.
+:::
 
 For a sphere, the surface poles are distributed over the surface such that there are none at the "equator" and most at the "pole" (see [](#fig:demagfield)d). Potential field theory shows that the external field of a uniformly magnetized body is identical to that of a centered dipole moment of magnitude $m=v M$ (where $v$ is volume). At the equator of the sphere as elsewhere, $\mathbf{H}_d = -N\mathbf{M}$. But the external field at the equator is equal to the demagnetizing field just inside the body because the field is continuous across the body. We can find the equatorial (tangential) demagnetizing field at the equator by substituting in the equatorial colatitude $\theta=90°$ into $H_{\theta}$ from Chapter 1, so:
 
@@ -333,7 +333,7 @@ $$
 
 so substituting and solving for $H_d$ we get $H_d=-\frac{1}{3} M$, hence $N=\frac{1}{3}$.
 
-Different directions within a non-spherical crystal will have different distributions of free poles (see [](#fig:demagfield)e,f). In fact the surface density of free poles is given by $\sigma_m=\mathbf{M}\cdot \hat{r}$. Because the surface pole density depends on the direction of magnetization, so too will $N$. In the case of a prolate ellipsoid magnetized parallel to the elongation axis $a$ ([](#fig:demagfield)e), the free poles are farther apart than across the grain, hence, intuitively, the demagnetizing field, which depends on $1/r^2$, must be less than in the case of a sphere. Thus, $N_a < \frac{1}{3}$. Similarly, if the ellipsoid is magnetized along $b$ ([](#fig:demagfield)e), the demagnetizing field is stronger or $N_b>\frac{1}{3}$.
+Different directions within a non-spherical crystal will have different distributions of free poles (see [](#fig:demagfield)e,f). In fact, the surface density of free poles is given by $\sigma_m=\mathbf{M}\cdot \hat{r}$. Because the surface pole density depends on the direction of magnetization, so too will $N$. In the case of a prolate ellipsoid magnetized parallel to the elongation axis $a$ ([](#fig:demagfield)e), the free poles are farther apart than across the grain, hence, intuitively, the demagnetizing field, which depends on $1/r^2$, must be less than in the case of a sphere. Thus, $N_a < \frac{1}{3}$. Similarly, if the ellipsoid is magnetized along $b$ ([](#fig:demagfield)e), the demagnetizing field is stronger or $N_b>\frac{1}{3}$.
 
 Getting back to the magnetostatic energy density, $\epsilon_m = \mathbf{M} \cdot \mathbf{B}$, remember that $\mathbf{B}$ includes both the external field $B_e = -\mu_o H_e$ and the internal demagnetizing field $\mu_o \mathbf{N}\cdot \mathbf{M}$. Therefore, magnetostatic energy density from both the external and internal fields is given by:
 
@@ -369,13 +369,6 @@ Note that the demagnetizing energy in [Equation %s](#eq:ed) has a uniaxial form,
 
 For a prolate ellipsoid $N_c=N_b$ and choosing for example $a/c = 1.5$ we find that $N_a-N_c \approx 0.16$. The magnetization of magnetite is 480 kAm$^{-1}$, so $K_u \simeq$ 2.7 × 10$^4$ Jm$^{-3}$. This is somewhat larger than the absolute value of $K_1$ for magnetocrystalline anisotropy in magnetite ($K_1$= −1.35 × 10$^{4}$ Jm$^{-3}$), so the magnetization for even slightly elongate grains will be dominated by uniaxial anisotropy controlled by shape. Minerals with low saturation magnetizations (like hematite) will not be prone to shape dominated magnetic anisotropy, however.
 
-:::{figure} ../figures/chapter4/micromag.png
-:name: fig:nonuniform
-:width: 80%
-
-Micromagnetic simulations of remanent domain states in truncated-octahedral magnetite as a function of equivalent spherical volume diameter (ESVD) and axial ratio (AR), computed using MERRILL ({cite}`williams2024`). Top row: prolate particles (AR = 2.25); bottom row: equant particles (AR = 1.00). (a,d) Single domain. (e) Flower/vortex transition. (b,c,f) Single-vortex states. Arrows show local magnetization direction; colors indicate alignment with magnetocrystalline easy axes. For equant grains, flower states emerge above ~60 nm and vortex states above ~80 nm ({cite}`nagy2017`; {cite}`williams2024`); elongation shifts both thresholds to larger sizes.pro [From {cite}`williams2024`.] 
-:::
-
 ### Magnetic energy and magnetic stability
 (sect:coercivity)=
 
@@ -387,26 +380,26 @@ $$ (eq:Bk)
 
 respectively (see {cite}`dunlop1997` for a more complete derivation). For elongate particles dominated by shape anisotropy, $H_k$ reduces to $\Delta NM$. [Note that the units for coercivity as derived here are in Am$^{-1}$, although they are often measured using instruments calibrated in tesla. Technically, because the field doing the flipping is inside the magnetic particle and $\mathbf{B}$ (measured in tesla) depends on the magnetization $\mathbf{M}$ as well as the field $\mathbf{H}$, coercivity should be written as $\mu_o H_k$ if the units are quoted in tesla.] Microscopic coercivity is another parameter with many names: *flipping field*, *switching field*, *intrinsic coercivity* and also more loosely, the *coercive field* and *coercivity*. We will come back to the topic of coercivity in Chapter 5.
 
-:::{figure} ../figures/chapter4/domains.png
-:name: fig:domains
-:width: 100%
-
-A variety of domain structures of a given particle. a) Uniformly magnetized (single domain). [Adapted from {cite}`tipler1999`.] b) Two domains. c) Four domains in a lamellar pattern. d) Essentially two domains with two closure domains.
-:::
-
 ## Magnetic domains
 
 So far we have been discussing hypothetical magnetic particles that are uniformly magnetized. Particles with strong magnetizations (like magnetite) have self energies that quickly become quite large because of the dependence on the square of the magnetization. We have been learning about several mechanisms that tend to align magnetic spins. In very small particles of magnetite (less than 60 nm for equant grains {cite}`nagy2017`), exchange energy dominates and the spins are uniformly aligned — the particle is single domain (SD). In larger particles, the self energy increasingly competes with the exchange and magnetocrystalline energies, and crystals develop distinctly non-uniform states of magnetization.
+
+:::{figure} ../figures/chapter4/micromag.png
+:name: fig:nonuniform
+:width: 80%
+
+Micromagnetic simulations of remanent domain states in truncated-octahedral magnetite as a function of equivalent spherical volume diameter (ESVD) and axial ratio (AR), computed using MERRILL ({cite}`williams2024`). Top row: prolate particles (AR = 2.25); bottom row: equant particles (AR = 1.00). (a,d) Single domain. (e) Flower/vortex transition. (b,c,f) Single-vortex states. Arrows show local magnetization direction; colors indicate alignment with magnetocrystalline easy axes. For equant grains, flower states emerge above ~60 nm and vortex states above ~80 nm ({cite}`nagy2017`; {cite}`williams2024`); elongation shifts both thresholds to larger sizes.pro [From {cite}`williams2024`.] 
+:::
 
 There are multiple strategies for magnetic particles to reduce self energy. Numerical models (called *micromagnetic models*) can find internal magnetization configurations that minimize the energies discussed in the preceding sections. Modern micromagnetic codes such as MERRILL ({cite}`oconbhui2018`) allow us to peer into the state of magnetization inside magnetic particles. [](#fig:nonuniform) shows the progression of remanent states as particle size increases, computed using MERRILL ({cite}`williams2024`). In the smallest grains, the exchange energy overwhelms the self energy and the magnetization is nearly uniform — the SD state. As equant grains grow beyond about 60 nm, the self energy becomes large enough to perturb the magnetization near particle surfaces, causing spins at the edges to splay outward while the interior remains broadly aligned. This is the *flower state* ([](#fig:nonuniform)e), so named because the fanning spins at the surface resemble the opening of a flower. By about 80 nm, the self energy is large enough that the magnetization curls into a closed loop, forming a *vortex state* ([](#fig:nonuniform)b,c,f) with a narrow core of spins ({cite}`nagy2017`). The net remanent moment of a vortex particle is carried almost entirely by this core, since the curling spins surrounding it largely cancel. In elongated grains, shape anisotropy aligns both the vortex core and the overall remanence along the long axis of the particle ([](#fig:nonuniform)a–c). The curling magnetization dramatically reduces the external field of the particle (and hence its self energy), while the exchange energy cost remains modest because neighboring spins change direction only gradually. In the smallest particles, the spins would have to curl too tightly and the exchange energy cost keeps them uniformly magnetized in the SD state. Particles with vortex cores share many properties of SD grains — in particular, they can carry extremely stable magnetic remanence with relaxation times exceeding the age of the Solar System ({cite}`nagy2017`) — which has led to them being termed *pseudo-single domain* (PSD) particles.
 
 As particles grow larger (>~200 nm), they break into multiple magnetic domains, separated by narrow zones of rapidly changing spin directions called *domain walls*. Magnetic domains can take many forms. We illustrate a few in [](#fig:domains). The uniform case (single domain) is shown in [](#fig:domains)a. The external field is very large because the free poles are far apart (at opposite ends of the particle). When the particle organizes itself into two domains ([](#fig:domains)b), the external field is reduced by about a factor of two. In the case of four lamellar domains ([](#fig:domains)c), the external field is quite small. The introduction of *closure domains* as in [](#fig:domains)d reduces the external field to nothing.
 
-:::{figure} ../figures/chapter4/wall.png
-:name: fig:wall
+:::{figure} ../figures/chapter4/domains.png
+:name: fig:domains
 :width: 100%
 
-Examples of possible domain walls. a) There is a 180° switch from one atom to the next. The domain wall is very thin, but the exchange price is very high. b) There is a more gradual switch from one direction to the other [note: each arrow represents several 10's of unit cells]. The exchange energy price is lower, but there are more spins in unfavorable directions from a magnetocrystalline point of view.
+A variety of domain structures of a given particle. a) Uniformly magnetized (single domain). [Adapted from {cite}`tipler1999`.] b) Two domains. c) Four domains in a lamellar pattern. d) Essentially two domains with two closure domains.
 :::
 
 As you might already suspect, domain walls are not "free", energetically speaking. If, as in [](#fig:wall)a, the spins simply switch from one orientation to the other abruptly, the exchange energy cost would be very high. One way to get around this is to spread the change over several hundred atoms, as sketched in [](#fig:wall)b. The wall width $\delta$ is wider and the exchange energy price is much less. However, there are now spins in unfavorable directions from a magnetocrystalline point of view (they are in "hard" directions). Exchange energy therefore favors wider domain walls while magnetocrystalline anisotropy favors thin walls. With some work (see e.g., {cite}`dunlop1997`, pp. 117–118), it is possible to come up with the following analytical expressions for wall width ($\delta_w$) and wall energy density ($\epsilon_w$):
@@ -416,6 +409,13 @@ $$
 $$ (eq:wall)
 
 where $A$ is the exchange constant (see [](#sect:exchange)) and $K$ is the magnetic anisotropy constant (e.g., $K_u$ or $K_1$). Note that $\epsilon_w$ is the energy density per unit wall area, not per volume. Plugging in values for magnetite given previously we get $\delta_w$ = 90 nm and $\epsilon_w$ = 3×10$^{-3}$ Jm$^{-2}$.
+
+:::{figure} ../figures/chapter4/wall.png
+:name: fig:wall
+:width: 100%
+
+Examples of possible domain walls. a) There is a 180° switch from one atom to the next. The domain wall is very thin, but the exchange price is very high. b) There is a more gradual switch from one direction to the other [note: each arrow represents several 10's of unit cells]. The exchange energy price is lower, but there are more spins in unfavorable directions from a magnetocrystalline point of view.
+:::
 
 In [](#fig:energies) we plot the self energy ([Equation %s](#eq:self)) and the wall energy ($\epsilon_w$ from [Equation %s](#eq:wall)) for spheres of magnetite. We see that the wall energy in particles with diameters of some 50 nm is less than the self energy, yet the width of the walls is about twice as wide as that. So the smallest wall is really more like the vortex state and it is only for particles larger than a few tenths of a micron that true domains separated by discrete walls can form. Interestingly, this is precisely what is predicted from micromagnetic modelling (e.g., [](#fig:nonuniform)).
 
