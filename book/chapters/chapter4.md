@@ -54,13 +54,6 @@ $\epsilon_m$ is at a minimum when $\mathbf{M}$ is aligned with $\mathbf{B}$, so 
 
 There are many causes of anisotropy energy. The most important ones derive from the details of crystal structure *(magnetocrystalline anisotropy energy)*, the state of stress within the particle *(magnetostriction)*, and the shape of the particle, *(shape anisotropy)*. We will consider these briefly in the following subsections.
 
-:::{figure} ../figures/chapter4/K-T.png
-:name: fig:K-T
-:width: 80%
-
-Variation of $K_1$ and $K_2$ of magnetite as a function of temperature. Solid lines are data from {cite}`syono1963`. Dashed lines are data from {cite}`fletcher1974`.
-:::
-
 ### Magnetocrystalline anisotropy energy
 (sect:K1)=
 
@@ -181,26 +174,44 @@ vis_energy = [True, False] + [True] * (n_traces - 2)
 vis_cube   = [False, True] + [True] * (n_traces - 2)
 
 fig.update_layout(
-    width=700, height=650,
-    margin=dict(r=120, b=10, l=10, t=50),
-    title=dict(text=f'Magnetite Anisotropy Map (grain radius = {radius_nm} nm)', x=0.5, y=0.95),
+    width=650, height=470,
+    margin=dict(r=180, b=0, l=10, t=0),
+    title=dict(text='Magnetocrystalline anisotropy (equant grain, diameter = 50 nm; temp = 300 K)', x=0.0, y=0.99, font=dict(size=13)),
     hovermode=False,
     updatemenus=[dict(
-        type="buttons", direction="down", x=0.02, y=0.98, bgcolor="rgba(255, 255, 255, 0.9)",
+        type="buttons", direction="left", x=0.5, xanchor="center", y=0.0, yanchor="top",
+        bgcolor="rgba(255, 255, 255, 0.9)",
+        pad=dict(t=0, b=2, l=0, r=0),
+        font=dict(size=11),
         buttons=list([
             dict(label="Energy Landscape", method="update",
-                 args=[{"visible": vis_energy}, {"title": f"Magnetite Energy Surface (grain radius = {radius_nm} nm)"}]),
-            dict(label="Crystal Habit", method="update",
-                 args=[{"visible": vis_cube}, {"title": f"Physical Crystal Shape (grain radius = {radius_nm} nm)"}]),
+                 args=[{"visible": vis_energy}, {"title": "Magnetite Energy Surface (equant grain, diameter = 50 nm; temperature = 300 K)"}]),
+            dict(label="Crystal Geometry", method="update",
+                 args=[{"visible": vis_cube}, {"title": "Physical Crystal Shape (equant grain, diameter = 50 nm)"}]),
         ]),
     )],
     scene=dict(xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False),
-        aspectmode='data', camera=dict(eye=dict(x=1., y=1., z=1.)), dragmode='orbit'),
+        aspectmode='data', camera=dict(eye=dict(x=1.2, y=0.6, z=0.9)), dragmode='orbit'),
 )
 fig.show()
 ```
 
-As a consequence of the magnetocrystalline anisotropy energy, once the magnetization is aligned with an easy direction, work must be done to change it. In order to switch from one easy axis to another (e.g. from one direction along the body diagonal to the opposite), the magnetization has to traverse a path over an energy barrier which is the difference between the energy in the easy direction and that in the intervening hard direction. In the case of magnetite at room temperature, we have this energy barrier as $\epsilon$[111]−$\epsilon$[110] or to first order $K_1/3 - K_1/4 = K_1/12$.
+As a consequence of the magnetocrystalline anisotropy energy, once the magnetization is aligned with an easy direction, work must be done to change it. In order to switch from one easy axis to another (e.g. from one direction along the body diagonal to the opposite for cubic magnetite), the magnetization has to traverse a path over an energy barrier which is the difference between the energy in the easy direction and that in the intervening hard direction. In the case of magnetite at room temperature, we have this energy barrier as $\epsilon$[111]−$\epsilon$[110] or to first order $K_1/3 - K_1/4 = K_1/12$.
+
+#### Temperature dependence of anisotropy
+
+Because electronic interactions depend heavily on interatomic spacing, magnetocrystalline anisotropy constants are a strong function of temperature (see [](#fig:K-T)). In magnetite, $K_1$ changes sign at a temperature known as the *isotropic point*. Given that $K_1=0$ at the isotropic point, there is minimal magnetocrystalline anisotropy. The large energy barriers that act to keep the magnetizations parallel to the body diagonal are gone and the spins can wander more freely through the crystal. Below the isotropic point, the energy barriers rise again, but with a different topology in which the crystal axes are the energy minima and the body diagonals are the high energy states.
+
+At room temperature, electrons hop freely between the ferrous and ferric ions on the B lattice sites, so there is no order. Below about 120 K, there is an ordered arrangement of the ferrous and ferric ions. Because of the difference in size between the two, the lattice of the unit cell becomes slightly distorted and becomes monoclinic instead of cubic. This transition occurs at what is known as the *Verwey temperature* ($T_v$). Although the isotropic point (measured magnetically) and the Verwey transition (measured electrically) are separated in temperature by about 15 K, they are related phenomena (the ordering and electron hopping cause the change in $K_1$).
+
+The change in magnetocrystalline anisotropy at low temperature can have a profound effect on the magnetization. In [](#fig:verwey) we show a typical (de)magnetization curve for magnetite taken from the "Rock magnetic bestiary" web site maintained at the Institute for Rock Magnetism: <http://irm.umn.edu/bestiary>. There is a loss of magnetization at around 100 K. This loss is the basis for *low-temperature demagnetization* (LTD). However, some portion of the magnetization always remains after low temperature cycling (called the *low temperature memory*), so the general utility of LTD may be limited.
+
+:::{figure} ../figures/chapter4/K-T.png
+:name: fig:K-T
+:width: 80%
+
+Variation of $K_1$ and $K_2$ of magnetite as a function of temperature. Solid lines are data from {cite}`syono1963`. Dashed lines are data from {cite}`fletcher1974`.
+:::
 
 :::{figure} ../figures/chapter4/verwey.png
 :name: fig:verwey
@@ -208,12 +219,6 @@ As a consequence of the magnetocrystalline anisotropy energy, once the magnetiza
 
 Magnetization curve for magnetite as a function of temperature. The specimen was placed in a very large field, cooled to near absolute zero, then warmed up. The magnetization was measured as it warmed. When it goes through the Verwey transition (~110 K), a fraction of the magnetization is lost. Data downloaded from "w5000" in the [Rock magnetic Bestiary](http://www.irm.umn.edu/bestiary) collection at the Institute for Rock Magnetism.
 :::
-
-Because electronic interactions depend heavily on interatomic spacing, magnetocrystalline anisotropy constants are a strong function of temperature (see [](#fig:K-T)). In magnetite, $K_1$ changes sign at a temperature known as the *isotropic point*. At the isotropic point, there is no large magnetocrystalline anisotropy. The large energy barriers that act to keep the magnetizations parallel to the body diagonal are gone and the spins can wander more freely through the crystal. Below the isotropic point, the energy barriers rise again, but with a different topology in which the crystal axes are the energy minima and the body diagonals are the high energy states.
-
-At room temperature, electrons hop freely between the ferrous and ferric ions on the B lattice sites, so there is no order. Below about 120 K, there is an ordered arrangement of the ferrous and ferric ions. Because of the difference in size between the two, the lattice of the unit cell becomes slightly distorted and becomes monoclinic instead of cubic. This transition occurs at what is known as the *Verwey temperature* ($T_v$). Although the isotropic point (measured magnetically) and the Verwey transition (measured electrically) are separated in temperature by about 15 K, they are related phenomena (the ordering and electron hopping cause the change in $K_1$).
-
-The change in magnetocrystalline anisotropy at low temperature can have a profound effect on the magnetization. In [](#fig:verwey) we show a typical (de)magnetization curve for magnetite taken from the "Rock magnetic bestiary" web site maintained at the Institute for Rock Magnetism: <http://irm.umn.edu/bestiary>. There is a loss of magnetization at around 100 K. This loss is the basis for *low-temperature demagnetization* (LTD). However, some portion of the magnetization always remains after low temperature cycling (called the *low temperature memory*), so the general utility of LTD may be limited.
 
 Cubic symmetry (as in the case of magnetite) is just one of many types of crystal symmetries. One other very important form is the uniaxial symmetry which can arise from crystal shape or structure. The energy density for uniaxial magnetic anisotropy is:
 
