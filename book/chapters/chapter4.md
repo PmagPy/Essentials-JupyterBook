@@ -65,7 +65,7 @@ $$
 \epsilon_a = K_1(\alpha_1^2 \alpha_2^2 + \alpha_2^2\alpha^2_3 + \alpha_3^2\alpha_1^2) + K_2\alpha_1^2\alpha_2^2\alpha_3^2,
 $$ (eq:xtalline)
 
-where $K_1$ and $K_2$ are empirically determined *magnetocrystalline anisotropy constants* with units of Jm$^{-3}$ (so $\epsilon_a$ is an energy density). Magnetite (cubic above 120 K) has $K_1$ = −1.35 × 10$^4$ Jm$^{-3}$ at room temperature. The result of this equation with these constants is that the easy directions are along the [111] body diagonals and the hard directions are along [100]. The **interactive visualization below** lets you explore this energy surface in 3D: the bulges along the hard [100] directions (red axes) and the dimples along the easy [111] directions (blue dashed axes) are a direct result of of [](#eq:xtalline). The energy is minimized along the [111] body diagonals with energy barriers between them due to the hard directions. Toggle between "Energy Landscape" and "Crystal Habit" to compare the energy surface with the physical cubic crystal geometry.
+where $K_1$ and $K_2$ are empirically determined *magnetocrystalline anisotropy constants* with units of Jm$^{-3}$ (so $\epsilon_a$ is an energy density). Magnetite (cubic above 120 K) has $K_1$ = −1.35 × 10$^4$ Jm$^{-3}$ at room temperature. The result of this equation with these constants is that the easy directions are along the [111] body diagonals and the hard directions are along [100]. The **interactive visualization below** lets you explore this energy surface in 3D: the bulges along the hard [100] directions (red axes) and the dimples along the easy [111] directions (blue dashed axes) are a direct result of of [](#eq:xtalline). The energy is minimized along the [111] body diagonals with energy barriers between them due to the hard directions. Toggle between "Energy Landscape" and "Crystal Geometry" to compare the energy surface with the physical cubic crystal geometry.
 
 ```{code-cell} python
 :tags: [remove-input]
@@ -82,143 +82,198 @@ def format_miller(h, k, l):
         return str(n)
     return f"[{to_char(h)}{to_char(k)}{to_char(l)}]"
 
-# --- Parameters ---
-K1 = -1.35e4        # Anisotropy constant K1 (J/m^3)
-K2 = -0.44e4        # Anisotropy constant K2 (J/m^3)
-radius_nm = 25       # Grain radius (nm)
-exaggeration = 0.6   # Geometric distortion factor
-cube_scale = 1.5     # Reference cube size
+def plot_magnetocrystalline_anisotropy(K1, K2, radius_nm, temperature, cbar_max=None):
+    """Plot 3D magnetocrystalline anisotropy energy surface for magnetite.
 
-# --- 1. MATH: Energy Surface ---
-phi = np.linspace(0, 2 * np.pi, 100)
-theta = np.linspace(0, np.pi, 100)
-phi, theta = np.meshgrid(phi, theta)
+    Creates an interactive 3D visualization showing the magnetocrystalline
+    anisotropy energy as a function of magnetization direction. The energy
+    surface is color-coded and includes crystallographic axes for reference.
 
-# Direction Cosines
-a1 = np.sin(theta) * np.cos(phi)
-a2 = np.sin(theta) * np.sin(phi)
-a3 = np.cos(theta)
+    Args:
+        K1 (float): First magnetocrystalline anisotropy constant (J/m³).
+        K2 (float): Second magnetocrystalline anisotropy constant (J/m³).
+        radius_nm (float): Grain radius in nanometers.
+        temperature (float): Temperature in Kelvin.
+        cbar_max (float, optional): Maximum value for colorbar. If None,
+            uses the actual maximum energy. Useful for comparing multiple
+            plots with consistent color scales.
 
-# Energy Density (Eq. 4.3)
-term1 = (a1**2 * a2**2) + (a2**2 * a3**2) + (a3**2 * a1**2)
-term2 = a1**2 * a2**2 * a3**2
-E_density = (K1 * term1) + (K2 * term2)
+    Returns:
+        tuple: (fig, energy_max) where fig is the Plotly figure object and
+            energy_max is the maximum energy barrier value (J).
+    """
+    exaggeration = 0.6   # Geometric distortion factor
+    cube_scale = 1.5     # Reference cube size
 
-# Convert to Total Energy (J) and Normalize
-r_particle = radius_nm * 1e-9
-Volume = (4/3) * np.pi * r_particle**3
-E_total = E_density * Volume
-E_norm = E_total - E_total.min()
+    # --- 1. MATH: Energy Surface ---
+    phi = np.linspace(0, 2 * np.pi, 100)
+    theta = np.linspace(0, np.pi, 100)
+    phi, theta = np.meshgrid(phi, theta)
 
-# Map energy to radius (Geometric Scaling)
-r_blob = 1.0 + (exaggeration * (E_norm / E_norm.max()))
+    # Direction Cosines
+    a1 = np.sin(theta) * np.cos(phi)
+    a2 = np.sin(theta) * np.sin(phi)
+    a3 = np.cos(theta)
 
-x_blob = r_blob * np.sin(theta) * np.cos(phi)
-y_blob = r_blob * np.sin(theta) * np.sin(phi)
-z_blob = r_blob * np.cos(theta)
+    # Energy Density (Eq. 4.3)
+    term1 = (a1**2 * a2**2) + (a2**2 * a3**2) + (a3**2 * a1**2)
+    term2 = a1**2 * a2**2 * a3**2
+    E_density = (K1 * term1) + (K2 * term2)
 
-# --- 2. GEOMETRY: The Reference Cube ---
-v_val = 0.6 * cube_scale
-x_cube = [v_val, v_val, -v_val, -v_val, v_val, v_val, -v_val, -v_val]
-y_cube = [v_val, -v_val, -v_val, v_val, v_val, -v_val, -v_val, v_val]
-z_cube = [v_val, v_val, v_val, v_val, -v_val, -v_val, -v_val, -v_val]
+    # Convert to Total Energy (J) and Normalize
+    r_particle = radius_nm * 1e-9
+    Volume = (4/3) * np.pi * r_particle**3
+    E_total = E_density * Volume
+    E_norm = E_total - E_total.min()
 
-i_ind = [7, 0, 0, 0, 4, 4, 6, 6, 4, 0, 3, 2]
-j_ind = [3, 4, 1, 2, 5, 6, 5, 2, 0, 1, 6, 3]
-k_ind = [0, 7, 2, 3, 6, 7, 1, 1, 5, 5, 7, 6]
+    # Store actual max for return value
+    energy_max = E_norm.max()
 
-# --- 3. PLOTTING ---
-fig = go.Figure()
+    # Use provided cbar_max or calculated energy_max for consistent scaling
+    cmax_val = cbar_max if cbar_max is not None else energy_max
 
-# TRACE 0: Energy Surface
-fig.add_trace(go.Surface(
-    z=z_blob, x=x_blob, y=y_blob,
-    surfacecolor=E_norm,
-    cmin=0,
-    colorscale='magma_r',
-    colorbar=dict(title='Energy<br>Barrier (J)', len=0.5, thickness=15, x=0.9, exponentformat='e'),
-    opacity=1.0,
-    hoverinfo='none',
-    contours_x=dict(highlight=False), contours_y=dict(highlight=False), contours_z=dict(highlight=False),
-    name='Energy'
-))
+    # Map energy to radius (Geometric Scaling) - use cmax_val for consistent comparison
+    r_blob = 1.0 + (exaggeration * (E_norm / cmax_val))
 
-# TRACE 1: Reference Cube
-fig.add_trace(go.Mesh3d(
-    x=x_cube, y=y_cube, z=z_cube, i=i_ind, j=j_ind, k=k_ind,
-    color='silver', opacity=1, flatshading=True, lighting=dict(ambient=0.5, diffuse=0.8),
-    hoverinfo='skip', visible=False, name='Cube'
-))
+    x_blob = r_blob * np.sin(theta) * np.cos(phi)
+    y_blob = r_blob * np.sin(theta) * np.sin(phi)
+    z_blob = r_blob * np.cos(theta)
 
-# --- 4. AXIS GENERATION ---
-max_extent = max(1.0 + exaggeration, v_val)
-axis_scale = max_extent + 0.5
+    # --- 2. GEOMETRY: The Reference Cube ---
+    v_val = 0.6 * cube_scale
+    x_cube = [v_val, v_val, -v_val, -v_val, v_val, v_val, -v_val, -v_val]
+    y_cube = [v_val, -v_val, -v_val, v_val, v_val, -v_val, -v_val, v_val]
+    z_cube = [v_val, v_val, v_val, v_val, -v_val, -v_val, -v_val, -v_val]
 
-# Hard axes <100> (red, solid)
-hard_axes = [([1,0,0]), ([-1,0,0]), ([0,1,0]), ([0,-1,0]), ([0,0,1]), ([0,0,-1])]
-for vec in hard_axes:
-    v = np.array(vec) * axis_scale
-    fig.add_trace(go.Scatter3d(x=[0, v[0]], y=[0, v[1]], z=[0, v[2]], mode='lines', line=dict(color='red', width=5), hoverinfo='skip', showlegend=False))
-    fig.add_trace(go.Scatter3d(x=[v[0]], y=[v[1]], z=[v[2]], mode='text', text=[f"{format_miller(*vec)}"], textfont=dict(color='red', size=12), hoverinfo='skip', showlegend=False))
+    i_ind = [7, 0, 0, 0, 4, 4, 6, 6, 4, 0, 3, 2]
+    j_ind = [3, 4, 1, 2, 5, 6, 5, 2, 0, 1, 6, 3]
+    k_ind = [0, 7, 2, 3, 6, 7, 1, 1, 5, 5, 7, 6]
 
-# Easy axes <111> (blue, dashed)
-for x, y, z in itertools.product([1, -1], repeat=3):
-    vec = np.array([x, y, z])
-    v = (vec / np.linalg.norm(vec)) * axis_scale
-    fig.add_trace(go.Scatter3d(x=[0, v[0]], y=[0, v[1]], z=[0, v[2]], mode='lines', line=dict(color='blue', width=4, dash='dash'), hoverinfo='skip', showlegend=False))
-    fig.add_trace(go.Scatter3d(x=[v[0]], y=[v[1]], z=[v[2]], mode='text', text=[f"{format_miller(x,y,z)}"], textfont=dict(color='blue', size=11), hoverinfo='skip', showlegend=False))
+    # --- 3. PLOTTING ---
+    fig = go.Figure()
 
-# --- 5. LAYOUT ---
-n_traces = len(fig.data)
-vis_energy = [True, False] + [True] * (n_traces - 2)
-vis_cube   = [False, True] + [True] * (n_traces - 2)
+    # TRACE 0: Energy Surface
+    fig.add_trace(go.Surface(
+        z=z_blob, x=x_blob, y=y_blob,
+        surfacecolor=E_norm,
+        cmin=0,
+        cmax=cmax_val,
+        colorscale='magma_r',
+        colorbar=dict(title='Energy<br>Barrier (J)', len=0.5, thickness=15, x=0.9, exponentformat='e'),
+        opacity=1.0,
+        hoverinfo='none',
+        contours_x=dict(highlight=False), contours_y=dict(highlight=False), contours_z=dict(highlight=False),
+        name='Energy'
+    ))
 
-fig.update_layout(
-    width=650, height=470,
-    margin=dict(r=180, b=0, l=10, t=0),
-    title=dict(text='Magnetocrystalline anisotropy (equant grain, diameter = 50 nm; temp = 300 K)', x=0.0, y=0.99, font=dict(size=13)),
-    hovermode=False,
-    updatemenus=[dict(
-        type="buttons", direction="left", x=0.5, xanchor="center", y=0.0, yanchor="top",
-        bgcolor="rgba(255, 255, 255, 0.9)",
-        pad=dict(t=0, b=2, l=0, r=0),
-        font=dict(size=11),
-        buttons=list([
-            dict(label="Energy Landscape", method="update",
-                 args=[{"visible": vis_energy}, {"title": "Magnetite Energy Surface (equant grain, diameter = 50 nm; temperature = 300 K)"}]),
-            dict(label="Crystal Geometry", method="update",
-                 args=[{"visible": vis_cube}, {"title": "Physical Crystal Shape (equant grain, diameter = 50 nm)"}]),
-        ]),
-    )],
-    scene=dict(xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False),
-        aspectmode='data', camera=dict(eye=dict(x=1.2, y=0.6, z=0.9)), dragmode='orbit'),
+    # TRACE 1: Reference Cube
+    fig.add_trace(go.Mesh3d(
+        x=x_cube, y=y_cube, z=z_cube, i=i_ind, j=j_ind, k=k_ind,
+        color='silver', opacity=1, flatshading=True, lighting=dict(ambient=0.5, diffuse=0.8),
+        hoverinfo='skip', visible=False, name='Cube'
+    ))
+
+    # --- 4. AXIS GENERATION ---
+    max_extent = max(1.0 + exaggeration, v_val)
+    axis_scale = max_extent + 0.5
+
+    # Hard axes <100> (red, solid)
+    hard_axes = [([1,0,0]), ([-1,0,0]), ([0,1,0]), ([0,-1,0]), ([0,0,1]), ([0,0,-1])]
+    for vec in hard_axes:
+        v = np.array(vec) * axis_scale
+        fig.add_trace(go.Scatter3d(x=[0, v[0]], y=[0, v[1]], z=[0, v[2]], mode='lines', line=dict(color='red', width=5), hoverinfo='skip', showlegend=False))
+        fig.add_trace(go.Scatter3d(x=[v[0]], y=[v[1]], z=[v[2]], mode='text', text=[f"{format_miller(*vec)}"], textfont=dict(color='red', size=12), hoverinfo='skip', showlegend=False))
+
+    # Easy axes <111> (blue, dashed)
+    for x, y, z in itertools.product([1, -1], repeat=3):
+        vec = np.array([x, y, z])
+        v = (vec / np.linalg.norm(vec)) * axis_scale
+        fig.add_trace(go.Scatter3d(x=[0, v[0]], y=[0, v[1]], z=[0, v[2]], mode='lines', line=dict(color='blue', width=4, dash='dash'), hoverinfo='skip', showlegend=False))
+        fig.add_trace(go.Scatter3d(x=[v[0]], y=[v[1]], z=[v[2]], mode='text', text=[f"{format_miller(x,y,z)}"], textfont=dict(color='blue', size=11), hoverinfo='skip', showlegend=False))
+
+    # --- 5. LAYOUT ---
+    n_traces = len(fig.data)
+    vis_energy = [True, False] + [True] * (n_traces - 2)
+    vis_cube   = [False, True] + [True] * (n_traces - 2)
+
+    fig.update_layout(
+        width=650, height=470,
+        margin=dict(r=180, b=0, l=10, t=0),
+        title=dict(text=f'Magnetocrystalline anisotropy (equant grain, diameter = {radius_nm*2} nm; temp = {temperature} K)', x=0.0, y=0.99, font=dict(size=13)),
+        hovermode=False,
+        updatemenus=[dict(
+            type="buttons", direction="left", x=0.5, xanchor="center", y=0.0, yanchor="top",
+            bgcolor="rgba(255, 255, 255, 0.9)",
+            pad=dict(t=0, b=2, l=0, r=0),
+            font=dict(size=11),
+            buttons=list([
+                dict(label="Energy Landscape", method="update",
+                     args=[{"visible": vis_energy}, {"title": f"Magnetite Energy Surface (equant grain, diameter = {radius_nm*2} nm; temperature = {temperature} K)"}]),
+                dict(label="Crystal Geometry", method="update",
+                     args=[{"visible": vis_cube}, {"title": f"Physical Crystal Shape (equant grain, diameter = {radius_nm*2} nm)"}]),
+            ]),
+        )],
+        scene=dict(xaxis=dict(visible=False), yaxis=dict(visible=False), zaxis=dict(visible=False),
+            aspectmode='data', camera=dict(eye=dict(x=1.2, y=0.6, z=0.9)), dragmode='orbit'),
+    )
+
+    return fig, energy_max
+
+# --- Generate visualization at 300 K ---
+fig_300K, energy_max = plot_magnetocrystalline_anisotropy(
+    K1=-1.35e4,  # J/m³
+    K2=-0.44e4,  # J/m³
+    radius_nm=25,
+    temperature=300
 )
-fig.show()
+fig_300K.show()
 ```
 
 As a consequence of the magnetocrystalline anisotropy energy, once the magnetization is aligned with an easy direction, work must be done to change it. In order to switch from one easy axis to another (e.g. from one direction along the body diagonal to the opposite for cubic magnetite), the magnetization has to traverse a path over an energy barrier which is the difference between the energy in the easy direction and that in the intervening hard direction. In the case of magnetite at room temperature, we have this energy barrier as $\epsilon$[111]−$\epsilon$[110] or to first order $K_1/3 - K_1/4 = K_1/12$.
 
 #### Temperature dependence of anisotropy
 
-Because electronic interactions depend heavily on interatomic spacing, magnetocrystalline anisotropy constants are a strong function of temperature (see [](#fig:K-T)). In magnetite, $K_1$ changes sign at a temperature known as the *isotropic point*. Given that $K_1=0$ at the isotropic point, there is minimal magnetocrystalline anisotropy. The large energy barriers that act to keep the magnetizations parallel to the body diagonal are gone and the spins can wander more freely through the crystal. Below the isotropic point, the energy barriers rise again, but with a different topology in which the crystal axes are the energy minima and the body diagonals are the high energy states.
+Because electronic interactions depend heavily on interatomic spacing, magnetocrystalline anisotropy constants are a strong function of temperature. The effect of this is dramatic in magnetite with $K_1$ progressively changing until it becomes zero at 130 K — this temperature is known as the *isotropic point* ([](#fig:K-T)). 
 
-At room temperature, electrons hop freely between the ferrous and ferric ions on the B lattice sites, so there is no order. Below about 120 K, there is an ordered arrangement of the ferrous and ferric ions. Because of the difference in size between the two, the lattice of the unit cell becomes slightly distorted and becomes monoclinic instead of cubic. This transition occurs at what is known as the *Verwey temperature* ($T_v$). Although the isotropic point (measured magnetically) and the Verwey transition (measured electrically) are separated in temperature by about 15 K, they are related phenomena (the ordering and electron hopping cause the change in $K_1$).
-
-The change in magnetocrystalline anisotropy at low temperature can have a profound effect on the magnetization. In [](#fig:verwey) we show a typical (de)magnetization curve for magnetite taken from the "Rock magnetic bestiary" web site maintained at the Institute for Rock Magnetism: <http://irm.umn.edu/bestiary>. There is a loss of magnetization at around 100 K. This loss is the basis for *low-temperature demagnetization* (LTD). However, some portion of the magnetization always remains after low temperature cycling (called the *low temperature memory*), so the general utility of LTD may be limited.
+:::{note} Temperature Scales in Paleomagnetism
+We often use the Kelvin scale when discussing magnetic properties because it is the SI standard for thermodynamic temperature. The conversion from Celsius is straightforward: K = °C + 273.15. Room temperature is commonly approximated as **300 K** (27°C; 80°F). While this is slightly warmer than typical indoor temperatures, the round number simplifies calculations and discussions. Magnetite's isotropic point of **130 K** corresponds to approximately -143°C, very chilly 🥶!
+:::
 
 :::{figure} ../figures/chapter4/K-T.png
 :name: fig:K-T
-:width: 80%
+:width: 60%
 
 Variation of $K_1$ and $K_2$ of magnetite as a function of temperature. Solid lines are data from {cite}`syono1963`. Dashed lines are data from {cite}`fletcher1974`.
 :::
 
+Given that $K_1=0$ at the isotropic point, there is minimal magnetocrystalline anisotropy at 130 K. The large energy barriers that act to keep the magnetizations parallel to the body diagonal are gone and the spins can wander more freely through the crystal. **The interactive visualization below** shows the energy landscape at 130 K, where the anisotropy energy is nearly uniform in all directions.
+
+```{code-cell} python
+:tags: [remove-input]
+
+# --- Generate visualization at isotropic point (130 K) ---
+fig_130K, _ = plot_magnetocrystalline_anisotropy(
+    K1=0.0,      # At isotropic point
+    K2=-0.44e4,  # J/m³ (approximately same as 300 K)
+    radius_nm=25,
+    temperature=130,
+    cbar_max=energy_max  # Use same colorbar scale as 300 K for comparison
+)
+fig_130K.show()
+```
+
+The change in magnetocrystalline anisotropy at low temperature can have a profound effect on the magnetization. As temperature decreases from room temperature, $K_1$ passes through zero at about 130 K — the *isotropic point* ($T_i$). Below the isotropic point, the energy barriers rise again, but with a different topology: the cube axes become the energy minima and the body diagonals become the high energy directions — the reverse of the room-temperature situation. At still lower temperature (~120 K), the crystal structure of magnetite distorts from cubic to monoclinic at the *Verwey temperature* ($T_v$). This distortion is driven by charge ordering: above $T_v$, the extra electron shared between Fe²⁺ and Fe³⁺ on the octahedral lattice sites hops rapidly, making the sites equivalent; below $T_v$, the charges localize into an ordered arrangement of Fe²⁺ and Fe³⁺, and the size difference between these ions distorts the lattice.
+
+The combined effect of these transitions on magnetization is illustrated in [](#fig:verwey), which shows the remanence of a sample magnetized to saturation at room temperature, then cooled to low temperature and rewarmed. On cooling, the magnetization progressively decreases through the isotropic point — where the anisotropy momentarily drops to zero and the easy axes switch — and drops further through the Verwey transition where the crystal structure changes. On rewarming, only partial recovery occurs. This is the basis for *low-temperature demagnetization* (LTD). The remanence loss is predominantly a multidomain effect: loosely pinned domain walls reorganize as the anisotropy changes and do not all return to their original positions on rewarming. The portion that survives — the *low-temperature memory* — includes the remanence of single-domain grains (which are largely unaffected by LTD) as well as remanence held by strongly pinned domain walls in larger grains.
+
 :::{figure} ../figures/chapter4/verwey.png
 :name: fig:verwey
-:width: 80%
+:width: 50%
 
-Magnetization curve for magnetite as a function of temperature. The specimen was placed in a very large field, cooled to near absolute zero, then warmed up. The magnetization was measured as it warmed. When it goes through the Verwey transition (~110 K), a fraction of the magnetization is lost. Data downloaded from "w5000" in the [Rock magnetic Bestiary](http://www.irm.umn.edu/bestiary) collection at the Institute for Rock Magnetism.
+The magnetization of magnetite-bearing basaltic dike specimen that was given a saturating isothermal remanent magnetization at room temperature (RTSIRM) before being cooled to 10 K and warmed back up to 300 K. On cooling, the magnetization decreases through the isotropic point (~130 K) and drops sharply at the Verwey transition (~120 K). On rewarming, only partial recovery occurs — the difference is the multidomain remanence lost during LTD. Data from {cite}`swanson-hysell2021` available in the MagIC database https://earthref.org/MagIC/20213.
 :::
+
+### Uniaxial magnetocrystalline anisotropy
 
 Cubic symmetry (as in the case of magnetite) is just one of many types of crystal symmetries. One other very important form is the uniaxial symmetry which can arise from crystal shape or structure. The energy density for uniaxial magnetic anisotropy is:
 
@@ -228,7 +283,7 @@ $$ (eq:Ku)
 
 Here the magnetocrystalline constants have been designated $K_{u1}, K_{u2}$ to distinguish them from $K_1, K_2$ used before. In this equation, when the largest *uniaxial anisotropy constant*, $K_{u1}$, is negative, the magnetization is constrained to lie perpendicular to the axis of symmetry. When $K_{u1}>0$, the magnetization lies parallel to it.
 
-An example of a mineral dominated by uniaxial symmetry is hematite, a mineral with hexagonal crystal symmetry. The magnetization of hematite is quite complicated, as we shall learn in Chapters 6 and 7, but one source of magnetization is spin-canting (see Chapter 3) within the basal plane of the hexagonal crystal. Within the basal plane, the anisotropy constant is very low and the magnetization wanders fairly freely. However, the anisotropy energy away from the basal plane is strong, so the magnetization is constrained to lie within the basal plane.
+An example of a mineral dominated by uniaxial symmetry is hematite, a mineral with hexagonal crystal symmetry. The magnetization of hematite is complicated, as we shall learn in Chapters 6 and 7, but one source of magnetization is spin-canting (see Chapter 3) within the basal plane of the hexagonal crystal. Within the basal plane, the anisotropy constant is very low and the magnetization wanders fairly freely. However, the anisotropy energy away from the basal plane is strong, so the magnetization is constrained to lie within the basal plane.
 
 ### Magnetostriction — stress anisotropy
 
