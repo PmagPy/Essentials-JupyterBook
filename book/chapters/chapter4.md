@@ -64,7 +64,15 @@ Variation of $K_1$ and $K_2$ of magnetite as a function of temperature. Solid li
 ### Magnetocrystalline anisotropy energy
 (sect:K1)=
 
-For equant single-domain particles or particles with low saturation magnetizations, the crystal structure dominates the magnetic energy. In such cases, the so-called *easy directions* of magnetization are crystallographic directions along which magnetocrystalline energy is at a minimum. The energy surface shown in [](#fig:magnetite)c represents the magnetocrystalline anisotropy energy density, $\epsilon_a$ for magnetite at room temperature. The highest energy bulges are in directions perpendicular to the cubic faces ([001, 010, 100]). The lowest energy dimples are along the body diagonals ([111]). The interactive visualization below allows you to explore this energy surface in 3D — rotate it to see the dimples along the easy [111] directions (blue dashed axes) and the bulges along the hard [100] directions (red axes). Toggle to "Crystal Habit" to see the cubic crystal shape for reference.
+For equant single-domain particles or particles with low saturation magnetizations, the crystal structure dominates the magnetic energy. The so-called *easy directions* of magnetization are crystallographic directions along which magnetocrystalline energy is at a minimum.
+
+For a cubic crystal like magnetite at room temperature, the magnetocrystalline anisotropy energy density is expressed in terms of the direction cosines $\alpha_1, \alpha_2, \alpha_3$ — the cosines of the angles between the magnetization direction and the crystallographic axes [100], [010], [001] (see Appendix for review of direction cosines):
+
+$$
+\epsilon_a = K_1(\alpha_1^2 \alpha_2^2 + \alpha_2^2\alpha^2_3 + \alpha_3^2\alpha_1^2) + K_2\alpha_1^2\alpha_2^2\alpha_3^2,
+$$ (eq:xtalline)
+
+where $K_1$ and $K_2$ are empirically determined *magnetocrystalline anisotropy constants* with units of Jm$^{-3}$ (so $\epsilon_a$ is an energy density). Magnetite (cubic above 120 K) has $K_1$ = −1.35 × 10$^4$ Jm$^{-3}$ at room temperature. The result of this equation with these constants is that the easy directions are along the [111] body diagonals and the hard directions are along [100]. The **interactive visualization below** lets you explore this energy surface in 3D: the bulges along the hard [100] directions (red axes) and the dimples along the easy [111] directions (blue dashed axes) are a direct result of of [](#eq:xtalline). The energy is minimized along the [111] body diagonals with energy barriers between them due to the hard directions. Toggle between "Energy Landscape" and "Crystal Habit" to compare the energy surface with the physical cubic crystal geometry.
 
 ```{code-cell} python
 :tags: [remove-input]
@@ -135,7 +143,7 @@ fig.add_trace(go.Surface(
     surfacecolor=E_norm,
     cmin=0,
     colorscale='magma_r',
-    colorbar=dict(title='Energy Barrier (J)', len=0.5, thickness=15, x=0.9, exponentformat='e'),
+    colorbar=dict(title='Energy<br>Barrier (J)', len=0.5, thickness=15, x=0.9, exponentformat='e'),
     opacity=1.0,
     hoverinfo='none',
     contours_x=dict(highlight=False), contours_y=dict(highlight=False), contours_z=dict(highlight=False),
@@ -173,8 +181,8 @@ vis_energy = [True, False] + [True] * (n_traces - 2)
 vis_cube   = [False, True] + [True] * (n_traces - 2)
 
 fig.update_layout(
-    width=800, height=700,
-    margin=dict(r=10, b=10, l=10, t=50),
+    width=700, height=650,
+    margin=dict(r=120, b=10, l=10, t=50),
     title=dict(text=f'Magnetite Anisotropy Map (grain radius = {radius_nm} nm)', x=0.5, y=0.95),
     hovermode=False,
     updatemenus=[dict(
@@ -191,15 +199,6 @@ fig.update_layout(
 )
 fig.show()
 ```
-
-Magnetite (above about 120 K) has a cubic structure, and the magnetocrystalline anisotropy energy is expressed in terms of the direction cosines $\alpha_1, \alpha_2, \alpha_3$. These direction cosines are the angles between a given direction and the crystallographic axes [100, 010, 001] (see Appendix for review of direction cosines). For such a crystal the magnetocrystalline anisotropy energy density is given by:
-
-$$
-\epsilon_a = K_1(\alpha_1^2 \alpha_2^2 + \alpha_2^2\alpha^2_3 + \alpha_3^2\alpha_1^2) + K_2\alpha_1^2\alpha_2^2\alpha_3^2,
-$$ (eq:xtalline)
-
-where $K_1$ and $K_2$ are empirically determined *magnetocrystalline anisotropy constants*. In the case of (room temperature) magnetite, $K_1$ is −1.35 × 10$^4$ Jm$^{-3}$. Note that the units of the $K_i$ are in Jm$^{-3}$, so $\epsilon_a$ is in units of energy per unit volume (an energy density).
-If you work through the magnetocrystalline equation, you will find $\epsilon_a$ is zero parallel to the [100] axis, $K_1/4$ parallel to the [110] and $K_1/3+K_2/27$ parallel to the [111] direction (the body diagonal). So when $K_1$ is negative, the [111] direction (body diagonal) has the minimum energy. This is the reason that there is a dimple in the energy surface along that direction in [](#fig:magnetite)c.
 
 As a consequence of the magnetocrystalline anisotropy energy, once the magnetization is aligned with an easy direction, work must be done to change it. In order to switch from one easy axis to another (e.g. from one direction along the body diagonal to the opposite), the magnetization has to traverse a path over an energy barrier which is the difference between the energy in the easy direction and that in the intervening hard direction. In the case of magnetite at room temperature, we have this energy barrier as $\epsilon$[111]−$\epsilon$[110] or to first order $K_1/3 - K_1/4 = K_1/12$.
 
