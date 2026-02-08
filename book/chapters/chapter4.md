@@ -231,7 +231,7 @@ fig_300K, energy_max = plot_magnetocrystalline_anisotropy(
 fig_300K.show()
 ```
 
-As a consequence of the magnetocrystalline anisotropy energy, once the magnetization is aligned with an easy direction, work must be done to change it. In order to switch from one easy axis to another (e.g. from one direction along the body diagonal to the opposite for cubic magnetite), the magnetization has to traverse a path over an energy barrier which is the difference between the energy in the easy direction and that in the intervening hard direction. In the case of magnetite at room temperature, we have this energy barrier as $\epsilon$[111]−$\epsilon$[110] or to first order $K_1/3 - K_1/4 = K_1/12$.
+As a consequence of the magnetocrystalline anisotropy energy, once the magnetization is aligned with an easy direction, work must be done to change it. In order to switch from one easy axis to another (e.g. from one direction along the body diagonal to the opposite for cubic magnetite), the magnetization has to traverse a path over an energy barrier which is the difference between the energy in the easy direction and that in the intervening hard direction. In the case of magnetite at room temperature, this energy barrier is $\epsilon_{[110]}-\epsilon_{[111]} = K_1/4 - K_1/3 = -K_1/12 = |K_1|/12$ (for $K_1<0$)
 
 #### Temperature dependence of anisotropy
 
