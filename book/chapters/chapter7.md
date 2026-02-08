@@ -1,6 +1,8 @@
 ---
-title: How Rocks Get and Stay Magnetized
+title: "Chapter 7: How Rocks Get and Stay Magnetized"
 label: chap:remanence
+numbering:
+  enumerator: 7.%s
 ---
 
 **Background:** read {cite}`widom2002`, Chapter 1.
@@ -80,8 +82,8 @@ It is instructive to plot distributions of grains on the $v-K$ diagrams as shown
 
 We will now consider various mechanisms by which rocks can become magnetized. The first mechanism, viscous remanent magnetization, is simply a consequence of [Equation %s](#eq:tau) in Chapter 4 and [](#fig:neel)a. Later, we will explore the role of temperature and grain volume in blocking of thermal and chemical remanences. We will finish this chapter with other remanences which are either rare or non-existent in nature but are nonetheless useful in paleomagnetism.
 
-## Viscous remanent magnetization
 (sect:vrm)=
+## Viscous remanent magnetization
 
 Placing a magnetic particle at an angle $\theta$ to an external magnetic field results in a magnetostatic energy $E_m$ of $-\m \cdot \B = -mB\cos \theta$, which is at a minimum when the moment is aligned with the field (see Chapters 1 and 5). Given an arbitrary $\theta$, the difference in $E_m$ between the two easy directions is given by:
 
@@ -134,8 +136,8 @@ VRM is a function of time and the relationship between the remanence vector and 
 Variation of relaxation time versus temperature for magnetite ellipsoids of different widths (all with length to width ratios of 1.3:1).
 :::
 
-## Thermal remanent magnetization
 (sect:trm)=
+## Thermal remanent magnetization
 
 The $v-K$ diagram shown in [](#fig:neel-trm) illustrates how TRM can be blocked. In [](#fig:neel-trm)a we have a population of magnetic grains with varying volumes and anisotropies. Raising temperature works in two ways on these grains. First, the relaxation time depends on thermal energy, so higher temperatures will result in lower blocking temperatures. Second, anisotropy energy depends on the square of magnetization (Chapter 4). Elevated temperature reduces magnetization, so the anisotropy energy will be depressed relative to lower temperatures. In the diagram, this means that not only do the relaxation time curves move with changing temperature, but the anisotropy energies of the population of grains change as well. This means that a population of grains that are superparamagnetic at high temperature ([](#fig:neel-trm)a) could be "blocked" as cooling causes the grains to "walk" through the superparamagnetic threshold into a region of magnetic stability ([](#fig:neel-trm)b).
 
@@ -234,8 +236,8 @@ Rapidly cooled volcanic rocks generally have grain-size distributions with a maj
 Migration of the blocking energy of grains by increasing volume. The relaxation times of a population of magnetic grains from a) short relaxation times when the particles are small to b) long relaxation times when the grains have grown through their blocking volumes.
 :::
 
-## Chemical remanent magnetization
 (sect:crm)=
+## Chemical remanent magnetization
 
 [Equation %s](#eq:tau3) shows that blocking energy depends on volume. This means that relaxation time could change from very short to very long by increasing the size of the grain (see [](#fig:neel-crm)). Chemical changes that form ferromagnetic minerals below their blocking temperatures which then grow in a magnetizing field result in acquisition of a *chemical remanent magnetization* or CRM. Chemical reactions involving ferromagnetic minerals include a) alteration of a pre-existing mineral (possibly also ferromagnetic) to a ferromagnetic mineral—*alteration chemical remanence* (aCRM)—or b) precipitation of a ferromagnetic mineral from solution—*grain-growth* CRM (gCRM).
 
@@ -271,8 +273,8 @@ Alteration CRM can also be much more complicated than simple gCRM in a single fi
 Depositional remanence versus applied field for redeposited glacial varves. $B_o$ was the field in the lab. [Data from {cite}`johnson1948`; figure from {cite}`tauxe1993`.]
 :::
 
-## Detrital remanent magnetization
 (sect:drm)=
+## Detrital remanent magnetization
 
 Sediments become magnetized in quite a different manner from igneous bodies. Detrital grains are already magnetized, unlike igneous rocks which crystallize above their Curie temperatures. Magnetic particles that can rotate freely will turn into the direction of the applied field just as compass needles do. The net magnetization of such particles, if locked in place can result in a *depositional remanent magnetization* (DRM). Sediments are also subject to post-depositional modification through the action of organisms, compaction, diagenesis and the acquisition of VRM all of which will affect the magnetization. This magnetization is usually called *post-depositional remanent magnetization* or pDRM. In the following, we will consider the syn-depositional processes of physical alignment of magnetic particles in viscous fluids (giving rise to the primary DRM).
 
@@ -357,8 +359,8 @@ BRMs are fixed when the particles are no longer free to move. The fixing of this
 a) Results of numerical experiments of the flocculation model using the parameters: $l=0.2$ m and the viscosity of water. $M/M_o$ is the DRM expressed as a fraction of saturation, holding $\bar m$ constant and varying $B$. For a given field strength, particles are either at saturation or randomly oriented, except for within a very narrow size range. b) Same as a) but plotted versus applied field ($B$). [Figures from {cite}`tauxe2006`.]
 :::
 
-#### Flocculating environments
 (sect:flocs)=
+#### Flocculating environments
 
 [Equation %s](#eq:nagata) predicts that a magnetic moment $\bf m$ making an initial angle $\theta_o$ with the applied field $\bf B$ will make an angle $\theta$ with the field after time $t$. From this, we can make a simple numerical model to predict the DRM for an initially randomly oriented assemblage of magnetic moments, after time $t$ [or the equivalent settling length $l$ using some settling law (e.g., {cite}`gibbs1985`; see {cite}`katari2001`)]. In [](#fig:flocs)a and b, we show the DRM curves predicted by {cite}`tauxe2006` for simple flocs with a single magnetite grain in each as a function of magnetic field and radius.
 
@@ -403,8 +405,8 @@ Interestingly, many natural sediments (e.g. deep sea or slowly deposited lake se
 Outcrop photo showing sampling locations and charred stump of tree that was hit by lightning in foreground. b) Impulse field required to reproduce the NRM intensity as an IRM, plotted as a function of distance from the tree shown in a). Dashed line is best-fit to the data assuming that the tree at the center of the photo was the site of a remagnetizing line current (lightning bolt) of 300,000 Amps. [Figures from {cite}`tauxe2003`.]
 :::
 
-## Isothermal remanent magnetization
 (sect:irm)=
+## Isothermal remanent magnetization
 
 Examination of [Equations %s](#eq:tau2) and [%s](#eq:tau3) reveals an interesting dependence of relaxation time on the coercivity of magnetic particles. We can coax the magnetization of otherwise firmly entrenched particles to follow an applied field, if that field is larger than the coercivity. Exposing a particle to a large magnetic field, will allow magnetic particles whose coercivity is below that field to flip their magnetic moments to a direction at a more favorable angle to the applied field, resulting in a gain in magnetic remanence in that direction. This type of magnetic remanence is called an *isothermal remanent magnetization* or IRM (see Chapters 4 and 5).
 
@@ -473,8 +475,8 @@ A rock collected from a geological formation has a magnetic remanence which may 
 Acquisition of ARM in alternating magnetic field. A total ARM is acquired if the DC field is switched on throughout the experiment (red dashed line) and a partial ARM (pARM) is acquired if the field is switched on only for part of the experiment (blue dash-dot line).
 :::
 
-## Artificial remanences
 (sect:arm)=
+## Artificial remanences
 
 Another way to magnetize rocks (although not in nature) is to subject a sample to an alternating field (see [](#fig:arm)). Particles whose coercivity is lower than the peak oscillating field will flip and flop along with the field. These entrained moments will become stuck as the peak field gradually decays below the coercivities of individual grains. Assuming that there is a range of coercivities in the sample, the low stability grains will be stuck half along one direction of the alternating field and half along the other direction; the net contribution to the remanence will be zero. This is the principle of so-called *alternating field (AF) demagnetization* which we will discuss in later chapters.
 

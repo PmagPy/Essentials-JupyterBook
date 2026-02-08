@@ -1,6 +1,8 @@
 ---
-title: Magnetic Anisotropy and Domains
+title: "Chapter 4: Magnetic Anisotropy and Domains"
 label: chap:anisotropy
+numbering:
+  enumerator: 4.%s
 kernelspec:
   name: python3
   display_name: Python 3
@@ -24,8 +26,8 @@ The simplest permanently magnetized particles are uniformly magnetized and are c
 
 ## The magnetic energy of particles
 
-### Exchange energy
 (sect:exchange)=
+### Exchange energy
 
 We learned in Chapter 3 that some crystalline states are capable of ferromagnetic behavior because of quantum mechanical considerations. Electrons in neighboring orbitals in certain crystals "know" about each other's spin states. In order to avoid sharing the same orbital with the same spin (hence having the same quantum numbers — not allowed by Pauli's exclusion principle), electronic spins in such crystals act in a coordinated fashion. They will be either aligned parallel or antiparallel according to the details of the interaction. This *exchange energy density* ($\epsilon_e$) is the source of spontaneous magnetization and is given for a pair of spins by:
 
@@ -524,8 +526,8 @@ $$
 
 so $\bar{\lambda}$ for magnetite is about 38 × 10$^{-6}$. Stress has units of Nm$^{-2}$ which have the same fundamental units as Jm$^{-3}$, so $\bar{\lambda}$ is dimensionless. Note the similarity in form of magnetostriction and uniaxial anisotropy giving rise to a single "easy axis" within the crystal.
 
-### Magnetostatic (shape) anisotropy
 (sect:shape)=
+### Magnetostatic (shape) anisotropy
 
 There is one more important source of magnetic anisotropy: shape. To understand how crystal shape controls magnetic energy, we need to understand the concept of the internal *demagnetizing field* of a magnetized body. In [](#fig:demagfield)a we show the magnetic vectors within a ferromagnetic crystal. These produce a magnetic field external to the crystal that is proportional to the magnetic moment (see Chapter 1). This external field is identical to a field produced by a set of *free poles* distributed over the surface of the crystal ([](#fig:demagfield)b). The surface poles do not just produce the external field, they also produce an internal field shown in [](#fig:demagfield)c. The internal field is known as the *demagnetizing field* ($H_d$). $H_d$ is proportional to the magnetization of the body and is sensitive to the shape. For a simple sphere in [](#fig:demagfield)a and applied field condition shown in [](#fig:demagfield)d, the demagnetizing field is given by:
 
@@ -592,8 +594,8 @@ Note that the demagnetizing energy in [Equation %s](#eq:ed) has a uniaxial form,
 
 For a prolate ellipsoid $N_c=N_b$ and choosing for example $a/c = 1.5$ we find that $N_a-N_c \approx 0.16$. The magnetization of magnetite is 480 kAm$^{-1}$, so $K_u \simeq$ 2.7 × 10$^4$ Jm$^{-3}$. This is somewhat larger than the absolute value of $K_1$ for magnetocrystalline anisotropy in magnetite ($K_1$= −1.35 × 10$^{4}$ Jm$^{-3}$), so the magnetization for even slightly elongate grains will be dominated by uniaxial anisotropy controlled by shape. Minerals with low saturation magnetizations (like hematite) will not be prone to shape dominated magnetic anisotropy, however.
 
-### Magnetic energy and magnetic stability
 (sect:coercivity)=
+### Magnetic energy and magnetic stability
 
 Paleomagnetists worry about how long a magnetization can remain fixed within a particle and we will begin to discuss this issue later in the chapter. It is worth pointing out here that any discussion of magnetic stability will involve magnetic anisotropy energy because this controls the energy required to change a magnetic moment from one easy axis to another. One way to accomplish this change is to apply a magnetic field sufficiently large that its magnetic energy exceeds the anisotropy energy. The magnetic field capable of flipping the magnetization of an individual uniformly magnetized particle (at saturation, or $M_s$) over the magnetic anisotropy energy barrier is the *microscopic coercivity* $H_k$. For uniaxial anisotropy ($K=K_u$) and for cubic magnetocrystalline anisotropy ($K=K_1$), microscopic coercivity is given by:
 
@@ -611,14 +613,14 @@ So far we have been discussing hypothetical magnetic particles that are uniforml
 :name: fig:nonuniform
 :width: 80%
 
-Micromagnetic simulations of remanent domain states in magnetite computed using MERRILL ({cite}`williams2024`). The elongate particles have an aspect ratio (c/a) of 2.25 while the equant particles are equidimensional. The numbers above the grains correspond to the equivalent spherical volume diameters (which is effectively the diameter for the equant ones; and a way to succinctly summarize the grain length for the elongate ones). The arrows show local magnetization direction while the colors indicate alignment with magnetocrystalline easy axes. For the elongate grains, the 90 nm grain has single-domain behavoir 
+Micromagnetic simulations of remanent domain states in magnetite computed using MERRILL {cite:p}`williams2024`. The elongate particles have an aspect ratio (c/a) of 2.25 while the equant particles are equidimensional. The numbers above the grains correspond to the equivalent spherical volume diameters (which is effectively the diameter for the equant ones; and a way to succinctly summarize the grain length for the elongate ones). The arrows show local magnetization direction while the colors indicate alignment with magnetocrystalline easy axes. For the elongate grains, the 90 nm grain has single-domain behavoir 
 
-The 80 nm equant grain is in a single-domain state, while the For the equant grains, we see dominantly single-domain behavoir in the  flower states emerge above ~60 nm and vortex states above ~80 nm ({cite}`nagy2017`; {cite}`williams2024`)
+The 80 nm equant grain is in a single-domain state, while the For the equant grains, we see dominantly single-domain behavoir in the  flower states emerge above ~60 nm and vortex states above ~80 nm {cite:p}`nagy2017; williams2024`
 
 (a,d) Single domain. (e) Flower/vortex transition. (b,c,f) Single-vortex states. . ; elongation shifts both thresholds to larger sizes.pro [From {cite}`williams2024`.] 
 :::
 
-There are multiple strategies for magnetic particles to reduce self energy. Numerical models (called *micromagnetic models*) can find internal magnetization configurations that minimize the energies discussed in the preceding sections. Modern micromagnetic codes such as MERRILL ({cite}`oconbhui2018`) allow us to peer into the state of magnetization inside magnetic particles. [](#fig:nonuniform) shows the progression of remanent states as particle size increases, computed using MERRILL ({cite}`williams2024`). In the smallest grains, the exchange energy overwhelms the self energy and the magnetization is nearly uniform — the SD state. As equant grains grow beyond about 60 nm, the self energy becomes large enough to perturb the magnetization near particle surfaces, causing spins at the edges to splay outward while the interior remains broadly aligned. This is the *flower state* ([](#fig:nonuniform)e), so named because the fanning spins at the surface resemble the opening of a flower. By about 80 nm, the self energy is large enough that the magnetization curls into a closed loop, forming a *vortex state* ([](#fig:nonuniform)b,c,f) with a narrow core of spins ({cite}`nagy2017`). The net remanent moment of a vortex particle is carried almost entirely by this core, since the curling spins surrounding it largely cancel. In elongated grains, shape anisotropy aligns both the vortex core and the overall remanence along the long axis of the particle ([](#fig:nonuniform)a–c). The curling magnetization dramatically reduces the external field of the particle (and hence its self energy), while the exchange energy cost remains modest because neighboring spins change direction only gradually. In the smallest particles, the spins would have to curl too tightly and the exchange energy cost keeps them uniformly magnetized in the SD state. Particles with vortex cores share many properties of SD grains — in particular, they can carry extremely stable magnetic remanence with relaxation times exceeding the age of the Solar System ({cite}`nagy2017`) — which has led to them being termed *pseudo-single domain* (PSD) particles.
+There are multiple strategies for magnetic particles to reduce self energy. Numerical models (called *micromagnetic models*) can find internal magnetization configurations that minimize the energies discussed in the preceding sections. Modern micromagnetic codes such as MERRILL {cite:p}`oconbhui2018` allow us to peer into the state of magnetization inside magnetic particles. [](#fig:nonuniform) shows the progression of remanent states as particle size increases, computed using MERRILL {cite:p}`williams2024`. In the smallest grains, the exchange energy overwhelms the self energy and the magnetization is nearly uniform — the SD state. As equant grains grow beyond about 60 nm, the self energy becomes large enough to perturb the magnetization near particle surfaces, causing spins at the edges to splay outward while the interior remains broadly aligned. This is the *flower state* ([](#fig:nonuniform)e), so named because the fanning spins at the surface resemble the opening of a flower. By about 80 nm, the self energy is large enough that the magnetization curls into a closed loop, forming a *vortex state* ([](#fig:nonuniform)b,c,f) with a narrow core of spins {cite:p}`nagy2017`. The net remanent moment of a vortex particle is carried almost entirely by this core, since the curling spins surrounding it largely cancel. In elongated grains, shape anisotropy aligns both the vortex core and the overall remanence along the long axis of the particle ([](#fig:nonuniform)a–c). The curling magnetization dramatically reduces the external field of the particle (and hence its self energy), while the exchange energy cost remains modest because neighboring spins change direction only gradually. In the smallest particles, the spins would have to curl too tightly and the exchange energy cost keeps them uniformly magnetized in the SD state. Particles with vortex cores share many properties of SD grains — in particular, they can carry extremely stable magnetic remanence with relaxation times exceeding the age of the Solar System {cite:p}`nagy2017` — which has led to them being termed *pseudo-single domain* (PSD) particles.
 
 As particles grow larger (>~200 nm), they break into multiple magnetic domains, separated by narrow zones of rapidly changing spin directions called *domain walls*. Magnetic domains can take many forms. We illustrate a few in [](#fig:domains). The uniform case (single domain) is shown in [](#fig:domains)a. The external field is very large because the free poles are far apart (at opposite ends of the particle). When the particle organizes itself into two domains ([](#fig:domains)b), the external field is reduced by about a factor of two. In the case of four lamellar domains ([](#fig:domains)c), the external field is quite small. The introduction of *closure domains* as in [](#fig:domains)d reduces the external field to nothing.
 
@@ -635,7 +637,7 @@ $$
 \delta_w = \pi \left(\frac{A}{K}\right)^{1/2}, \quad \epsilon_w = 2\pi (AK)^{1/2},
 $$ (eq:wall)
 
-where $A$ is the exchange constant (see [](#sect:exchange)) and $K$ is the magnetic anisotropy constant (e.g., $K_u$ or $K_1$). Note that $\epsilon_w$ is the energy density per unit wall area, not per volume. Plugging in values for magnetite given previously we get $\delta_w$ = 90 nm and $\epsilon_w$ = 3×10$^{-3}$ Jm$^{-2}$.
+where $A$ is the exchange constant (see {ref}`sect:exchange`) and $K$ is the magnetic anisotropy constant (e.g., $K_u$ or $K_1$). Note that $\epsilon_w$ is the energy density per unit wall area, not per volume. Plugging in values for magnetite given previously we get $\delta_w$ = 90 nm and $\epsilon_w$ = 3×10$^{-3}$ Jm$^{-2}$.
 
 :::{figure} ../figures/chapter4/wall.png
 :name: fig:wall
@@ -666,8 +668,8 @@ There are by now other ways of imaging magnetic domains. We will not review them
 
 Another common method for imaging magnetic domains employs a technique known as *magnetic force microscopy*. Magnetic force microscopy (MFM) uses a scanning probe microscope that maps out the vertical component of the magnetic fields produced by a highly polished section. The measurements are made with a cantilevered magnetic tip that responds to the magnetic field of the sample. In practice, the measurements are made in two passes. The first establishes the topography of the sample ([](#fig:domain-images)c). Then in the second pass, the tip is raised slightly above the surface and by subtracting the "topographic only" signal the attraction of the magnetic surface can be mapped ([](#fig:domain-images)d). [](#fig:domain-images)e shows an interpretation of the magnetic directions of different magnetic domains.
 
-## Thermal energy
 (sect:tau)=
+## Thermal energy
 
 We have gone some way toward answering the questions posed at the beginning of the chapter. We see now that anisotropy energy, with contributions from crystal structure, shape and stress, inhibits changes in the magnetic direction thereby offering a possible mechanism whereby a given magnetization could be preserved for posterity. We also asked the question of what allows the magnetization to come into equilibrium with the applied magnetic field in the first place; this question requires a little more work to answer. The key to this question is to find some mechanism which allows the moments to "jump over" magnetic anisotropy energy barriers. One such mechanism is thermal energy $E_T$, which was given in Chapter 3 as:
 

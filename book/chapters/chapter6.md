@@ -1,6 +1,8 @@
 ---
-title: Magnetic Mineralogy
+title: "Chapter 6: Magnetic Mineralogy"
 label: chap:mineralogy
+numbering:
+  enumerator: 6.%s
 ---
 
 **Background:** {cite}`evans2003`, Chapter 3.
@@ -179,7 +181,7 @@ Photomicrographs of bacterial magnetites produced by magnetotactic bacteria. a) 
 
 Igneous (and metamorphic) rocks are the ultimate source for the components of sedimentary rocks, but biological and low-temperature diagenetic agents work to modify these components and have a significant effect on magnetic mineralogy in sediments. As a result there is a virtual rainbow of magnetic mineralogies found in sediments. (Titano)magnetite coming into the sedimentary environment from an igneous source may experience a change in pH and redox conditions that make it no longer the stable phase, hence it may alter. Also, although the geochemistry of seawater is generally oxidizing with respect to the stability field of magnetite, pronounced changes in the redox state of sediments often occur with increasing depth as a function of the breakdown of organic carbon. Such changes may result in locally strongly reducing environments where magnetite may be dissolved and authigenic sulfides produced. Indeed, changes down sediment cores in the ferrimagnetic mineral content and porewater geochemistry suggest that this process is active in some (most?) marine sedimentary sequences. For example, dissolution of magnetite and/or production of non-magnetic sulfides may be responsible for the oft-seen decrease in various bulk magnetic parameters (e.g., magnetic susceptibility, IRM, ARM, etc.) with depth.
 
-Some of the more spectacular magnetic minerals found in sediments are biogenic magnetites produced by magnetotactic bacteria (see recent review by {cite}`kopp2008` and [](#fig:bacteria)). The sizes and shapes of bacterial magnetite, when plotted on the Evans diagram from Chapter 4, suggest that magnetotactic bacteria form magnetite in the single domain grain size range—otherwise extremely rare in nature. It appears that bacterial magnetites are common in sediments, but their role in contributing to the natural remanence is still poorly understood.
+Some of the more spectacular magnetic minerals found in sediments are biogenic magnetites produced by magnetotactic bacteria (see review by {cite}`kopp2008` and [](#fig:bacteria)). The sizes and shapes of bacterial magnetite, when plotted on the Evans diagram from Chapter 4, suggest that magnetotactic bacteria form magnetite in the single domain grain size range—otherwise extremely rare in nature. It appears that bacterial magnetites are common in sediments, but their role in contributing to the natural remanence is still poorly understood.
 
 ## Physical properties of magnetic minerals
 (tab:rockpars)=

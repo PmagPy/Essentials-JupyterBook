@@ -1,14 +1,19 @@
 ---
-title: Magnetic Hysteresis
+title: "Chapter 5: Magnetic Hysteresis"
 label: chap:hysteresis
+numbering:
+  enumerator: 5.%s
+kernelspec:
+  name: python3
+  display_name: Python 3
 ---
 
 In [Chapter 4](#chap:anisotropy) we discussed the energies that control the state of magnetization within ferromagnetic particles. Particles will tend to find a configuration of internal magnetization directions that minimizes the energies (although meta-stable states with *local energy minima* or LEMs are a possibility). The longevity of a particular magnetization state has to do with the depth of the energy well that the magnetization is in and the energy available for hopping over barriers.
 
 The ease with which particles can be coerced into changing their magnetizations in response to external fields can tell us much about the overall stability of the particles and perhaps also something about their ability to carry a magnetic remanence over the long haul. The concepts of long term stability, incorporated into the concept of relaxation time and the response of the magnetic particles to external magnetic fields are therefore linked through the anisotropy energy constant $K$ (see [Chapter 4](#chap:anisotropy)) which dictates the magnetic response of particles to changes in the external field. This chapter will focus on the response of magnetic particles to changing external magnetic fields.
 
-## The "flipping" field
 (sect:flipping)=
+## The "flipping" field
 
 Magnetic remanence is the magnetization in the absence of an external magnetic field. If we imagine a particle with a single "easy" axis — a so-called "uniaxial" particle with magnetic anisotropy constant $K_u$, the magnetic energy density (energy per unit volume) of a particle whose magnetic moment makes an angle $\theta$ to the easy axis direction ([](#fig:mB)a) can be expressed as:
 
@@ -18,11 +23,11 @@ $$
 
 As the moment swings around with angle $\theta$ to the easy axis, the anisotropy energy density $\epsilon_a$ will change as sketched in [](#fig:mB)b. The energy minima are when $\theta$ is aligned parallel to the easy axis (an axis means either direction along the axis, so we pick one direction as being 0 and the other as 180°). In the absence of a magnetic field, the moment will lie along one of these two directions. [In reality, thermal energy will perturb this direction somewhat, depending on the balance of anisotropy to thermal energy, but for the present discussion, we are assuming that thermal energy can be neglected.]
 
-:::{figure} ../figures/chapter5/mB.png
+:::{figure} ../figures/chapter5/chapter5_figure1.png
 :name: fig:mB
 :width: 100%
 
-a) Sketch of a magnetic particle with easy axis as shown. In response to a magnetic field $\mathbf{B}$, applied at an angle $\phi$ to the easy axis, the particle moment $\mathbf{m}$ rotates, making an angle $\theta$ with the easy axis. b) Variation of the anisotropy energy density $\epsilon_a = K_u\sin^2\theta$ as a function of $\theta$ for the particle with $\phi=45°$ as shown in a). The $\theta$ associated with the minimum energy is indicated by $\epsilon_{min}$. $B$ = 0 mT. c) Same as in b) but for $B$ = 30 mT. Also shown the interaction energy density $\epsilon_m=-M_s B\cos (\phi-\theta)$ and the total energy density $\epsilon_t=\epsilon_a+\epsilon_m$.
+a) Sketch of a prolate spheroid magnetic particle (magnetite, elongation q = 2) with easy axis along the long dimension. In response to a magnetic field $\mathbf{B}$, applied at an angle $\phi$ to the easy axis, the particle moment $\mathbf{m}$ rotates, making an angle $\theta$ with the easy axis. b) Variation of the anisotropy energy density $\epsilon_a = K_u\sin^2\theta$ as a function of $\theta$ for the particle with $\phi=45°$ as shown in a). The $\theta$ associated with the minimum energy is indicated by $\epsilon_{min}$. $B$ = 0 mT. c) Same as in b) but for $B$ = 30 mT. Also shown are the interaction energy density $\epsilon_m=-M_s B\cos (\phi-\theta)$ and the total energy density $\epsilon_t=\epsilon_a+\epsilon_m$. d) Same as in c) but for $B$ = 500 mT, showing how a strong applied field can dominate the anisotropy energy and shift the energy minimum toward the field direction.
 :::
 
 When an external field is applied at an angle $\phi$ to the easy axis (and an angle $\phi-\theta$ with the magnetic moment; see [](#fig:mB)a), the magnetostatic interaction energy density $\epsilon_m$ given by the dot product of the magnetization and the applied field ([Equation %s](#eq:Em1) in Chapter 4) or:
@@ -45,8 +50,10 @@ The magnetic moment of a uniaxial single domain grain will find the angle $\thet
 :name: fig:flip
 :width: 100%
 
-a) Variation of the anisotropy energy density $\epsilon_a = K_u\sin^2\theta$, the interaction energy density $\epsilon_m=-M_s B\cos \phi$ and the total energy density $\epsilon_t=\epsilon_a+\epsilon_m$ as a function of $\theta$ for the particle shown in [](#fig:mB)a. The field was applied with $\phi$ = 180° and was 58 mT in magnitude. The $\theta$ associated with the minimum energy is indicated by $\epsilon_{min}$ and is 180°. b) Variation in first and second derivatives of the energy equation. The flipping condition of both being zero simultaneously is met. c) Same as a) but the field was only 30 mT. d) Same as b) but the flipping condition is not met.
-:::
+Variation of energy densities ($\epsilon_a$, $\epsilon_m$, $\epsilon_t$) and their derivatives as a function of $\theta$ for a prolate spheroid magnetite particle with the applied field antiparallel to the initial magnetization ($\phi$ = 0°). **a)** Field applied with $\phi$ = 180° and 58 mT magnitude - the flipping condition is met (both derivatives cross zero). **b)** First and second derivatives showing the flipping condition. **c)** Same as (a) but with 30 mT field - flipping condition not met. **d)** Derivatives for 30 mT case.
+
+**[→ Open interactive version](_static/flipping_field_widget.html)** - Use the slider to increase B from 0-100 mT and observe the energy landscape evolution in real-time.
+::: 
 
 When a magnetic field that is large enough to overcome the anisotropy energy is applied in a direction opposite to the magnetization vector, the moment will jump over the energy barrier and stay in the opposite direction when the field is switched off. The field necessary to accomplish this feat is called the *flipping field* ($\mu_oH_f$) (also sometimes the "switching field"). [Note the change to the use of $H$ for internal fields where $M$ cannot be considered zero.] We introduced this parameter in Chapter 4 (see [Equation %s](#eq:Bk)) as the microscopic coercivity. {cite}`stoner1948` showed that the flipping field can be found from the condition that $d\epsilon_t/d\theta = 0$ and $d^2\epsilon_t/d\theta^2$ = 0. We will call this the "flipping condition". The necessary equations can be found by differentiating [Equation %s](#eq:Et):
 
@@ -68,7 +75,7 @@ $$ (eq:Bf)
 
 where $t= \tan^{1/3} \phi$. In this equation, $\phi$ is the angle between the applied field and the easy axis direction opposite to $m$.
 
-Now we can derive the so-called "microscopic coercivity" ($H_k$) introduced in [](#sect:coercivity) in Chapter 4. Microscopic coercivity is the maximum flipping field for a particle. When magnetic anisotropy of a particle is dominated by uniaxial anisotropy constant $K_u$ and $\phi$ is zero (antiparallel to the easy direction nearest the moment), $\mu_o H_k = 2K_u/M_s$. Using the values appropriate for magnetite ($K_u$ = 1.4 × 10$^4$ Jm$^{-3}$ and $M_s$ = 480 kAm$^{-1}$) we get $\mu_o H_k$ = 58 mT. To see why this would indeed result in a flipped moment, we plot the behavior of [Equations %s](#eq:Et) – [%s](#eq:2ndderiv) in [](#fig:flip). The minimum in total energy $\epsilon_t$ occurs at an angle of $\theta$ = 180° ([](#fig:flip)a) and the first and second derivatives satisfy the flipping condition by having a common zero crossing ($\theta=0$ in [](#fig:flip)b). There is no other applied field value for which this is true (see, e.g., the case of a 30 mT field in [](#fig:flip)c,d).
+Now we can derive the so-called "microscopic coercivity" ($H_k$) introduced in [](#sect:coercivity) in Chapter 4. Microscopic coercivity is the maximum flipping field for a particle. When magnetic anisotropy of a particle is dominated by uniaxial anisotropy constant $K_u$ and $\phi$ is zero (antiparallel to the easy direction nearest the moment), $\mu_o H_k = 2K_u/M_s$. Using the values appropriate for magnetite ($K_u$ = 1.4 × 10$^4$ Jm$^{-3}$ and $M_s$ = 480 kAm$^{-1}$) we get $\mu_o H_k$ = 58 mT. To see why this would indeed result in a flipped moment, we visualize the behavior of [Equations %s](#eq:Et) – [%s](#eq:2ndderiv) in the interactive [](#fig:flip). When the applied field reaches the flipping field, the minimum in total energy $\epsilon_t$ occurs at an angle of $\theta$ = 180° (the upper panel) and the first and second derivatives satisfy the flipping condition by having a common zero crossing at the occupied state (the lower panel). At lower field values (e.g., 30 mT), the flipping condition is not met and the magnetization remains trapped in its initial orientation.
 
 :::{figure} ../figures/chapter5/bf.png
 :name: fig:bf
@@ -85,8 +92,8 @@ In this section we will develop the theory for predicting the response of substa
 
 Let us begin by considering what happens to single particles when subjected to applied fields in the cycle known as the *hysteresis loop*. From the last section, we know that when a single domain, uniaxial particle is subjected to an increasing magnetic field the magnetization is gradually drawn into the direction of the applied field. If the flipping condition is not met, then the magnetization will return to the original direction when the magnetic field is removed. If the flipping condition is met, then the magnetization undergoes an irreversible change and will be in the opposite direction when the magnetic field is removed.
 
-### Uniaxial anisotropy
 (sect:uniaxial)=
+### Uniaxial anisotropy
 
 Imagine a single domain particle with uniaxial anisotropy. Because the particle is single domain, the magnetization is at saturation and, in the absence of an applied field is constrained to lie along the easy axis. Now suppose we apply a magnetic field in the opposite direction (see track #1 in [](#fig:outerloop)a). When $B$ reaches $\mu_oH_f$ in magnitude, the magnetization flips to the opposite direction (track #2 in [](#fig:outerloop)) and will not change further regardless of how high the field goes. The field then is decreased to zero and then increased along track #3 in [](#fig:outerloop) until $\mu_oH_f$ is reached again. The magnetization then flips back to the original direction (track #4 in [](#fig:outerloop)a).
 
@@ -125,8 +132,8 @@ The coercivity of remanence $\mu_o H_{cr}$ is defined as the magnetic field requ
 
 An alternative means of estimating coercivity of remanence is to use a so-called $\Delta M$ curve {cite}`jackson1988` which is obtained by subtracting the ascending loop from the descending loop (see [](#fig:sdloops)b). When all the moments are flipped into the new field, the ascending and descending loops join together and $\Delta M$ is 0. $\Delta M$ is at 50% of its initial value at the field at which half the moments are flipped (the definition of coercivity of remanence); this field is here termed $\mu_oH_{cr}$.
 
-### Magnetic susceptibility
 (sect:chi)=
+### Magnetic susceptibility
 
 [](#fig:sdloops)a is the loop created in the idealized case in which only uniaxial ferromagnetic particles participated in the hysteresis measurements; in fact the curve is entirely theoretical. In "real" specimens there can be paramagnetic, diamagnetic AND ferromagnetic particles and the loop may well look like that shown in [](#fig:Bcr). The initial slope of a hysteresis experiment starting from a demagnetized state in which the field is ramped from zero up to higher values is the low field magnetic susceptibility or $\chi_{lf}$ (see [](#fig:Bcr)). If the field is then turned off, the magnetization will return again to zero. But as the field increases past the lowest flipping field, the remanence will no longer be zero but some isothermal remanence. Once all particle moments have flipped and saturation magnetization has been achieved, the slope relating magnetization and applied field reflects only the non-ferromagnetic (paramagnetic and/or diamagnetic) susceptibility, here called *high field susceptibility*, $\chi_{hf}$. In order to estimate the saturation magnetization and the saturation remanence, we must first subtract the high field slope. So doing gives us the blue dashed line in [](#fig:Bcr) from which we may read the various hysteresis parameters illustrated in [](#fig:sdloops)b.
 
@@ -187,8 +194,8 @@ $$ (eq:chiSP1)
 
 Comparing this expression with that derived for ferromagnetic susceptibility in [](#sect:uniaxial), we find that $\chi_{sp}$ is a factor of $\ln(C\tau)\simeq 27$ larger than the equivalent single domain particle.
 
-### Particles with domain walls
 (sect:day)=
+### Particles with domain walls
 
 Moving domain walls around is much easier than flipping the magnetization of an entire particle coherently. The reason for this is the same as the reason that it is easier to move a rug by lifting up a small wrinkle and pushing that through the rug, than to drag the whole rug by the same amount. Because of the greater ease of changing magnetic moments in multidomain (MD) grains, they have lower coercive fields and saturation remanence is also much lower than for uniformly magnetized particles (see typical MD hysteresis loop in [](#fig:md)a.)
 
@@ -247,8 +254,8 @@ In [](#fig:wallenergy), we show a sketch of a hypothetical transect of $E_w$ acr
 
 Domain walls move in response to external magnetic fields (see [](#fig:wallenergy)b–g). Starting in the demagnetized state ([](#fig:wallenergy)b), we apply a magnetic field that increases to saturation ([](#fig:wallenergy)c). As the field increases, the domain walls move in sudden jerks as each successive local wall energy high is overcome. This process, known as *Barkhausen jumps*, leads to the stair-step like increases in magnetization (shown in the inset of [](#fig:wallenergy)g). At saturation, all the walls have been flushed out of the crystal and it is uniformly magnetized. When the field decreases again, to say +3 mT ([](#fig:wallenergy)d), domain walls begin to nucleate, but because the energy of nucleation is larger than the energy of denucleation, the grain is not as effective in cancelling out the net magnetization, hence there is a net saturation remanence ([](#fig:wallenergy)e). The walls migrate around as a magnetic field is applied in the opposite direction ([](#fig:wallenergy)f) until there is no net magnetization. The difference in nucleation and denucleation energies was called on by {cite}`halgedahl1983` to explain the high stability observed in some large magnetic grains.
 
-## Hysteresis of mixtures of SP, SD and MD grains
 (sect:mixtures)=
+## Hysteresis of mixtures of SP, SD and MD grains
 
 {cite}`day1977` popularized the use of diagrams like that shown in [](#fig:md)c which are known as *Day diagrams*. They placed quasi-theoretical bounds on the plot whereby points with $M_r/M_s$ ratios above 0.5 were labelled single domain (SD), and points falling in the box bounded by $0.5>M_r/M_s>0.05$ and $1.5<H_{cr}/H_c < 5$ were labelled *pseudo-single domain* (PSD). Points with $M_r/M_s$ below 0.05 were labelled multi-domain (MD). This paper has been cited over 800 times in the literature and the Day plot still serves as the principal way that rock and paleomagnetists determined domain state and grain size.
 
