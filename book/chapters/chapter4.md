@@ -560,10 +560,10 @@ so substituting and solving for $H_d$ we get $H_d=-\frac{1}{3} M$, hence $N=\fra
 
 Different directions within a non-spherical crystal will have different distributions of free poles (see [](#fig:demagfield)e,f). In fact, the surface density of free poles is given by $\sigma_m=\mathbf{M}\cdot \hat{r}$. Because the surface pole density depends on the direction of magnetization, so too will $N$. In the case of a prolate ellipsoid magnetized parallel to the elongation axis $a$ ([](#fig:demagfield)e), the free poles are farther apart than across the grain, hence, intuitively, the demagnetizing field, which depends on $1/r^2$, must be less than in the case of a sphere. Thus, $N_a < \frac{1}{3}$. Similarly, if the ellipsoid is magnetized along $b$ ([](#fig:demagfield)e), the demagnetizing field is stronger or $N_b>\frac{1}{3}$.
 
-Getting back to the magnetostatic energy density, $\epsilon_m = \mathbf{M} \cdot \mathbf{B}$, remember that $\mathbf{B}$ includes both the external field $B_e = -\mu_o H_e$ and the internal demagnetizing field $\mu_o \mathbf{N}\cdot \mathbf{M}$. Therefore, magnetostatic energy density from both the external and internal fields is given by:
+Getting back to the magnetostatic energy density, $\epsilon_m = -\mathbf{M} \cdot \mathbf{B}$, remember that $\mathbf{B}$ includes both the external field $\mathbf{H}_e$ and the internal demagnetizing field $\mathbf{H}_d = -\mathbf{N}\cdot\mathbf{M}$. Therefore, magnetostatic energy density from both the external and internal fields is given by:
 
 $$
-\epsilon_{ms} = -\mathbf{M} \cdot  \mu_o  \mathbf{H}_e -\frac{1}{2} \mu_o \mathbf{M} \cdot \mathbf{N} \cdot \mathbf{M}.
+\epsilon_{ms} = -\mu_o \mathbf{M} \cdot \mathbf{H}_e + \frac{1}{2} \mu_o \mathbf{M} \cdot \mathbf{N} \cdot \mathbf{M}.
 $$ (eq:etot)
 
 The two terms in [Equation %s](#eq:etot) are the by now familiar magnetostatic energy density $\epsilon_m$, and the *magnetostatic self energy density* or the *demagnetizing energy density* $\epsilon_{d}$. $\epsilon_d$ can be estimated by "building" a magnetic particle and considering the potential energy gained by each incremental volume $dv$ as it is brought in ($-\mu_o \mathbf{M} dv \cdot \mathbf{H}_d$) and integrating. The $\frac{1}{2}$ appears in order to avoid counting each volume element twice and the $v$ disappears because all the energies we have been discussing are energy densities — the energy per unit volume.
