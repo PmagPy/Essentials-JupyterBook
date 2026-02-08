@@ -8,9 +8,9 @@ kernelspec:
   display_name: Python 3
 ---
 
-In [Chapter 4](#chap:anisotropy) we discussed the energies that control the state of magnetization within ferromagnetic particles. Particles will tend to find a configuration of internal magnetization directions that minimizes the energies (although meta-stable states with *local energy minima* or LEMs are a possibility). The longevity of a particular magnetization state has to do with the depth of the energy well that the magnetization is in and the energy available for hopping over barriers.
+In [Chapter 4](#chap:anisotropy), we discussed the energies that control the state of magnetization within ferromagnetic particles. Particles will tend to find a configuration of internal magnetization directions that minimizes the energies (although meta-stable states with *local energy minima* or LEMs are a possibility). The longevity of a particular magnetization state has to do with the depth of the energy well that the magnetization is in and the energy available for hopping over barriers.
 
-The ease with which particles can be coerced into changing their magnetizations in response to external fields can tell us much about the overall stability of the particles and perhaps also something about their ability to carry a magnetic remanence over the long haul. The concepts of long term stability, incorporated into the concept of relaxation time and the response of the magnetic particles to external magnetic fields are therefore linked through the anisotropy energy constant $K$ (see [Chapter 4](#chap:anisotropy)) which dictates the magnetic response of particles to changes in the external field. This chapter will focus on the response of magnetic particles to changing external magnetic fields.
+The ease with which particles can be coerced into changing their magnetizations in response to external fields can tell us much about the overall stability of the particles and perhaps also something about their ability to carry a magnetic remanence over the long haul. The concepts of long-term stability, incorporated into the concept of relaxation time and the response of the magnetic particles to external magnetic fields are therefore linked through the anisotropy energy constant $K$ (see [Chapter 4](#chap:anisotropy)) which dictates the magnetic response of particles to changes in the external field. This chapter will focus on the response of magnetic particles to changing external magnetic fields.
 
 (sect:flipping)=
 ## The "flipping" field
@@ -21,7 +21,7 @@ $$
 \epsilon_a = K_u\sin^2\theta.
 $$
 
-As the moment swings around with angle $\theta$ to the easy axis, the anisotropy energy density $\epsilon_a$ will change as sketched in [](#fig:mB)b. The energy minima are when $\theta$ is aligned parallel to the easy axis (an axis means either direction along the axis, so we pick one direction as being 0 and the other as 180°). In the absence of a magnetic field, the moment will lie along one of these two directions. [In reality, thermal energy will perturb this direction somewhat, depending on the balance of anisotropy to thermal energy, but for the present discussion, we are assuming that thermal energy can be neglected.]
+As the moment swings around with angle $\theta$ to the easy axis, the anisotropy energy density $\epsilon_a$ will change as sketched in [](#fig:mB)b. The energy minima are when $\theta$ is aligned parallel to the easy axis (an axis means either direction along the axis, so we pick one direction as being 0° and the other as 180°). In the absence of a magnetic field, the moment will lie along one of these two directions. [In reality, thermal energy will perturb this direction somewhat, depending on the balance of anisotropy to thermal energy, but for the present discussion, we are assuming that thermal energy can be neglected.]
 
 :::{figure} ../figures/chapter5/chapter5_figure1.png
 :name: fig:mB
@@ -46,14 +46,34 @@ The total energy density $\epsilon_t$ is shown as the heavy solid line in [](#fi
 
 The magnetic moment of a uniaxial single domain grain will find the angle $\theta$ that is associated with the minimum total energy density ($\epsilon_{min}$; see [](#fig:mB)b,c). For low external fields, $\theta$ will be closer to the easy axis and for higher external fields (e.g., 30 mT; [](#fig:mB)c), $\theta$ will be closer to the applied field direction ($\phi$).
 
-:::{figure} ../figures/chapter5/flip.png
-:name: fig:flip
-:width: 100%
+The **interactive visualization below** demonstrates Stoner-Wohlfarth magnetization reversal for a prolate spheroid magnetite particle (aspect ratio $q = 1.5$). Use the slider to gradually increase the applied field and observe how the energy landscape evolves with the initial magnetization staying in a local energy minima until the magnetization flips. This flip happens the the energy barrier goes away which corresponds to when the second derivative of the total energy curve goes to zero.
 
-Variation of energy densities ($\epsilon_a$, $\epsilon_m$, $\epsilon_t$) and their derivatives as a function of $\theta$ for a prolate spheroid magnetite particle with the applied field antiparallel to the initial magnetization ($\phi$ = 0°). **a)** Field applied with $\phi$ = 180° and 58 mT magnitude - the flipping condition is met (both derivatives cross zero). **b)** First and second derivatives showing the flipping condition. **c)** Same as (a) but with 30 mT field - flipping condition not met. **d)** Derivatives for 30 mT case.
+(fig:flip)=
+```{code-cell} python
+:tags: [remove-input]
 
-**[→ Open interactive version](_static/flipping_field_widget.html)** - Use the slider to increase B from 0-100 mT and observe the energy landscape evolution in real-time.
-::: 
+from IPython.display import HTML
+from pathlib import Path
+import base64
+
+# Read the HTML widget file
+widget_path = Path('..') / 'figures' / 'chapter5' / 'flipping_field_widget.html'
+with open(widget_path, 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# Encode as base64 data URI and embed in iframe
+html_b64 = base64.b64encode(html_content.encode('utf-8')).decode('utf-8')
+iframe_html = f'''
+<iframe
+    src="data:text/html;base64,{html_b64}"
+    width="700"
+    height="720"
+    frameborder="0"
+    style="border: 1px solid #ddd;">
+</iframe>
+'''
+HTML(iframe_html)
+```
 
 When a magnetic field that is large enough to overcome the anisotropy energy is applied in a direction opposite to the magnetization vector, the moment will jump over the energy barrier and stay in the opposite direction when the field is switched off. The field necessary to accomplish this feat is called the *flipping field* ($\mu_oH_f$) (also sometimes the "switching field"). [Note the change to the use of $H$ for internal fields where $M$ cannot be considered zero.] We introduced this parameter in Chapter 4 (see [Equation %s](#eq:Bk)) as the microscopic coercivity. {cite}`stoner1948` showed that the flipping field can be found from the condition that $d\epsilon_t/d\theta = 0$ and $d^2\epsilon_t/d\theta^2$ = 0. We will call this the "flipping condition". The necessary equations can be found by differentiating [Equation %s](#eq:Et):
 

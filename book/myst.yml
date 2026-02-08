@@ -25,6 +25,11 @@ project:
   bibliography:
     - references.bib
 
+  # Numbering configuration
+  numbering:
+    headings: true
+    enumerator: '%s'
+
   # Abbreviations
   abbreviations:
     SD: Single Domain
@@ -49,6 +54,7 @@ project:
   toc:
     - file: index.md
     - title: Chapters
+      numbered: true
       children:
         - file: chapters/chapter4.md
         - file: chapters/chapter5.md
@@ -74,4 +80,6 @@ site:
   options:
     logo: _static/logo_placeholder.png
     hide_toc: false
-    numbered_references: true
+    numbered_references: false
+    number_source_lines: false
+    number_headings: true
