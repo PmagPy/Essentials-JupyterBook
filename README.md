@@ -1,14 +1,15 @@
 # Essentials of Paleomagnetism — JupyterBook Edition
 
-A modern, interactive web version of **Essentials of Paleomagnetism** by Lisa Tauxe, built with [Jupyter Book v2](https://jupyterbook.org/).
+A modern, interactive web version of **Essentials of Paleomagnetism**, built with [Jupyter Book v2](https://jupyterbook.org/).
 
 ## Attribution
 
-This work is adapted from:
+This work is being adapted, revised, and updated from:
 
-> Tauxe, L., 2010. *Essentials of Paleomagnetism*, University of California Press.
+> Tauxe, L. *Essentials of Paleomagnetism*, 5th web edition.
+> with contributions from: Subir K. Banerjee, Robert F. Butler and Rob van der Voo
 
-The original textbook is available online at [EarthRef.org](https://earthref.org/MagIC/books/Tauxe/Essentials/).
+That version is available online at [EarthRef.org](https://earthref.org/MagIC/books/Tauxe/Essentials/) with the source files to be found here: https://github.com/ltauxe/Essentials-of-Paleomagnetism
 
 ## Setup
 
