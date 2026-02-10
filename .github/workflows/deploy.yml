@@ -46,7 +46,7 @@ jobs:
       - name: Build the book
         working-directory: book
         run: |
-          jupyter book build --execute
+          jupyter book build --html --execute
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
