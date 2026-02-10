@@ -45,6 +45,8 @@ jobs:
 
       - name: Build the book
         working-directory: book
+        env:
+          BASE_URL: /${{ github.event.repository.name }}
         run: |
           jupyter book build --html --execute
 
