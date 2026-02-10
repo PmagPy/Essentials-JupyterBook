@@ -36,8 +36,7 @@ mamba activate ess-jbook
 ### Local development server (recommended)
 
 ```bash
-cd book
-jupyter book start --execute
+mamba activate ess-jbook && cd book && jupyter book start --execute
 ```
 
 This launches a live-reloading dev server with notebook execution — edits to `.md` and `.ipynb` files are reflected immediately. The server URL will be displayed in the terminal output (typically `http://localhost:3000` or another available port).
