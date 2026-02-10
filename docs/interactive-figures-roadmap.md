@@ -6,6 +6,18 @@ This document captures ideas for converting static figures into interactive visu
 
 ---
 
+## Chapter 4 low-temperature data
+
+Replace:
+:::{figure} ../figures/chapter4/verwey.png
+:name: fig:verwey
+:width: 80%
+
+Magnetization curve for magnetite as a function of temperature. The specimen was placed in a very large field, cooled to near absolute zero, then warmed up. The magnetization was measured as it warmed. When it goes through the Verwey transition (~110 K), a fraction of the magnetization is lost. Data downloaded from "w5000" in the [Rock magnetic Bestiary](http://www.irm.umn.edu/bestiary) collection at the Institute for Rock Magnetism.
+:::
+with a live pull-in via MagIC
+
+
 ## Priority: Chapter 7 Relaxation Time Curves
 
 These figures would benefit most from interactivity, allowing students to explore parameter space:
