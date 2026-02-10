@@ -18,7 +18,7 @@ project:
       affiliation: Scripps Institution of Oceanography, UC San Diego
     - name: Nicholas Swanson-Hysell
       affiliation: Institute for Rock Magnetism, University of Minnesota
-  github: unimos/Essentials-JupyterBook
+  github: pmagpy/Essentials-JupyterBook
   subject: Earth Science
 
   # Bibliography
@@ -53,13 +53,11 @@ project:
   # Table of contents
   toc:
     - file: index.md
-    - title: Chapters
+    - file: chapters/chapter4.md
       numbered: true
-      children:
-        - file: chapters/chapter4.md
-        - file: chapters/chapter5.md
-        - file: chapters/chapter6.md
-        - file: chapters/chapter7.md
+    - file: chapters/chapter5.md
+    - file: chapters/chapter6.md
+    - file: chapters/chapter7.md
 
   # Math macros (adapted from the LaTeX source mydefs.tex)
   math:
@@ -77,6 +75,7 @@ project:
 
 site:
   template: book-theme
+  base_url: /Essentials-JupyterBook
   options:
     logo: _static/logo_placeholder.png
     hide_toc: false
