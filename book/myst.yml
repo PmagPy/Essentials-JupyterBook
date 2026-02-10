@@ -19,7 +19,7 @@ project:
     - name: Nicholas Swanson-Hysell
       affiliation: Institute for Rock Magnetism, University of Minnesota
   github: pmagpy/Essentials-JupyterBook
-  subject: Earth Science
+  subject: Essentials of Paleomagnetism
 
   # Bibliography
   bibliography:
@@ -58,6 +58,7 @@ project:
     - file: chapters/chapter5.md
     - file: chapters/chapter6.md
     - file: chapters/chapter7.md
+    - file: chapters/chapter8.md
 
   # Math macros (adapted from the LaTeX source mydefs.tex)
   math:

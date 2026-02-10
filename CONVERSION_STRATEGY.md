@@ -30,12 +30,65 @@ This document outlines the strategy for converting chapters from the original La
 
 ## Figures
 
-### Conversion Pipeline
+### Font Conversion Pipeline
 
-1. **Source**: EPS files in `../Essentials-of-Paleomagnetism/EPSFiles/`
-2. **Tool**: `scripts/convert_figures.py` using ghostscript
-3. **Output**: PNG at 300 DPI in `book/figures/`
-4. **Reference**: `:::{figure} ../figures/filename.png` in MyST
+The original EPS figures use Comic Sans MS which is replaced with Source Sans Pro for professional typography.
+
+**Pipeline**: EPS → PDF (Ghostscript) → SVG (Inkscape) → font replacement → PNG (Inkscape)
+
+**Tool**: `scripts/convert_figures_inkscape.py`
+
+**Workflow**:
+
+1. **Convert new chapter figures**:
+
+   ```bash
+   python scripts/convert_figures_inkscape.py --chapter 8
+   ```
+
+   This generates:
+   - SVGs saved to `Essentials-of-Paleomagnetism/SVGFiles/chapter8/` (for manual editing)
+   - PNGs saved to `book/figures/chapter8/`
+
+2. **Review and edit SVGs** in Inkscape to fix layout issues from font changes
+
+3. **Regenerate PNGs** after SVG edits:
+
+   ```bash
+   python scripts/convert_figures_inkscape.py --svg-to-png --chapter 8
+   ```
+
+4. **Resize large images** (> 1.5 MB) to avoid build warnings:
+
+   ```bash
+   convert book/figures/chapter8/largefile.png -resize 50% book/figures/chapter8/largefile.png
+   ```
+
+5. **Add white backgrounds** to all PNGs (required for dark mode compatibility):
+
+   The converted PNGs have transparent backgrounds which render poorly in dark mode. Fix with:
+
+   ```bash
+   # Single file
+   convert image.png -background white -alpha remove -alpha off image.png
+
+   # All PNGs in a chapter
+   for png in book/figures/chapter8/*.png; do
+     convert "$png" -background white -alpha remove -alpha off "$png"
+   done
+
+   # All PNGs in all chapters
+   for png in book/figures/**/*.png; do
+     convert "$png" -background white -alpha remove -alpha off "$png"
+   done
+   ```
+
+### File Locations
+
+- **Source**: `../Essentials-of-Paleomagnetism/EPSFiles/`
+- **Editable SVGs**: `../Essentials-of-Paleomagnetism/SVGFiles/chapter<N>/`
+- **Final PNGs**: `book/figures/chapter<N>/`
+- **Reference in MyST**: `:::{figure} ../figures/chapter<N>/filename.png`
 
 ### Chapter 4 Figures (11 total)
 
@@ -135,16 +188,26 @@ toc:
       - file: chapters/chapter5.md
 ```
 
-Then add explicit chapter numbers to each chapter's frontmatter:
+Then add the complete frontmatter to each chapter file:
 
 ```yaml
 ---
-title: Chapter Title
-label: chap:label
+title: "Chapter 5: Magnetic Hysteresis"  # Format: "Chapter N: Title"
+label: chap:hysteresis                    # Unique label for cross-references
 numbering:
-  enumerator: 4.%s  # For Chapter 4 (use 5.%s for Chapter 5, etc.)
+  enumerator: 5.%s                        # Chapter number prefix for sections
+kernelspec:                               # Required for executable code cells
+  name: python3
+  display_name: Python 3
 ---
 ```
+
+**Frontmatter fields:**
+
+- `title`: Use format `"Chapter N: Chapter Title"` for consistent display
+- `label`: Unique identifier like `chap:hysteresis` for cross-referencing
+- `numbering.enumerator`: Set to `N.%s` where N is the chapter number
+- `kernelspec`: Required if the chapter contains `{code-cell}` directives
 
 This will number sections as:
 - Level 2 headings (`##`): 4.1, 4.2, 4.3...
