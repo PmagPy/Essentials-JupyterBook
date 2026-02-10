@@ -1,6 +1,9 @@
 ---
 title: "Chapter 6: Magnetic Mineralogy"
 label: chap:mineralogy
+authors:
+  - name: Lisa Tauxe
+    affiliation: Scripps Institution of Oceanography, UC San Diego
 numbering:
   enumerator: 6.%s
 ---

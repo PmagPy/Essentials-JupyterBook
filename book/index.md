@@ -1,19 +1,18 @@
 ---
 title: Essentials of Paleomagnetism
+numbering:
+  headings: false
 ---
 
 # Essentials of Paleomagnetism
 
-This is a modern, interactive version of **Essentials of Paleomagnetism** by [Lisa Tauxe](https://ltauxe.scrippsprofiles.ucsd.edu/) with edits and additions by [Nick Swanson-Hysell](https://cse.umn.edu/esci/nicholas-swanson-hysell). It is being ported over from the web book version that is available online at [EarthRef.org](https://earthref.org/MagIC/books/Tauxe/Essentials/) for which the source files are available on [Github](https://github.com/ltauxe/Essentials-of-Paleomagnetism).
+The geomagnetic field acts as both a shield, protecting Earth's surface from cosmic radiation, and a window into the dynamics of the deep Earth. Rocks and sediments can record the ambient magnetic field, with these records having the potential to persist for millions to billions of years. They reveal a history of geomagnetic reversals and document the changing paleogeography of Earth through deep time. Extracting such information requires an understanding of rock magnetism and paleomagnetism, the subjects of this book.
 
-## About This Edition
+This textbook draws together essential rock magnetic theory, paleomagnetic techniques, and applications from magnetostratigraphy to tectonic reconstructions. It is intended for Earth scientists who use paleomagnetic data, students in courses with paleomagnetic content, and anyone with a college-level science background and an interest in magnetism in the Earth.
 
-This JupyterBook edition aims to bring the content of the original textbook into an interactive web format with:
-
-- **Interactive figures** enable 3D visualizations and data exploration
-- **Executable code** demonstrating key concepts with Python
-- **Modern web rendering** of equations and cross-references
-- **MyST Markdown** for rich scientific document authoring
+:::{note} About This Edition
+The original edition of this book was written by Lisa Tauxe with contributions from R.F. Butler, S.K. Banerjee, and R. van der Voo. With Lisa's blessing, [Nick Swanson-Hysell](https://cse.umn.edu/esci/nicholas-swanson-hysell) is porting, revising, and updating the text into an interactive web book format. This version include 3D visualizations and figures including those developed through integrated code that draws on [PmagPy](https://pmagpy.github.io/PmagPy-docs/intro.html) {cite}`tauxe2016_pmagpy`. Chapters are being added and revised on a rolling basis as of Spring 2026. The original edition is available at [EarthRef.org](https://earthref.org/MagIC/books/Tauxe/Essentials/) and the source for this edition is on [GitHub](https://github.com/pmagpy/Essentials-JupyterBook).
+:::
 
 ## Chapters
 
