@@ -140,19 +140,23 @@ Renders as: (Cockett et al., 2015; Heagy et al., 2017)
 
 ### Prefix and Suffix
 
-Add contextual text before or after citations using curly braces:
-```markdown
-{cite:p}`{see}cockett2015{fig 1}`
-```
-Renders as: (see Cockett et al., 2015, fig 1)
+**Note:** The curly-brace prefix/suffix syntax documented in MyST may not work in all versions. Use the manual prefix approach instead:
 
-Additional examples:
 ```markdown
-{cite:p}`{e.g., }johnson1948`           → (e.g., Johnson et al., 1948)
-{cite:p}`{see }dunlop1997`              → (see Dunlop and Özdemir, 1997)
-{cite:p}`{see also }tauxe2006`          → (see also Tauxe et al., 2006)
-{cite:p}`{cf. }nagy2017`                → (cf. Nagy et al., 2017)
-{cite:p}`{see }dunlop1997{ for details}`→ (see Dunlop and Özdemir, 1997 for details)
+# DOES NOT WORK (prefix syntax broken):
+{cite:p}`{e.g., }johnson1948`
+
+# USE THIS INSTEAD (manual prefix with {cite:t}):
+(e.g., {cite:t}`johnson1948`)
+```
+
+Working examples with manual prefixes:
+
+```markdown
+(see {cite:t}`dunlop1997`)              → (see Dunlop and Özdemir, 1997)
+(see also {cite:t}`tauxe2006`)          → (see also Tauxe et al., 2006)
+(e.g., {cite:t}`nagy2017`)              → (e.g., Nagy et al., 2017)
+(e.g., {cite:t}`ref1`; {cite:t}`ref2`)  → (e.g., Author1, Year; Author2, Year)
 ```
 
 ### Common Conversion Patterns
@@ -162,8 +166,8 @@ When converting from LaTeX or fixing existing MyST:
 | Pattern | Convert to | Result |
 |---------|-----------|--------|
 | `({cite}\`ref\`)` | `{cite:p}\`ref\`` | (Author, Year) |
-| `(see {cite}\`ref\`)` | `{cite:p}\`{see }ref\`` | (see Author, Year) |
-| `(e.g., {cite}\`ref\`)` | `{cite:p}\`{e.g., }ref\`` | (e.g., Author, Year) |
+| `(see {cite}\`ref\`)` | `(see {cite:t}\`ref\`)` | (see Author, Year) |
+| `(e.g., {cite}\`ref\`)` | `(e.g., {cite:t}\`ref\`)` | (e.g., Author, Year) |
 | `({cite}\`ref1\`; {cite}\`ref2\`)` | `{cite:p}\`ref1; ref2\`` | (Author1, Year; Author2, Year) |
 
 ### Configuration

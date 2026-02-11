@@ -59,6 +59,7 @@ project:
     - file: chapters/chapter6.md
     - file: chapters/chapter7.md
     - file: chapters/chapter8.md
+    - file: chapters/chapter9.md
 
   # Math macros (adapted from the LaTeX source mydefs.tex)
   math:
