@@ -1,6 +1,6 @@
 ---
 title: "Chapter 8: Environmental Magnetism"
-label: chap:mineralogy
+label: chap:envmag
 authors:
   - name: Lisa Tauxe
     affiliation: Scripps Institution of Oceanography, UC San Diego
@@ -41,7 +41,7 @@ Images of various magnetic phases. a) 300 μm titanomagnetite grain of igneous o
 | **Magnetic susceptibility:** | | | |
 | &emsp;volume normalized | $\chi$ | dimensionless | Chapter 1 |
 | &emsp;mass normalized | $\kappa$ | m³kg⁻¹ | Chapter 1 |
-| &emsp;low field (initial) | $\chi_{lf}$ | | [%s](#sect:chi) |
+| &emsp;low field (initial) | $\chi_{lf}$ | | [%s](#sect:chi8) |
 | &emsp;high field | $\chi_{hf}$ | | [%s](#sect:hyst) |
 | &emsp;frequency dependent | $\chi_{fd}$ | | [%s](#sect:chifd) |
 | **Magnetization:** | | | |
@@ -59,7 +59,7 @@ Images of various magnetic phases. a) 300 μm titanomagnetite grain of igneous o
 | &emsp;median destructive field | MDF | Am⁻¹ or T | [%s](#sect:crittemp) |
 | **Ratios:** | | | |
 | &emsp;Squareness | $M_r/M_s$ | | Chapter 5 |
-| | $H_{cr}/H_{c}$ | | [%s](#sect:day) |
+| | $H_{cr}/H_{c}$ | | [%s](#sect:day8) |
 | &emsp;S-ratio | IRM$_x$/$M_r$ | | [%s](#sect:ratios) |
 | &emsp;HIRM | $M_r$ - IRM$_x$ | | [%s](#sect:ratios) |
 | | $M_r$/$\chi$ | | [%s](#sect:ratios) |
@@ -99,7 +99,7 @@ The principal drawback of the differential method of Curie temperature estimatio
 
 There are a host of other measurements of remanent magnetization as a function of temperature. These can contribute significantly to the discussion of degree of alteration, degree of particle interaction and grain size of the magnetic phases in a specimen. A complete discussion of these are beyond the scope of this chapter, but the student should be aware of the rich possibilities of low and high temperature measurements of remanence. For interesting examples, peruse the various issues of the IRM Quarterly at: [http://www.irm.umn.edu/IRM/quarterly.html](http://www.irm.umn.edu/IRM/quarterly.html).
 
-(sect:chi)=
+(sect:chi8)=
 ## Magnetic Susceptibility
 
 We first encountered the concept of magnetic susceptibility in Chapter 1 and again in more detail in Chapters 3 and 5. We defined it as the ratio of the induced magnetization to an inducing magnetic field or $M_I/H$. Because everything in a rock or mineral separate contributes to the magnetic susceptibility, it can be a fertile source of information on the composition of the sample. [For the same reasons, it can also be somewhat nightmarish to interpret on its own.] It is quick and easy to measure both in the field and in the laboratory; hence, magnetic susceptibility is used in a variety of ways in applied rock magnetism, including lithologic correlation, magnetic fabric, magnetic grain size/domain state, mineralogy and so on.
@@ -268,7 +268,7 @@ Plots of hysteresis parameters from a collection of related specimens. a) Plot o
 
 A bewildering array of parameter ratios are in popular use in the applied rock and mineral magnetism literature. The most commonly used ratios are listed in [Table %s](#tab:params). Most of these are new to us in this chapter and deserve some discussion. Two of the most popular ratios are the hysteresis ratios $M_r/M_s$ and $H_{cr}/H_c$. These are sensitive to remanence state (SP, SD, flower, vortex, MD) and the source of magnetic anisotropy (cubic, uniaxial, defects), hence reveal something about grain size and shape. Both of these ratios can be estimated from a typical hysteresis experiment (Chapter 5) and the results of many such experiments can be compiled onto a single diagram as in [Figure %s](#fig:slag).
 
-(sect:day)=
+(sect:day8)=
 [Figure %s](#fig:slag)a is known as the *Day diagram* ({cite}`day1977`; see [Section %s](#sect:mixtures) in Chapter 5). Day diagrams are divided into regions of nominally SD, PSD and MD behavior using some theoretical bounds as guides. The designation PSD stands for *pseudo-single domain* and has $M_r/M_s$ ratios in between those characteristic of SD behavior (0.5 or higher) and MD (0.05 or lower). In practice nearly all geological materials plot in the PSD box which comprises the entire flower and vortex state range. The PSD designation should really be split into the truly pseudo-single domain behavior of the flower state and what would better be described as *pseudo-multi-domain* (PMD) behavior of the vortex state. Nonetheless, data such as those shown in [Figure %s](#fig:slag) are often interpreted in terms of grain size using the crushed data shown in [Figure %s](#fig:trends) as calibration. The problem arises however that the trends strongly depend on sample preparation and the absolute grain size interpretations are therefore usually wrong in the literature.
 
 Part of the problem is that the hysteresis behavior of multi-domain assemblages is similar to that of superparamagnetic particles (Chapter 5) and more information (such as behavior as a function of temperature) is necessary for a correct interpretation. Moreover, by taking the ratio $H_{cr}/H_c$ we lose information. For this reason, {cite}`tauxe2002` argued for the much older practice of plotting $M_r/M_s$ versus $H_{cr}$ and $H_c$ separately ({cite}`neel1955`). This type of plot, known as the *squareness-coercivity diagram* is shown in [Figure %s](#fig:slag). The "F" and "V" designations for flower and vortex respectively were approximated by micromagnetic modelling ({cite}`tauxe2002`).

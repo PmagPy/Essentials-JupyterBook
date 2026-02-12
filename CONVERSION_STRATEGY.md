@@ -198,6 +198,9 @@ Then add the complete frontmatter to each chapter file:
 ---
 title: "Chapter 5: Magnetic Hysteresis"  # Format: "Chapter N: Title"
 label: chap:hysteresis                    # Unique label for cross-references
+authors:
+  - name: Lisa Tauxe
+    affiliation: Scripps Institution of Oceanography, UC San Diego
 numbering:
   enumerator: 5.%s                        # Chapter number prefix for sections
 kernelspec:                               # Required for executable code cells
@@ -210,6 +213,7 @@ kernelspec:                               # Required for executable code cells
 
 - `title`: Use format `"Chapter N: Chapter Title"` for consistent display
 - `label`: Unique identifier like `chap:hysteresis` for cross-referencing
+- `authors`: Author attribution (use Lisa Tauxe, SIO, UC San Diego for all chapters)
 - `numbering.enumerator`: Set to `N.%s` where N is the chapter number
 - `kernelspec`: Required if the chapter contains `{code-cell}` directives
 
@@ -259,6 +263,21 @@ The original textbook uses custom macros defined in `mydefs.tex`. These are hand
 - `\S` → `\mathbf{S}` (spin vector)
 - `\beq`/`\eeq` → `$$...$$` (equation environment)
 
+## Documenting Unresolved References
+
+During conversion, some cross-references cannot be resolved because the target content (e.g., appendices) has not yet been converted. These should be:
+
+1. **Converted to generic text** in the chapter (e.g., "see Appendix" instead of `[](#app:name)`)
+2. **Documented in `docs/future-action-items.md`** for later resolution
+
+The future-action-items.md file tracks:
+
+- Appendix cross-references (equations, sections, figures)
+- Inter-chapter references to unconverted chapters
+- Any other deferred work items
+
+When the referenced content is eventually converted, use this document to restore the proper cross-references.
+
 ## Per-Chapter Checklist
 
 For each chapter conversion:
@@ -276,3 +295,4 @@ For each chapter conversion:
 - [ ] Check all figure references resolve
 - [ ] Check all equation references resolve
 - [ ] Check all citations resolve
+- [ ] Document unresolved references in `docs/future-action-items.md`

@@ -85,7 +85,7 @@ CHAPTER_FIGURES = {
     ],
     9: [
         "drill.eps", "hand.eps", "core.eps", "orientation.eps",
-        "suncomp.eps", "backbite.eps", "gps.eps", "samples.eps",
+        "orient.eps", "suncomp.eps", "backbite.eps", "gps.eps", "samples.eps",
         "comps.eps", "zijd.eps", "digeo.eps", "foldtesta.eps",
         "foldtestb.eps", "congloma.eps", "conglomb.eps", "baked.eps",
         "NS034.eps",
@@ -94,6 +94,27 @@ CHAPTER_FIGURES = {
         "pintprinc.eps", "koenigsberger.eps", "TT.eps", "dunlop01.eps",
         "method.eps", "zigzag.eps", "trm-anis.eps", "coolingrate.eps",
         "Shaw-DD.eps", "drm1.eps",
+    ],
+    11: [
+        "gauss.eps", "fisher.eps", "P.eps", "vecsum.eps", "a95-csd.eps",
+        "twosets.eps", "lnp.eps", "incfish.eps", "fishrot.eps",
+        "unexp.eps", "fishqq.eps",
+    ],
+    12: [
+        "vgp-di.eps", "confidence.eps", "love.eps", "hypeq.eps",
+        "twofiles.eps", "cdf.eps", "revtest.eps", "unfolding.eps",
+    ],
+    13: [
+        "measAMS.eps", "magnitude.eps", "eij.eps", "evec.eps",
+        "kmin.eps", "dikeams.eps", "sedams.eps", "shape.eps",
+        "diags.eps", "ternaryams.eps",
+    ],
+    14: [
+        "c14.eps", "chinesecompass.eps", "halley.eps", "gufm1.eps",
+        "psvmod.eps", "wilsoncreek.eps", "sint800.eps", "sedpint.eps",
+        "919.eps", "reversals.eps", "vgpspint.eps", "gpts.eps",
+        "hk02.eps", "tangent.eps", "sbg-lava.eps", "psvrl.eps",
+        "bell.eps", "tk03.eps",
     ],
 }
 

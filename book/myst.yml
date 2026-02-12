@@ -60,6 +60,11 @@ project:
     - file: chapters/chapter7.md
     - file: chapters/chapter8.md
     - file: chapters/chapter9.md
+    - file: chapters/chapter10.md
+    - file: chapters/chapter11.md
+    - file: chapters/chapter12.md
+    - file: chapters/chapter13.md
+    - file: chapters/chapter14.md
 
   # Math macros (adapted from the LaTeX source mydefs.tex)
   math:
@@ -74,6 +79,9 @@ project:
     '\X': '\mathbf{X}'
     '\V': '\mathbf{V}'
     '\E': '\mathbf{E}'
+    '\A': '\mathbf{A}'
+    '\T': '\mathbf{T}'
+    '\C': '\mathbf{C}'
 
 site:
   template: book-theme
