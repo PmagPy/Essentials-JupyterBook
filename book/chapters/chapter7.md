@@ -67,7 +67,7 @@ where $M_s$ is itself a strong function of temperature. The temperature dependen
 
 $$
 M_s(T) = M_s(0) \left(1 - \frac{T}{T_c}\right)^\gamma
-$$ (eq:MsT)
+$$ (eq:MsT-approx)
 
 where $T_c$ is the Curie temperature and $\gamma$ is an empirical exponent (typically ~0.38 for magnetite). We can see from [Equation %s](#eq:tau3) that relaxation time is a function of magnetization, as well as volume, coercivity and temperature, properties that we will return to later in the chapter and in future chapters throughout the course.
 

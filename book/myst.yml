@@ -53,8 +53,10 @@ project:
   # Table of contents
   toc:
     - file: index.md
+    - file: chapters/chapter1.md
+    - file: chapters/chapter2.md
+    - file: chapters/chapter3.md
     - file: chapters/chapter4.md
-      numbered: true
     - file: chapters/chapter5.md
     - file: chapters/chapter6.md
     - file: chapters/chapter7.md
@@ -65,6 +67,14 @@ project:
     - file: chapters/chapter12.md
     - file: chapters/chapter13.md
     - file: chapters/chapter14.md
+    - file: chapters/chapter15.md
+    - file: chapters/chapter16.md
+    - title: Appendices
+      children:
+        - file: chapters/appendix.md
+        - file: chapters/appendix-b.md
+        - file: chapters/appendix-c.md
+        - file: chapters/appendix-d.md
 
   # Math macros (adapted from the LaTeX source mydefs.tex)
   math:
@@ -82,6 +92,7 @@ project:
     '\A': '\mathbf{A}'
     '\T': '\mathbf{T}'
     '\C': '\mathbf{C}'
+    '\s': '\mathbf{s}'
 
 site:
   template: book-theme
