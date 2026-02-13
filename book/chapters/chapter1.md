@@ -12,7 +12,7 @@ numbering:
 
 Paleomagnetism is the study of the magnetic properties of rocks. It is one of the most broadly applicable disciplines in geophysics, having uses in diverse fields such as geomagnetism, tectonics, paleoceanography, volcanology, paleontology, and sedimentology. Although the potential applications are varied, the fundamental techniques are remarkably uniform. Thus, a grounding in the basic tools of paleomagnetic data analysis can open doors to many of these applications. One of the underpinnings of paleomagnetic endeavors is the relationship between the magnetic properties of rocks and the Earth's magnetic field.
 
-In this chapter we will review the basic physical principles behind magnetism: what are magnetic fields, how are they produced and how are they measured? Although many find a discussion of scientific units boring, much confusion arose when paleomagnetists switched from "cgs" to the Système International (SI) units and mistakes abound in the literature. Therefore, we will explain both unit systems and look at how to convert successfully between them. There is a review of essential mathematical tricks in the Appendix to which the reader is referred for help.
+In this chapter we will review the basic physical principles behind magnetism: what are magnetic fields, how are they produced and how are they measured? Although many find a discussion of scientific units boring, much confusion arose when paleomagnetists switched from "cgs" to the Système International (SI) units and mistakes abound in the literature. Therefore, we will explain both unit systems and look at how to convert successfully between them. There is a review of essential mathematical tricks in [](#app:definitions) to which the reader is referred for help.
 
 (sect:H)=
 ## What is a magnetic field?
@@ -36,7 +36,7 @@ $$
 
 where $r$ is the length of the vector $\mathbf{r}$. So, now we know the units of $H$: Am$^{-1}$.
 
-Ampère's Law in its most general form is one of Maxwell's equations of electromagnetism: in a steady electrical field, $\nabla \times \H = \J_f$, where $\J_f$ is the electric current density (see the Appendix for review of the $\nabla$ operator). In words, the curl (or circulation) of the magnetic field is equal to the current density. The origin of the term "curl" for the cross product of the gradient operator with a vector field is suggested in [](#fig:filings)a in which the iron filings seem to curl around the wire.
+Ampère's Law in its most general form is one of Maxwell's equations of electromagnetism: in a steady electrical field, $\nabla \times \H = \J_f$, where $\J_f$ is the electric current density (see [](#app:nabla) for review of the $\nabla$ operator). In words, the curl (or circulation) of the magnetic field is equal to the current density. The origin of the term "curl" for the cross product of the gradient operator with a vector field is suggested in [](#fig:filings)a in which the iron filings seem to curl around the wire.
 
 (sect:moment)=
 ## Magnetic moment
@@ -83,7 +83,7 @@ $$ (eq:faraday)
 (sect:Me)=
 ## Magnetic energy
 
-A magnetic moment $\m$ in the presence of a magnetic field $\B$ has a *magnetostatic energy* ($E_m$) associated with it. This energy tends to align compass needles with the magnetic field (see [](#fig:compass)). $E_m$ is given by $-\m \cdot \B$ or $-m B \cos \theta$ where $m$ and $B$ are the magnitudes of $\m$ and $\B$, respectively (see the Appendix for review of vector multiplication). Magnetic energy has units of joules and is at a minimum when $\m$ is aligned with $\B$.
+A magnetic moment $\m$ in the presence of a magnetic field $\B$ has a *magnetostatic energy* ($E_m$) associated with it. This energy tends to align compass needles with the magnetic field (see [](#fig:compass)). $E_m$ is given by $-\m \cdot \B$ or $-m B \cos \theta$ where $m$ and $B$ are the magnitudes of $\m$ and $\B$, respectively (see [](#app:vecmult) for review of vector multiplication). Magnetic energy has units of joules and is at a minimum when $\m$ is aligned with $\B$.
 
 :::{figure} ../figures/chapter1/compass.png
 :name: fig:compass
@@ -194,7 +194,7 @@ Notes: 1 H = kg m$^2$ A$^{-2}$ s$^{-2}$; 1 emu = 1 G cm$^3$; $B = \mu_o H$ (in v
 (sect:potential)=
 ## The magnetic potential
 
-An isolated electrical charge produces an electrical field that begins at the source (the charge) and spread (diverge) outward (see [](#fig:divergence)a). Because there is no return flux to an oppositely charged "sink", there is a net flux out of the dashed box shown in the figure. The *divergence* of the electrical field is defined as $\nabla \cdot \E$ which quantifies the net flux (see Appendix for more). In the case of the field around an electric charge, the divergence is non-zero.
+An isolated electrical charge produces an electrical field that begins at the source (the charge) and spread (diverge) outward (see [](#fig:divergence)a). Because there is no return flux to an oppositely charged "sink", there is a net flux out of the dashed box shown in the figure. The *divergence* of the electrical field is defined as $\nabla \cdot \E$ which quantifies the net flux (see [](#app:nabla) for more). In the case of the field around an electric charge, the divergence is non-zero.
 
 Magnetic fields are different from electrical fields in that there is no equivalent to an isolated electrical charge; there are only pairs of "opposite charges"—magnetic *dipoles*. Therefore, any line of flux starting at one magnetic pole, returns to its sister pole and there is no net flux out of the box shown in [](#fig:divergence)b; the magnetic field has no divergence ([](#fig:divergence)b). This property of magnetic fields is another of Maxwell's equations: $\nabla \cdot \B = 0$.
 
@@ -211,7 +211,7 @@ $$
 \H = - \nabla \psi_m.
 $$
 
-The presence of a magnetic moment $\m$ creates a magnetic field which is the gradient of some scalar field. To gain a better intuitive feel about the relationship between scalar fields and their gradient vector fields, see the Appendix. Because the divergence of the magnetic field is zero, by definition, the divergence of the gradient of the scalar field is also zero, or $\nabla^2 \psi_m = 0$. The operator $\nabla^2$ is called the Laplacian and $\nabla^2 \psi_m = 0$ is *Laplace's equation*. This will be the starting point for spherical harmonic analysis of the geomagnetic field discussed briefly in Chapter 2.
+The presence of a magnetic moment $\m$ creates a magnetic field which is the gradient of some scalar field. To gain a better intuitive feel about the relationship between scalar fields and their gradient vector fields, see [](#app:nabla). Because the divergence of the magnetic field is zero, by definition, the divergence of the gradient of the scalar field is also zero, or $\nabla^2 \psi_m = 0$. The operator $\nabla^2$ is called the Laplacian and $\nabla^2 \psi_m = 0$ is *Laplace's equation*. This will be the starting point for spherical harmonic analysis of the geomagnetic field discussed briefly in Chapter 2.
 
 The curl of the magnetic field $(\nabla \times \H)$ depends on the current density and is not always zero and magnetic fields cannot generally be represented as the gradient of a scalar field. Laplace's equation is only valid outside the magnetic sources and away from currents.
 

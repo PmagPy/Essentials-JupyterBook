@@ -418,7 +418,7 @@ IRMs can also be useful. The magnitude is sensitive to the magnetic mineralogy, 
 :name: fig:irm
 :width: 70%
 
-Acquisition of IRM by exposure to large magnetic fields. After saturation, the remanence remaining is $M_r$. One can then turn the sample around and apply smaller fields in the opposite direction to determine the field necessary to reduce the net remanence to zero. Also shown are two methods of estimating coercivity of remanence ($H_{cr}''$ and $H_{cr}'''$; see Appendix for summary).
+Acquisition of IRM by exposure to large magnetic fields. After saturation, the remanence remaining is $M_r$. One can then turn the sample around and apply smaller fields in the opposite direction to determine the field necessary to reduce the net remanence to zero. Also shown are two methods of estimating coercivity of remanence ($H_{cr}''$ and $H_{cr}'''$; see [](#app:hyst) for summary).
 :::
 
 In [](#fig:irm) we illustrate the behavior of an initially demagnetized specimen as it is subjected to increasing impulse fields. The maximum IRM achieved is known as sIRM (saturation IRM) or $M_r$ (and sometimes $M_{rs}$). After saturation, the specimen can be turned around and subjected to increasingly large *back-fields*. The back-field sufficient to remagnetize half of the moments (resulting in a net remanence of zero) is the coercivity of remanence ($H_{cr}$ or $\mu_o H_{cr}$ depending on the magnetic units). Alternatively, we could use the magnetic field required to impart an IRM that is half the intensity of the saturation remanence ($H'''_{cr}$). We call this the $H_{1/2}$ method.

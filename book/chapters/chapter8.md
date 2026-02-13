@@ -210,7 +210,7 @@ An example of 3D IRM data are shown in [Figure %s](#fig:3dirm). The curve is dom
 (sect:hyst)=
 ## Hysteresis Parameters
 
-IRM and ARM acquisition and demagnetization curves can be a fecund source of information about the magnetic phases in rocks. However, these are extremely time consuming to measure taking hours for each one. Hysteresis loops on the other hand are quick, taking about 10 minutes to measure the outer loop. In principle, some of the same information could be obtained from hysteresis loops as from the IRM acquisition curves. [For computational details, see Appendix C.]
+IRM and ARM acquisition and demagnetization curves can be a fecund source of information about the magnetic phases in rocks. However, these are extremely time consuming to measure taking hours for each one. Hysteresis loops on the other hand are quick, taking about 10 minutes to measure the outer loop. In principle, some of the same information could be obtained from hysteresis loops as from the IRM acquisition curves. [For computational details, see [](#app:hyst).]
 
 ### The Building Blocks of Hysteresis Loops
 

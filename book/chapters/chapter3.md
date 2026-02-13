@@ -159,7 +159,7 @@ $$
 P(E) \propto \exp (-E_m/kT).
 $$ (eq:PE)
 
-From this we see that the degree of alignment depends exponentially on the ratio of magnetic energy to thermal energy. The degree of alignment with the magnetic field controls the net magnetization $M$. When spins are completely aligned, the substance has a *saturation magnetization* $M_s$. The probability density function leads directly to the following relation (derived in Appendix A):
+From this we see that the degree of alignment depends exponentially on the ratio of magnetic energy to thermal energy. The degree of alignment with the magnetic field controls the net magnetization $M$. When spins are completely aligned, the substance has a *saturation magnetization* $M_s$. The probability density function leads directly to the following relation (derived in [](#app:langevin)):
 
 $$
 {M\over {M_s}} = \left[\coth a - {1\over{a}}\right]=\mathcal{L}(a).

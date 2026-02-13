@@ -193,7 +193,7 @@ The dipole field intensity has changed by more than an order of magnitude in the
 (sect:eqarea)=
 ## Plotting magnetic directional data
 
-Magnetic field and magnetization directions can be visualized as unit vectors anchored at the center of a unit sphere. Such a unit sphere is difficult to represent on a 2-D page. There are several popular projections, including the Lambert equal area projection which we will be making extensive use of in later chapters. The principles of construction of the equal area projection are covered in the Appendix.
+Magnetic field and magnetization directions can be visualized as unit vectors anchored at the center of a unit sphere. Such a unit sphere is difficult to represent on a 2-D page. There are several popular projections, including the Lambert equal area projection which we will be making extensive use of in later chapters. The principles of construction of the equal area projection are covered in [](#app:eqarea).
 
 In general, regions of equal area on the sphere project as equal area regions on this projection, as the name implies. Plotting directional data in this way enables rapid assessment of data scatter. A drawback of this projection is that circles on the surface of a sphere project as ellipses. Also, because we have projected a vector onto a unit sphere, we have lost information concerning the magnitude of the vector. Finally, lower and upper hemisphere projections must be distinguished with different symbols. The paleomagnetic convention is: lower hemisphere projections (downward directions) use solid symbols, while upper hemisphere projections are open.
 
@@ -223,7 +223,7 @@ x_{1}= \cos D \cos I; \quad
 x_{2}= \sin D \cos I; \quad x_{3}= \sin I.
 $$ (eq:dir2cart)
 
-These are rotated to the new coordinate system ($x'_{i}$, see Appendix) by:
+These are rotated to the new coordinate system ($x'_{i}$, see [](#app:coord)) by:
 
 $$
 x'_{1}= (x_{1}^{2}+x_{3}^{2})^{1/2} \sin (I_{d} - \alpha); \quad
@@ -258,7 +258,7 @@ In order to remove the dependence of direction merely on position on the globe, 
 
 Paleomagnetists use the following conventions: $\phi$ is measured positive eastward from the Greenwich meridian and ranges from $0 \rightarrow 360^\circ$; $\theta$ is measured from the North pole and goes from $0 \rightarrow 180^\circ$. Of course $\theta$ relates to latitude, $\lambda$ by $\theta = 90 - \lambda$. $\theta_m$ is the magnetic co-latitude and is given by [Equation %s](#eq:mcolat). Be sure not to confuse latitudes and co-latitudes. Also, be careful with declination. Declinations between 180$^\circ$ and 360$^{\circ}$ are equivalent to $D$ - 360 $^\circ$ which are counter-clockwise with respect to North.
 
-The first step in the problem of calculating a VGP is to determine the magnetic co-latitude $\theta_m$ by [Equation %s](#eq:mcolat) which is defined in the dipole formula ([Equation %s](#eq:mcolat)). The declination $D$ is the angle from the geographic North Pole to the great circle joining the observation site $S$ and the pole $P$, and $\Delta \phi$ is the difference in longitudes between P and S, $\phi_p-\phi_s$. Now we use some tricks from spherical trigonometry as reviewed in the Appendix.
+The first step in the problem of calculating a VGP is to determine the magnetic co-latitude $\theta_m$ by [Equation %s](#eq:mcolat) which is defined in the dipole formula ([Equation %s](#eq:mcolat)). The declination $D$ is the angle from the geographic North Pole to the great circle joining the observation site $S$ and the pole $P$, and $\Delta \phi$ is the difference in longitudes between P and S, $\phi_p-\phi_s$. Now we use some tricks from spherical trigonometry as reviewed in [](#app:strig).
 
 We can locate VGPs using the law of sines and the law of cosines. The declination $D$ is the angle from the geographic North Pole to the great circle joining $S$ and $P$ (see [](#fig:mkvgp)) so:
 
@@ -339,7 +339,7 @@ c) Take the vectors from the output of Problem 1b and convert them to cartesian 
 
 **Problem 2**
 
-a) Plot the IGRF directions from Problem 1b on an equal area projection by hand. Use the equal area net provided in the Appendix. Remember that the outer rim is horizontal and the center of the diagram is vertical. Azimuth goes around the rim with clockwise being positive. Put a thumbtack through the equal area (Schmidt) net and place a piece of tracing paper on the thumbtack. Mark the top of the stereonet with a tick mark on the tracing paper.
+a) Plot the IGRF directions from Problem 1b on an equal area projection by hand. Use the equal area net provided in [](#app:eqarea). Remember that the outer rim is horizontal and the center of the diagram is vertical. Azimuth goes around the rim with clockwise being positive. Put a thumbtack through the equal area (Schmidt) net and place a piece of tracing paper on the thumbtack. Mark the top of the stereonet with a tick mark on the tracing paper.
 
 To plot a direction, rotate the tick mark of the tracing paper around counter clockwise until the top of the paper is rotated by the declination of the direction. Then count tick marks toward the center from the outer rim (the horizontal) to the inclination angle, plot the point, and rotate back so that the tick is North again. Put all your points on the diagram.
 

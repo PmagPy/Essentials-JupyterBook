@@ -39,7 +39,7 @@ $$ (eq:MkH)
 
 where $\chi_{ij}$ are coefficients of the magnetic susceptibility tensor.
 
-We have met tensors before in the orientation matrix and rotation matrices (see Appendix A.3.5). The coefficients ${\chi_{ij}}$ are the elements of a second-order, symmetric tensor, known as the *anisotropy of magnetic susceptibility* (AMS) tensor $\boldsymbol{\chi}$. The set of [Equations %s](#eq:MkH) can be rewritten in summation notation as:
+We have met tensors before in the orientation matrix and rotation matrices (see [](#app:tensors)). The coefficients ${\chi_{ij}}$ are the elements of a second-order, symmetric tensor, known as the *anisotropy of magnetic susceptibility* (AMS) tensor $\boldsymbol{\chi}$. The set of [Equations %s](#eq:MkH) can be rewritten in summation notation as:
 
 $$
 M_i=\chi_{ij}H_j.
@@ -99,7 +99,7 @@ $$ (eq:b66)
 
 In the special case in which $\mathbf{A}$ is a square matrix (as in [Equation %s](#eq:a66)), $(\mathbf{A}^T\mathbf{A})^{-1}\mathbf{A}^T$ reduces to $\mathbf{A}^{-1}$ (i.e. $\mathbf{B} = \mathbf{A}^{-1}$).
 
-There exists one coordinate system $\mathbf{V}$ (whose axes are the eigenvectors of $\boldsymbol{\chi}$: $\mathbf{V}_1$, $\mathbf{V}_2$, $\mathbf{V}_3$) in which the off-axis terms of $\boldsymbol{\chi}$ are zero (see Appendix A.3.5). While the eigenvectors collectively are called the "principal axes", the first eigenvector is also known simply as the principal eigenvector and the other two are the major and minor eigenvector respectively. In this special coordinate system:
+There exists one coordinate system $\mathbf{V}$ (whose axes are the eigenvectors of $\boldsymbol{\chi}$: $\mathbf{V}_1$, $\mathbf{V}_2$, $\mathbf{V}_3$) in which the off-axis terms of $\boldsymbol{\chi}$ are zero (see [](#app:eigen)). While the eigenvectors collectively are called the "principal axes", the first eigenvector is also known simply as the principal eigenvector and the other two are the major and minor eigenvector respectively. In this special coordinate system:
 
 $$
 \begin{matrix}
@@ -369,7 +369,6 @@ In none of the various types of plots just discussed are the horizontal and vert
 Properties of the Ternary diagram: a) There are three axes with limits of $\tau_1,\tau_2, \tau_3$. Because of the constraint that $\tau_1>\tau_2>\tau_3$, only the shaded region is allowed. This is bounded at the top by a sphere when all three eigenvalues are equal, to the bottom left by a disk and to the bottom right by a needle. Geological materials generally have a low percentage of anisotropy and plot close to the sphere. This region is enlarged in b) which illustrates how the ternary projection can be plotted as $E'$ versus $R$ and how shape (oblate, prolate, sphere) and percent anisotropy appear on the diagram. [Figure from {cite:t}`tauxe1998`.]
 :::
 
-(table:params)=
 :::{table} Assorted anisotropy statistics
 :label: table:params
 
@@ -445,7 +444,7 @@ There could be several ways of estimating the DRM tensor in the lab: directly, b
 
 Despite the fact that ARM and DRM may be carried by the same particles, the relationship between the ARM and DRM anisotropy tensors is not straightforward. {cite:t}`jackson1991` consider the complexity of the processes that align and misalign particle long-axes, including the external magnetic field, gravitational, compactional, electrostatic, surface tension and Van der Waal's forces. The result of all of these is only a slight net alignment (as discussed in Chapter 7). Under certain circumstances including post-depositional compaction and syn-depositional effect of elongate particles landing on the sediment/water interface, there can be preferential alignment in the horizontal plane leading to inclination shallowing.
 
-In order to tie the AARM tensor to the DRM anisotropy tensor, we need to determine the orientations of the particle long axes as well as the effects of individual particle anisotropies. This latter results from the fact that individual particles are not ordinarily at saturation being generally (except for very small grains or grains of low magnetization materials) non-uniformly magnetized themselves (e.g., vortex remanence state). The rationale is that because AARM reflects the variations in the capacity for carrying remanence in the detrital particles, that AARM can be used to determine the anisotropy of DRM, if the ARM anisotropy of the detrital particles themselves can be determined. The details of how this are done in practice is summarized in the Appendix.
+In order to tie the AARM tensor to the DRM anisotropy tensor, we need to determine the orientations of the particle long axes as well as the effects of individual particle anisotropies. This latter results from the fact that individual particles are not ordinarily at saturation being generally (except for very small grains or grains of low magnetization materials) non-uniformly magnetized themselves (e.g., vortex remanence state). The rationale is that because AARM reflects the variations in the capacity for carrying remanence in the detrital particles, that AARM can be used to determine the anisotropy of DRM, if the ARM anisotropy of the detrital particles themselves can be determined. The details of how this are done in practice is summarized in [](#app:aarm).
 
 **SUPPLEMENTAL READINGS:** {cite:t}`vaughn2005`; {cite:t}`lebti2008`.
 

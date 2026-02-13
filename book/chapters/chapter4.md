@@ -61,7 +61,7 @@ There are many causes of anisotropy energy. The most important ones derive from 
 
 For equant single-domain particles or particles with low saturation magnetizations, the crystal structure dominates the magnetic energy. The so-called *easy directions* of magnetization are crystallographic directions along which magnetocrystalline energy is at a minimum.
 
-For a cubic crystal like magnetite at room temperature, the magnetocrystalline anisotropy energy density is expressed in terms of the direction cosines $\alpha_1, \alpha_2, \alpha_3$ — the cosines of the angles between the magnetization direction and the crystallographic axes [100], [010], [001] (see Appendix for review of direction cosines):
+For a cubic crystal like magnetite at room temperature, the magnetocrystalline anisotropy energy density is expressed in terms of the direction cosines $\alpha_1, \alpha_2, \alpha_3$ — the cosines of the angles between the magnetization direction and the crystallographic axes [100], [010], [001] (see [](#app:dircosines) for review of direction cosines):
 
 $$
 \epsilon_a = K_1(\alpha_1^2 \alpha_2^2 + \alpha_2^2\alpha^2_3 + \alpha_3^2\alpha_1^2) + K_2\alpha_1^2\alpha_2^2\alpha_3^2,
@@ -535,7 +535,7 @@ $$
 \mathbf{H}_d = -N \mathbf{M},
 $$
 
-where $N$ is a *demagnetizing factor* determined by the shape. In fact, the demagnetizing factor depends on the orientation of $\mathbf{M}$ within the crystal and therefore is a tensor (see Appendix for review of tensors). The more general equation is $\mathbf{H}_d = \mathbf{N} \cdot \mathbf{M}$ where $\mathbf{H}_d$ and $\mathbf{M}$ are vectors and $\mathbf{N}$ is a 3 × 3 tensor. For now, we will simplify things by considering the isotropic case of a sphere in which $\mathbf{N}$ reduces to the single value scalar quantity $N$.
+where $N$ is a *demagnetizing factor* determined by the shape. In fact, the demagnetizing factor depends on the orientation of $\mathbf{M}$ within the crystal and therefore is a tensor (see [](#app:tensors) for review of tensors). The more general equation is $\mathbf{H}_d = \mathbf{N} \cdot \mathbf{M}$ where $\mathbf{H}_d$ and $\mathbf{M}$ are vectors and $\mathbf{N}$ is a 3 × 3 tensor. For now, we will simplify things by considering the isotropic case of a sphere in which $\mathbf{N}$ reduces to the single value scalar quantity $N$.
 
 :::{figure} ../figures/chapter4/demagfield.png
 :name: fig:demagfield
