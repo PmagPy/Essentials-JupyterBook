@@ -52,6 +52,19 @@ FONT_REPLACEMENTS = {
 
 # Chapter figure lists (same as convert_figures.py)
 CHAPTER_FIGURES = {
+    1: [
+        "wire.eps", "moment.eps", "barmagnetfield.eps", "compass.eps",
+        "pp.eps", "divergence.eps", "mH.eps", "discdynamo.eps", "dipole.eps",
+    ],
+    2: [
+        "components.eps", "schmidt.eps", "harmonics.eps", "power.eps",
+        "B.eps", "poles.eps", "igrf.eps", "igrf_dip.eps", "mkvgp.eps",
+    ],
+    3: [
+        "1s.eps", "shells.eps", "structure.eps", "larmor.eps",
+        "para.eps", "exchange.eps", "MsT.eps", "curie.eps",
+        "spins.eps", "spinwave.eps",
+    ],
     4: [
         "magnetite.eps", "K-T.eps", "verwey.eps", "demagfield.eps",
         "micromag.eps", "energies.eps", "tauvd.eps", "butban.eps",
@@ -115,6 +128,24 @@ CHAPTER_FIGURES = {
         "919.eps", "reversals.eps", "vgpspint.eps", "gpts.eps",
         "hk02.eps", "tangent.eps", "sbg-lava.eps", "psvrl.eps",
         "bell.eps", "tk03.eps",
+    ],
+    15: [
+        "cox64.eps", "mason61.eps", "pitman66.eps", "opdyke66.eps",
+        "opdyke74.eps", "hilgen91.eps", "newark.eps", "neogene.eps",
+        "spreadingrate.eps", "isochron.eps",
+    ],
+    16: [
+        "wandering.eps", "plates.eps", "finrot.eps", "polarity.eps",
+        "poles-aus.eps", "mkapwp.eps", "PEP.eps", "APWP.eps",
+        "triangulation.eps", "gondwana-apwp.eps", "squish.eps", "EI.eps",
+        "pangea.eps", "pangea-poles.eps", "poles_na_dis.eps", "inconly.eps",
+    ],
+    "appendix": [
+        "strig.eps", "vectors.eps", "cross.eps", "dircosines.eps",
+        "transform.eps", "ski.eps", "div.eps", "divzero.eps", "curl.eps",
+        "bootstrap.eps", "sundefs.eps", "mkeq.eps", "equal.eps", "how2eq.eps",
+        "tilt.eps", "ternary.eps", "Ais.eps", "hparcalc.eps", "IZZI.eps",
+        "meas15.eps", "AMSspin.eps", "AMSspinProc.eps",
     ],
 }
 
@@ -249,8 +280,8 @@ def main():
         description="Convert EPS figures to PNG with font replacement"
     )
     parser.add_argument(
-        "--chapter", "-c", type=int, choices=list(CHAPTER_FIGURES.keys()),
-        help="Chapter number to convert"
+        "--chapter", "-c",
+        help="Chapter number (1-16) or 'appendix' to convert"
     )
     parser.add_argument("--all", action="store_true", help="Convert all EPS files")
     parser.add_argument("--files", nargs="+", help="Specific EPS files to convert")
@@ -274,6 +305,22 @@ def main():
         print("\nERROR: Must specify --chapter <N>, --all, or --files <file1.eps ...>")
         sys.exit(1)
 
+    # Parse chapter argument (can be integer or 'appendix')
+    chapter_key = None
+    if args.chapter:
+        if args.chapter.lower() == "appendix":
+            chapter_key = "appendix"
+        else:
+            try:
+                chapter_key = int(args.chapter)
+            except ValueError:
+                print(f"ERROR: Invalid chapter: {args.chapter}")
+                print("Use a number (1-16) or 'appendix'")
+                sys.exit(1)
+        if chapter_key not in CHAPTER_FIGURES:
+            print(f"ERROR: Unknown chapter: {chapter_key}")
+            sys.exit(1)
+
     if not check_dependencies():
         sys.exit(1)
 
@@ -281,17 +328,25 @@ def main():
         print(f"ERROR: EPS directory not found: {EPS_DIR}")
         sys.exit(1)
 
+    # Determine directory name based on chapter
+    if chapter_key == "appendix":
+        dir_name = "appendix"
+    elif chapter_key:
+        dir_name = f"chapter{chapter_key}"
+    else:
+        dir_name = None
+
     # Determine PNG output directory
     if args.output_dir:
         png_output_dir = args.output_dir
-    elif args.chapter:
-        png_output_dir = FIGURES_DIR / f"chapter{args.chapter}"
+    elif dir_name:
+        png_output_dir = FIGURES_DIR / dir_name
     else:
         png_output_dir = FIGURES_DIR
 
     # Determine SVG output directory (in original repo)
-    if args.chapter:
-        svg_output_dir = SVG_DIR / f"chapter{args.chapter}"
+    if dir_name:
+        svg_output_dir = SVG_DIR / dir_name
     else:
         svg_output_dir = SVG_DIR
 
@@ -304,7 +359,7 @@ def main():
     elif args.all:
         file_stems = [f.stem for f in EPS_DIR.glob("*.eps")]
     else:
-        file_stems = [Path(f).stem for f in CHAPTER_FIGURES[args.chapter]]
+        file_stems = [Path(f).stem for f in CHAPTER_FIGURES[chapter_key]]
 
     converted = 0
     failed = 0
