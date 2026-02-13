@@ -34,7 +34,7 @@ project:
   abbreviations:
     SD: Single Domain
     PSD: Pseudo-Single Domain
-    MD: Multi-Domain
+    MD: Multidomain
     SP: Superparamagnetic
     TRM: Thermoremanent Magnetization
     NRM: Natural Remanent Magnetization

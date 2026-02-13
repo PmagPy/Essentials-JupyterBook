@@ -35,7 +35,7 @@ Paleomagnetism is famous for its use of a large number of incomprehensible acron
 | IGRF | International geomagnetic reference field: [](#sect:igrf) |
 | IZZI | Infield-zero field/ zero field-infield paleointensity protocol: [](#sect:KTT) |
 | IRM | Isothermal remanent magnetization: [](#sect:uniaxial) and [](#sect:irm) |
-| MD | Multi-domain: Chapter 4 |
+| MD | Multidomain: Chapter 4 |
 | MDF | Median destructive field: [](#sect:crittemp) |
 | MDT | Median destructive temperature: [](#sect:crittemp) |
 | NRM | Natural remanent magnetization: Chapter 7 |
