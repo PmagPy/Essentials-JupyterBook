@@ -40,11 +40,11 @@ Exsolution is important in paleomagnetism for two reasons. First, the different 
 a) Atomic force micrograph image of magnetite inclusion in clinopyroxene. The topographically low areas are ulvöspinel while the higher areas are magnetite. b) Magnetic force micrograph of magnetic domains (black and white are oppositely magnetized). The ulvöspinel lamellae are essentially non-magnetic and are gray. c) Transmission electron micrograph of ilmenite host with hematite exsolution lamellae. Lamellar size gets smaller with proximity to edge. d) Photomicrograph of titanohematite exsolution lamellae. Dark bands are Ti-rich (high magnetization, low $T_c$), light grey bands are Ti-poor (low magnetization, high $T_c$). [a and b are from {cite}`feinberg2005`, c) from {cite}`robinson2002`, d) is modified from S. Haggerty in {cite}`butler1992`.]
 :::
 
-:::{figure} ../figures/chapter6/tern.png
+:::{figure} ../figures/chapter6/oxide_ternary.png
 :name: fig:tern
-:width: 60%
+:width: 90%
 
-Ternary diagram for iron-oxides. The solid lines are solid solution series with increasing titanium concentration ($x$). The dashed lines with arrows indicate the direction of increasing oxidation ($z$). [Figure redrawn from {cite}`butler1992`.]
+Cation-fraction ternary diagram (Fe$^{3+}$–Ti$^{4+}$–Fe$^{2+}$) for the Fe–Ti oxide system. Solid lines show the titanomagnetite and titanohematite solid-solution series with increasing titanium substitution ($x$). Dashed lines with arrows indicate the direction of increasing oxidation ($z$). Panel (b) illustrates high-temperature oxyexsolution of titanomagnetite into magnetite-rich and ilmenite-rich lamellae, conserving bulk composition. Panel (c) shows low-temperature oxidation (maghemitization), which increases Fe$^{3+}$ at approximately constant Ti.
 :::
 
 Compositions of minerals are frequently plotted on ternary diagrams like the one shown in [](#fig:tern). [For help in reading ternary diagrams, please see the Appendix.] The apices of the ternary diagram are Fe$^{2+}$ on the lower left, Fe$^{3+}$ on the lower right and Ti$^{4+}$ on the top. The oxides with these species are FeO (wüstite), Fe$_2$O$_3$ (hematite or maghemite depending on structure) and TiO (rutile). Every point on the triangle represents a cation mixture or solution that adds up to one cation (hence the fractional formulae).
