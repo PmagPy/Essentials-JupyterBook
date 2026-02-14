@@ -47,12 +47,12 @@ a) Atomic force micrograph image of magnetite inclusion in clinopyroxene. The to
 Cation-fraction ternary diagram (Fe$^{3+}$–Ti$^{4+}$–Fe$^{2+}$) for the Fe–Ti oxide system. Solid lines show the titanomagnetite and titanohematite solid-solution series with increasing titanium substitution ($x$). Dashed lines with arrows indicate the direction of increasing oxidation ($z$). Panel (b) illustrates high-temperature oxyexsolution of titanomagnetite into magnetite-rich and ilmenite-rich lamellae, conserving bulk composition. Panel (c) shows low-temperature oxidation (maghemitization), which increases Fe$^{3+}$ at approximately constant Ti.
 :::
 
-Compositions of minerals are frequently plotted on ternary diagrams like the one shown in [](#fig:tern). [For help in reading ternary diagrams, please see the Appendix.] The apices of the ternary diagram are Fe$^{2+}$ on the lower left, Fe$^{3+}$ on the lower right and Ti$^{4+}$ on the top. The oxides with these species are FeO (wüstite), Fe$_2$O$_3$ (hematite or maghemite depending on structure) and TiO (rutile). Every point on the triangle represents a cation mixture or solution that adds up to one cation (hence the fractional formulae).
+Compositions of minerals are frequently plotted on ternary diagrams like the one shown in [](#fig:tern). [For help in reading ternary diagrams, please see the Appendix.] The apices of the ternary diagram are Fe$^{2+}$ on the lower left, Fe$^{3+}$ on the lower right and Ti$^{4+}$ on the top. The oxides with these species are FeO (wüstite), Fe$_2$O$_3$ (hematite or maghemite depending on structure) and TiO$_2$ (rutile). Every point on the triangle represents a cation mixture or solution that adds up to one cation (hence the fractional formulae).
 
 Each of the solid arrows in [](#fig:tern) (labelled titanomagnetite and hemoilmenite) represent increasing substitution of titanium into the crystal lattices of magnetite and hematite respectively. The amount of Ti substitution in titanomagnetites is denoted by "$x$", while substitution in the hemoilmenites is denoted by "$y$". Values for $x$ and $y$ range from 0 (magnetite or hematite) to 1 (ulvöspinel or ilmenite).
 
-### Titanomagnetites Fe$_{3-x}$Ti$_x$O$_4$
 (sect:titano)=
+### Titanomagnetites Fe$_{3-x}$Ti$_x$O$_4$
 
 In earlier chapters on rock magnetism, we learned a few things about magnetite. As mentioned in [Chapter 4](#chap:anisotropy), magnetite (Fe$_3$O$_4$) has an inverse spinel structure (AB$_2$O$_4$). The oxygen atoms form a face-centered cubic lattice into which cations fit in either octahedral or tetrahedral symmetry. For each unit cell there are four tetrahedral sites (A) and eight octahedral sites (B). To maintain charge balance with the four oxygen ions (O$^{2-}$), there are two Fe$^{3+}$ ions and one Fe$^{2+}$ ion. Fe$^{3+}$ has five unpaired spins, while Fe$^{2+}$ has four. As discussed in [Chapter 3](#chap:inducedremanent), each unpaired spin contributes a moment of one Bohr magneton ($m_b$). The divalent iron ions all reside in the octahedral lattice sites, whereas the trivalent iron ions are split evenly between octahedral and tetrahedral sites: Fe$^{3+}|$Fe$^{3+}$Fe$^{2+}|$O$_4$. The A and B lattice sites are coupled with antiparallel spins and magnetite is ferrimagnetic. Therefore, the net moment of magnetite is (9-5=4) $m_b$ per molecule (at 0 K).
 
@@ -83,7 +83,7 @@ Ulvöspinel is antiferromagnetic because the A and B lattice sites have the same
 
 The profound effect of titanium substitution on the intrinsic properties of titanomagnetite is illustrated in [](#fig:X). Because Ti$^{4+}$ has no unpaired spins, the saturation magnetization decreases with increasing $x$ ([](#fig:X)a). The cell dimensions increase with increasing $x$ ([](#fig:X)b). As a result of the increased cell dimension, there is a decrease in Curie Temperature ([](#fig:X)c). There is also a slight increase in coercivity (not shown).
 
-The large $M_s$ of magnetite (see [](#tab:rockpars)) means that for deviations from equant grains as small as 10%, the magnetic anisotropy energy becomes dominated by shape. Nonetheless, aspects of the magnetocrystalline anisotropy provide useful diagnostic tests. The magnetocrystalline anisotropy constants are a strong function of temperature. On warming to ~-100°C from near absolute zero, changes in these constants can lead to an abrupt loss of magnetization, which is known loosely as the *Verwey transition* (see [Chapter 4](#chap:anisotropy)). Identification of the Verwey transition suggests a remanence that is dominated by magnetocrystalline anisotropy. As we shall see, the temperature at which it occurs is sensitive to oxidation and the transition can be completely suppressed by maghemitization (see {cite}`dunlop1997`).
+The large $M_s$ of magnetite (see [](#tab:rockpars)) means that for deviations from equant grains as small as 10%, the magnetic anisotropy energy becomes dominated by shape. Nonetheless, aspects of the magnetocrystalline anisotropy provide useful diagnostic tests. The magnetocrystalline anisotropy constants are a strong function of temperature. On warming to ~120 K (~-150°C) from near absolute zero, changes in these constants can lead to an abrupt loss of magnetization, which is known loosely as the *Verwey transition* (see [Chapter 4](#chap:anisotropy)). Identification of the Verwey transition suggests a remanence that is dominated by magnetocrystalline anisotropy. As we shall see, the temperature at which it occurs is sensitive to oxidation and the transition can be completely suppressed by maghemitization (see {cite}`dunlop1997`).
 
 It should be noted that natural titanomagnetites often contain impurities (usually Al, Mg, Cr). These impurities also affect the magnetic properties. Substitution of 0.1 Al$^{3+}$ into the unit cell of titanomagnetite results in a 25% reduction in $M_s$ and a reduction of the Curie temperature by some 50°C. Substitution of Mg$^{2+}$ into TM60 also results in a lower saturation magnetization with a reduction of some 15%.
 
@@ -94,10 +94,10 @@ It should be noted that natural titanomagnetites often contain impurities (usual
 Variation of properties with Ti substitution in the titanohematite series. a) Variation of saturation magnetization. b) Variation of Néel Temperature. [Modified from {cite}`nagata1961` and {cite}`stacey1974`.]
 :::
 
-### Hematite-Ilmenite Fe$_{2-y}$Ti$_y$O$_3$
 (sect:hemo)=
+### Hematite-Ilmenite Fe$_{2-y}$Ti$_y$O$_3$
 
-Hematite has a corundum structure (see [](#fig:hematite)). It is rhombohedral with a pseudocleavage (perpendicular to the $c$ axis) and tends to break into flakes. It is antiferromagnetic, with a weak parasitic ferromagnetism resulting from either spin-canting or defect ferromagnetism (see [Chapter 3](#chap:inducedremanent)). Because the magnetization is a spin canted antiferromagnetism, the temperature at which this magnetization disappears is called the Néel Temperature instead of the Curie Temperature which is *sensu strictu* only for ferromagnetic minerals. The Néel temperature for hematite is approximately 685°C.
+Hematite has a corundum structure (see [](#fig:hematite)). It is rhombohedral with a pseudocleavage (perpendicular to the $c$ axis) and tends to break into flakes. It is antiferromagnetic, with a weak parasitic ferromagnetism resulting from either spin-canting or defect ferromagnetism (see [Chapter 3](#chap:inducedremanent)). Because the magnetization is a spin canted antiferromagnetism, the temperature at which this magnetization disappears is called the Néel Temperature instead of the Curie Temperature which is *sensu stricto* only for ferromagnetic minerals. The Néel temperature for hematite is approximately 685°C.
 
 Above about -10°C (the *Morin transition*), the magnetization is constrained by aspects of the crystal structure to lie perpendicular to the $c$ axis or within the basal plane. Below the Morin transition, spin-canting all but disappears and the magnetization is parallel to the $c$ axis. This effect could be used to demagnetize the grains dominated by spin-canting: it does not affect those dominated by defect moments. Most hematites formed at low-temperatures have magnetizations dominated by defect moments, so the remanence of many rocks will not display a Morin transition.
 
@@ -138,10 +138,10 @@ The (titano)maghemite structure is metastable and can invert to form the isochem
 a) Photograph of goethite. [From en.wikipedia.org; photo of Eurico Zimbres.] b) Goethite crystal structure. c) Photograph of greigite. [Photo of William Péraud.] d) Greigite crystal structure. e) Photograph of single crystal of pyrrhotite. [Photo of Dan Weinrich.] f) Pyrrhotite crystal structure. [All crystal structure images from webmineral.com.]
 :::
 
-## Iron-oxyhydroxides and iron-sulfides
 (sect:pyrrho)=
+## Iron-oxyhydroxides and iron-sulfides
 
-Of the many iron oxyhydroxides that occur in any abundance in nature, goethite ($\alpha$FeOOH; [](#fig:minerals)a,b) is the most common magnetic phase. It is antiferromagnetic with what is most likely a defect magnetization. It occurs widely as a weathering product of iron-bearing minerals and as a direct precipitate from iron-bearing solutions. It is metastable under many conditions and dehydrates to hematite with time or elevated temperature. Dehydration is usually complete by about 325°C. It is characterized by a very high coercivity but a low Néel temperature of about 100–150°C. Diagnostic properties of goethite are listed in [](#tab:rockpars).
+Of the many iron oxyhydroxides that occur in any abundance in nature, goethite ($\alpha$FeOOH; [](#fig:minerals)a,b) is the most common magnetic phase. It is antiferromagnetic with what is most likely a defect magnetization. It occurs widely as a weathering product of iron-bearing minerals and as a direct precipitate from iron-bearing solutions. It is metastable under many conditions and dehydrates to hematite with time or elevated temperature. Dehydration is usually complete by about 325°C. It is characterized by a very high coercivity but a low Néel temperature of about 120°C. Diagnostic properties of goethite are listed in [](#tab:rockpars).
 
 There are two iron-sulfides that are important to paleomagnetism: greigite (Fe$_3$S$_4$; [](#fig:minerals)c,d) and pyrrhotite (Fe$_7$S$_8$–Fe$_{11}$S$_{12}$; [](#fig:minerals)e,f). These are ferrimagnetic and occur in reducing environments. They both tend to oxidize to various iron oxides leaving paramagnetic pyrite as the sulfide component.
 
@@ -273,8 +273,8 @@ Some of the more spectacular magnetic minerals found in sediments are biogenic m
   - 5271 kg m$^{-3}$
   - {cite}`dunlop1997`
 * - Néel temperature
-  - 675°C
-  - {cite}`oreilly1984`
+  - 680–690°C
+  - {cite}`ozdemir2006`
 * - Saturation Magnetization
   - 0.4 Am$^2$kg$^{-1}$
   - {cite}`oreilly1984`
@@ -297,7 +297,7 @@ Some of the more spectacular magnetic minerals found in sediments are biogenic m
   - 4264 kg m$^{-3}$
   - {cite}`dunlop1997`
 * - Néel temperature
-  - 70→125°C
+  - ~120°C
   - {cite}`oreilly1984`
 * - Saturation Magnetization
   - 10$^{-3}$→1 Am$^2$kg$^{-1}$
@@ -409,8 +409,8 @@ a) Thermomagnetic run of mineral whereby magnetization (normalized by the initia
 
 **Problem 3**
 
-Ferromagnetic minerals in two rock samples are known to be FeTi oxides and are found to have the properties described below. Using this information and looking up the properties of FeTi oxides described in the text, identify the ferromagnetic minerals. For titanomagnetite or titanohematite, approximate the compositional parameter $x$.
+Ferromagnetic minerals in two rock samples are known to be FeTi oxides and are found to have the properties described below. Using this information and looking up the properties of FeTi oxides described in the text, identify the ferromagnetic minerals. For titanomagnetite or titanohematite, approximate the compositional parameter ($x$ or $y$).
 
 a) Strong-field thermomagnetic analysis indicates a dominant Curie temperature $T_c$ = 420°C. Subjecting the specimen to increasingly larger fields to measure successive isothermal remanences (see [Chapter 5](#chap:hysteresis)) reveals a coercivity spectrum with a coercivity of less than 300 mT. What is this ferromagnetic mineral?
 
-b) Strong-field thermomagnetic analysis (used for measuring the Curie temperature) shows the behavior in [](#fig:microprobe)a with Curie temperature $T_c$ = 200°C. In addition, electron microprobe data indicates abundances of FeO, Fe$_2$O$_3$, and TiO shown in [](#fig:microprobe)b. Unfortunately, electron microprobe data are not very effective in determining the Fe$_2$O$_3$:FeO ratio (placement from left to right in the TiO-FeO-Fe$_2$O$_3$ ternary diagram). Accordingly, there is much uncertainty in the Fe$_2$O$_3$:FeO ratio indicated by the microprobe data. But microprobe data are effective in determining the TiO:(Fe$_2$O$_3$ + FeO) ratio (placement from bottom to top in the TiO-FeO-Fe$_2$O$_3$ ternary diagram). With this information, identify the ferromagnetic mineral.
+b) Strong-field thermomagnetic analysis (used for measuring the Curie temperature) shows the behavior in [](#fig:microprobe)a with Curie temperature $T_c$ = 200°C. In addition, electron microprobe data indicates abundances of FeO, Fe$_2$O$_3$, and TiO$_2$ shown in [](#fig:microprobe)b. Unfortunately, electron microprobe data are not very effective in determining the Fe$_2$O$_3$:FeO ratio (placement from left to right in the TiO$_2$-FeO-Fe$_2$O$_3$ ternary diagram). Accordingly, there is much uncertainty in the Fe$_2$O$_3$:FeO ratio indicated by the microprobe data. But microprobe data are effective in determining the TiO$_2$:(Fe$_2$O$_3$ + FeO) ratio (placement from bottom to top in the TiO$_2$-FeO-Fe$_2$O$_3$ ternary diagram). With this information, identify the ferromagnetic mineral.
