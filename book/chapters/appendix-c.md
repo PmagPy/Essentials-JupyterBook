@@ -8,7 +8,7 @@ numbering:
   enumerator: C.%s
 ---
 
-Chapters 5 and 7 discussed various hysteresis parameters and Chapters 11 and 12 developed the major features of paleomagnetic directional statistics. Here we go over some aspects in greater detail.
+[Chapter 5](#chap:hysteresis) and [Chapter 7](#chap:remanence) discussed various hysteresis parameters and [Chapter 11](#chap:fisher) and [Chapter 12](#chap:beyond-fisher) developed the major features of paleomagnetic directional statistics. Here we go over some aspects in greater detail.
 
 (app:hyst)=
 ## Hysteresis Parameters
@@ -44,7 +44,7 @@ Typical hysteresis experiment. a) Raw data are solid red line. Data are processe
 
 3. Coercivity ($\mu_o H_c$) is the field at which $M=0$. We estimate this by finding the values of $B$ between which $M$ switches sign for both the ascending and descending loops (after adjustment), calculate a line and evaluate the $B$ for which $M=0$. The coercivity is the average of the two estimates.
 
-4. We fit a spline to the adjusted ascending and descending loops and resample the loops at even intervals of $B$ (usually 10 mT intervals). The $\Delta M$ curve shown in [](#fig:hparcalc)b is the difference between these two interpolated curves, averaging the data for negative and positive $B$. The saturation remanence $M_r$ is the value of the $\Delta M$ curve at $B=0$. The coercivity of remanence ($\mu_oH_{cr}$ in [](#tab:hystpars)) is the field for which $\Delta M$ is half the value of $M_r$. This is the "$\Delta M$" method of coercivity of remanence calculation (see Chapter 5).
+4. We fit a spline to the adjusted ascending and descending loops and resample the loops at even intervals of $B$ (usually 10 mT intervals). The $\Delta M$ curve shown in [](#fig:hparcalc)b is the difference between these two interpolated curves, averaging the data for negative and positive $B$. The saturation remanence $M_r$ is the value of the $\Delta M$ curve at $B=0$. The coercivity of remanence ($\mu_oH_{cr}$ in [](#tab:hystpars)) is the field for which $\Delta M$ is half the value of $M_r$. This is the "$\Delta M$" method of coercivity of remanence calculation (see [Chapter 5](#chap:hysteresis)).
 
 5. If there are "back-field" IRM data as in [](#fig:hparcalc)b, the coercivity of remanence can be estimated by finding (through interpolation) the applied field which reduces the saturation remanence ($M_r$) to zero. This is the "back field" method.
 
@@ -102,7 +102,7 @@ $$
 (app:linesNplanes)=
 ### Combining lines and planes
 
-1. Calculate $M$ directed lines (two in our case) and $N$ great circles (one in our case) using principal component analysis (see Chapter 9) or Fisher statistics.
+1. Calculate $M$ directed lines (two in our case) and $N$ great circles (one in our case) using principal component analysis (see [Chapter 9](#chap:direction)) or Fisher statistics.
 
 2. Assume that the primary direction of magnetization for the samples with great circles lies somewhere along the great circle path (i.e., within the plane).
 
@@ -186,7 +186,7 @@ $$
 \hat \sigma^2_3={N^{-1}}\sum_k ({x_{k3}}')^2.
 $$ (eq:kentpars)
 
-As defined here, $\hat \mu = R/N$ ($R$ is closely approximated by the equation for $R$ in Chapter 11. Also to good approximation, $\hat \sigma_2^2 = \tau_2,$ and $\hat \sigma_3^2 = \tau_3$, where $\tau_i$ are the eigenvalues of the orientation matrix.
+As defined here, $\hat \mu = R/N$ ($R$ is closely approximated by the equation for $R$ in [Chapter 11](#chap:fisher). Also to good approximation, $\hat \sigma_2^2 = \tau_2,$ and $\hat \sigma_3^2 = \tau_3$, where $\tau_i$ are the eigenvalues of the orientation matrix.
 
 The semi-angles $\zeta_{95}$ and $\eta_{95}$ subtended by the major and minor axes of the 95% confidence ellipse are given by:
 
@@ -268,9 +268,9 @@ Paleointensity statistics have gotten somewhat out of hand of late. There are a 
 Illustration of paleointensity parameters. **Arai plots:** The magnitude of the NRM remaining after each step is plotted versus the pTRM gained at each temperature step. Closed symbols are zero-field first followed by in-field steps (ZI) while open symbols are in-field first followed by zero field (IZ). Triangles are pTRM checks and squares are pTRM tail checks. Horizontal dashed lines are the vector difference sum (VDS) of the NRM steps. **Vector endpoint plots:** Insets are the x,y (solid symbols) and x,z (open symbols) projections of the (unoriented) natural remanence (zero field steps) as it evolves from the initial state (plus signs) to the demagnetized state. The laboratory field was applied along -Z. Diamonds indicate bounding steps for calculations. a) The $f_{vds}$ is the fraction of the component used of the total VDS. The difference between the pTRM check and the original measurement at each step is $\delta T_i$. The inset shows the deviation angle (DANG) that a component of NRM makes with the origin. The maximum angle of deviation MAD is calculated from the scatter of the points about the best-fit line (solid green line). b) Data exhibit "zig-zag behavior" diagnostic for significant difference between blocking and unblocking temperatures. The Zig-zag for slopes compares slopes calculated between ZI and IZ steps ($b_{zi}$) with those connecting IZ and ZI steps $b_{iz}$). The difference between the pTRM tail check and the original measurement at each step is $\Delta T_i$. c) $\beta$ reflects the scatter ($\delta_x, \delta_y$) about the best-fit slope (solid green line). The Zig-zag for directions compares those calculated between ZI and IZ steps ($D_{zi}$) with those connecting IZ and ZI steps $D_{iz}$). [Figures from {cite:t}`benyosef2008`.]
 :::
 
-1. The Deviation of the ANGle (DANG; {cite:t}`tauxe2004`; see Chapter 9): The angle that the direction of the NRM component used in the slope calculations calculated as a best-fit line (see [](#app:eigen)) makes with the angle of the line anchoring the center of mass (see [](#app:eigen)) to the origin (see insert to [](#fig:IZZI)a).
+1. The Deviation of the ANGle (DANG; {cite:t}`tauxe2004`; see [Chapter 9](#chap:direction)): The angle that the direction of the NRM component used in the slope calculations calculated as a best-fit line (see [](#app:eigen)) makes with the angle of the line anchoring the center of mass (see [](#app:eigen)) to the origin (see insert to [](#fig:IZZI)a).
 
-2. The Maximum Angle of Deviation (MAD; {cite:t}`kirschvink1980`; see Chapter 9): The scatter about the best-fit line through the NRM steps.
+2. The Maximum Angle of Deviation (MAD; {cite:t}`kirschvink1980`; see [Chapter 9](#chap:direction)): The scatter about the best-fit line through the NRM steps.
 
 3. We can calculate the best-fit slope ($b$) for the data on the NRM-pTRM plot and its standard error $\sigma$ ({cite:t}`york1966`; {cite:t}`coe1978`). The procedure for calculating the best-fit slope, which is the best estimate for the paleofield, is given as follows:
 
@@ -300,13 +300,13 @@ Illustration of paleointensity parameters. **Arai plots:** The magnitude of the 
 
    where $\Delta y_T$ is the length of the NRM segment used in the slope calculation (see [](#fig:IZZI)).
 
-6. The fraction of the total remanence (by vector difference sum), $f_{vds}$ ({cite:t}`tauxe2004`): While $f$ works well with single component magnetizations as in [](#fig:IZZI)d where it reflects the fraction of the total NRM used in the slope calculation, it can be misleading when there are multiple components of remanence as in [](#fig:IZZI)a. The values of $f$ for such specimens can be quite high, whereas the fraction of the total NRM is much less. We prefer to use a parameter $f_{vds}$ which is the fraction of the total NRM, estimated by the vector difference sum (VDS; Chapter 9) of the entire zero field demagnetization data. The VDS (see [](#fig:IZZI)a) "straightens out" the various components of the NRM by summing up the vector differences at each demagnetization step. $f_{vds}$ is calculated as:
+6. The fraction of the total remanence (by vector difference sum), $f_{vds}$ ({cite:t}`tauxe2004`): While $f$ works well with single component magnetizations as in [](#fig:IZZI)d where it reflects the fraction of the total NRM used in the slope calculation, it can be misleading when there are multiple components of remanence as in [](#fig:IZZI)a. The values of $f$ for such specimens can be quite high, whereas the fraction of the total NRM is much less. We prefer to use a parameter $f_{vds}$ which is the fraction of the total NRM, estimated by the vector difference sum (VDS; [Chapter 9](#chap:direction)) of the entire zero field demagnetization data. The VDS (see [](#fig:IZZI)a) "straightens out" the various components of the NRM by summing up the vector differences at each demagnetization step. $f_{vds}$ is calculated as:
 
    $$
    f_{vds} = \Delta y_T/ y_{vds},
    $$
 
-   where $y_{vds}$ is the vector difference sum of the entire NRM (see [](#fig:IZZI)a and Chapter 9). This parameter becomes small, if the remanence is multi-component, whereas the original $f$ can be blind to multi-component remanences.
+   where $y_{vds}$ is the vector difference sum of the entire NRM (see [](#fig:IZZI)a and [Chapter 9](#chap:direction)). This parameter becomes small, if the remanence is multi-component, whereas the original $f$ can be blind to multi-component remanences.
 
 7. The Difference RATio Sum, DRATS: The difference between the original pTRM at a given temperature step (horizontal component of the circles in [](#fig:IZZI)) and the pTRM check (horizontal component of the triangles in see [](#fig:IZZI)), $\delta_i$ (see [](#fig:IZZI)a), can result from experimental noise or from alteration during the experiment. {cite:t}`selkin2000` normalized the maximum $\delta_i$ value within the region of interest by the length of the hypotenuse of the NRM/pTRM data used in the slope calculation. DRAT is therefore the maximum difference ratio expressed as a percentage. In many cases, it is useful to consider the trend of the pTRM checks as well as their maximum deviations. We follow {cite:t}`tauxe2004` who used the sum of these differences. We normalize this difference sum by the pTRM acquired by cooling from the maximum temperature step used in the slope calculation to room temperature. This parameter is called the Difference RATio Sum or DRATS. Only pTRM checks at temperatures below the maximum bound are included in the DRATS calculation.
 

@@ -47,7 +47,7 @@ $$
 m = n i \pi r^2.
 $$ (eq:moment)
 
-So, now we know the units of $\m$: Am$^2$. In nature, magnetic moments are carried by magnetic minerals the most common of which are magnetite and hematite (see Chapter 6 for details).
+So, now we know the units of $\m$: Am$^2$. In nature, magnetic moments are carried by magnetic minerals the most common of which are magnetite and hematite (see [Chapter 6](#chap:mineralogy) for details).
 
 :::{figure} ../figures/chapter1/moment.png
 :name: fig:moment
@@ -171,7 +171,6 @@ $$ (eq:torque)
 
 Recalling our earlier discussion of magnetic moment, you will realize that $pl$ is simply the magnetic moment $m$. This line of reasoning also makes clear why it is called a "moment". The units of torque are energy, which are ergs in cgs, so the units of magnetic moment are technically erg per gauss. But because of the "silent" $\mu_o$ in cgs, magnetic moment is most often defined as erg per oersted. We therefore follow convention and define the "electromagnetic unit" (emu) as being one erg $\cdot$ Oe$^{-1}$. [Some use emu to refer to the magnetization (volume normalized moment, see above), but this is incorrect and a source of a lot of confusion.]
 
-(tab:units)=
 :::{table} Conversion between SI and cgs units.
 :name: tab:units
 
@@ -211,7 +210,7 @@ $$
 \H = - \nabla \psi_m.
 $$
 
-The presence of a magnetic moment $\m$ creates a magnetic field which is the gradient of some scalar field. To gain a better intuitive feel about the relationship between scalar fields and their gradient vector fields, see [](#app:nabla). Because the divergence of the magnetic field is zero, by definition, the divergence of the gradient of the scalar field is also zero, or $\nabla^2 \psi_m = 0$. The operator $\nabla^2$ is called the Laplacian and $\nabla^2 \psi_m = 0$ is *Laplace's equation*. This will be the starting point for spherical harmonic analysis of the geomagnetic field discussed briefly in Chapter 2.
+The presence of a magnetic moment $\m$ creates a magnetic field which is the gradient of some scalar field. To gain a better intuitive feel about the relationship between scalar fields and their gradient vector fields, see [](#app:nabla). Because the divergence of the magnetic field is zero, by definition, the divergence of the gradient of the scalar field is also zero, or $\nabla^2 \psi_m = 0$. The operator $\nabla^2$ is called the Laplacian and $\nabla^2 \psi_m = 0$ is *Laplace's equation*. This will be the starting point for spherical harmonic analysis of the geomagnetic field discussed briefly in [Chapter 2](#chap:geomag).
 
 The curl of the magnetic field $(\nabla \times \H)$ depends on the current density and is not always zero and magnetic fields cannot generally be represented as the gradient of a scalar field. Laplace's equation is only valid outside the magnetic sources and away from currents.
 

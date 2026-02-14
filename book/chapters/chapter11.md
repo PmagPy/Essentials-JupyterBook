@@ -165,7 +165,7 @@ $$ (eq:fishpde)
 
 This probability (for $\kappa = 5, 10, 50, 100$) is shown in [Figure %s](#fig:P)b where the effect of the $\sin \alpha$ term is apparent. [Equation %s](#eq:fishdis) for the Fisher distribution function suggests that declinations are symmetrically distributed about the mean. In "data" coordinates, this means that the declinations are uniformly distributed from 0 $\rightarrow$ 360$^{\circ}$. Furthermore, the probability $P_{\alpha}$ of finding a direction of $\alpha$ away from the mean decays exponentially.
 
-Because the intensity of the magnetization has little to do with the validity of the measurement (except for very weak magnetizations), it is customary to assign unit length to all directions. The mean direction is calculated by first converting the individual moment directions ($m_i$) (see [Figure %s](#fig:vecsum)), which may be expressed as declination and inclination ($D_i,I_i$), to Cartesian coordinates ($x_1,x_2,x_3$) by the methods given in Chapter 2. Following the logic for vector addition explained in [](#app:vectors), the length of the vector sum, or resultant vector $R$, is given by:
+Because the intensity of the magnetization has little to do with the validity of the measurement (except for very weak magnetizations), it is customary to assign unit length to all directions. The mean direction is calculated by first converting the individual moment directions ($m_i$) (see [Figure %s](#fig:vecsum)), which may be expressed as declination and inclination ($D_i,I_i$), to Cartesian coordinates ($x_1,x_2,x_3$) by the methods given in [Chapter 2](#chap:geomag). Following the logic for vector addition explained in [](#app:vectors), the length of the vector sum, or resultant vector $R$, is given by:
 
 $$
 R^2 = \left(\sum_{i} x_{1i}\right)^2 + \left(\sum_i x_{2i}\right)^2 + \left(\sum_i x_{3i}\right)^2,
@@ -177,7 +177,7 @@ $$
 \bar x_1 = \frac{1}{R} \left(\sum_i x_{1i}\right); \quad \bar x_2 = \frac{1}{R} \left(\sum_i x_{2i}\right); \quad \bar x_3 = \frac{1}{R} \left(\sum_i x_{3i}\right).
 $$ (eq:xbar)
 
-These Cartesian coordinates can, of course, be converted back to geomagnetic elements ($\bar D, \bar I$) by the familiar method described in Chapter 2.
+These Cartesian coordinates can, of course, be converted back to geomagnetic elements ($\bar D, \bar I$) by the familiar method described in [Chapter 2](#chap:geomag).
 
 :::{figure} ../figures/chapter11/vecsum.png
 :name: fig:vecsum
@@ -232,7 +232,7 @@ When we calculate the mean direction, a dispersion estimate, and a confidence li
 
 Having buried the reader in mathematical formulations, we present the following illustrations to develop some intuitive appreciation for the statistical quantities. One essential concept is the distinction between statistical quantities calculated from a directional data set and the unknown parameters of the sampled population.
 
-Consider the various sets of directions plotted as equal area projections (see Chapter 2) in [Figure %s](#fig:fisher). These are all synthetic data sets drawn from Fisher distributions with means of a single, vertical direction. Each of the three diagrams in a row is a replicate sample from the same distribution. The top row were all drawn from a distribution with $\kappa = 5$, the middle with $\kappa = 10$ and the bottom row with $\kappa = 50$. For each synthetic data set, we estimated $\bar D, \bar I, \kappa$ and $\alpha_{95}$ (shown as insets to the equal area diagrams).
+Consider the various sets of directions plotted as equal area projections (see [Chapter 2](#chap:geomag)) in [Figure %s](#fig:fisher). These are all synthetic data sets drawn from Fisher distributions with means of a single, vertical direction. Each of the three diagrams in a row is a replicate sample from the same distribution. The top row were all drawn from a distribution with $\kappa = 5$, the middle with $\kappa = 10$ and the bottom row with $\kappa = 50$. For each synthetic data set, we estimated $\bar D, \bar I, \kappa$ and $\alpha_{95}$ (shown as insets to the equal area diagrams).
 
 There are several important observations to be taken from these examples. Note that the calculated mean direction is never exactly the true mean direction ($I$ = +90$^{\circ}$). The calculated mean inclination $\bar I$ varies from 78.6$^{\circ}$ to 89.3$^{\circ}$, and the mean declinations fall within all quadrants of the equal-area projection. The calculated mean direction thus randomly dances about the true mean direction and deviates from the true mean by between 0.7$^{\circ}$ and 11.4$^{\circ}$. The calculated $k$ statistic varies considerably among replicate samples as well. The variation of $k$ and differences in angular variance of the data sets with the same underlying distribution are simply due to the vagaries of random sampling.
 
@@ -255,7 +255,7 @@ The effects of increasing $N$ are readily apparent in [Figure %s](#fig:a95-csd) 
 Dependence of estimated angular standard deviation, CSD and $\delta$, and confidence limit, $\alpha_{95}$, on the number of directions in a data set. An increasing number of directions were selected from a Fisherian sample of directions with angular standard deviation $S$ = 15$^{\circ}$ ($\kappa$ = 29.2), shown by the horizontal line.
 :::
 
-If directions are converted to VGPs as outlined in Chapter 2, the transformation distorts a rotationally symmetric set of data into an elliptical distribution. The associated $\alpha_{95}$ may no longer be appropriate. {cite}`cox1960` suggested the following for 95% confidence regions in VGPs. Ironically, it is more likely that the VGPs are spherically symmetric implying that most sets of directions are not!
+If directions are converted to VGPs as outlined in [Chapter 2](#chap:geomag), the transformation distorts a rotationally symmetric set of data into an elliptical distribution. The associated $\alpha_{95}$ may no longer be appropriate. {cite}`cox1960` suggested the following for 95% confidence regions in VGPs. Ironically, it is more likely that the VGPs are spherically symmetric implying that most sets of directions are not!
 
 $$
 dm = \alpha_{95} \frac{\cos \lambda}{\cos \bar I}, \quad dp = \frac{1}{2} \alpha_{95} (1 + 3 \sin^2 \lambda),
@@ -267,15 +267,15 @@ where $dm$ is the semi-axis parallel to the meridians (lines of longitude), $dp$
 
 The Fisher distribution allows us to ask a number of questions about paleomagnetic data sets, such as:
 
-1. Is a given set of directions random? This is the question that we ask when we perform a conglomerate test (Chapter 9).
+1. Is a given set of directions random? This is the question that we ask when we perform a conglomerate test ([Chapter 9](#chap:direction)).
 
-2. Is one data set better grouped than another as in the fold test from Chapter 9.
+2. Is one data set better grouped than another as in the fold test from [Chapter 9](#chap:direction).
 
 3. Is the mean direction of a given (Fisherian) data set different from some known direction? This question comes up when we compare a given data set with, for example, the directions of the present or GAD field.
 
 4. Are two (Fisherian) data sets different from each other? For example, are the normal directions and the antipodes of the reversed directions the same for a given data set?
 
-5. If a given site has some samples that allow only the calculation of a best-fit plane and not a directed line, what is the site mean direction that combines the best-fit lines and planes (see Chapter 9)?
+5. If a given site has some samples that allow only the calculation of a best-fit plane and not a directed line, what is the site mean direction that combines the best-fit lines and planes (see [Chapter 9](#chap:direction))?
 
 In the following discussion, we will briefly summarize ways of addressing these issues using Fisher techniques. There are two fundamental principles of statistical significance tests that are important to the proper interpretation:
 
@@ -285,7 +285,7 @@ In the following discussion, we will briefly summarize ways of addressing these 
 
 An important sidelight to this discussion of level of significance is that too much emphasis is often put on the 5% level of significance as a magic number. Remember that we are often performing significance tests on data sets with a small number of observations. Failure of a significance test at the 5% level of significance means only that the observed differences between sample and null hypothesis cannot be shown to have a probability of chance occurrence that is > 5%. This does not mean that the observed differences are unimportant. Indeed the observed differences might be significant at a marginally higher level of significance (for instance, 10%) and might be important to the objective of the paleomagnetic investigation.
 
-Significance tests for use in paleomagnetism were developed in the 1950s by G.S. Watson and E.A. Irving. These versions of the significance tests are fairly simple, and an intuitive appreciation of the tests can be developed through a few examples. Because of their simplicity and intuitive appeal, we investigate these "traditional" significance tests in the development below. However, many of these tests have been updated using advances in statistical sampling theory. These will be discussed in Chapter 12. While they are technically superior to the traditional significance tests, they are more complex and less intuitive than the traditional tests.
+Significance tests for use in paleomagnetism were developed in the 1950s by G.S. Watson and E.A. Irving. These versions of the significance tests are fairly simple, and an intuitive appreciation of the tests can be developed through a few examples. Because of their simplicity and intuitive appeal, we investigate these "traditional" significance tests in the development below. However, many of these tests have been updated using advances in statistical sampling theory. These will be discussed in [Chapter 12](#chap:beyond-fisher). While they are technically superior to the traditional significance tests, they are more complex and less intuitive than the traditional tests.
 
 (sect:Ro)=
 ### Watson's Test for Randomness
@@ -298,7 +298,6 @@ $$ (eq:Ro)
 
 The estimation works well for $N > 10$, but is somewhat biased for smaller data sets. The critical values of $R$ for $5 < N < 20$ from {cite}`watson1956` are listed for convenience in [Table %s](#tab:Ro).
 
-(tab:Ro)=
 :::{table} Critical values of $R$ for Watson's test for randomness at the 95% confidence level (from Watson, 1956).
 :name: tab:Ro
 
@@ -323,7 +322,7 @@ The estimation works well for $N > 10$, but is somewhat biased for smaller data 
 
 :::
 
-The test for randomness is particularly useful for determining if, for example, the directions from a given site are randomly oriented (the data for the site should therefore be thrown out). Also, one can determine if directions from the conglomerate test are random or not (see Chapter 9).
+The test for randomness is particularly useful for determining if, for example, the directions from a given site are randomly oriented (the data for the site should therefore be thrown out). Also, one can determine if directions from the conglomerate test are random or not (see [Chapter 9](#chap:direction)).
 
 ### Comparison of Precision
 
@@ -400,7 +399,7 @@ This test can be applied to the two polarities in a given data collection to see
 
 ### Combining Directions and Great Circles
 
-Consider the demagnetization data shown in [Figure %s](#fig:lnp) of various specimens from a certain site. Best-fit lines from the data for the two specimens at the top of the diagram are calculated using principal component analysis (Chapter 9). The data from the specimen shown at the bottom of the diagram track along a great circle path and can be used to find the pole to the best-fit plane calculated also as in Chapter 9. {cite}`mcfadden1988` described a method for estimating the mean direction (diamond in central equal area plot) and the $\alpha_{95}$ from sites that mixes planes (great circles on an equal area projection) and directed lines (see [](#app:linesNplanes)). The key to their method is to find the direction within each plane that gives the tightest grouping of directions. Then "regular" Fisher statistics can be applied.
+Consider the demagnetization data shown in [Figure %s](#fig:lnp) of various specimens from a certain site. Best-fit lines from the data for the two specimens at the top of the diagram are calculated using principal component analysis ([Chapter 9](#chap:direction)). The data from the specimen shown at the bottom of the diagram track along a great circle path and can be used to find the pole to the best-fit plane calculated also as in [Chapter 9](#chap:direction). {cite}`mcfadden1988` described a method for estimating the mean direction (diamond in central equal area plot) and the $\alpha_{95}$ from sites that mixes planes (great circles on an equal area projection) and directed lines (see [](#app:linesNplanes)). The key to their method is to find the direction within each plane that gives the tightest grouping of directions. Then "regular" Fisher statistics can be applied.
 
 ## Inclination Only Data
 

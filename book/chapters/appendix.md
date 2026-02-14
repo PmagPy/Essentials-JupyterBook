@@ -30,22 +30,22 @@ Paleomagnetism is famous for its use of a large number of incomprehensible acron
 | FC | Field cooled: [](#sect:delta) |
 | GAD | Geocentric axial dipole: [](#sect:gad) |
 | GHA | Greenwich hour angle: [](#app:sundec) |
-| GPTS | Geomagnetic polarity time scale: Chapter 15 |
+| GPTS | Geomagnetic polarity time scale: [Chapter 15](#chap:gpts) |
 | GRM | Gyroremanent magnetization: [](#sect:arm) |
 | IGRF | International geomagnetic reference field: [](#sect:igrf) |
 | IZZI | Infield-zero field/ zero field-infield paleointensity protocol: [](#sect:KTT) |
 | IRM | Isothermal remanent magnetization: [](#sect:uniaxial) and [](#sect:irm) |
-| MD | Multidomain: Chapter 4 |
+| MD | Multidomain: [Chapter 4](#chap:anisotropy) |
 | MDF | Median destructive field: [](#sect:crittemp) |
 | MDT | Median destructive temperature: [](#sect:crittemp) |
-| NRM | Natural remanent magnetization: Chapter 7 |
+| NRM | Natural remanent magnetization: [Chapter 7](#chap:remanence) |
 | pARM | Partial anhysteretic remanence: [](#sect:arm) |
 | pDRM | Post-depositional detrital remanent magnetization: [](#sect:drm) |
-| PSD | Pseudo-single domain: Chapter 4 |
+| PSD | Pseudo-single domain: [Chapter 4](#chap:anisotropy) |
 | PSV | Paleosecular variation of the geomagnetic field: [](#sect:historical) |
 | pTRM | Partial thermal remanence: [](#sect:trm) |
 | sIRM | Saturation IRM: See $M_r$ |
-| SD | Single domain: Chapter 4 |
+| SD | Single domain: [Chapter 4](#chap:anisotropy) |
 | SP | Superparamagnetic: [](#sect:tau) |
 | SV | Secular variation: [](#sect:historical) |
 | TRM | Thermal remanent magnetization: [](#sect:trm) |
@@ -237,7 +237,7 @@ In this section, we have assembled assorted mathematical and plotting techniques
 (app:strig)=
 ### Spherical trigonometry
 
-Spherical trigonometry has widespread applications throughout the book. It is used in the transformations of observed directions to virtual poles (Chapter 2) and transformation of coordinate systems, to name a few. Here we summarize the two most useful relationships: the *Law of Sines* and the *Law of Cosines*.
+Spherical trigonometry has widespread applications throughout the book. It is used in the transformations of observed directions to virtual poles ([Chapter 2](#chap:geomag)) and transformation of coordinate systems, to name a few. Here we summarize the two most useful relationships: the *Law of Sines* and the *Law of Cosines*.
 
 :::{figure} ../figures/appendix/strig.png
 :name: fig:strig
@@ -408,7 +408,7 @@ $$
 x'_3 = a_{31}x_1 + a_{32}x_2 + a_{33}x_3.
 $$ (eq:newx)
 
-The declination and inclination can be calculated by inserting these values in the equations in Chapter 2.
+The declination and inclination can be calculated by inserting these values in the equations in [Chapter 2](#chap:geomag).
 
 (app:polerot)=
 #### Method for rotating points on a globe using finite rotation poles
@@ -465,14 +465,14 @@ $$
 P_{t3} = R_{31} P_{p1} + R_{32}P_{p2}+R_{33}P_{p3}
 $$
 
-which can be converted back into latitude and longitude in the usual way (see Chapter 2).
+which can be converted back into latitude and longitude in the usual way (see [Chapter 2](#chap:geomag)).
 
 (app:eigen)=
 #### The orientation tensor and eigenvectors
 
 The *orientation tensor* $\mathbf{T}$ {cite:p}`scheidegger1965` (also known as the matrix of sums of squares and products), is extremely useful in paleomagnetism. This is found as follows:
 
-1. Convert the $D$, $I$, and $M$ for a set of data points (e.g., a sequence of demagnetization data, or a set of geomagnetic vectors or unit vectors where $M=1$) to corresponding $x_i$ values (see Chapter 2).
+1. Convert the $D$, $I$, and $M$ for a set of data points (e.g., a sequence of demagnetization data, or a set of geomagnetic vectors or unit vectors where $M=1$) to corresponding $x_i$ values (see [Chapter 2](#chap:geomag)).
 
 2. Calculate the coordinates of the "center of mass" ($\bar x$) of the data points:
 
@@ -480,7 +480,7 @@ $$
 \bar x_1 = {1\over N} (\sum_{1}^{N} x_{1i}); \quad \bar x_2 = {1\over N} (\sum_{1}^{N} x_{2i}); \quad \bar x_3 = {1\over N} (\sum_{1}^{N} x_{3i}),
 $$ (eq:cm)
 
-where $N$ is the number of data points involved. Note that for unit vectors, the center of mass is the same as the Fisher mean (Chapter 11).
+where $N$ is the number of data points involved. Note that for unit vectors, the center of mass is the same as the Fisher mean ([Chapter 11](#chap:fisher)).
 
 3. Transform the origin of the data cluster to the center of mass:
 
@@ -673,7 +673,7 @@ In order to estimate a confidence interval for the mean using the bootstrap, we 
 (app:sundec)=
 ### Directions using a sun compass
 
-In a sun compass problem, we have the direction of the sun's shadow and an angle between that and the desired direction ($\alpha$). The declination of the shadow itself is 180° from the direction toward the sun. In [](#fig:sundefs), the problem of calculating declination from sun compass information is set up as a spherical trigonometry problem, similar to those introduced in Chapter 2 and [](#app:strig). The declination of the shadow direction $\beta'$, is given by 180 - $\beta$. We also know the latitude of the sampling location L ($\lambda_L$). We need to calculate the latitude of S (the point on the Earth's surface where the sun is directly overhead), and the local hour angle $H$.
+In a sun compass problem, we have the direction of the sun's shadow and an angle between that and the desired direction ($\alpha$). The declination of the shadow itself is 180° from the direction toward the sun. In [](#fig:sundefs), the problem of calculating declination from sun compass information is set up as a spherical trigonometry problem, similar to those introduced in [Chapter 2](#chap:geomag) and [](#app:strig). The declination of the shadow direction $\beta'$, is given by 180 - $\beta$. We also know the latitude of the sampling location L ($\lambda_L$). We need to calculate the latitude of S (the point on the Earth's surface where the sun is directly overhead), and the local hour angle $H$.
 
 Knowing the time of observation (in Universal Time), the position of S ($\lambda_s = \delta,\phi_s$ in [](#fig:sundefs)) can be calculated with reasonable precision (to within 0.01°) for the period of time between 1950 and 2050 using the procedure recommended in the 1996 Astronomical Almanac:
 
