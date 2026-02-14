@@ -1,18 +1,18 @@
 ---
 title: "Chapter 6: Magnetic Mineralogy"
 label: chap:mineralogy
-authors:
-  - name: Lisa Tauxe
-    affiliation: Scripps Institution of Oceanography, UC San Diego
 numbering:
   enumerator: 6.%s
 ---
 
-**Background:** {cite}`evans2003`, Chapter 3.
-
 An essential part of every paleomagnetic study is a discussion of what is carrying the magnetic remanence and how the rocks got magnetized. For this, we need some knowledge of what the important natural magnetic phases are, how to identify them, how they formed, and what their magnetic behavior is. In this chapter, we will cover a brief description of geologically important magnetic phases. Useful magnetic characteristics of important minerals can be found in [](#tab:rockpars) at the end of this chapter.
 
 Iron is by far the most abundant transition element in the solar system, so most paleomagnetic studies depend on the magnetic iron bearing minerals: the iron-nickels (which are particularly important for extra-terrestrial magnetic studies), the iron-oxides such as magnetite, maghemite and hematite, the iron-oxyhydroxides such as goethite and ferrihydrite, and the iron-sulfides such as greigite and pyrrhotite. We are concerned here with the latter three as iron-nickel is very rare in terrestrial paleomagnetic studies.
+
+:::{seealso}
+For a comprehensive treatment of the magnetic properties of all major terrestrial rock-forming magnetic minerals, see [*Mineral Magnetism*](
+https://doi.org/10.1017/9781108935630) by Andrew P. Roberts (Cambridge University Press, 2026). This valuable reference covers the fundamentals of mineral magnetism alongside in-depth chapters on each major magnetic mineral.
+:::
 
 ## Iron-oxides
 
@@ -97,7 +97,12 @@ Variation of properties with Ti substitution in the titanohematite series. a) Va
 (sect:hemo)=
 ### Hematite-Ilmenite Fe$_{2-y}$Ti$_y$O$_3$
 
-Hematite has a corundum structure (see [](#fig:hematite)). It is rhombohedral with a pseudocleavage (perpendicular to the $c$ axis) and tends to break into flakes. It is antiferromagnetic, with a weak parasitic ferromagnetism resulting from either spin-canting or defect ferromagnetism (see [Chapter 3](#chap:inducedremanent)). Because the magnetization is a spin canted antiferromagnetism, the temperature at which this magnetization disappears is called the Néel Temperature instead of the Curie Temperature which is *sensu stricto* only for ferromagnetic minerals. The Néel temperature for hematite is approximately 685°C.
+Hematite has a corundum structure (see [](#fig:hematite)). It is rhombohedral with a pseudocleavage (perpendicular to the $c$ axis) and tends to break into flakes. It is antiferromagnetic, with a weak parasitic ferromagnetism resulting from either spin-canting or defect ferromagnetism (see [Chapter 3](#chap:inducedremanent)). Because the magnetization is a , The temperature at which hematite's spin-canted antiferromagnetism disapears (the Néel Temperature) is approximately 685°C.
+
+:::{admonition} Néel temperature vs. Curie temperature
+:class: info
+In rock magnetism, Curie temperature ($T_C$) refers to the temperature above which ferromagnetic and ferrimagnetic minerals (e.g., magnetite, pyrrhotite, greigite) lose their long-range magnetic order and become paramagnetic. Néel temperature ($T_N$) refers to the corresponding transition for antiferromagnetic minerals (e.g., hematite, goethite). Some sources use $T_C$ loosely for all such transitions regardless of magnetic structure. The naming honors the chronology of discovery: Pierre Curie identified the critical temperature for loss of ferromagnetic order in 1895 {cite:p}`curie1895`, while Louis Néel's prediction of antiferromagnetic ordering in 1936 {cite:p}`neel1936` led to the distinct designation for that transition.
+:::
 
 Above about -10°C (the *Morin transition*), the magnetization is constrained by aspects of the crystal structure to lie perpendicular to the $c$ axis or within the basal plane. Below the Morin transition, spin-canting all but disappears and the magnetization is parallel to the $c$ axis. This effect could be used to demagnetize the grains dominated by spin-canting: it does not affect those dominated by defect moments. Most hematites formed at low-temperatures have magnetizations dominated by defect moments, so the remanence of many rocks will not display a Morin transition.
 
