@@ -97,6 +97,7 @@ project:
 site:
   template: book-theme
   options:
+    lang: en
     logo: _static/logo_placeholder.png
     hide_toc: false
     numbered_references: false
