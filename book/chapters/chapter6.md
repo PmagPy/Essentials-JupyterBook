@@ -26,6 +26,7 @@ Two solid solution series are particularly important in paleomagnetism: the ulv�
 
 :::{figure} ../figures/chapter6/solidsolution.png
 :name: fig:solidsolution
+:alt: Two phase diagrams plotting temperature versus Ti substitution. Left: titanomagnetite solvus from magnetite to ulvospinel with exsolution arrows. Right: titanohematite solvus from hematite to ilmenite.
 :width: 100%
 
 Phase diagrams for FeTi oxides. The composition is indicated by $x$ or $y$. There is complete solid solution above the solid lines. Exsolution begins as the temperature cools below the solid curves. a) Titanomagnetite series. [Redrawn from {cite}`nagata1961`.] b) Titanohematite series. [Redrawn from {cite}`robinson2004`.]
@@ -35,6 +36,7 @@ Exsolution is important in paleomagnetism for two reasons. First, the different 
 
 :::{figure} ../figures/chapter6/exsolution.png
 :name: fig:exsolution
+:alt: Four micrographs of exsolution lamellae: atomic force image of magnetite-ulvospinel intergrowth, magnetic force image of domains, TEM of hematite lamellae in ilmenite, and photomicrograph of Ti-rich and Ti-poor titanohematite bands.
 :width: 100%
 
 a) Atomic force micrograph image of magnetite inclusion in clinopyroxene. The topographically low areas are ulvöspinel while the higher areas are magnetite. b) Magnetic force micrograph of magnetic domains (black and white are oppositely magnetized). The ulvöspinel lamellae are essentially non-magnetic and are gray. c) Transmission electron micrograph of ilmenite host with hematite exsolution lamellae. Lamellar size gets smaller with proximity to edge. d) Photomicrograph of titanohematite exsolution lamellae. Dark bands are Ti-rich (high magnetization, low $T_c$), light grey bands are Ti-poor (low magnetization, high $T_c$). [a and b are from {cite}`feinberg2005`, c) from {cite}`robinson2002`, d) is modified from S. Haggerty in {cite}`butler1992`.]
@@ -42,6 +44,7 @@ a) Atomic force micrograph image of magnetite inclusion in clinopyroxene. The to
 
 :::{figure} ../figures/chapter6/oxide_ternary.png
 :name: fig:tern
+:alt: Three ternary diagrams with Fe2+, Fe3+, and Ti4+ apices showing titanomagnetite and titanohematite solid-solution series, high-temperature oxyexsolution paths, and low-temperature maghemitization trends.
 :width: 90%
 
 Cation-fraction ternary diagram (Fe$^{3+}$–Ti$^{4+}$–Fe$^{2+}$) for the Fe–Ti oxide system. Solid lines show the titanomagnetite and titanohematite solid-solution series with increasing titanium substitution ($x$). Dashed lines with arrows indicate the direction of increasing oxidation ($z$). Panel (b) illustrates high-temperature oxyexsolution of titanomagnetite into magnetite-rich and ilmenite-rich lamellae, conserving bulk composition. Panel (c) shows low-temperature oxidation (maghemitization), which increases Fe$^{3+}$ at approximately constant Ti.
@@ -58,6 +61,7 @@ In earlier chapters on rock magnetism, we learned a few things about magnetite. 
 
 :::{figure} ../figures/chapter6/X.png
 :name: fig:X
+:alt: Three plots versus Ti substitution (x) in titanomagnetite: magnetization in Bohr magnetons decreasing linearly, cell size increasing linearly, and Curie temperature decreasing linearly from about 580 to below 0 degrees C.
 :width: 100%
 
 Variation of intrinsic parameters with titanium substitution in the titanomagnetite lattice. X is the degree of substitution from 0 (no Ti) to 1 (100% substitution). a) Variation of the magnetization expressed as Bohr magnetons per unit cell. b) Variation of cell lattice size. c) Variation of Curie temperature. [Data compiled by {cite}`oreilly1984`.]
@@ -74,6 +78,7 @@ Substitution of Ti$^{4+}$, which has no unpaired spins (see [Chapter 3](#chap:in
 
 :::{figure} ../figures/chapter6/hematite.png
 :name: fig:hematite
+:alt: Photograph of botryoidal kidney ore hematite specimen alongside two views of the hematite crystal structure showing Fe and O atoms in the rhombohedral corundum lattice.
 :width: 100%
 
 Hematite. a) Photograph of Kidney ore hematite from Michigan by DanielCD. [From commons.wikimedia.org.] b-c) Two views of the crystal structure of hematite. c-axis is perpendicular to the basal plane. [From webmineral.com.]
@@ -89,6 +94,7 @@ It should be noted that natural titanomagnetites often contain impurities (usual
 
 :::{figure} ../figures/chapter6/hemY.png
 :name: fig:hemY
+:alt: Two plots versus Ti substitution (y) in titanohematite: saturation magnetization near zero for y less than 0.45 then peaking sharply near y equals 0.9, and Neel temperature decreasing linearly from about 680 degrees C.
 :width: 100%
 
 Variation of properties with Ti substitution in the titanohematite series. a) Variation of saturation magnetization. b) Variation of Néel Temperature. [Modified from {cite}`nagata1961` and {cite}`stacey1974`.]
@@ -108,6 +114,7 @@ Above about -10°C (the *Morin transition*), the magnetization is constrained by
 
 :::{figure} ../figures/chapter6/Z.png
 :name: fig:Z
+:alt: Three plots versus oxidation parameter z for TM60: magnetization decreasing, cell size shrinking, and Curie temperature increasing. Inset shows a micrograph of a magnetite crystal cracking during maghemitization.
 :width: 100%
 
 Variation of intrinsic parameters with oxidation in TM60. $z$ is the degree of oxidation. a) Variation of the magnetization. b) Variation of cell lattice size. c) Variation of Curie temperature. [Data compiled by {cite}`dunlop1997`.] Inset: A magnetite crystal (~30 μm) undergoing maghemitization. Because of the change in volume, the crystal begins to crack. [From {cite}`gapeyev1988` in {cite}`dunlop1997`.]
@@ -121,6 +128,7 @@ Titanohematite particles with intermediate values of $y$ have interesting proper
 
 :::{figure} ../figures/chapter6/suppress.png
 :name: fig:suppress
+:alt: Two plots of normalized remanence versus temperature in Kelvin. Left: stoichiometric magnetite with a sharp drop at the Verwey transition near 110 K. Right: partially oxidized magnetite with a gradual decline and suppressed transition.
 :width: 80%
 
 Effect of maghemitization on Verwey transition. a) Saturation remanence acquired at 10 K observed as it warms up for 37 nm stoichiometric magnetite. b) Same but for partially oxidized magnetite. [Data from {cite}`ozdemir1993`.]
@@ -138,6 +146,7 @@ The (titano)maghemite structure is metastable and can invert to form the isochem
 
 :::{figure} ../figures/chapter6/minerals.png
 :name: fig:minerals
+:alt: Six panels showing photographs and crystal structures of goethite, greigite, and pyrrhotite. Each mineral has a specimen photo paired with a ball-and-stick crystal structure diagram.
 :width: 100%
 
 a) Photograph of goethite. [From en.wikipedia.org; photo of Eurico Zimbres.] b) Goethite crystal structure. c) Photograph of greigite. [Photo of William Péraud.] d) Greigite crystal structure. e) Photograph of single crystal of pyrrhotite. [Photo of Dan Weinrich.] f) Pyrrhotite crystal structure. [All crystal structure images from webmineral.com.]
@@ -154,6 +163,7 @@ The Curie temperature of monoclinic pyrrhotite (Fe$_7$S$_8$) is about 325°C (se
 
 :::{figure} ../figures/chapter6/pyrrhotiteT.png
 :name: fig:pyrrhotiteT
+:alt: Four panels of pyrrhotite magnetic data: low-temperature IRM transition near 35 K, monoclinic thermomagnetic curve dropping to zero near 325 degrees C, hexagonal curve with a peak near 200 degrees C, and a mixed-phase curve combining both features.
 :width: 100%
 
 a) Low-temperature transition in monoclinic pyrrhotite. [Data from {cite}`snowball1999`.] Thermomagnetic curves for b) monoclinic c) hexagonal and d) mixture of b) and c) pyrrhotite. [Data from {cite}`dekkers1988`.]
@@ -167,6 +177,7 @@ Although there is considerable variability, the Ti (ulvöspinel) content of the 
 
 :::{figure} ../figures/chapter6/igneous.png
 :name: fig:igneous
+:alt: Range chart showing compositional ranges of titanomagnetite (solid arrows) and titanohematite (dashed arrows) in tholeiitic, calcalkaline, alkaline, and silicic igneous rock types, plotted against Ti substitution from 0 to 1.
 :width: 100%
 
 Occurrence of FeTi oxides in igneous rocks. [Data from {cite}`frost1991`.]
@@ -180,6 +191,7 @@ Weathering at ambient surface conditions or mild hydrothermal alteration may lea
 
 :::{figure} ../figures/chapter6/bacteria.png
 :name: fig:bacteria
+:alt: Two electron micrographs of bacterial magnetite: a false-color image of a magnetotactic bacterium with a chain of magnetosomes visible inside, and a TEM image of extracted magnetosome chains from marine sediment.
 :width: 100%
 
 Photomicrographs of bacterial magnetites produced by magnetotactic bacteria. a) Intact magnetosome in living bacterium. [False color image from H. Vali in {cite}`maher1999`.] b) Chains recovered from ODP Site 1006D in the Bahamas. [From M. Hounslow in {cite}`maher1999`.]
@@ -382,6 +394,7 @@ Some of the more spectacular magnetic minerals found in sediments are biogenic m
 
 :::{figure} ../figures/chapter6/problem1.png
 :name: fig:prob1
+:alt: Plot of normalized magnetization versus temperature for two samples: curve A (red) stays high until dropping sharply near 750 degrees C, curve B (black) decreases more gradually and drops near 700 degrees C.
 :width: 40%
 
 Curie Temperature curves for two samples, A and B. [Figure redrawn from {cite}`butler1992`.]
@@ -407,6 +420,7 @@ d) Based on your understanding of coercivity and Curie temperatures, what is car
 
 :::{figure} ../figures/chapter6/microprobe.png
 :name: fig:microprobe
+:alt: Two panels: a thermomagnetic curve showing irreversible heating (red) and cooling (blue) paths with a Curie temperature near 200 degrees C, and a TiO2-FeO-Fe2O3 ternary diagram with electron microprobe data points clustered along the titanomagnetite join.
 :width: 100%
 
 a) Thermomagnetic run of mineral whereby magnetization (normalized by the initial value) is measured as a function of temperature. The red line is the heating curve and the blue line is the cooling curve. b) Electron microprobe data from FeTi oxides (dots in yellow field) plotted on TiO$_2$-FeO-Fe$_2$O$_3$ ternary diagram. [Figure redrawn from {cite}`butler1992`.]

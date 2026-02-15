@@ -19,6 +19,7 @@ The magnetic field of a dipole aligned along the spin axis and centered in the E
 
 :::{figure} ../figures/chapter2/components.png
 :name: fig:coord
+:alt: Three-panel diagram: (a) geocentric axial dipole field lines through Earth cross-section, (b) 3D flux lines of the 2005 geomagnetic field with labeled B_H, B_V, and inclination I at point P, (c) vector decomposition showing declination D and inclination I relative to geographic and magnetic north.
 :width: 100%
 
 a) Lines of flux produced by a geocentric axial dipole. b) Lines of flux of the geomagnetic field of 2005. At point P the horizontal component of the field $B_H$, is directed toward the magnetic north. The vertical component $B_V$ is directed down and the field makes an angle $I$ with the horizontal, known as the inclination. c) Components of the geomagnetic field vector $\mathbf{B}$. The angle between the horizontal component (directed toward magnetic north and geographic north is the declination $D$.) [Modified from {cite:t}`benyosef2008b`.]
@@ -79,6 +80,7 @@ and are shown in [](#fig:schmidt).
 
 :::{figure} ../figures/chapter2/schmidt.png
 :name: fig:schmidt
+:alt: Plot of Schmidt polynomials P_1^0, P_2^0, and P_3^0 versus colatitude (0 to 180 degrees), showing decreasing, U-shaped, and oscillating curves respectively.
 :width: 75%
 
 Schmidt polynomials.
@@ -88,6 +90,7 @@ To get an idea of how the Gauss coefficients in the potential relate to the asso
 
 :::{figure} ../figures/chapter2/harmonics.png
 :name: fig:harmonics
+:alt: Three global Hammer-projection maps of inclination patterns for (a) dipole, (b) quadrupole, and (c) octupole fields, colored red for positive and blue for negative inclinations, each with a potential field inset.
 :width: 100%
 
 Examples of potential fields (insets) and maps of the associated patterns for global inclinations. Each coefficient is set to 30 $\mu$T. a) Dipole ($g_1^0=30 \mu$T), b) Quadrupole ($g_2^0=30 \mu$T), c) Octupole ($g_3^0=30 \mu$T).
@@ -134,6 +137,7 @@ In order to get a feel for the importance of the various Gauss coefficients, tak
 
 :::{figure} ../figures/chapter2/power.png
 :name: fig:power
+:alt: Log-scale plot of geomagnetic power (mu-T squared) versus spherical harmonic degree (1 to 13), showing steep decline from about 2000 at degree 1 to below 0.001 at degree 13.
 :width: 75%
 
 Power at the Earth's surface of the geomagnetic field versus degree for the 2005 IGRF ([](#tab:igrf15)).
@@ -141,6 +145,7 @@ Power at the Earth's surface of the geomagnetic field versus degree for the 2005
 
 :::{figure} ../figures/chapter2/B.png
 :name: fig:B
+:alt: Three global Hammer-projection maps of the 2005 IGRF: (a) intensity ranging from 25 to 65 mu-T with highs near poles, (b) inclination from -80 to +80 degrees, and (c) magnetic potential with positive values in the northern hemisphere and negative in the southern.
 :width: 100%
 
 Maps of geomagnetic field of the IGRF for 2005. a) Intensity (units of $\mu$T), b) inclination, c) potential (units of nT).
@@ -155,6 +160,7 @@ We can recast the vectors at the surface of the Earth into maps of components as
 
 :::{figure} ../figures/chapter2/poles.png
 :name: fig:poles
+:alt: Google Earth view of the Arctic showing three labeled pole positions: geographic North Pole (star), geomagnetic North Pole (circle), and magnetic North Pole (square), with seafloor topography visible.
 :width: 65%
 
 Different poles. The square is the magnetic North Pole, where the magnetic field is straight down $(I = +90^{\circ})$ (82.7$^{\circ}$N, 114.4$^{\circ}$W for the IGRF 2005); the circle is the geomagnetic North Pole, where the axis of the best fitting dipole pierces the surface (9.7$^{\circ}$N, 71.8$^{\circ}$W for the IGRF 2005). The star is the geographic North Pole. [Figure made using Google Earth with seafloor topography of D. Sandwell supplied to Google Earth by D. Staudigel.]
@@ -199,6 +205,7 @@ In general, regions of equal area on the sphere project as equal area regions on
 
 :::{figure} ../figures/chapter2/igrf.png
 :name: fig:igrf
+:alt: Three panels: (a) Hammer projection with 200 random locations on an inclination color map, (b) equal area stereonet of IGRF directions with open/closed symbols for upper/lower hemisphere, (c) inclination versus latitude plot with data points clustered around the GAD dipole formula curve.
 :width: 75%
 
 a) Hammer projection of 200 randomly selected locations around the globe. b) Equal area projection of directions of Earth's magnetic field as given by the IGRF evaluated for the year 2005 at locations shown in a). Open (closed) symbols indicate upper (lower) hemisphere. c) Inclinations (I) plotted as a function of site latitude ($\lambda$). The solid line is the inclination expected from the dipole formula (see text). Negative latitudes are south and negative inclinations are up. [Figure redrawn from {cite:t}`tauxe1998`.]
@@ -237,6 +244,7 @@ In [](#fig:didip)a we show the geomagnetic field vectors evaluated at random lon
 
 :::{figure} ../figures/chapter2/igrf_dip.png
 :name: fig:didip
+:alt: Three panels: (a) 3D Cartesian axes with colored field vectors at 45 degrees N pointing north and down, (b) same vectors rotated to look along the expected GAD direction forming a ring, (c) equal area stereonet of D-prime I-prime transformed directions clustered tightly near center.
 :width: 100%
 
 a) Vectors evaluated around the globe at 45$^{\circ}$N. Red/green/blue colors reflect the North, East and Down components respectively. b) The unit vectors (assuming unit length) from a). c) Directions from [](#fig:igrf)b transformed using the $D', I'$ transformation.
@@ -244,6 +252,7 @@ a) Vectors evaluated around the globe at 45$^{\circ}$N. Red/green/blue colors re
 
 :::{figure} ../figures/chapter2/mkvgp.png
 :name: fig:mkvgp
+:alt: Four panels: (a) globe showing a field line from site S to a VGP with the virtual dipole moment at Earth's center, (b) spherical geometry diagram with angles D, theta_m, theta_s, and theta_p relating site to pole, (c) globe with tightly clustered VGP positions near the North Pole, (d) globe colored by intensity showing the virtual axial dipole moment concept.
 :width: 90%
 
 Transformation of a vector measured at S into a virtual geomagnetic pole position (VGP) and virtual dipole moment (VDM), using principles of spherical trigonometry and the dipole formula. a) Red dashed line is the magnetic field line observed at S (latitude of $\lambda_s$, longitude of $\phi_s$). This field line is the same as one produced by the VDM at the center of the Earth. The point where the axis of the VDM pierces the Earth's surface is the VGP. b) Observed declination (D) and inclination (converted to $\theta_m$ using the dipole formula (see text) defines angles $D$ and $\theta_m$. $\theta_s$ is the colatitude of the observation site. N is the geographic North Pole (the spin axis of the Earth). The position of the pole at P ($\theta_p,\phi_p$) can be calculated with spherical trigonometry (see text). c) VGP positions converted from directions shown in [](#fig:igrf)b. d) The virtual axial dipole moment giving rise to the observed intensity at S.

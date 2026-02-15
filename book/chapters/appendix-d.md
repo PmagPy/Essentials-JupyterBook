@@ -53,6 +53,7 @@ $$ (eq:bjel)
 
 :::{figure} ../figures/appendix/meas15.png
 :name: fig:meas15
+:alt: Cubic specimen with coordinate axes x1, x2, x3 and 15 numbered measurement orientations shown as rotated squares with arrows indicating field direction relative to specimen axes.
 :width: 100%
 
 The 15 position scheme of {cite:t}`jelinek1978` for measuring the AMS of a sample. [Figure from {cite:t}`tauxe1998`.]
@@ -63,6 +64,7 @@ The 15 position scheme of {cite:t}`jelinek1978` for measuring the AMS of a sampl
 
 :::{figure} ../figures/appendix/AMSspin.png
 :name: fig:AMSspin
+:alt: Three cylindrical specimen orientations for spinning susceptibility measurements: Positions 1, 2, and 3 with rotation axes and specimen coordinate systems labeled, plus a diagram of the coil axis geometry.
 :width: 100%
 
 Specimen orientations for the three spins used with spinning magnetic susceptibility meters. The heavy gray arrows show the axes of rotation; one oriented toward the user for Position 1 (a) and 2 (b) away from the user for Position 3 (c). The orientation of the specimen coordinate system in space is specified by the azimuth and plunge of either the arrow along the core length (+x$_3$ axis, black) or the +x$_1$ axis (red arrow on core top). d) orientation of applied field (coil axis) relative to specimen coordinates in Position 3. [Figure from {cite:t}`gee2008`.]
@@ -80,6 +82,7 @@ The best fit values for $\chi$ for the entire sequence of data gives the 2D Mode
 
 :::{figure} ../figures/appendix/AMSspinProc.png
 :name: fig:AMSspinProc
+:alt: Four-panel plot showing AMS spin data processing: a) raw signal with drift correction, b) stacked detrended revolutions with 2D model fit, c) deviatoric susceptibility from three spin positions, d) crossover adjustment scaled to absolute values.
 :width: 100%
 
 Processing steps for data spin protocol. a) From a single spin with eight revolutions. Raw data with peaks (red dots) identified by peak-finding algorithm and best fit linear trend. Data are detrended using peaks. b) Data from detrended individual revolutions and best fit 2-D model. c) Original (zero-mean) deviatoric susceptibility data from three spins. The best fit 2-D model for each spin provides an estimate of two elements of the deviatoric susceptibility tensor (square, $\chi_{11}$; hexagon, $\chi_{22}$; circle, $\chi_{33}$). Thick bars indicate the calculated offsets for Positions 1 and 2. d) Crossover adjustment for data from three positions. Original (zero-mean) deviatoric susceptibility data from three positions are scaled to absolute values (right-hand scale) using a bulk measurement in spin Position 3, and adjusted to minimize cross over error. [Figure modified from {cite:t}`gee2008`.]

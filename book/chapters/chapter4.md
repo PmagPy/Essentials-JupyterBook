@@ -17,6 +17,7 @@ In [Chapter 6](#chap:mineralogy), we will discuss the behavior of common magneti
 
 :::{figure} ../figures/chapter4/magnetite.png
 :name: fig:magnetite
+:alt: Three-panel figure: (a) photo of a dark, lustrous magnetite octahedron, (b) ball-and-stick model of the cubic inverse spinel crystal structure with oxygen anions and iron cations on tetrahedral and octahedral sites, (c) 3D anisotropy energy surface with lobes along hard [100] axes and dimples along easy [111] axes.
 :width: 100%
 
 a) A magnetite octahedron. [Photo of Lou Perloff in The Photo-Atlas of Minerals.] b) Internal crystal structure. Directions of the body diagonal ([111] direction) and orthogonal to the cubic faces ([001] direction) are shown as arrows. Big red dots are the oxygen anions. The blue dots are iron cations in octahedral coordination and the yellow dots are in tetrahedral coordination. Fe$^{3+}$ sits on the A sites and Fe$^{2+}$ and Fe$^{3+}$ sit on the B sites. c) Magnetocrystalline anisotropy energy as a function of direction within a magnetite crystal at room temperature. The easiest direction to magnetize (the direction with the lowest energy — note dimples in energy surface) is along the body diagonal (the [111] direction). [Figure from {cite}`williams1995`.]
@@ -243,6 +244,7 @@ We often use the Kelvin scale when discussing magnetic properties because it is 
 
 :::{figure} ../figures/chapter4/K-T.png
 :name: fig:K-T
+:alt: Plot of magnetite anisotropy constants K1 (red) and K2 (blue) versus temperature from 100 to 700 K. K1 crosses zero at the isotropic point near 130 K, reaching a minimum around 230 K.
 :width: 60%
 
 Variation of $K_1$ and $K_2$ of magnetite as a function of temperature. Solid lines are data from {cite}`syono1963`. Dashed lines are data from {cite}`fletcher1974`.
@@ -270,6 +272,7 @@ The combined effect of these transitions on magnetization is illustrated in [](#
 
 :::{figure} ../figures/chapter4/verwey.png
 :name: fig:verwey
+:alt: Magnetization versus temperature plot showing RTSIRM cooling (blue) and warming (red) curves. Magnetization drops sharply at the Verwey transition near 120 K, with incomplete recovery on warming.
 :width: 50%
 
 The magnetization of magnetite-bearing basaltic dike specimen that was given a saturating isothermal remanent magnetization at room temperature (RTSIRM) before being cooled to 10 K and warmed back up to 300 K. On cooling, the magnetization decreases through the isotropic point (~130 K) and drops sharply at the Verwey transition (~120 K). On rewarming, only partial recovery occurs — the difference is the multidomain remanence lost during LTD. Data from {cite}`swanson-hysell2021` available in the MagIC database https://earthref.org/MagIC/20213.
@@ -539,6 +542,7 @@ where $N$ is a *demagnetizing factor* determined by the shape. In fact, the dema
 
 :::{figure} ../figures/chapter4/demagfield.png
 :name: fig:demagfield
+:alt: Six-panel diagram: (a) internal magnetization arrows in a sphere with external field lines, (b) equivalent surface magnetic poles, (c) internal demagnetizing field opposing magnetization, (d) surface poles on a sphere, (e) surface poles on a prolate ellipsoid, (f) ellipsoid showing magnetization at angle theta from the long axis with demagnetizing field.
 :width: 100%
 
 a) Internal magnetizations within a ferromagnetic crystal. b) Generation of an identical external field from a series of surface monopoles. c) The internal "demagnetizing" field resulting from the surface monopoles. [Redrawn from {cite}`oreilly1984`.] d) Surface monopoles on a sphere. e) Surface monopoles on an ellipse, with the magnetization parallel to the elongation. f) Demagnetizing field $\mathbf{H}_d$ resulting from magnetization $M$ at angle $\theta$ from $a$ axis in prolate ellipsoid.
@@ -612,6 +616,7 @@ So far we have been discussing hypothetical magnetic particles that are uniforml
 <!-- Figure modified from williams2024, licensed CC BY 4.0 -->
 :::{figure} ../figures/chapter4/vortex.png
 :name: fig:nonuniform
+:alt: Micromagnetic simulations of six magnetite grains showing remanent states. Elongate grains transition from single-domain (90 nm) to single-vortex (160 nm). Equant grains progress from single-domain (80 nm) through flower state (90 nm) to single-vortex (140 nm). Colored arrows indicate local spin directions.
 :width: 80%
 
 Micromagnetic simulations of remanent domain states in magnetite computed using MERRILL {cite:p}`williams2024`. The elongate particles have an aspect ratio (b/a) of 2.25 while the equant particles are equidimensional. The numbers above the grains correspond to the equivalent spherical volume diameters (which is effectively the diameter for the equant ones; and a way to succinctly summarize the grain length for the elongate ones). The arrows show local magnetization direction while the colors indicate alignment with magnetocrystalline easy axes. For the elongate grains, the 90 nm grain has single-domain behavoir while the 160 nm grain has a vortex aligned with the long axis (which is the easy axis). The 80 nm equant grain is in a single-domain state, while the 90 nm grain is in an intermediate flower state with the initiation of a vortex. At a size of 140 nm there is a vortex aligned with the crystallographic easy axis. [From {cite}`williams2024`.] 
@@ -623,6 +628,7 @@ As particles grow larger (>~200 nm), they break into multiple magnetic domains, 
 
 :::{figure} ../figures/chapter4/domains.png
 :name: fig:domains
+:alt: Four domain configurations in a magnetic particle: (a) single domain with large external field lines, (b) two antiparallel domains reducing the external field, (c) four lamellar domains with minimal external field, (d) two domains with triangular closure domains eliminating the external field.
 :width: 80%
 
 A variety of domain structures of a given particle. a) Uniformly magnetized (single domain). [Adapted from {cite}`tipler1999`.] b) Two domains. c) Four domains in a lamellar pattern. d) Essentially two domains with two closure domains.
@@ -638,6 +644,7 @@ where $A$ is the exchange constant (see {ref}`sect:exchange`) and $K$ is the mag
 
 :::{figure} ../figures/chapter4/wall.png
 :name: fig:wall
+:alt: Two 3D block diagrams comparing domain walls: (a) an abrupt thin wall where spins switch 180 degrees between adjacent atoms, (b) a gradual wide wall where spins rotate progressively across hundreds of atoms within a shaded transition zone.
 :width: 100%
 
 Examples of possible domain walls. a) There is a 180° switch from one atom to the next. The domain wall is very thin, but the exchange price is very high. b) There is a more gradual switch from one direction to the other [note: each arrow represents several 10's of unit cells]. The exchange energy price is lower, but there are more spins in unfavorable directions from a magnetocrystalline point of view.
@@ -647,6 +654,7 @@ In [](#fig:energies) we plot the self energy ([Equation %s](#eq:self)) and the w
 
 :::{figure} ../figures/chapter4/energies.png
 :name: fig:energies
+:alt: Plot of energy (fJ) versus particle diameter (nm) for magnetite spheres. The self energy curve (red, solid) rises steeply with diameter, crossing above the more slowly increasing wall energy curve (green, dashed) near 50 nm.
 :width: 50%
 
 Comparison of "self" energy versus the energy of the domain wall in magnetite spheres as a function of particle size.
@@ -656,6 +664,7 @@ How can we test the theoretical predictions of domain theory? Do domains really 
 
 :::{figure} ../figures/chapter4/domain-images.png
 :name: fig:domain-images
+:alt: Five-panel figure showing domain imaging techniques: (a) Bitter pattern micrograph with dark lines marking domain walls on polished magnetite, (b) MOKE image with light and dark bands revealing domain orientations, (c-e) MFM of a magnetite inclusion showing surface topography, magnetic signal, and interpreted domain directions.
 :width: 80%
 
 a) Bitter patterns from an oriented polished section of magnetite. [Figure from {cite}`ozdemir1995`.] b) Domains revealed by longitudinal magneto-optical Kerr effect. [Image from {cite}`heider1992`.] c–e) Magnetic force microscopy technique. [Images from {cite}`feinberg2005`.] c) Image of topography of surface of a magnetite inclusion in a non-magnetic matrix. d) Magnetic image from MFM technique. e) Interpretation of magnetizations of magnetic domains.
@@ -694,6 +703,7 @@ Thus, the relaxation time is proportional to anisotropy constant and volume, and
 
 :::{figure} ../figures/chapter4/tauvd.png
 :name: fig:tauvd
+:alt: Semi-log plot of relaxation time versus particle width for magnetite ellipsoids. The curve rises steeply from nanoseconds at 5 nm to billions of years above 25 nm, with horizontal reference lines at 100 seconds, 1 year, 1 million years, and 1 billion years.
 :width: 70%
 
 Relaxation time in magnetite ellipsoids as a function of grain width in nanometers (all length to width ratios of 1.3:1.)
@@ -708,6 +718,7 @@ The figure also predicts the boundary between the single domain field and the tw
 
 :::{figure} ../figures/chapter4/butban.png
 :name: fig:butban
+:alt: Evans diagram plotting particle length versus width-to-length ratio for magnetite parallelepipeds, showing three domain-state fields. The superparamagnetic region lies below the heavy blue (100 s) and thin green (1 Gyr) threshold lines, single domain occupies the middle, and multidomain lies above the dashed red SD/MD boundary.
 :width: 70%
 
 Expected domain states for various sizes and shapes of parallelepipeds of magnetite at room temperature. The parameters $a$ and $b$ are as in [](#fig:demagfield)e. Heavy blue (thin green) line is the superparamagnetic threshold assuming a relaxation time of 100s (1 Gyr). Dashed red line marks the SD/MD threshold size. Calculations done using assumptions and parameters described in the text.

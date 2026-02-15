@@ -21,6 +21,7 @@ Scientists discovered reversely magnetized rocks in the early 20th century (see 
 
 :::{figure} ../figures/chapter15/cox64.png
 :name: fig:cox64
+:alt: Polarity observations from global lava flows (0-4 Ma) with normal/reverse symbols, and geomagnetic declination record showing Brunhes, Matuyama, and Gauss epochs with Olduvai and Mammoth events.
 :width: 100%
 
 Magnetic polarities from volcanic units plotted against age as determined by the potassium-argon method. The first three long intervals were named after famous geomagnetists. [Figure redrawn from {cite:t}`cox1964`.]
@@ -30,6 +31,7 @@ Magnetic polarities from volcanic units plotted against age as determined by the
 
 :::{figure} ../figures/chapter15/mason61.png
 :name: fig:mason61
+:alt: Black-and-white striped map of marine magnetic anomalies offshore northwestern North America, from Cape Mendocino to British Columbia.
 :width: 80%
 
 Map of the pattern of magnetic anomalies off northwestern North America. [Figure from {cite:t}`mason1961`.]
@@ -39,6 +41,7 @@ Time scales constructed in the manner of Cox and colleagues that pair dates with
 
 :::{figure} ../figures/chapter15/pitman66.png
 :name: fig:pitman66
+:alt: Stacked panels showing the GPTS polarity bar, model magnetic anomaly, the Eltanin-19 profile and its mirror image, and bathymetry across the East Pacific Rise, with Brunhes through Gilbert chrons labeled.
 :width: 100%
 
 A profile of bathymetry (bottom panel) and magnetic anomalies (labelled "profile") obtained from the East Pacific Rise (Eltanin 19 profile, also known as "the magic profile".) The magnetic anomaly profile, flipped east-to-west is replotted above (labelled "profile backwards"). Assuming a magnetization of a 500 m thick section of oceanic crust (black and white pattern above), a model for the predicted anomalies could be generated (labelled "model"). Above is the inferred time scale. The position of the Gauss/Gilbert boundary is marked by stars. [Adapted from {cite:t}`pitman1966`.]
@@ -48,6 +51,7 @@ The publication of {cite:t}`cox1963` (see also {cite:t}`mcdougall1963`), essenti
 
 :::{figure} ../figures/chapter15/opdyke66.png
 :name: fig:opdyke66
+:alt: Three-panel figure: inclination versus depth in Antarctic core V16-134 showing polarity reversals, the 1966 GPTS with Brunhes through Gilbert epochs, and southern ocean faunal zones.
 :width: 85%
 
 a) Inclinations from core V16-134 plotted against depth. b) The GPTS as it was known in 1966. c) Faunal zones of the southern ocean identified within the core. [Data from {cite:t}`opdyke1966`.]
@@ -57,6 +61,7 @@ In a parallel effort to the marine magnetic anomaly work, several groups were in
 
 :::{figure} ../figures/chapter15/opdyke74.png
 :name: fig:opdyke74
+:alt: Declination versus depth in equatorial Pacific core RC12-65 showing ~180-degree swings between normal and reverse polarity, with a black-and-white polarity bar and Epochs 1 through 11 labeled below.
 :width: 100%
 
 Declinations from deep-sea piston core RC12-65 from the equatorial Pacific Ocean (using an arbitrary zero line because the cores were not oriented). The epoch system of magnetostratigraphic nomenclature was extended back to Epoch 11 in this core and to Epoch 19 in companion cores. [Figure redrawn from {cite:t}`opdyke1974`.]
@@ -72,6 +77,7 @@ As we go back farther in time, the GPTS necessarily becomes more sketchy. Long s
 
 :::{figure} ../figures/chapter15/hilgen91.png
 :name: fig:hilgen91
+:alt: Polarity column and sapropel layers from the Gauss chron correlated via tie lines to orbital precession and eccentricity curves spanning about 2.5 to 3.0 Ma.
 :width: 90%
 
 Illustration of the "astrochronology" dating method. The sequence of polarity intervals and climatically induced sapropel layers is correlated to the GPTS (left) and the orbital cycles (right). The numerical ages from the orbital cycles can then be transferred to the GPTS. [Adapted from {cite:t}`hilgen1991`.]
@@ -83,6 +89,7 @@ An interesting aspect to the magnetostratigraphic work typified by {cite:t}`opdy
 
 :::{figure} ../figures/chapter15/newark.png
 :name: fig:newark
+:alt: Newark Basin composite section showing lithostratigraphy and polarity zones E1-E23 at left, correlated to a GPTS with 400-kyr cycles and the Late Triassic geological time scale at right.
 :width: 100%
 
 Left: Lithostratigraphic and magnetostratigraphic pattern derived from overlapping drill cores into the Newark Basin. Right: Interpretation for the GPTS based on astrochronology and correlation to the Geological Time Scale. [Adapted from {cite:t}`kent1995` and {cite:t}`kent1999`.]
@@ -90,6 +97,7 @@ Left: Lithostratigraphic and magnetostratigraphic pattern derived from overlappi
 
 :::{figure} ../figures/chapter15/neogene.png
 :name: fig:neogene
+:alt: Neogene time scale chart (0-25 Ma) with columns for epoch, stage, polarity, chron, planktonic foraminifer zones, and nannofossil zones aligned against a numerical age axis.
 :width: 100%
 
 The Neogene of the Geological Time Scale. [Figure created using TSCreator software from <http://chronos.org> based on time scale of {cite:t}`lourens2004`.]
@@ -117,6 +125,7 @@ For reference, we include the dates from a recent GPTS in [](#tab:gpts). As an e
 
 :::{figure} ../figures/chapter15/spreadingrate.png
 :name: fig:spreadingrate
+:alt: Dual-axis plot with a blue curve of distance from ridge crest versus age (0-80 Ma) and a red curve of inferred South Atlantic spreading rate showing peaks near 20 and 40 Ma.
 :width: 80%
 
 Plot of distance from the ridge crest in the South Atlantic versus age using the GPTS of {cite:t}`gradstein2004`. The differential of this curve gives the inferred instantaneous spreading rate.
@@ -146,6 +155,7 @@ Sedimentation is not always a continuous process in many environments and a stra
 
 :::{figure} ../figures/chapter15/isochron.png
 :name: fig:isochron
+:alt: Cross-section of laterally correlated stratigraphic columns with normal (solid) and reverse (open) polarity sites, sand bodies A-C in gray, and dashed lines tracing magnetic isochrons across sections.
 :width: 95%
 
 Application of magnetostratigraphic techniques for delineating isochronous horizons in a series of stratigraphic sections. The polarities of sampling sites are shown by open (reverse) and solid (normal) symbols. The light shading indicates silts, while the darker shaded units (labelled A-C) represent sand bodies, which were not suitable for paleomagnetic analysis in this example. The inferred isochrons (horizons that separate polarity zones) are shown as heavy dashed lines. [Figure modified from {cite:t}`behrensmeyer1982`.]

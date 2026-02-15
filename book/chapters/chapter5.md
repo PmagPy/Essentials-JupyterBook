@@ -25,6 +25,7 @@ As the moment swings around with angle $\theta$ to the easy axis, the anisotropy
 
 :::{figure} ../figures/chapter5/chapter5_figure1.png
 :name: fig:mB
+:alt: Four-panel figure: (a) prolate spheroid particle sketch with moment m, field B, and angles; (b-d) energy density vs theta plots showing anisotropy, interaction, and total energies at 0, 30, and 500 mT applied fields.
 :width: 100%
 
 a) Sketch of a prolate spheroid magnetic particle (magnetite, elongation q = 2) with easy axis along the long dimension. In response to a magnetic field $\mathbf{B}$, applied at an angle $\phi$ to the easy axis, the particle moment $\mathbf{m}$ rotates, making an angle $\theta$ with the easy axis. b) Variation of the anisotropy energy density ($\epsilon_a$) as a function of $\theta$. The energy is minimized along the easy axis ($\epsilon_{min}$) and the highest perpindicular to that axis. c) Applying a field of B = 30 mT at a $\phi=45°$ as shown in (a) leads to interaction energy density ($\epsilon_m$) as shown by the orange dashed line. The anisotropy energy density ($\epsilon_a$) is the same as in (b) with the total energy density being the two added together ($\epsilon_t=\epsilon_a+\epsilon_m$). The effect is for the grain magnetization to be slightly pulled away from the easy axis as indicated by the position of the energy minimum ($\epsilon_{min}$).  d) Applying a larger field of 500 mT, results in domiance of the interaction energy density that pulls the energy minimum ($\epsilon_{min}$) much closer to the applied field direction.
@@ -99,6 +100,7 @@ Now we can derive the so-called "microscopic coercivity" ($H_k$) introduced in [
 
 :::{figure} ../figures/chapter5/bf.png
 :name: fig:bf
+:alt: Prolate spheroid sketch with field angle phi, and plot of flipping field versus phi showing a concave curve with minimum near 45 degrees for magnetite with aspect ratio 1.5.
 :width: 90%
 
 The flipping field $\mu_oH_f$ required to irreversibly switch the magnetization vector from one easy direction to the other in a single domain particle dominated by uniaxial shape anisotropy (here calculated for a prolate magnetite spheroid with aspect ratio of 1.5). The angle $\phi$ is measured between the applied field and the easy axis direction opposite to $\mathbf{m}$. The minimum flipping field occurs at $\phi$ = 45°. At $\phi$ = 0° and 90°, $\mu_oH_f$ equals the microscopic coercivity $\mu_oH_k$ = 2$K_u$/$M_s$. Note that the magnetization reversal at $\phi$ = 90° is entirely reversible — the moment deflects toward the applied field but returns to its original easy axis direction when the field is removed, so no remanence in the applied direction is acquired.
@@ -121,6 +123,7 @@ Applying fields at arbitrary angles to the easy axis results in loops of various
 
 :::{figure} ../figures/chapter5/outerloop.png
 :name: fig:outerloop
+:alt: Two-panel figure: (a) rectangular hysteresis loop for phi=0 with numbered tracks showing moment flipping at the flipping field; (b) overlaid loops for phi = 0, 22, 45, 70, and 90 degrees becoming progressively thinner.
 :width: 100%
 
 a) Moment measured for the particle ($\phi=0°$) with applied field starting at 0 mT and increasing in the opposite direction along track #1. When the flipping field $\mu_oH_f$ is reached, the moment switches to the other direction along track #2. The field then switches sign and decreases along track #3 to zero, then increases again to the flipping field. The moment flips and the field increases along track #4. b) The component of magnetization parallel to +B$_{max}$ versus $B$ for field applied with various angles $\phi$. 
@@ -128,6 +131,7 @@ a) Moment measured for the particle ($\phi=0°$) with applied field starting at 
 
 :::{figure} ../figures/chapter5/sdloops.png
 :name: fig:sdloops
+:alt: Hysteresis loop for a random SD assemblage showing M/Ms versus B, with labeled Ms, Mr, Hc, and chi_lf. Four side panels show particle moment configurations at demagnetized, saturated, remanent, and coercive states.
 :width: 100%
 
 Net response of a random assemblage of uniaxial single domain particles. Snapshots of magnetization states (squares labeled 1 to 4) for representative particles are shown in the panels labeled State 1–4. The initial demagnetized state is "State 1" with no applied field and zero net magnetization. The initial slope as the field is increased from zero is the low-field susceptibility $\chi_{lf}$. When all the moments are parallel to the applied field (State 2), the magnetization is at saturation $M_s$. When the field is returned to zero, the magnetization is the remanent magnetization ($M_r$; State 3). When the field is applied in the opposite direction and has flipped half the moments (State 4), the net magnetization is zero and the field is the bulk coercive field $\mu_oH_c$.
@@ -139,6 +143,7 @@ If the field is increased beyond the flipping field of some of the magnetic grai
 
 :::{figure} ../figures/chapter5/Bcr.png
 :name: fig:Bcr
+:alt: Hysteresis loop plot of M/Ms versus B showing uncorrected loop (red/green) with paramagnetic slope chi_hf and slope-corrected loop (blue dashed) with labeled Ms, Mr, Hc, Hcr, and chi_lf.
 :width: 60%
 
 Heavy green line: initial behavior of demagnetized specimen as applied field ramps up from zero field to a saturating field. The initial slope is the initial or low-field susceptibility $\chi_{lf}$. After saturation is achieved the slope is the high-field susceptibility $\chi_{hf}$ which is the non-ferromagnetic contribution, in this case the paramagnetic susceptibility (because $\chi_{hf}$ is positive.) The dashed blue line is the hysteresis loop after the paramagnetic slope has been subtracted. Saturation magnetization $M_s$ is the maximum value of magnetization after slope correction. Saturation remanence $M_r$ is the value of the magnetization remaining in zero applied field. Coercivity ($\mu_o H_c$) and coercivity of remanence $\mu_oH_{cr}'$ are as in [](#fig:sdloops)a. A loop that does not achieve a saturating field (red in [](#fig:sdloops)a) is called a *minor hysteresis loop*, while one that does is called the *outer loop*.
@@ -150,6 +155,7 @@ The coercivity of remanence $\mu_oH_{cr}$ is defined as the magnetic field requi
 
 :::{figure} ../figures/chapter5/backfield.png
 :name: fig-backfield
+:alt: Backfield demagnetization curve plotting magnetization versus increasingly negative applied field, starting at positive Mr and decreasing through zero at Bcr = 19.6 mT (marked with star) toward negative saturation.
 :width: 500px
 
 Backfield demagnetization of saturation remanence for specimen SJ1-4. After saturation in the positive direction, the field is applied in the negative direction with increasing magnitude. At each field step, the remanence is measured. The magnetization starts at the saturation remanence ($M_r$) and decreases, passing through zero at the coercivity of remanence $B_{cr}$ = 19.6 mT (star), before approaching saturation in the negative direction. Data processed using `pmagpy.rockmag`.
@@ -168,6 +174,7 @@ The most direct way to measure coercivity of remanence is the *backfield experim
 
 :::{figure} ../figures/chapter5/cubicloops.png
 :name: fig:cubic
+:alt: Hysteresis loops for cubic magnetite grains plotting M/Ms versus H/Hk, with heavy dashed curves for [001] and [111] directions, thin black curves for individual orientations, and heavy red curve for the random assemblage.
 :width: 50%
 
 Heavy lines: theoretical behavior of cubic grains of magnetite. Dashed lines are the responses along particular directions. Light grey lines: hysteresis response for single particles with various orientations with respect to the applied field. [Figure from {cite}`tauxe2002`.]
@@ -186,6 +193,7 @@ where $\gamma = M_sBv/(kT)$ and $N$ is the number of particles of volume $v$, is
 
 :::{figure} ../figures/chapter5/loops.png
 :name: fig:loops
+:alt: Two-panel figure: (a) Langevin function curve of M/Ms versus gamma showing S-shaped reversible magnetization with B90 marked; (b) log-scale plot of B90 versus particle size d, showing steep increase below about 10 nm.
 :width: 80%
 
 a) The contribution of SP particles with saturation magnetization $M_s$ and cubic edge length $d$. $\gamma = BM_s d^3/kT$. There is no hysteresis. b) The field at which the magnetization reaches 90% of the maximum $B_{90}$ is when $M_s d^3/kT\simeq 10$. [Figure from {cite}`tauxe1996`.]
@@ -226,6 +234,7 @@ Moving domain walls around is much easier than flipping the magnetization of an 
 
 :::{figure} ../figures/chapter5/mdloop.png
 :name: fig:md
+:alt: Three-panel figure: (a) narrow multidomain hysteresis loop with low Mr and Hc; (b) detail showing linear MD susceptibility chi_md relating Mr and Hc; (c) Day diagram of Mr/Ms versus Hcr/Hc with SD limit at 0.5 and hyperbolic MD trend with SD-MD mixing curve in red.
 :width: 100%
 
 a) Typical hysteresis loop from a multidomain assemblage. b) Theoretical behavior for the region in the inset to a). c) Theoretical relationship between $M_r/M_s$ and $H_{cr}/H_c$ for constant $\chi_iH_c/M_s = 0.1$. Heavy red line is the theoretical linear mixing curve of SD/MD end-members. (See text.)
@@ -261,6 +270,7 @@ When $\chi_i H_c/M_s$ is constant, [Equation %s](#eq:day) is a hyperbola. For a 
 
 :::{figure} ../figures/chapter5/void.png
 :name: fig:void
+:alt: Diagram of a multidomain grain with lamellar domains and voids, showing free poles and demagnetizing fields around a void within a domain (left) versus reduced self-energy when a domain wall intersects the void (right).
 :width: 80%
 
 Interaction of a domain wall and a void. When the void is within a domain, free poles create a magnetic field which creates a self energy ([Chapter 4](#chap:anisotropy)). When a domain wall intersects the void, the self-energy is reduced. There are no exchange or magnetocrystalline anisotropy energy terms within the void, so the wall energy is reduced.
@@ -270,6 +280,7 @@ There are several possible causes of variability in wall energy within a magneti
 
 :::{figure} ../figures/chapter5/wallenergy.png
 :name: fig:wallenergy
+:alt: Multi-panel figure: (a) wall energy profile with local minima a-d across a grain with domain wall positions shown in inset; (b-g) schematic domain states through a hysteresis cycle from demagnetized to saturated to remanent states, with resulting loop showing Barkhausen jumps.
 :width: 100%
 
 a) Schematic view of wall energy across a transect of a multidomain grain. Inset: Placement of domain walls in the demagnetized state. [Domain observations from {cite}`halgedahl1983`.] b–g) Schematic view of the magnetization process in MD grain shown in previous figure. b) Demagnetized state, c) in the presence of a saturating field, d) field lowered to +3 mT, e) remanent state, f) backfield of −3 mT, g) resulting loop. Inset shows detail of domain walls moving by small increments called Barkhausen jumps. [Domain wall observations from {cite}`halgedahl1983`; schematic loop after {cite}`oreilly1984`.]
@@ -325,6 +336,7 @@ Hysteresis loops can yield a tremendous amount of information yet much of this i
 
 :::{figure} ../figures/chapter5/forcprinc.png
 :name: fig:forcprinc
+:alt: Three-panel figure: (a) single FORC from Ha back to saturation on a hysteresis loop; (b) series of FORCs filling the loop interior with neighboring-point smoothing circles; (c) FORC density contour plot in Hc-Hu coordinates showing a central ridge for SD particles.
 :width: 100%
 
 a) Dashed line is the descending magnetization curve taken from a saturating field to some field $H_a$. Red line is the first order reversal curve (FORC) from $H_a$ returning to saturation. At any field $H_b>H_a$ there is a value for the magnetization $M(H_a,H_b)$. b) A series of FORCs for a single domain assemblage of particles. At any point there are a set of related "nearest neighbor" measurements (circles in inset) that can be used to develop a FORC diagram using smoothing algorithms. c) A contour plot of the FORC density surface for data in b). Specimen is of the Tiva Canyon Tuff, courtesy of the Institute for Rock Magnetism.
@@ -340,6 +352,7 @@ where the $a_i$ are fitted coefficients determined from neighboring measurement 
 
 :::{figure} ../figures/chapter5/m428.png
 :name: fig:forcpsd
+:alt: Two-panel figure: (a) dense set of FORCs for a PSD specimen showing wide hysteresis loop filled with reversal curves; (b) FORC diagram showing density spread along both Hc and Hu axes, indicating mixed SD and vortex-state contributions.
 :width: 100%
 
 a) A series of FORCs for a specimen from the Stillwater Layered Intrusion. b) FORC diagram for data in a). Data are courtesy of J.S. Gee.

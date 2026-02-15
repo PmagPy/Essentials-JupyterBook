@@ -241,6 +241,7 @@ Spherical trigonometry has widespread applications throughout the book. It is us
 
 :::{figure} ../figures/appendix/strig.png
 :name: fig:strig
+:alt: Spherical triangle with vertices A, B, C on a globe, connected by great circle arcs a, b, c, with inset showing subtended angles on a unit sphere.
 :width: 80%
 
 Rules of spherical trigonometry. $a,b,c$ are all great circle tracks on a sphere which form a triangle with apices $A,B,C$. The lengths of $a,b,c$ on a unit sphere are equal to the angles subtended by radii that intersect the globe at the apices, as shown in the inset. $\alpha,\beta,\gamma$ are the angles between the great circles.
@@ -263,6 +264,7 @@ $$ (eq:lawcos)
 
 :::{figure} ../figures/appendix/vectors.png
 :name: fig:vectors
+:alt: Two vectors A and B in an X-Y coordinate system with their x and y components shown, angles to the X axis labeled, and resultant vector C from their addition.
 :width: 80%
 
 Vectors $\mathbf{A}$ and $\mathbf{B}$, their components A$_{x,y}$, B$_{x,y}$ and the angles between them and the $X$ axis, $\alpha$ and $\beta$. The angle between the two vectors is $\alpha-\beta = \Delta$. Unit vectors in the directions of the axes are $\hat x$ and $\hat y$ respectively.
@@ -285,6 +287,7 @@ There are two ways to multiply vectors. The first is the dot product whereby $\m
 
 :::{figure} ../figures/appendix/cross.png
 :name: fig:cross
+:alt: Three-dimensional diagram with vectors A and B in a plane separated by angle theta, and their cross product vector C pointing perpendicular to the plane.
 :width: 60%
 
 Illustration of cross product of vectors $A$ and $B$ separated by angle $\theta$ to get the orthogonal vector $C$.
@@ -333,6 +336,7 @@ The first subscript always refers to the $X$ system and the second refers to the
 
 :::{figure} ../figures/appendix/dircosines.png
 :name: fig:transform
+:alt: Two-panel diagram. a) Vector R in the X1-X2 coordinate system at angle alpha. b) Two coordinate systems X and X-prime with direction cosine angles alpha-11, alpha-12, alpha-21, alpha-22 between their axes.
 :width: 100%
 
 Definition of direction cosines in two dimensions. a) Definition of vector in one set of coordinates, $x_1, x_2$. b) Definition of angles relating $X$ axes to $X'$.
@@ -375,6 +379,7 @@ with a short cut notation as: $x'_i = a_{ij} x_j$. However we write this, it mea
 
 :::{figure} ../figures/appendix/transform.png
 :name: fig:trans
+:alt: Two-panel diagram. a) Sample cube with right-hand coordinate axes X1, X2, X3. b) Sphere showing X and X-prime coordinate systems with angle alpha between corresponding axes and spherical triangle relating the two systems.
 :width: 100%
 
 a) Sample coordinate system. b) Trigonometric relations between two cartesian coordinate systems, $\mathbf{X}_i$ and $\mathbf{X}'_i$. $\lambda,\phi,\psi$ are all known and the angles between the various axes can be calculated using spherical trigonometry. For example, the angle $\alpha$ between $\mathbf{X}_1$ and $\mathbf{X}_1'$ forms one side of the triangle shown by dash-dot lines. Thus, $\cos \alpha = \cos \lambda \cos \phi + \sin \lambda \sin \phi \cos \psi$. [Figure from {cite:t}`tauxe1998`.]
@@ -533,6 +538,7 @@ We often wish to differentiate a function along three orthogonal axes. For examp
 
 :::{figure} ../figures/appendix/ski.png
 :name: fig:ski
+:alt: Photograph of a snow-covered ski slope with red arrows indicating the direction and magnitude of steepest descent on the terrain.
 :width: 100%
 
 Illustration of the relationship between a vector field (direction and magnitude of steepest slope at every point, e.g., red arrows) and the scalar field (height) of a ski slope.
@@ -558,6 +564,7 @@ $$
 
 :::{figure} ../figures/appendix/div.png
 :name: fig:div
+:alt: Arrows radiating outward from a central point with increasing magnitude, enclosed by a dashed box, illustrating a vector field with non-zero divergence.
 :width: 80%
 
 Example of a vector field with a non-zero divergence.
@@ -581,6 +588,7 @@ Like all dot products, the divergence of a vector function is a scalar.
 
 :::{figure} ../figures/appendix/divzero.png
 :name: fig:divzero
+:alt: Uniform parallel arrows all pointing upward with equal magnitude, enclosed by a dashed box, illustrating a vector field with zero divergence.
 :width: 60%
 
 Example of a vector field with zero divergence.
@@ -588,6 +596,7 @@ Example of a vector field with zero divergence.
 
 :::{figure} ../figures/appendix/curl.png
 :name: fig:curl
+:alt: Arrows circulating counterclockwise around a central point in the x-y plane along an elliptical path, with x, y, and z axes shown, illustrating a vector field with non-zero curl.
 :width: 80%
 
 Example of a vector field with non-zero curl.
@@ -652,6 +661,7 @@ Sometimes things just are not normal. Statistically that is. When you can not as
 
 :::{figure} ../figures/appendix/bootstrap.png
 :name: fig:bootstrap
+:alt: Three-panel figure. a) Histogram of 500 data points from a Gaussian distribution. b) Q-Q plot showing data versus normal quantiles. c) Histogram of 10,000 bootstrapped means with 95% confidence bounds marked.
 :width: 100%
 
 Bootstrapping applied to a normal distribution. a) 500 data points are drawn from a Gaussian distribution with mean of 10 and a standard deviation of 2. b) Q-Q plot of data in a). The 95% confidence interval for the mean is given by Gauss statistics as $\pm$ 0.17. 10,000 new (para) data sets are generated by randomly drawing $N$ data points from the original data set shown in a). c) A histogram of the means from all the para-data sets. 95% of the means fall within the interval 10.06$^{+0.16}_{-0.16}$, hence the bootstrap confidence interval is similar to that calculated with Gaussian statistics. [Figure from {cite:t}`tauxe1998`.]
@@ -663,6 +673,7 @@ The data in [](#fig:bootstrap)a plot in a line on the Q-Q plot ([](#fig:bootstra
 
 :::{figure} ../figures/appendix/sundefs.png
 :name: fig:sundefs
+:alt: Sphere with North Pole at top showing site location L and sub-solar point S connected by spherical triangle with angles H, beta, beta-prime, theta, and solar declination delta.
 :width: 50%
 
 Calculation of the azimuth of the shadow direction ($\beta'$) relative to true North, using a sun compass. L is the site location (at $\lambda_L,\phi_L$), S is the position on the Earth where the sun is directly overhead ($\lambda_S,\phi_S$). [Figure from {cite:t}`tauxe1998`.]

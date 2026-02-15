@@ -16,6 +16,7 @@ The most frequently used magnetic tensors are the anisotropy of magnetic suscept
 
 :::{figure} ../figures/chapter13/measAMS.png
 :name: fig:measAMS
+:alt: Three-panel diagram showing a cubic specimen with X1, X2, X3 coordinate axes, six measurement orientations for determining the anisotropy ellipsoid, and a specimen inside a susceptibility meter coil.
 :width: 100%
 
 a) Definition of specimen coordinate system. b) Six measurement scheme for determining the anisotropy ellipsoid. c) Position of the specimen in the magnetic susceptibility meter.
@@ -113,6 +114,7 @@ The eigenvalues $\tau_1$, $\tau_2$ and $\tau_3$ correspond to the maximum, inter
 
 :::{figure} ../figures/chapter13/magnitude.png
 :name: fig:magnitude
+:alt: Cubic specimen with arbitrary coordinate axes alongside a 3D shaded ellipsoid with eigenvectors V1, V2, and V3 marking its principal semi-axes.
 :width: 80%
 
 a) Arbitrary coordinate system of a specimen. b) The magnitude ellipsoid of AMS. Its coordinate system is defined by the eigenvectors $\mathbf{V}_i$. The lengths along the eigenvectors of the ellipsoid surface are related to the eigenvalues $\tau_i$ (see text).
@@ -175,6 +177,7 @@ $n_f$ is the number of degrees of freedom, given by $N_{meas}-6$ where $N_{meas}
 
 :::{figure} ../figures/chapter13/eij.png
 :name: fig:eij
+:alt: Unit sphere with three eigenvectors V1, V2, V3 and labeled uncertainty ellipses at each axis, with semi-axes epsilon_ij oriented along the other eigenvector directions.
 :width: 60%
 
 Relationship of the uncertainty ellipses (calculated by Hext statistics for AMS data) to the principal axes. The major and minor semi-axes of the uncertainty ellipses are oriented along the axes defined by the eigenvectors. [Figure from {cite:t}`tauxe1998`.]
@@ -270,6 +273,7 @@ The assumptions for using Hext statistics ([](#sect:hext)) are that the uncertai
 
 :::{figure} ../figures/chapter13/evec.png
 :name: fig:evec
+:alt: Four equal area projections: (a) V1, V2, V3 eigenvectors with Hext confidence ellipses from a dike margin, and (b-d) bootstrapped eigenvector distributions for each principal axis separately.
 :width: 100%
 
 a) Lower hemisphere projection of directions of $\mathbf{V}_1$ (squares), $\mathbf{V}_2$ (triangles), and $\mathbf{V}_3$ (circles) from the margin of a volcanic dike. Open symbols are the Hext means. Thin blue lines are the Hext 95% confidence ellipses (dashed portion are on the upper hemisphere). b) Equal area projection of principal eigenvectors ($\mathbf{V}_1$) of 500 pseudo-samples drawn from the data in a). c) Same as b) for the major eigenvectors ($\mathbf{V}_2$). d) Same as b) for the minor eigenvectors ($\mathbf{V}_3$). [Data from {cite:t}`tauxe1998b`.]
@@ -291,6 +295,7 @@ Speaking of "too few samples", it is important to emphasize again that bootstrap
 
 :::{figure} ../figures/chapter13/kmin.png
 :name: fig:kmin
+:alt: Four panels: (a) equal area projection of AMS eigenvectors from carbonate limestones, (b) bootstrapped eigenvectors, (c-d) cumulative distributions of V3 Cartesian components with 95% confidence bounds bracketing zero.
 :width: 100%
 
 a) AMS data from Cretaceous carbonate limestones in Italy (the Scaglia Bianca Formation) in tilt adjusted coordinates. a) Lower hemisphere projections of the principal $\mathbf{V}_1$ (squares), major $\mathbf{V}_2$ (triangles), and minor $\mathbf{V}_3$ (circles) eigenvectors. b) Bootstrapped eigenvectors from pseudo-samples of the data in a). c) Cumulative distribution of the $v_{31}$ with bounds containing 95% of the components plotted as dashed lines. The zero value expected from a vertical direction is shown as a vertical solid line. d) Same as c) but for the $v_{32}$ components. [Data from {cite:t}`cronin2001`.]
@@ -304,6 +309,7 @@ Another question that often arises is whether eigenvectors from two sets of anis
 
 :::{figure} ../figures/chapter13/dikeams.png
 :name: fig:dikeams
+:alt: Schematic of elongate particles imbricated against both margins of a volcanic dike during magma flow, paired with a stereonet showing V1 directions from eastern and western margins on opposite sides of the dike trace.
 :width: 100%
 
 Principles of AMS for interpretation of flow directions in dikes. [Figure from {cite:t}`tauxe1998` after {cite:t}`knight1988`.]
@@ -315,6 +321,7 @@ Some of the earliest magnetic measurements made on sediments were of anisotropy 
 
 :::{figure} ../figures/chapter13/sedams.png
 :name: fig:sedams
+:alt: Three depositional scenarios with particle orientation sketches and corresponding stereonets: (a) quiet water with horizontal fabric, (b) moderate current with imbricated particles, (c) high current with entrained elongate grains.
 :width: 100%
 
 Characteristics of AMS data from sediments deposited in a) quiet water, b) moderate water flow, and c) flow that is sufficient to entrain particles. [Figure adapted from {cite:t}`tauxe1998`.]
@@ -322,6 +329,7 @@ Characteristics of AMS data from sediments deposited in a) quiet water, b) moder
 
 :::{figure} ../figures/chapter13/shape.png
 :name: fig:shape
+:alt: Twelve-panel figure with 3D ellipsoids at top, then rows of eigenvector stereonets, bootstrapped eigenvector distributions, and eigenvalue cumulative distribution plots for spherical, oblate, prolate, and triaxial fabrics.
 :width: 100%
 
 Determination of the shape of AMS data using the bootstrap. Conventions as in Figure 13.4. a-d) Selected data sets plotted as eigenvector directions from individual specimens. e-h) Bootstrapped eigenvectors from a-d) respectively. i-l) Cumulative distributions of the bootstrapped eigenvalues associated with the eigenvectors plotted in e-h). The bounds containing 95% of each eigenvalue are shown as vertical dashed dot line for $\tau_3$, dashed for $\tau_2$ and solid for $\tau_1$.
@@ -347,6 +355,7 @@ With the variety of shape parameters comes a host of plotting conventions. We wi
 
 :::{figure} ../figures/chapter13/diags.png
 :name: fig:diags
+:alt: Three anisotropy shape diagrams side by side: (a) Flinn plot of L vs F, (b) Ramsay plot of L-prime vs F-prime, and (c) Jelinek plot of T vs P-prime, each showing oblate and prolate fields with increasing anisotropy trends.
 :width: 100%
 
 Properties of various AMS diagrams: a) Flinn, b) Ramsay and c) Jelinek. [Figure from {cite:t}`tauxe1998`.]
@@ -364,6 +373,7 @@ In none of the various types of plots just discussed are the horizontal and vert
 
 :::{figure} ../figures/chapter13/ternaryams.png
 :name: fig:tern1
+:alt: Two-panel ternary diagram: (a) triangle with tau1, tau2, tau3 vertices and shaded allowed region, (b) enlarged view plotted as E-prime vs R showing sphere, oblate, and prolate end members with percent anisotropy contours.
 :width: 100%
 
 Properties of the Ternary diagram: a) There are three axes with limits of $\tau_1,\tau_2, \tau_3$. Because of the constraint that $\tau_1>\tau_2>\tau_3$, only the shaded region is allowed. This is bounded at the top by a sphere when all three eigenvalues are equal, to the bottom left by a disk and to the bottom right by a needle. Geological materials generally have a low percentage of anisotropy and plot close to the sphere. This region is enlarged in b) which illustrates how the ternary projection can be plotted as $E'$ versus $R$ and how shape (oblate, prolate, sphere) and percent anisotropy appear on the diagram. [Figure from {cite:t}`tauxe1998`.]

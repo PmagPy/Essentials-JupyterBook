@@ -19,6 +19,7 @@ We live in a world that is in constant motion down to the atomic level. The stat
 
 :::{figure} ../figures/chapter7/dynamic_equilibrium_sheep.png
 :name: fig:equilibrium
+:alt: Sheep jumping over a fence in a field, with sunny conditions on one side and rain on the other, illustrating dynamic equilibrium.
 :width: 80%
 
 Illustration of dynamic equilibrium. If conditions on either side of the fence are equally pleasant, an equal number of sheep will be on either side of the fence, despite the fact that sheep are constantly jumping over the fence. If one side is preferable (sunny rather than rainy), there will tend to be more sheep on the nicer side.
@@ -32,6 +33,7 @@ If we had a collection of magnetized particles with some initial statistical ali
 
 :::{figure} ../figures/chapter7/neel.png
 :name: fig:neel
+:alt: Two-panel plot. a) Exponential decay of magnetization M/Mo versus time with relaxation time tau. b) Grain volume versus anisotropy constant with curves for relaxation times of 100 s, 1 Myr, and 4.5 Gyr separating blocked and equilibrium regions; inset shows temperature effect.
 :width: 100%
 
 a) Magnetic relaxation in an assemblage of single domain ferromagnetic grains. The initial magnetization $M_o$ decays to $1/e$ of its original strength in time $\tau$. b) Relaxation times of single domain grains on a plot of grain volume, $v$, against an anisotropy energy constant ($K$), for a given temperature. Grains with short relaxation times plot toward the lower left and are in equilibrium with the magnetic field (they are superparamagnetic). Grains with long relaxation times plot toward the upper right; their moments are blocked, preserving the magnetization for geologically significant times. Inset shows the effect of temperature on the relaxation time curves which move toward the right and up with increasing temperature, changing "blocked" remanences to unblocked ones.
@@ -73,6 +75,7 @@ where $T_c$ is the Curie temperature and $\gamma$ is an empirical exponent (typi
 
 :::{figure} ../figures/chapter7/neel-vrm.png
 :name: fig:neel-vrm
+:alt: Grain volume versus anisotropy energy density plot with contoured grain population and curves for tau of 100 s, 1 Myr, and 4.5 Gyr dividing superparamagnetic and stable single domain regions.
 :width: 70%
 
 Lines of equal blocking energy in plot of grain volume, $v$, against the anisotropy energy density, $K$. Lines of equal blocking energy (product $Kv$) are also lines of equal relaxation time, $\tau$, at a given temperature (here assumed to be room temperature). Contours are for a hypothetical population of magnetic grains. Grains with short $\tau$ plot toward the lower left. Grains with long $\tau$ plot toward the upper right; superparamagnetic grains with $\tau < 100$s plot to the left or below the "superparamagnetic line" when $\tau \simeq$ 100s. Stable single domain grains with $\tau > 100$s plot above or to right of superparamagnetic line.
@@ -97,6 +100,7 @@ We can visualize what happens in [](#fig:neel-vrm). Let us place an assemblage o
 
 :::{figure} ../figures/chapter7/vrm1.png
 :name: fig:vrm1
+:alt: Three-panel plot of magnetization versus time. a) Exponential decay from Mo to zero in zero field. b) Exponential growth from zero to Me in an applied field. c) Exponential transition from positive Mo to negative Me in an antiparallel field.
 :width: 100%
 
 Magnetization versus time for a) Saturation remanence placed in zero field. b) Zero initial magnetization placed in a field. c) Magnetization placed in an antiparallel field.
@@ -120,6 +124,7 @@ which grows (or decays) exponentially from $\M_o \rightarrow \M_e$ as $t \righta
 
 :::{figure} ../figures/chapter7/neel-trm.png
 :name: fig:neel-trm
+:alt: Two-panel volume-versus-anisotropy plot showing grain population migration from superparamagnetic at high temperature (a) to blocked at low temperature (b) as relaxation time curves shift with cooling.
 :width: 100%
 
 Migration of the relaxation times of a population of magnetic grains from a) low anisotropy energy at high temperature to b) high anisotropy energy at lower temperatures and the resulting change in relaxation times. The relaxation time curves also migrate up and to the right with lower thermal energy. Any particle initially to the right or above the superparamagnetic line would acquire a TRM its anisotropy energy density migrated across the line by cooling. Note that the anisotropy energy density ($K$ from [Chapter 4](#chap:anisotropy)) itself is a function of temperature through its dependence on magnetization, so a given population of grains will change with changing temperature, migrating to the left with higher temperature as magnetization goes down.
@@ -131,6 +136,7 @@ VRM is a function of time and the relationship between the remanence vector and 
 
 :::{figure} ../figures/chapter7/tauT.png
 :name: fig:tauT
+:alt: Log-scale plot of relaxation time versus temperature for magnetite ellipsoids of 20, 25, and 30 nm width, showing steep decrease in tau with increasing temperature. Horizontal lines mark 100 seconds, 1 year, 1 million years, and 1 billion years.
 :width: 80%
 
 Variation of relaxation time versus temperature for magnetite ellipsoids of different widths (all with length to width ratios of 1.3:1).
@@ -147,6 +153,7 @@ The sharpness of the relationship between relaxation time and temperature allows
 
 :::{figure} ../figures/chapter7/lava.png
 :name: fig:lava
+:alt: Three-panel figure. a) Photo of glowing red lava flow. b) Schematic of non-magnetic crystals above the Curie temperature with randomly oriented moments. c) Below blocking temperature, magnetic moments become fixed with a statistical bias toward the ambient field direction.
 :width: 100%
 
 a) Picture of lava flow courtesy of Daniel Staudigel. b) While the lava is still well above the Curie temperature, crystals start to form, but are non-magnetic. c) Below the Curie temperature but above the blocking temperature, certain minerals become magnetic, but their moments continually flip among the easy axes with a statistical preference for the applied magnetic field. As the lava cools down, the moments become fixed, preserving a thermal remanence. [b) and c) modified from animation of Genevieve Tauxe.] [Figure from {cite}`tauxe2007`.]
@@ -190,6 +197,7 @@ where $m_o$ is the grain moment at the blocking temperature.
 
 :::{figure} ../figures/chapter7/trm.png
 :name: fig:trm
+:alt: Two-panel plot of TRM versus applied field. a) Theoretical curves for magnetite ellipsoids of different sizes and aspect ratios showing linear to nonlinear TRM acquisition. b) Experimental TRM data for three natural specimens with nonlinear field dependence.
 :width: 100%
 
 Relationship of TRM with respect to the applied field for different assemblages of magnetite grains. a) Theoretical calculations of TRM acquisition for different assemblages of randomly oriented non-interacting single domain ellipsoids of magnetite. b) Experimentally determined TRM acquisition in three natural specimens. [Redrawn from {cite}`selkin2007`.]
@@ -199,6 +207,7 @@ We show the theoretical behavior of TRM as a function of applied field for diffe
 
 :::{figure} ../figures/chapter7/pTRM.png
 :name: fig:ptrm
+:alt: Blocking temperature spectrum of a basalt showing stepwise TRM decay curve and color-coded pTRM bars for each temperature interval from 0 to Tc, with largest pTRM contributions near the Curie temperature.
 :width: 70%
 
 Distribution of blocking temperatures of a typical basaltic specimen. The solid line labeled TRM indicates the amount of TRM remaining after step heating to increasingly higher temperature. The colored blocks labeled PTRM shows the amount of TRM blocked within corresponding temperature intervals.
@@ -216,6 +225,7 @@ As an example of the laws of additivity and reciprocity of pTRM, again consider 
 
 :::{figure} ../figures/chapter7/TRM-d.png
 :name: fig:trm-d
+:alt: Log-log plot of fractional TRM versus grain diameter for dispersed magnetite particles, showing a d-inverse trend with highest TRM efficiency below 0.1 micrometers and decreasing efficiency for larger grains.
 :width: 80%
 
 Dependence of intensity of TRM on particle diameter of magnetite. Magnetite particles were dispersed in a non-magnetic matrix; the intensity of TRM is determined per unit volume of magnetite and normalized to the maximum TRM observed to allow comparison between experiments that used varying concentrations of dispersed magnetite; the magnetizing field was 100 μT. [Data compiled by {cite}`dunlop1997`.]
@@ -231,6 +241,7 @@ Rapidly cooled volcanic rocks generally have grain-size distributions with a maj
 
 :::{figure} ../figures/chapter7/neel-crm.png
 :name: fig:neel-crm
+:alt: Two-panel volume-versus-anisotropy plot showing grain population growing from small superparamagnetic volumes (a) through their blocking volumes into the stable single domain region (b) as grains increase in size.
 :width: 100%
 
 Migration of the blocking energy of grains by increasing volume. The relaxation times of a population of magnetic grains from a) short relaxation times when the particles are small to b) long relaxation times when the grains have grown through their blocking volumes.
@@ -243,6 +254,7 @@ Migration of the blocking energy of grains by increasing volume. The relaxation 
 
 :::{figure} ../figures/chapter7/chinji.png
 :name: fig:chinji
+:alt: Three panels: a) photo of red bed outcrops in Pakistan, b) schematic of non-magnetic matrix grains, c) superparamagnetic minerals forming with statistically aligned moments in ambient field.
 :width: 100%
 
 Grain growth CRM. a) Red beds of the Chinji Formation, Siwaliks, Pakistan. The red soil horizons have a CRM carried by pigmentary hematite. b) Initial state of non-magnetic matrix. c) Formation of superparamagnetic minerals with a statistical alignment with the ambient magnetic field (shown in blue).
@@ -268,6 +280,7 @@ Alteration CRM can also be much more complicated than simple gCRM in a single fi
 
 :::{figure} ../figures/chapter7/lit-redep.png
 :name: fig:lit-redep
+:alt: Plot of magnetization M versus normalized applied field B/Bo showing nonlinear increase that curves toward saturation, with data points and a best-fit curve.
 :width: 60%
 
 Depositional remanence versus applied field for redeposited glacial varves. $B_o$ was the field in the lab. [Data from {cite}`johnson1948`; figure from {cite}`tauxe1993`.]
@@ -304,6 +317,7 @@ Plugging in reasonable values for $\eta, M$ and $B$ and assuming isolated magnet
 
 :::{figure} ../figures/chapter7/drmprocesses.png
 :name: fig:drmprocesses
+:alt: Two-panel schematic: a) freshwater non-flocculating environment showing magnetic particles settling through turbulent then still water to lock-in depth, b) marine flocculating environment with floc formation, bioturbation, and consolidation zones.
 :width: 100%
 
 a) Schematic drawing of traditional view of the journey of magnetic particles from the water column to burial in a non-flocculating (freshwater) environment. Magnetic particles are black. b) View of depositional remanence in a flocculating (marine) environment. [Figure from {cite}`tauxe2007`.]
@@ -319,6 +333,7 @@ In saline environments, sedimentary particles tend to flocculate. For magnetic p
 
 :::{figure} ../figures/chapter7/brownian.png
 :name: fig:brownian
+:alt: Two panels: a) BRM/sIRM versus applied field B curves for magnetite particles of 25-70 nm radius showing nonlinear saturation behavior, b) BRM/sIRM for a particle size distribution (shown in inset) versus B.
 :width: 100%
 
 a) Numerical simulations of Brownian remanent magnetization (BRM) for various sizes of magnetite. b) BRM simulated for distribution of particle sizes of magnetite shown in inset. [Figure from {cite}`tauxe2007`.]
@@ -354,6 +369,7 @@ BRMs are fixed when the particles are no longer free to move. The fixing of this
 
 :::{figure} ../figures/chapter7/flocs.png
 :name: fig:flocs
+:alt: Two panels: a) DRM/sIRM versus floc radius for different applied field strengths showing sharp transitions from aligned to random, b) DRM/sIRM versus applied field B for different floc radii showing larger flocs yield weaker, more linear DRM.
 :width: 100%
 
 a) Results of numerical experiments of the flocculation model using the parameters: $l=0.2$ m and the viscosity of water. $M/M_o$ is the DRM expressed as a fraction of saturation, holding $\bar m$ constant and varying $B$. For a given field strength, particles are either at saturation or randomly oriented, except for within a very narrow size range. b) Same as a) but plotted versus applied field ($B$). [Figures from {cite}`tauxe2006`.]
@@ -368,6 +384,7 @@ In general, the magnetic flocs are either nearly aligned with the magnetic field
 
 :::{figure} ../figures/chapter7/drm-exp.png
 :name: fig:drm-exp
+:alt: DRM/sIRM percentage versus applied field B for settling experiments at different salinities (1-5 ppt NaCl), showing nonlinear increase with field and decreasing DRM efficiency at higher salinity, with model fits.
 :width: 70%
 
 Results of settling experiments as a function of field ($B$) in a flocculating environment. The assumed mean and standard deviations of truncated log-normal distributions for floc radii are shown in the legends and are indicated using the different line styles in the figure. [Figure from {cite}`tauxe2007` after {cite}`tauxe2006`.]
@@ -389,6 +406,7 @@ Other processes not involving post-depositional physical rotation of magnetic pa
 
 :::{figure} ../figures/chapter7/ifio.png
 :name: fig:incerror
+:alt: Observed inclination versus applied field inclination with data points falling below the 1:1 line, and a best-fit dashed curve with f=0.55 showing systematic inclination shallowing.
 :width: 60%
 
 Applied field inclination versus remanent inclination for redeposited river sediments. Best fit line is with $f=0.55$. [Data from {cite}`tauxe1984`.]
@@ -400,6 +418,7 @@ Interestingly, many natural sediments (e.g. deep sea or slowly deposited lake se
 
 :::{figure} ../figures/chapter7/lightning.png
 :name: fig:lightning
+:alt: Two panels: a) outcrop photo with labeled sampling sites and charred tree stump from lightning strike, b) plot of impulse field versus distance from tree showing decay with a best-fit curve for a 300,000 Amp line current.
 :width: 100%
 
 Outcrop photo showing sampling locations and charred stump of tree that was hit by lightning in foreground. b) Impulse field required to reproduce the NRM intensity as an IRM, plotted as a function of distance from the tree shown in a). Dashed line is best-fit to the data assuming that the tree at the center of the photo was the site of a remagnetizing line current (lightning bolt) of 300,000 Amps. [Figures from {cite}`tauxe2003`.]
@@ -416,6 +435,7 @@ IRMs can also be useful. The magnitude is sensitive to the magnetic mineralogy, 
 
 :::{figure} ../figures/chapter7/irm.png
 :name: fig:irm
+:alt: IRM/sIRM versus applied field B showing acquisition curve rising to saturation Mr, and a back-field demagnetization curve crossing zero, with coercivity of remanence estimates Hcr'' and Hcr''' labeled.
 :width: 70%
 
 Acquisition of IRM by exposure to large magnetic fields. After saturation, the remanence remaining is $M_r$. One can then turn the sample around and apply smaller fields in the opposite direction to determine the field necessary to reduce the net remanence to zero. Also shown are two methods of estimating coercivity of remanence ($H_{cr}''$ and $H_{cr}'''$; see [](#app:hyst) for summary).
@@ -457,6 +477,7 @@ Using experimental values of blocking temperature for hematite, they calculated 
 
 :::{figure} ../figures/chapter7/pullaiah.png
 :name: fig:pullaiah
+:alt: Two-panel nomogram of log relaxation time versus temperature with curves for different blocking energies: a) magnetite with Tc near 580 degrees C, b) hematite with Tc near 675 degrees C. Horizontal lines mark 100 s, 1 yr, 1 kyr, 1 Myr, and 1 Gyr.
 :width: 100%
 
 Theoretical nomogram relating relaxation time and blocking temperature. a) magnetite and b) hematite.
@@ -470,6 +491,7 @@ A rock collected from a geological formation has a magnetic remanence which may 
 
 :::{figure} ../figures/chapter7/ARM.png
 :name: fig:arm
+:alt: Decaying alternating field versus time with a constant DC bias field (red dashed line) for total ARM and a partial DC bias field (blue dash-dot line) for partial ARM acquisition.
 :width: 70%
 
 Acquisition of ARM in alternating magnetic field. A total ARM is acquired if the DC field is switched on throughout the experiment (red dashed line) and a partial ARM (pARM) is acquired if the field is switched on only for part of the experiment (blue dash-dot line).

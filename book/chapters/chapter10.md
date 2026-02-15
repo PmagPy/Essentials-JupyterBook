@@ -37,6 +37,7 @@ If the laboratory remanence has the same proportionality constant with respect t
 
 :::{figure} ../figures/chapter10/pintprinc.png
 :name: fig:pintprinc
+:alt: Linear plot of remanent magnetization versus applied magnetic field, showing how M_NRM maps to B_anc via the slope determined from M_lab and B_lab.
 :width: 60%
 
 Principles of paleointensity estimation. The remanent magnetization is assumed linear with the magnetic field. If the slope $\nu$ can be determined through laboratory proxy measurements ($M_{lab}/B_{lab}$), then the NRM of a given specimen, $M_{NRM},$ can be mapped to an estimate of the ancient magnetic field $B_{anc}$.
@@ -68,6 +69,7 @@ The step-wise heating approach relies on the assumption that partial thermal rem
 
 :::{figure} ../figures/chapter10/koenigsberger.png
 :name: fig:koenigsberger
+:alt: Plot of magnetization J versus temperature showing two diverging curves for heating in positive and negative 0.4 Oe fields, with numbered steps from Koenigsberger's 1938 experiment.
 :width: 50%
 
 Example of thermal normalization experiment of {cite}`koenigsberger1938`. A specimen is heated to given temperature and cooled in a field of +0.4 Oe (40 μT) (e.g., step labeled #4). Then the specimen is heated to same temperature and cooled in field of -0.4 Oe (e.g., step #5). The two curves can be decomposed to give $M_{nrm}$ and $M_{lab}$, the ratio of which was termed $Q_{nt}$ by Königsberger. Note that $J_{rn}$ and $J_{rt}$ are $M_{NRM}$ and $M_{pTRM}$ respectively here. [Figure redrawn from {cite}`koenigsberger1938` by {cite}`tauxe2007`.]
@@ -103,6 +105,7 @@ The laboratory $\M_{pTRM}$ in this "zero-field/in-field" (or ZI) method is calcu
 
 :::{figure} ../figures/chapter10/TT.png
 :name: fig:thellier
+:alt: Two-panel figure. a) NRM decay and pTRM growth curves versus temperature. b) Arai diagram plotting NRM remaining versus pTRM gained, with a linear fit and pTRM check triangles showing alteration detection.
 :width: 100%
 
 Illustration of step-wise heating method for determining absolute paleointensity. a) Thermal demagnetization of NRM shown as filled circles and the laboratory acquired pTRM shown as open symbols. b) Plot of NRM component remaining versus pTRM gained at each temperature step. Triangles are the second in-field heating step (pTRM check step) at a given temperature. The difference, e.g., $\delta_{300}$, is an indication of possible alteration during the heating experiment.
@@ -114,6 +117,7 @@ Despite its huge popularity and widespread use, the approach of progressively re
 
 :::{figure} ../figures/chapter10/dunlop01.png
 :name: fig:dunlop01
+:alt: Two-panel figure. a) Thermal demagnetization of pTRMs for magnetite grains of 1 to 135 microns showing increasing deviation from ideal SD behavior with grain size. b) Arai plots for the same specimens showing progressive sagging below the ideal SD line.
 :width: 100%
 
 a) Stepwise thermal demagnetization of pTRMs imparted by applying a small DC field during cooling from 370 to 350°C in magnetite specimens of known grain size. Between 50 and 90% of the remanence unblocks at temperatures below (a low temperature pTRM tail) or above (a high temperature pTRM tail) the pTRM blocking temperature range. The failure of reciprocity is most extreme for the largest grain sizes. b) Step-wise heating paleointensity experiments on specimens with a laboratory TRM. Heavy red line is theoretical SD behavior. All specimens give results that sag below the ideal SD line, an expression of the pTRM tails exhibited by some of the same specimens in a). [Data of {cite}`dunlop2001`.]
@@ -127,6 +131,7 @@ A failure of reciprocity means that $\nu_{lab} \neq \nu_{anc}$ and the key assum
 
 :::{figure} ../figures/chapter10/method.png
 :name: fig:method
+:alt: Schematic bar diagram of the IZZI protocol showing alternating ZI and IZ steps at successive blocking temperatures, with pTRM check and pTRM tail check steps. Bars are color-coded for NRM, demagnetized, and lab pTRM fractions.
 :width: 100%
 
 Schematic diagram of the IZZI experimental protocol. [Figure from {cite}`benyosef2008`.]
@@ -136,6 +141,7 @@ In order to detect inequality of blocking and unblocking and the effect of "pTRM
 
 :::{figure} ../figures/chapter10/zigzag.png
 :name: fig:zigzag
+:alt: Two-panel IZZI experiment results. a) NRM decay and pTRM growth versus temperature. b) Arai plot with alternating IZ and ZI steps producing a characteristic zig-zag pattern, plus pTRM check triangles and pTRM tail check squares.
 :width: 100%
 
 Example of results from an IZZI paleointensity experiment. a) NRM remaining after demagnetization in zero field (blue circles) and pTRM gained after heating and cooling in the laboratory field (red squares). Both remanences were normalized by the initial NRM. b) Arai plot of data in a). Open (closed) symbols are the IZ (ZI) steps. Triangles are pTRM check steps and blue squares are the pTRM tail check steps. The zig-zag behavior is characteristic of the effect of pTRM tails.
@@ -147,6 +153,7 @@ There are several other violations of the fundamental assumptions that require a
 
 :::{figure} ../figures/chapter10/trm-anis.png
 :name: fig:trm-anis
+:alt: Plot of normalized TRM versus angle of applied field from 0 to 180 degrees, showing a U-shaped curve with minimum near 90 degrees. Circled arrows indicate field orientation at each measurement angle.
 :width: 65%
 
 Data from an experiment with an anisotropic specimen given a total TRM in different orientations with respect to the laboratory field. The relative TRM magnitudes are plotted as squares and a best fit model intensity based on the TRM anisotropy tensor is shown as the solid line. [Redrawn from {cite}`selkin2000`.]
@@ -156,6 +163,7 @@ Differences in laboratory and ancient cooling rate are also important. The appro
 
 :::{figure} ../figures/chapter10/coolingrate.png
 :name: fig:coolingrate
+:alt: Log-linear plot of B_est/B_anc versus ancient relaxation time in seconds, with curves for blocking temperatures of 300, 400, 500, and 550 degrees C. All curves rise from 1.0, showing overestimation increases with slower cooling.
 :width: 70%
 
 Ratio of estimated field intensity $B_{est}$ to actual ancient field intensity $B_{anc}$ versus the ratio of cooling rates at the blocking temperature using the method of {cite}`halgedahl1980` but the variation of $M_s(T)$ in [Chapter 3](#chap:inducedremanent) ($\gamma=0.38$). Laboratory blocking temperatures are shown as examples. [Figure courtesy of R. Mitra.]
@@ -186,6 +194,7 @@ The previous sections were devoted to experiments in which detection of non-idea
 
 :::{figure} ../figures/chapter10/Shaw-DD.png
 :name: fig:shaw-dd
+:alt: Six-panel figure showing Shaw double-double method plots. Panels a and d plot NRM or TRM versus TRM at AF steps; b and e plot successive ARMs; c and f show ARM-corrected NRM-TRM and TRM1-TRM2 plots with linear fits.
 :width: 100%
 
 Shaw family of methods (see text). a) Plot of pairs of NRM and the first TRM for each AF demagnetization step. b) Plot of pairs of the first ARM and the second ARM for each AF demagnetization step. c) Plot of pairs of NRM and TRM adjusted by the ratio of ARM1/ARM2 for that AF step from b) (TRM1*). d) same as a) but for the first and second TRMs. e) same as a) but for the second and third ARMs. f) Same as c) but for first and second TRM where TRM2* is adjusted using ARM2/ARM3 ratio from e). [Data of {cite}`yamamoto2003`; figure from {cite}`tauxe2007`.]
@@ -232,6 +241,7 @@ The principle on which paleointensity studies in sedimentary rocks rests is that
 
 :::{figure} ../figures/chapter10/drm1.png
 :name: fig:drm
+:alt: Plot of relative intensity versus applied field B in microtesla. Scattered open circles show raw DRM varying with magnetic activity; filled circles show DRM normalized by magnetic activity falling on a linear trend through the origin.
 :width: 70%
 
 Principles of relative paleointensity. The original DRM is plotted as open symbols. It is a function not only of the applied field, but also of the magnetic activity $[a_m]$ of the specimen. When normalized by $[a_m]$ (dots), the DRM is a linear function of applied field $B$. [Redrawn from {cite}`tauxe1993`.]

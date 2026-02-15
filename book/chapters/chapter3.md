@@ -21,6 +21,7 @@ In [Chapter 1](#chap:physics) we took the classical (pre-quantum mechanics) appr
 
 :::{figure} ../figures/chapter3/1s.png
 :name: fig:1s
+:alt: Probability density curve peaking near 1 atomic unit with an inset dot-density plot showing a spherical electron cloud.
 :width: 80%
 
 Plot of radial distribution and "dot-density" for the 1s electron shell.
@@ -60,6 +61,7 @@ As might be expected, the shells for $l=2$ are even more complicated than for $l
 
 :::{figure} ../figures/chapter3/shells.png
 :name: fig:shells
+:alt: Four 3D orbital shapes: spherical s shell, two-lobed p shell, and two four-lobed d shells with different orientations.
 :width: 100%
 
 Examples of surfaces of equal probability of the first three shells ($l=1,2,3$). Surfaces created with Orbital Viewer.
@@ -81,6 +83,7 @@ This is known as the *Bohr magneton*.
 
 :::{figure} ../figures/chapter3/structure.png
 :name: fig:structure
+:alt: Table of electron configurations from Na to Zn showing spin-up and spin-down arrows filling 3s, 3p, 3d, and 4s orbitals.
 :width: 80%
 
 Electronic structure of elements from Na to Zn.
@@ -105,6 +108,7 @@ We have learned that there are two sources of magnetic moments in electronic mot
 
 :::{figure} ../figures/chapter3/larmor.png
 :name: fig:larmor
+:alt: Angular momentum vector L precessing in a cone about applied field H, with induced moment change Delta-m opposing the field.
 :width: 40%
 
 Larmor precession. The orbit of the electron has an angular momentum vector $\mathbf{L}$ which creates a magnetic moment. In the presence of a magnetic field $\H$, the moment experiences a torque which causes a change in angular momentum $\Delta L$. The precession of the electronic orbit about $\H$ creates an induced magnetic moment $\Delta m$ in a sense opposite to the applied field $\H$.
@@ -125,6 +129,7 @@ We learned in [Chapter 1](#chap:physics) that the proportionality between induce
 
 :::{figure} ../figures/chapter3/para.png
 :name: fig:para
+:alt: Two plots: (a) Langevin function M/Ms rising from zero and saturating near 1 versus a, and (b) M/Ms versus T showing inverse-temperature Curie law decay.
 :width: 100%
 
 a) Paramagnetic magnetization (obtained from the Langevin function $\mathcal{L}(a)$ versus $a= mB/kT$.) b) Paramagnetic magnetization as a function of temperature (Curie Law).
@@ -185,6 +190,7 @@ We have considered the simplest case here in which $\chi$ can be treated as a sc
 
 :::{figure} ../figures/chapter3/exchange.png
 :name: fig:exchange
+:alt: Superexchange diagram showing overlapping 3d orbitals of Fe2+ and Fe3+ cations bridged by 2p orbitals of an oxygen anion.
 :width: 80%
 
 Exchange energy associated with overlapping orbitals. Example of super-exchange between the $3d$ orbitals of two iron cations through the $2p$ orbitals of the intervening oxygen anion. The two electrons in the $2p$ shells are, by necessity antiparallel. These are shared by the $3d$ shells, hence the two cations have anti-parallel spins. [Figure redrawn from {cite:t}`oreilly1984`.]
@@ -203,6 +209,7 @@ As temperature increases, crystals expand and exchange becomes weaker. Above a t
 
 :::{figure} ../figures/chapter3/MsT.png
 :name: fig:MsT
+:alt: Plot of M/Ms versus temperature as a fraction of Tc, with a solid curve dropping steeply near Tc and a dashed Curie-Weiss curve above Tc.
 :width: 80%
 
 Behavior of magnetization versus temperature of a ferromagnetic substance. Below $T_c$, the magnetization follows [Equation %s](#eq:Mferro) and is the ferromagnetic magnetization. Above $T_c$ the magnetization follows [Equation %s](#eq:curieweiss) and is the induced magnetization. [Redrawn from {cite:t}`tauxe1998`.]
@@ -236,6 +243,7 @@ $$ (eq:curieweiss)
 
 :::{figure} ../figures/chapter3/curie.png
 :name: fig:curie
+:alt: Normalized magnetite Ms(T)/Ms(To) versus T/Tc from three data sets with best-fit power law curves for gamma values near 0.36.
 :width: 80%
 
 Various data sets for the behavior of $M_s(T)$ for magnetite.
@@ -271,6 +279,7 @@ where $\gamma$ is 0.5 from simple molecular field theory and $T_o$ is absolute z
 
 :::{figure} ../figures/chapter3/spins.png
 :name: fig:spins
+:alt: Five spin-arrow diagrams: (a) all parallel, (b) alternating antiparallel, (c) canted antiparallel, (d) antiparallel with a defect, (e) unequal antiparallel.
 :width: 100%
 
 Types of spin alignment in ferromagnetism *(sensu lato)*: a) ferromagnetism (*sensu stricto*), b) antiferromagnetism, c) spin-canted antiferromagnetism, d) defect anti-ferromagnetism, e) ferrimagnetism.
@@ -280,6 +289,7 @@ As we have seen, below the Curie temperature, certain crystals have a permanent 
 
 :::{figure} ../figures/chapter3/spinwave.png
 :name: fig:spinwave
+:alt: (a) Single magnetic moment spiraling into alignment with applied field H. (b) Coupled moments precessing cooperatively as a spin wave.
 :width: 100%
 
 a) Response of a magnetic moment to the torque of an applied field for isolated moments. b) Response of coupled moments to a perturbation. Neighboring spins produce an effect known as "spin waves".

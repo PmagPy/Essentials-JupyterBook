@@ -15,6 +15,7 @@ numbering:
 
 :::{figure} ../figures/appendix/mkeq.png
 :name: fig:mkeq
+:alt: Cross-section of a sphere showing projection geometry with point P at declination D and inclination I, and the resulting equal area net with point P plotted.
 :width: 100%
 
 Construction of an equal area projection for a point P corresponding to a $D$ of 40° and an $I$ of 35°. [Figure from {cite:t}`tauxe1998`.]
@@ -30,6 +31,7 @@ where $L_o = 1/\sqrt{x_1^2+x_2^2}$.
 
 :::{figure} ../figures/appendix/equal.png
 :name: fig:equal
+:alt: Schmidt equal area net with intersecting great circles and small circles forming a grid within a circle, oriented with N at top.
 :width: 100%
 
 Schmidt (equal area) net.
@@ -37,6 +39,7 @@ Schmidt (equal area) net.
 
 :::{figure} ../figures/appendix/how2eq.png
 :name: fig:how2eq
+:alt: Four-step sequence on equal area nets showing how to plot a direction: mark declination, rotate net, count inclination inward, and mark the final point.
 :width: 100%
 
 How to use an equal area net (see text).
@@ -60,6 +63,7 @@ Print out the equal-area grid provided in [](#fig:equal). Poke a thumb tack thro
 
 :::{figure} ../figures/appendix/tilt.png
 :name: fig:tilt
+:alt: Equal area projection showing bedding-tilt correction with strike at 310 degrees, dip direction at 40 degrees, and in situ and corrected NRM directions connected by an arrow.
 :width: 100%
 
 Example of structural corrections to NRM directions. The bedding attitude is specified by dip and dip direction (squares on the equal-area projections); the azimuth of the strike is 90° anti-clockwise from the dip direction; the rotation required to restore the bedding to horizontal is clockwise (as viewed along the strike line) by the dip angle and is shown by the rotation symbol; the *in situ* NRM direction is at the tail of the arrow, and the structurally corrected NRM direction is at the head of the arrow.
@@ -78,6 +82,7 @@ Ternary diagrams are triangles with the three corners representing a composition
 
 :::{figure} ../figures/appendix/ternary.png
 :name: fig:how2tern
+:alt: Three ternary diagrams with a star plotted at the same position, each highlighting how to read one component: a) 60% A, b) 15% B, c) 25% C.
 :width: 100%
 
 How to read a ternary diagram. The three apices are components A, B, C. A composition is plotted as the star. a) Shows the percentage of component A (60%). b) Shows the percentage of component B (15%) and c) shows the percentage of component C (25%).
@@ -90,6 +95,7 @@ When does a data set conform to a particular distribution? One way to assess thi
 
 :::{figure} ../figures/appendix/Ais.png
 :name: fig:Ais
+:alt: Three panels illustrating Q-Q plot construction: a) density curve divided into areas by sorted data, b) theoretical quantiles dividing the distribution into equal areas, c) resulting Q-Q plot of data versus theoretical quantiles.
 :width: 100%
 
 a) Illustration of how the sorted data $\zeta_i$ divide the density curve into areas $A_i$ with an average area of $1/(N+1)$. b) The values of $z_i$ which divide the density function into equal areas $a_i=1/(N+1)$. c) Q-Q plot of $z$ and $\zeta$. [Figure from {cite:t}`tauxe1998`.]

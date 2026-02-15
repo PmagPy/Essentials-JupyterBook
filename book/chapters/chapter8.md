@@ -21,6 +21,7 @@ Images of magnetic phases are used to shed light on the origin of the magnetic p
 
 :::{figure} ../figures/chapter8/images.png
 :name: fig:images
+:alt: Five SEM images of magnetic particles: a) titanomagnetite with exsolution lamellae, b) rounded detrital grains, c) hematite rosettes on clay, d) fly-ash spherule, e) pitted cosmic spherule with Fe dendrites.
 :width: 100%
 
 Images of various magnetic phases. a) 300 μm titanomagnetite grain of igneous origin showing high temperature exsolution lamellae [Photo from R. Reynolds in {cite}`maher1999`.]. b) Detrital and aeolian (titano)magnetites from Chinese Loess. [Photo from {cite}`maher1999`.] c) Hematite rosettes on a smectite surface. [Photo from {cite}`reynolds1985`.] d) Backscatter SEM image of fly-ash spherule. [Photo of J. Matzka, in {cite}`maher1999`.] The bright grains are iron rich particles embedded in a silicate matrix. e) Silicate spherule with dendrites of Fe-rich material of cosmic origin, showing characteristic pitting of the surface. [Photo from M. Hounslow in {cite}`maher1999`.]
@@ -79,6 +80,7 @@ Although we defined the Curie temperature in [Chapter 3](#chap:inducedremanent),
 
 :::{figure} ../figures/chapter8/curiebalance.png
 :name: fig:curiebalance
+:alt: Photograph of a translation Curie balance instrument alongside a labeled schematic showing electromagnet, oven, thermocouple, specimen, and pickup coil arrangement.
 :width: 90%
 
 a) Translation Curie balance in the Scripps Laboratory. b) Schematic drawing of the key elements of a) (top view).
@@ -88,6 +90,7 @@ Estimating the Curie temperature is not as simple as it seems at first glance. {
 
 :::{figure} ../figures/chapter8/curie1.png
 :name: fig:curie1
+:alt: Three panels for magnetite: a) M/Ms versus temperature curve decreasing to zero near 590 degrees C with intersecting tangent inset, b) first derivative dM/dT showing sharp drop, c) second derivative with peak at Tc of 589 degrees C.
 :width: 100%
 
 a) $M_s-T$ data for magnetite. Inset illustrates intersecting tangent method of Curie temperature estimation. b) Data from a) differentiated once. c) Data from a) differentiated twice. Peak shows temperature of maximum curvature, interpreted as the Curie temperature for this specimen.
@@ -106,6 +109,7 @@ We first encountered the concept of magnetic susceptibility in [Chapter 1](#chap
 
 :::{figure} ../figures/chapter8/kappa.png
 :name: fig:kappa
+:alt: Two-panel illustration of susceptibility measurement: a) paired coils with current and offset meters, b) specimen inserted into coil producing a measurable offset in the coupled circuit.
 :width: 90%
 
 Measuring magnetic susceptibility. a) An alternating current applied in the coil on the right induces a current in the left-hand coil. This induces a magnetization in the specimen shown in b), which in turn offsets the current in the coil to the right. The offset is proportional to the magnetic susceptibility of the specimen. [Modified from Genevieve Tauxe animation.]
@@ -119,6 +123,7 @@ Many laboratories use equipment that works on the principle illustrated in [Figu
 
 :::{figure} ../figures/chapter8/chiT.png
 :name: fig:chiT
+:alt: Two plots: a) paramagnetic susceptibility decreasing with temperature and constant negative diamagnetic susceptibility, b) ferromagnetic susceptibility peaking sharply near the Curie temperature before dropping, with M/Ms decay curve overlaid.
 :width: 100%
 
 a) Schematic drawings of paramagnetic (solid line) and diamagnetic (dashed line) magnetic susceptibility as a function of temperature. b) Behavior of ferromagnetic susceptibility (solid line) as the material approaches its Curie temperature ($M_s-T$ data shown as dashed line).
@@ -131,6 +136,7 @@ Susceptibility can be measured as a function of temperature by placing the speci
 
 :::{figure} ../figures/chapter8/chifd.png
 :name: fig:chifd
+:alt: Two panels: a) susceptibility decreasing with increasing frequency from 1 to 1000 Hz at room temperature, b) susceptibility versus temperature curves at seven frequencies diverging at higher temperatures due to superparamagnetic effects.
 :width: 100%
 
 a) Magnetic susceptibility as a function of frequency. The decrease in frequency dependence of susceptibility with increasing frequency is caused by the superparamagnetic particles in the specimen. b) Plot showing temperature and frequency dependence of the same specimen as in a). [Data from Tiva Canyon Tuff, {cite}`carterstiglitz2006`.]
@@ -145,6 +151,7 @@ In [Figure %s](#fig:chifd)a we show measurements made at room temperature. Becau
 
 :::{figure} ../figures/chapter8/chimap.png
 :name: fig:chimap
+:alt: Color contour map of magnetic susceptibility overlaid on a roadside photograph, showing highest values (yellow) near the road and decreasing values (purple) with distance.
 :width: 85%
 
 Map of magnetic susceptibility as a function of distance from the road. [Data from {cite}`hoffmann1999`; Figure of M. Knab.]
@@ -161,6 +168,7 @@ Although most laboratories make magnetic susceptibility measurements on small sp
 
 :::{figure} ../figures/chapter8/crossover.png
 :name: fig:crossover
+:alt: Two panels: a) IRM acquisition and AF demagnetization curves crossing near 0.5 for non-interacting SD magnetite and near 0.25 for interacting chiton teeth, b) ARM acquisition versus DC bias field showing nonlinear curve for low-concentration and linear curve for high-concentration magnetite.
 :width: 100%
 
 a) IRM acquisition (solid lines) versus progressive demagnetization of IRM with alternating fields (dashed lines) for two specimens. Circles are the Lambert plagioclase (non-interacting uniaxial single domain magnetite particles) and squares are chiton teeth (interacting magnetite particles). The field at which the demagnetization and acquisition curves cross (the cross-over point $R_x$) is sensitive to particle interaction. [Data of {cite}`cisowski1981`.] b) ARM acquisition as a function of DC bias field for two specimens with different concentrations of magnetite. The squares are for a low concentration of 2.6 × 10⁻⁴ volume percent magnetite while the circles are for a high concentration of 2.33 volume percent. [Data of {cite}`sugiura1979`.]
@@ -176,6 +184,7 @@ Another method for detecting magnetic interactions was developed by {cite}`sugiu
 
 :::{figure} ../figures/chapter8/unmixing.png
 :name: fig:unmixing
+:alt: IRM acquisition curve (LAP) rising steeply then saturating, with inset showing the derivative (GAP) decomposed into two log-normal coercivity components at different peak fields.
 :width: 65%
 
 Theoretical curve for the acquisition of IRM with two magnetic components with different coercivity spectra (see insert). The acquisition curve can be differentiated to get the heavy solid line in the insert and then decomposed into the different components assuming some distribution of coercivity (in this case log-normal). The main plot is a "linear acquisition plot" (LAP) and the heavy solid line in the inset is a "gradient of acquisition plot" (GAP) in the terminology of {cite}`kruiver2001`. $H_{1/2}$ and $DP$ are the fields required to magnetize half the population and the "dispersion parameter" of {cite}`robertson1994` respectively. Note that $H_{1/2}$ is a measure of $H_{cr}$ ($H'''_{cr}$ in Table C.1) if there is only one population of coercivities.
@@ -194,6 +203,7 @@ This technique anticipates somewhat the chapter on demagnetization techniques. I
 
 :::{figure} ../figures/chapter8/3dirm.png
 :name: fig:3dirm
+:alt: Two panels: a) stepwise IRM acquisition reaching saturation near 2 T, b) thermal demagnetization of three orthogonal IRM components showing the dominant low-coercivity fraction unblocking by 580 degrees C with a small high-coercivity fraction persisting above 650 degrees C.
 :width: 70%
 
 a) Acquisition of IRM ($M_r$). After applying a field of 2 T, the specimen was subjected to two additional IRMs: 0.4 T and 0.12 T along orthogonal axes. b) Thermal demagnetization of a 3-axis IRM. Each component is plotted separately. [Figure from {cite}`tauxe1998`.]
@@ -218,6 +228,7 @@ Hysteresis loops, like IRM acquisition curves are the sum of all the contributin
 
 :::{figure} ../figures/chapter8/bblocks.png
 :name: fig:bblocks
+:alt: Nine hysteresis loops in a 3-by-3 grid: top row shows end-member behaviors (diamagnetic, paramagnetic, superparamagnetic), middle row shows single domain types (uniaxial, magnetocrystalline, pseudo-single domain), bottom row shows mixtures (goose-necked, wasp-waisted, pot-bellied).
 :width: 100%
 
 Hysteresis loops of end-member behaviors: a) diamagnetic, b) paramagnetic, c) superparamagnetic (data for submarine basaltic glass), d) uniaxial, single domain, e) magnetocrystalline, single domain, f) "pseudo-single domain". Hysteresis behavior of various mixtures: g) magnetite, and hematite, h) SD/SP magnetite (data from {cite}`tauxe1996`), i) another example of SD/SP magnetite with a finer grained SP distribution. [Figures redrawn from {cite}`tauxe1998`.]
@@ -229,6 +240,7 @@ Above some critical volume, grains will have relaxation times that are sufficien
 
 :::{figure} ../figures/chapter8/interp.png
 :name: fig:interp
+:alt: Twelve-panel grid arranged in four columns: top row shows hysteresis loops for hematite, SD magnetite, their mixture, and SD plus SP magnetite; middle row shows corresponding delta-M curves; bottom row shows derivative d(delta-M)/dH curves revealing one or two coercivity peaks.
 :width: 100%
 
 a-d) Hysteresis curves, e-h: $\Delta M$ curves and i-l) $d\Delta M/dH$ curves. Columns from the left to right: hematite, SD magnetite, hematite plus magnetite, and SD plus SP magnetite. [Redrawn from {cite}`tauxe1998`.]
@@ -249,6 +261,7 @@ One quest of applied rock magnetism is a diagnostic set of measurements that wil
 
 :::{figure} ../figures/chapter8/trends.png
 :name: fig:trends
+:alt: Five log-log plots of magnetite hysteresis parameters versus grain size for crushed (red), glass ceramic (blue), and hydrothermal (green) samples: a) coercivity, b) Mr/Ms, c) coercivity of remanence all decreasing with size, d) susceptibility nearly flat, e) ARM susceptibility decreasing with size.
 :width: 90%
 
 Grain size dependence in hysteresis parameters. Crushed grains (red) indicated by "C", glass ceramic grains (blue) indicated by GC; hydrothermal grains (green) indicated by "H". a) Variation of coercivity ($\mu_oH_c$). b) Variation of $M_r/M_s$. c) Variation of coercivity of remanence $\mu_oH_{cr}$. [Data compiled by {cite}`hunt1995`.] d) Variation of susceptibility with grain size. [Data compiled by {cite}`heider1996`.] e) Variation in $\chi_{ARM}$ with grain size. [Data compiled by {cite}`dunlop1997b`.]
@@ -258,6 +271,7 @@ Grain size trends in ARM are shown in [Figure %s](#fig:trends)e. ARM has been co
 
 :::{figure} ../figures/chapter8/slag.png
 :name: fig:slag
+:alt: Two plots: a) Day diagram of Mr/Ms versus Hcr/Hc with SD, PSD, and MD regions labeled and an inset hysteresis loop, b) squareness-coercivity diagram of Mr/Ms versus coercivity with SD, flower (F), and vortex (V) regions labeled.
 :width: 90%
 
 Plots of hysteresis parameters from a collection of related specimens. a) Plot of $M_r/M_s$ versus $H_{cr}/H_c$. Inset shows typical loop from which the ratios were derived. b) Plot of $M_r/M_s$ versus $\mu_oH_c$. [Data from {cite}`benyosef2008`.]
@@ -289,6 +303,7 @@ Although we have encountered numerous practical applications in this chapter alr
 
 :::{figure} ../figures/chapter8/banerjee.png
 :name: fig:banerjee
+:alt: Biplot of anhysteretic remanence versus magnetic susceptibility with three color-coded groups along different slope lines labeled baseline, onset of agriculture, and little ice age, with an arrow indicating decreasing grain size.
 :width: 50%
 
 Plot of ARM versus magnetic susceptibility for a core from Minnesota. The different slopes are correlated with major climatic and anthropogenic events during the Holocene. [Redrawn from {cite}`banerjee1981`.]
@@ -300,6 +315,7 @@ Depth plots are useful for core correlation, variations in concentration, minera
 
 :::{figure} ../figures/chapter8/rosenbaum-1.png
 :name: fig:bucklake-1
+:alt: Four depth profiles from Buck Lake core with warm pollen zones highlighted in yellow and cold zones in blue: magnetic susceptibility, HIRM, Ti weight percent, and Zr concentration, all plotted against depth from 6 to 20 meters.
 :width: 100%
 
 Rock magnetic and trace element data from Buck Lake [Data downloaded from http://pubs.usgs.gov/of/1995/of95-673/of95-673.html and interpreted as in {cite}`rosenbaum1996`].
@@ -309,6 +325,7 @@ In [Figure %s](#fig:bucklake-2)a we observe that two elements, Ti and Zr, both d
 
 :::{figure} ../figures/chapter8/rosenbaum-2.png
 :name: fig:bucklake-2
+:alt: Four biplots against Ti as detrital proxy: a) Zr versus Ti showing tight linear correlation, b) Fe versus Ti with dashed no-loss line above data indicating Fe loss, c) HIRM versus Ti, d) susceptibility versus Ti, both with scattered high-Ti points and negative intercepts.
 :width: 80%
 
 Biplots of various trace elements and rock magnetic parameters. Solid lines are best-fit lines. Dashed lines are theoretical lines with no Fe-loss. Open symbols were excluded from best-fit line. Note that many data are off the plot. a) Zr against Ti. b) Fe against Ti. c) HIRM (hematite component) against Ti (proxy for detrital input). d) $\chi$ (magnetite component) against Ti. [Figures re-drawn from {cite}`rosenbaum1996` using data in [Figure %s](#fig:bucklake-1).]
@@ -325,6 +342,7 @@ Earlier in this chapter, we showed an early example ({cite}`banerjee1981`) of th
 
 :::{figure} ../figures/chapter8/np21.png
 :name: fig:yamazaki
+:alt: Three panels for pelagic clay core NP21: a) corrected and uncorrected frequency-dependent susceptibility versus age from 0 to 4 Ma, b) low-frequency susceptibility difference versus low-frequency susceptibility with linear fit extrapolating to a frequency-independent fraction, c) ARM/susceptibility ratio versus age showing divergence between corrected and uncorrected values below 2.8 Ma.
 :width: 100%
 
 a) Frequency dependence of magnetic susceptibility ($\chi_{fd}$) versus age for NP21, a pelagic clay core. b) Low-frequency magnetic susceptibility ($\chi_{l}$) versus the difference between the low and high-frequency magnetic susceptibilities ($\chi_l-\chi_h$) for core NP21. The value at the intersection of a linear regression line with the $\chi_l$ axis is interpreted as the frequency-independent fraction. c) Ratio of ARM to $\chi$ versus age for the uncorrected (U: open symbols) and corrected (C: solid symbols) data using the paramagnetic fraction of the susceptibility for core NP21. [Data of {cite}`yamazaki1997`.]
@@ -344,6 +362,7 @@ The parameters $\chi_{fd}$ (ultrafine or SP fraction) and ARM/$\chi_{l}$ (slight
 
 :::{figure} ../figures/chapter8/jackson-1.png
 :name: fig:jackson-1
+:alt: Two panels: a) Neel diagram contour plot of particle volume versus microscopic coercivity showing two distinct clusters for the Tiva Canyon Tuff mixture, b) calculated back-field dM/dH spectra at frequencies from 10 to 300 Hz with bimodal peaks.
 :width: 85%
 
 a) Calculated grain distribution for the mixture of two Tiva Canyon Tuff specimens with different mean grain sizes and aspect ratios (contour interval = f$_{max}$/10). b) Calculated back-field spectra. [Redrawn from Figure 18 in {cite}`jackson2006`.]
@@ -363,6 +382,7 @@ The particle volume distribution $f(v)$ can be estimated if the distribution of 
 
 :::{figure} ../figures/chapter8/jackson-2.png
 :name: fig:jackson-2
+:alt: Two panels for a Chinese loess paleosol: a) Neel diagram contour plot showing a broad continuous distribution of volume and coercivity spanning 10 to 100 nm, b) best-fit back-field dM/dH spectra at temperatures from 50 to 340 K with a single broad peak.
 :width: 100%
 
 a) Reconstructed grain distribution (contour interval of fmax/10) and b) best fit back-field spectra for a paleosol specimen. The RMS misfit is <5%. [Redrawn from Figure 21 in {cite}`jackson2006`.]
@@ -385,6 +405,7 @@ where $M_{rs}$ is the saturation IRM remaining at 80 or 150 K while warming from
 
 :::{figure} ../figures/chapter8/moskowitz08-1.png
 :name: fig:moskowitz-1
+:alt: Three panels of sIRM versus temperature from 10 to 300 K with FC (dashed red) and ZFC (solid blue) curves: a) above OAI at 2.7 m showing gradual decay, b) at OAI base at 3.5 m showing sharp drops near the Verwey transition with FC and ZFC divergence, c) below OAI at 4.0 m showing gradual decay.
 :width: 100%
 
 Low-temperature FC (dashed line) and ZFC (solid line) demagnetization curves for selected water depths corresponding to a) above the oxic-anoxic interface (OAI; 2.7 m), b) bottom of OAI (3.5 m), and c) below the OAI (4.0 m). [Redrawn from Figure 9 in {cite}`moskowitz2008`.]
@@ -394,6 +415,7 @@ Low-temperature FC (dashed line) and ZFC (solid line) demagnetization curves for
 
 :::{figure} ../figures/chapter8/moskowitz08-2.png
 :name: fig:moskowitz-2
+:alt: Depth profile of delta-FC over delta-ZFC ratio versus water depth from 1 to 5 meters, with the oxic-anoxic interface shaded in yellow between 3.1 and 3.5 m where ratios exceed the diagnostic threshold of 2.0 indicating intact magnetosome chains.
 :width: 45%
 
 $\delta_{FC}/\delta_{ZFC}$ ratios as a function of water depth. Shaded zone is the location of the OAI based on chemical profiles. sr: short-rod shaped magnetotactic bacteria. Values of $\delta_{FC}/\delta_{ZFC} > 2.0$ are characteristic of MMB and MRP bacteria that have magnetite magnetosomes organized in chains. [Redrawn from Figure 10b in {cite}`moskowitz2008`.]

@@ -25,6 +25,7 @@ Any statistical method for determining a mean (and confidence limit) from a set 
 
 :::{figure} ../figures/chapter11/gauss.png
 :name: fig:gauss
+:alt: Four-panel plot: a) bell-shaped Gaussian PDF, b) histogram of 1000 bed thickness measurements with normal curve overlay, c) narrow histogram of 100 sample means, d) skewed chi-squared histogram of variances.
 :width: 100%
 
 a) The Gaussian probability density function (normal distribution, [Equation %s](#eq:normal)). The proportion of observations within an interval $dz$ centered on $z$ is $f(z)dz$. b) Histogram of 1000 measurements of bed thickness in a sedimentary formation. Also shown is the smooth curve of a normal distribution with a mean of 10 and a standard deviation of 3. c) Histogram of the means from 100 repeated sets of 1000 measurements from the same sedimentary formation. The distribution of the means is much tighter. d) Histogram of the variances ($s^2$) from the same set of experiments as in c). The distribution of variances is not bell shaped; it is $\chi^2$.
@@ -112,6 +113,7 @@ Some of these sources of scatter (e.g., items 1, 2 and perhaps 6 above) lead to 
 
 :::{figure} ../figures/chapter11/fisher.png
 :name: fig:fisher
+:alt: Nine equal area projections in a 3x3 grid showing Fisher-distributed directions with increasing concentration from top (kappa=5, scattered) to bottom (kappa=50, tightly clustered), with mean directions and confidence circles.
 :width: 100%
 
 Hypothetical data sets drawn from Fisher distributions with vertical true directions with $\kappa$ = 5 (a-c), $\kappa$ = 10 (d-f), $\kappa$ = 50 (g-i). Estimated $\bar D, \bar I, \kappa, \alpha_{95}$ shown in insets.
@@ -136,6 +138,7 @@ We can see in [Figure %s](#fig:P)a the probability of finding a direction within
 
 :::{figure} ../figures/chapter11/P.png
 :name: fig:P
+:alt: Two panels showing Fisher probability density versus angle from true mean for kappa=5, 10, 50, 100: a) probability per unit area decreasing from the mean, b) probability per angular band peaking away from zero due to the sin(alpha) factor.
 :width: 100%
 
 a) Probability of finding a direction within an angular area, $dA$ centered at an angle $\alpha$ from the true mean. b) Probability of finding a direction at angle $\alpha$ away from the true mean direction.
@@ -181,6 +184,7 @@ These Cartesian coordinates can, of course, be converted back to geomagnetic ele
 
 :::{figure} ../figures/chapter11/vecsum.png
 :name: fig:vecsum
+:alt: Diagram of eight unit vectors m1 through m8 arranged head-to-tail with their resultant vector R shown as a bold red arrow, illustrating vector addition of directional data.
 :width: 70%
 
 Vector addition of eight unit vectors ($m_i$) to yield resultant vector $R$. [Figure redrawn from {cite}`butler1992`.]
@@ -250,6 +254,7 @@ The effects of increasing $N$ are readily apparent in [Figure %s](#fig:a95-csd) 
 
 :::{figure} ../figures/chapter11/a95-csd.png
 :name: fig:a95-csd
+:alt: Line plot of angle versus N showing CSD and delta fluctuating around the true S=15 degree line, while alpha-95 decreases steadily from about 20 degrees at N=4 to 5 degrees at N=30.
 :width: 70%
 
 Dependence of estimated angular standard deviation, CSD and $\delta$, and confidence limit, $\alpha_{95}$, on the number of directions in a data set. An increasing number of directions were selected from a Fisherian sample of directions with angular standard deviation $S$ = 15$^{\circ}$ ($\kappa$ = 29.2), shown by the horizontal line.
@@ -340,6 +345,7 @@ As applied to the fold test, one examines the ratio of $k$ after tectonic correc
 
 :::{figure} ../figures/chapter11/twosets.png
 :name: fig:twosets
+:alt: Three panels: a) equal area projection with two overlapping data sets marked by spades and hearts symbols, b) their Fisher means with overlapping confidence circles, c) cumulative distribution of simulated Vw values with critical and observed values marked.
 :width: 100%
 
 a) Equal area projections of declinations and inclinations of two hypothetical data sets. b) Fisher means and circles of confidence from the data sets in a). c) Distribution of $V_w$ for simulated Fisher distributions with the same $N$ and $\kappa$ as the two shown in a). The dashed line is the upper bound for the smallest 95% of the $V_w$s calculated for the simulations ($V_{crit}$). The solid vertical line is the $V_w$ calculated for the two data sets. According to this test, the two data sets do not have a common mean, despite their overlapping confidence ellipses.
@@ -351,6 +357,7 @@ The calculation of confidence regions for paleomagnetic data is largely motivate
 
 :::{figure} ../figures/chapter11/lnp.png
 :name: fig:lnp
+:alt: Central equal area projection showing six directed lines and one great circle with their combined mean direction and alpha-95 circle, surrounded by inset Zijderveld diagrams showing the demagnetization data for selected specimens.
 :width: 100%
 
 Examples of demagnetization data from a site whose mean is partially constrained by a great circle. The best-fit great circle and six directed lines allow a mean (diamond) and associated $\alpha_{95}$ to be calculated using the method of {cite}`mcfadden1988`. Demagnetization data for two of the directed lines are shown at the top of the diagram while those for the great circle are shown at the bottom. [Data from {cite}`tauxe2003b`.]
@@ -407,6 +414,7 @@ A different problem arises when only the inclination data are available as in th
 
 :::{figure} ../figures/chapter11/incfish.png
 :name: fig:incfish
+:alt: Equal area projection of directions from a steep Fisher distribution showing the Fisher mean (triangle), Gaussian average inclination, and McFadden-Reid maximum likelihood inclination estimate, with the Gaussian average being shallowest.
 :width: 55%
 
 Directions drawn from a Fisher distribution with a near vertical true mean direction. The Fisher mean direction from the sample is shown by the triangle. The Gaussian average inclination ($<I>= 70^{\circ}$) is shallower than the Fisher mean $I_F = 75^{\circ}$. The estimated inclination using the maximum likelihood estimate of {cite}`mcfadden1982` ($I_{MF}=73^{\circ}$) is closer to the Fisher mean than the Gaussian average.
@@ -418,6 +426,7 @@ By comparing inclinations estimated using the McFadden-Reid technique with those
 
 :::{figure} ../figures/chapter11/fishrot.png
 :name: fig:fishrot
+:alt: Two equal area projections: a) directional data in geographic coordinates with the principal eigenvector V1 shown as a triangle, b) the same data rotated into data coordinates with V1 at the center of the projection.
 :width: 100%
 
 Transformation of coordinates from a) geographic to b) "data" coordinates. The direction of the principal eigenvector $\mathbf{V}_1$ is shown by the triangle in both plots. [Figure redrawn from {cite}`tauxe1998`.]
@@ -432,6 +441,7 @@ Let us now consider how to determine whether a given data set is Fisher distribu
 
 :::{figure} ../figures/chapter11/unexp.png
 :name: fig:unexp
+:alt: Two histograms in data coordinates: a) declinations showing roughly uniform distribution with a dashed uniform reference line, b) co-inclinations showing a peaked distribution with a dashed exponential reference curve.
 :width: 100%
 
 a) Declinations and b) co-inclinations ($\alpha$) from [Figure %s](#fig:fishrot). Also shown are behaviors expected for $D$ and $I$ from a Fisher distribution, i.e., declinations are uniformly distributed while co-inclinations are exponentially distributed. [Figure from {cite}`tauxe1998`.]
@@ -445,6 +455,7 @@ Recalling that Fisher distributions are symmetrically disposed about the mean di
 
 :::{figure} ../figures/chapter11/fishqq.png
 :name: fig:fishqq
+:alt: Two Q-Q plots: a) data quantiles versus uniform quantiles for declinations falling along a straight line (Mu=0.877), b) data quantiles versus exponential quantiles for co-inclinations also falling along a line (Me=0.541), confirming Fisher distribution.
 :width: 85%
 
 a) Quantile-quantile plot of declinations (in data coordinates) from [Figure %s](#fig:fishrot) plotted against an assumed uniform distribution. b) Same for inclinations plotted against an assumed exponential distribution. The data are Fisher distributed. [Figure from {cite}`tauxe1998`.]

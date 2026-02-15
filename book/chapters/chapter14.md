@@ -18,6 +18,7 @@ The magnetic field is one component of the highly complex Earth system. It inter
 
 :::{figure} ../figures/chapter14/c14.png
 :name: fig:c14
+:alt: Three-panel plot: (a) radiocarbon vs calendar age calibration curve deviating from 1:1 line, (b) atmospheric delta-14C variations over 50 kyr, (c) predicted delta-14C from geomagnetic field intensity.
 :width: 100%
 
 a) Radiocarbon calibration data from Cariaco ODP Leg 165, Holes 1002D and 1002E (blue circles), plotted versus calendar age assigned by correlation of detailed paleoclimate records to the Greenland Ice Core GISP2. The thin black line is high-resolution radiocarbon calibration data from tree rings joined at 12 cal. ka B.P. to the varve counting chronology. Red squares are paired $^{14}$C-U/Th dates from corals. Light gray shading represents the uncertainties in the Cariaco calibration. The radiocarbon dates are too young, falling well below the dotted line of 1:1 correlation. b) Compilation of data interpreted as production rate changes in radiocarbon ($\Delta^{14}$C) versus calender age. (symbols same as in a). c) Predicted variation of $\Delta^{14}$C from the geomagnetic field intensity variations from sediments of the north Atlantic {cite:p}`laj2002` using the model of {cite:t}`masarik1999`. [Figure modified from {cite:t}`hughen2004`.]
@@ -33,6 +34,7 @@ a) Radiocarbon calibration data from Cariaco ODP Leg 165, Holes 1002D and 1002E 
 
 :::{figure} ../figures/chapter14/chinesecompass.png
 :name: fig:spoon
+:alt: Photo of a lodestone spoon on an ornate bronze plate alongside a scatter plot of Chinese magnetic declination measurements from 720 to 1829 CE.
 :width: 100%
 
 a) A reconstruction {cite:p}`wang1948` of the south pointing spoon (*shao*) used by the Chinese in the first century CE. [Photo of Stan Sherer.] b) Measurements of magnetic declination made in China from 720 CE to 1829. [Data quoted in {cite:t}`smith1967`.]
@@ -51,6 +53,7 @@ But the earliest compass appears to date from the first century in China. Lodest
 
 :::{figure} ../figures/chapter14/halley.png
 :name: fig:halley
+:alt: Historical Atlantic chart by Halley showing contour lines of magnetic declination circa 1700, with the 2005 zero-declination line overlaid in blue showing westward drift.
 :width: 80%
 
 Chart of magnetic declination of Halley. Shown in blue is the line of zero variation from the 2005 IGRF. [Figure modified from {cite:t}`cook2001`.]
@@ -70,6 +73,7 @@ The internal origin of the magnetic field was discovered by Gilbert in 1546 who 
 
 :::{figure} ../figures/chapter14/gufm1.png
 :name: fig:gufm1
+:alt: Two global maps of radial magnetic field at the core-mantle boundary for 1600 and 1990 CE showing migrating flux patches, plus a line graph of declining field strength in San Diego since 1840.
 :width: 100%
 
 Maps of the strength of the radial magnetic field at the core mantle boundary from the **GUFM1** secular variation model of {cite:t}`jackson2000`. a) For 1600 CE. b) For 1990. c) Field strength in San Diego, CA evaluated from the **GUFM1** model.
@@ -81,6 +85,7 @@ Gauss provided the mathematical framework we use today for dealing with geomagne
 
 :::{figure} ../figures/chapter14/psvmod.png
 :name: fig:psvmod
+:alt: Four side-by-side inclination time series from east to west (35N to 66N) spanning 1000 BCE to 2000 CE, with correlated maxima and minima connected by green lines.
 :width: 90%
 
 Inclinations evaluated at 100 year intervals from the PSVMOD1.0 of {cite:t}`constable2000` for selected records. These are plotted from East to West. Maxima and minima are noted. Westward drift would imply that these correlated features would "rise" to the right.
@@ -103,6 +108,7 @@ Sedimentary materials were first used for the investigation of secular variation
 
 :::{figure} ../figures/chapter14/wilsoncreek.png
 :name: fig:lund
+:alt: Photo of the Wilson Creek outcrop near Mono Lake alongside inclination and declination profiles versus depth, with the Mono Lake excursion visible as a large directional swing near 6.75 m.
 :width: 100%
 
 Paleosecular variation of the magnetic field ($D$ and $I$) observed in the Wilson Creek section north of Mono Lake. The inclination expected from a geocentric axial dipole is shown as a dashed line. The declination is expected to be zero. The so-called "Mono Lake" excursion is marked. The data are from {cite:t}`lund1988` and represent some 23 kyr of time.
@@ -124,6 +130,7 @@ We mentioned that early workers measuring the secular variation of declination n
 
 :::{figure} ../figures/chapter14/sint800.png
 :name: fig:sint800
+:alt: VADM time series over the past 800 kyr showing oscillating paleointensity with labeled excursions including Laschamp, Blake, and the Brunhes-Matuyama reversal.
 :width: 100%
 
 Stack of relative paleointensity records from deep sea sediments. [Figure modified from {cite:t}`guyodo1999`.]
@@ -142,6 +149,7 @@ There are two approaches to studying the geomagnetic field in ancient times: exa
 
 :::{figure} ../figures/chapter14/sedpint.png
 :name: fig:sedpint
+:alt: Sixteen stacked relative paleointensity records from global ocean sediment cores spanning 0-100 ka, with red and blue bars marking the Laschamp and Mono Lake excursion lows.
 :width: 100%
 
 Relative paleointensity records spanning the last 100 kyr with independent age control based on $\delta^{18}$O. The solid red bars indicate intensity lows that are possibly related to the "Laschamp excursion" and the blue bars are a later paleointensity low, referred to as the "Mono Lake excursion". [Figure from {cite:t}`tauxe2007`.]
@@ -159,6 +167,7 @@ In a recent review of the phenomenon on excursions, {cite:t}`laj2007` advocated 
 
 :::{figure} ../figures/chapter14/919.png
 :name: fig:919
+:alt: Declination and inclination versus age (30-43 ka) from ODP Site 919 showing two distinct excursional intervals at approximately 33 ka and 40 ka with large directional swings.
 :width: 80%
 
 Directional data from ODP Site 919. Declination ($D$) and inclination ($I$) data from continuous core ("u-channel") measurements (dark/green closed symbols connected by line), deconvolved u-channel data (closed gray/blue symbols connected by dashed line) and data from 1cc discrete samples (open/red squares without connecting line). [Figure redrawn from {cite:t}`channell2006`.]
@@ -176,6 +185,7 @@ Finally, we have the directional records from sedimentary sequences long enough 
 
 :::{figure} ../figures/chapter14/reversals.png
 :name: fig:reversals
+:alt: Sediment core magnetization, declination, and inclination profiles showing the lower Jaramillo reversal, beside a globe with transitional VGP paths traced across it.
 :width: 100%
 
 a) The lower Jaramillo geomagnetic polarity reversal as recorded in deep sea sediments from core RC14-14. Inclinations and declinations expected from a normal and reverse GAD field are shown as dashed lines. [Data from {cite:t}`clement1984`.] b) Record of polarity transition recorded at Steens Mountain. [Data from {cite:t}`camps1999`.]
@@ -190,6 +200,7 @@ We have examined in detail only a few of the many directional and intensity aber
 
 :::{figure} ../figures/chapter14/vgpspint.png
 :name: fig:vgpspint
+:alt: Scatter plot of VDM versus VGP latitude showing low intensities at transitional latitudes, a global map of transitional VGP positions clustered in longitudinal bands, and a shear wave velocity map at the core-mantle boundary.
 :width: 100%
 
 a) VDM versus VGP latitude from data in the PINT06 database compiled by {cite:t}`tauxe2007`. The red triangles are from double heating experiments with pTRM checks (see [Chapter 10](#chap:paleointensity)). b) Plot of transitional VGPs (blue dots) from the TRANS data base {cite:p}`mcelhinny1996`. No selection criteria were applied. c) Shear wave velocity SB448 model of {cite:t}`masters2000` evaluated at 2770 km (core mantle boundary region). There is a fast (cold) ring around the Pacific, presumably from the influence of subducted slabs.
@@ -203,6 +214,7 @@ A more controversial observation about directions in extrema was first pointed o
 
 :::{figure} ../figures/chapter14/gpts.png
 :name: fig:longterm
+:alt: Black-and-white polarity barcode for 0-160 Ma with a long normal interval (CNS) near 80-120 Ma, and a red reversal frequency curve peaking near 4 per Myr at present and before the CNS.
 :width: 90%
 
 Barcode: The Geomagnetic Polarity Time Scale (GPTS) for the last 160 Ma {cite:p}`berggren1995; gradstein1995`. Line traces the reversal frequency (number of reversals in a four million year interval) estimated by {cite:t}`constable2003`.
@@ -218,6 +230,7 @@ Examination of the reversal history shown in [](#fig:longterm) suggests that rev
 
 :::{figure} ../figures/chapter14/hk02.png
 :name: fig:taf
+:alt: Global Mollweide map of time-averaged field intensity with symmetric zonal bands grading from blue (low, ~30 microtesla) at the equator to pink (high, ~60 microtesla) at the poles.
 :width: 80%
 
 Time averaged intensity of the geomagnetic field. [Model of {cite:t}`hatakeyama2002`.]
@@ -233,6 +246,7 @@ One of the primary assumptions in many paleomagnetic studies is that the magneti
 
 :::{figure} ../figures/chapter14/tangent.png
 :name: fig:tangent
+:alt: Paleointensity versus latitude scatter plot with binned means showing a plateau or decline above 65 degrees near the tangent cylinder, beside a cutaway Earth diagram illustrating columnar outer-core flow and the tangent cylinder around the inner core.
 :width: 100%
 
 a) Paleointensity versus latitude of the Pint06 database (grey crosses) (see {cite:t}`tauxe2007`) and paleointensity estimates from {cite:t}`lawrence2009` for data with ages less than 5 Ma, $d\sigma B \le$ 15 $\mu$T, and $N_{site} \ge$ 2. Mean paleointensity results (diamonds) are calculated for 15° latitude bins and errors are shown as 2$\sigma$. The black line is the longitudinal-averaged intensity for today's field. The vertical dashed line is the surface expression of the edge of the tangent cylinder. Southern hemisphere data have been flipped to the Northern hemisphere. The black line represents the mean intensity for today's field as defined by the 2005 IGRF model coefficients, while the red dashed line represents the intensity associated with a geocentric axial dipole with a dipole term of 30 $\mu$T. b) Illustration of outer core flow regimes. The tangent cylinder is denoted by the blue cylinder tangential to the red sphere (inner core). [Figures redrawn from {cite:t}`lawrence2009`.]
@@ -244,6 +258,7 @@ One puzzling feature of [](#fig:tangent)a is the absence of an increasing trend 
 
 :::{figure} ../figures/chapter14/sbg-lava.png
 :name: fig:pint
+:alt: Virtual dipole moment versus age (0-170 Ma) with submarine basaltic glass (blue dots), single crystal (red diamonds), and other data (triangles), showing moderate values through most of the Mesozoic and elevated values near 100 Ma above the polarity barcode.
 :width: 100%
 
 Summary of data in the PINT06 compilation of {cite:t}`tauxe2007` meeting minimum acceptance criteria for last 200 Ma. Blue dots are submarine basaltic glass data. Red diamonds are single crystal results. Triangles are all other data meeting the same consistency criteria ($\sigma <$ 5% of mean or $<$5$\mu$T). At the bottom is the Geomagnetic Polarity Time Scale showing the Cretaceous Normal Superchron (CNS) and the M-sequence of magnetic anomalies. [Figure from {cite:t}`tauxe2007`.]
@@ -257,6 +272,7 @@ We plot a compilation of paleointensity data since the Jurassic in [](#fig:pint)
 
 :::{figure} ../figures/chapter14/psvrl.png
 :name: fig:psvrl
+:alt: Three equal-area stereonets of paleomagnetic directions at latitudes 0, 30, and 60 degrees, showing elongate north-south scatter at the equator that becomes more circular at higher latitudes.
 :width: 100%
 
 a) Paleomagnetic directions from the PSVRL database (see {cite:t}`mcelhinny1997`) compiled for latitude band 0-5° (N&S). Antipodes of reverse directions are used. The expected direction is at the star at the center of the equal area projection. Directions in the upper (lower) half are above (below) those expected and those to the right (left) are right-handed (left-handed). The red ellipse illustrates the elongation $E$ of the directional data where $E$ is the ratio of the eigenvalues along the maximum and minimum axes (here vertical and E-W respectively). b) Same as a) but for 25-35° (N&S) latitude band. c) Same as a) but for 55-65° (N&S) latitude band. [Figures redrawn from {cite:t}`tauxe2004b`.]
@@ -267,6 +283,7 @@ a) Paleomagnetic directions from the PSVRL database (see {cite:t}`mcelhinny1997`
 
 :::{figure} ../figures/chapter14/bell.png
 :name: fig:bell
+:alt: Three Gaussian bell curves with different standard deviations illustrating normal distributions, alongside a plot of standard deviation sigma decreasing with spherical harmonic degree in the CP88 model.
 :width: 100%
 
 a) Illustration of a normal distribution with varying standard deviations. b) Variation of standard deviation $\sigma$ as a function of spherical harmonic degree $l$ in the CP88 model.
@@ -304,6 +321,7 @@ A different PSV model, Model A of {cite:t}`irving1963`, starts from Fisher distr
 
 :::{figure} ../figures/chapter14/tk03.png
 :name: fig:tk03
+:alt: Four panels of the TK03 model: sigma versus harmonic degree for asymmetric and symmetric families, VGP scatter S-prime versus latitude with data and model fit, 1000 simulated field vectors on a globe at 30N, and an elongation-inclination curve with large igneous province data points.
 :width: 100%
 
 a) Variation of the standard deviation $\sigma_l$ as a function of harmonic degree $l$ for asymmetric and symmetric terms for the statistical field model TK03.GAD. All terms have zero mean except the axial dipole term. b) Estimated behavior of $S'$ from the data compilation of {cite:t}`mcelhinny1997` (circles). Blue line is the predicted variation of $S'$ from the TK03.GAD model of {cite:t}`tauxe2004b`. c) 1000 vector endpoints from realizations of model TK03.GAD at 30°N. d) Elongation versus inclination predicted from the TK03.GAD model. Compilation of data from LIPs of {cite:t}`tauxe2009`. Crossed open circles are data from large igneous provinces back through time. Yemeni traps: {cite:t}`riisager2005`. Deccan traps: {cite:t}`vandamme1991`; {cite:t}`vandamme1992`. Faroe Island basalts: {cite:t}`riisager2002`. Kerguelen: {cite:t}`plenier2002`. [Figures from {cite:t}`tauxe2004b`; {cite:t}`tauxe2005`; {cite:t}`tauxe2009`.]

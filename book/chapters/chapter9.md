@@ -23,6 +23,7 @@ Some applications in paleomagnetism require that the secular variation of the ge
 
 :::{figure} ../figures/chapter9/drill.png
 :name: fig:drill
+:alt: Four-panel photo sequence showing water-cooled drill coring into rock, orientation device on core, core extraction, and arrow marking on extracted sample.
 :width: 80%
 
 Sampling technique with a water-cooled drill. [Photos of Daniel Staudigel.] a) Drill the sample. b) Insert a non-magnetic slotted tube with an adjustable platform around the sample. Rotate the slot to the upper side of the sample. Note the azimuth and plunge of the drill direction (into the outcrop) with a sun and/or magnetic compass and inclinometer. Mark the sample through the slot with a brass or copper wire. c) Extract the sample. d) Make a permanent arrow on the upper side of the sample in the direction of drilling and label the sample with the sample name. Make a note of the name and orientation of the arrow in a field notebook.
@@ -30,6 +31,7 @@ Sampling technique with a water-cooled drill. [Photos of Daniel Staudigel.] a) D
 
 :::{figure} ../figures/chapter9/hand.png
 :name: fig:hand
+:alt: Four-panel photo sequence showing hand sampling of soft sediment: digging to fresh material, rasping a flat surface, marking strike and dip with a compass, and labeled extracted sample.
 :width: 80%
 
 Hand sampling technique for soft sediment: a) Dig down to fresh material. b) Rasp off a flat surface. c) Mark the strike and dip on the sample. d) Extract the sample and label it.
@@ -45,6 +47,7 @@ Samples can be taken using a gasoline or electric powered drill, as "hand sample
 
 :::{figure} ../figures/chapter9/core.png
 :name: fig:core
+:alt: Split sediment core in a plastic liner with a clear plastic sampling cube pressed into the surface, a ruler for scale, and an arrow indicating the up-core direction.
 :width: 80%
 
 Sampling of a sediment core. A plastic cube with a hole in it to let the air escape is pressed into the split surface of a core. The orientation arrow points "up core". After extraction, a label with the sample name is put on. [Photo from Kurt Schwehr.]
@@ -54,6 +57,7 @@ Sampling of a sediment core. A plastic cube with a hole in it to let the air esc
 
 :::{figure} ../figures/chapter9/orientation.png
 :name: fig:orientation
+:alt: Two 3D diagrams of a cylindrical core sample showing X, Y, Z specimen axes and the orientation angles (azimuth and hade) relating the core to geographic coordinates.
 :width: 85%
 
 Orientation system for sample collected by portable core drill. a) Schematic representation of core sample in situ. The $Z$ axis points into outcrop; the $X$ axis is perpendicular to $Z$ and is in the vertical plane; the $Y$ axis in the horizontal plane and is positive to the right of $X$. b) Orientation angles for core samples. The angles measured are the hade of the $Z$ axis (angle of $Z$ from vertical) and geographic azimuth of the horizontal projection of the +$X$ axis measured clockwise from geographic north.
@@ -65,6 +69,7 @@ Lightning strikes can produce significant secondary IRM, which can mask the prim
 
 :::{figure} ../figures/chapter9/orient.png
 :name: fig:orient
+:alt: Photo of a Pomeroy orientation device with sun compass gnomon and field notebook resting on a rock outcrop.
 :width: 80%
 
 Pomeroy orientation device in use as a sun compass.
@@ -72,6 +77,7 @@ Pomeroy orientation device in use as a sun compass.
 
 :::{figure} ../figures/chapter9/suncomp.png
 :name: fig:suncomp
+:alt: Diagram showing a vertical gnomon casting a shadow on a horizontal dial, with the shadow angle alpha measured between the sun's shadow and the desired drilling direction.
 :width: 50%
 
 Schematic of the principles of sun compass orientation.
@@ -87,6 +93,7 @@ Sometimes large local magnetic anomalies, for example from a strongly magnetized
 
 :::{figure} ../figures/chapter9/backbite.png
 :name: fig:backbite
+:alt: Composite photo showing a geologist back-sighting along a drill direction with two Brunton compasses, with insets highlighting the sun compass gnomon and compass details.
 :width: 90%
 
 Back-sighting technique using a Pomeroy orientation device and two Brunton Compasses. One is used with the Pomeroy to measure the direction of drill and the other is used to check for deflection caused by local magnetic anomalies.
@@ -96,6 +103,7 @@ Another way to avoid the deflection of the compass needle by strong local magnet
 
 :::{figure} ../figures/chapter9/gps.png
 :name: fig:gps
+:alt: Field setup in Antarctica showing a differential GPS system with two receivers on a rigid base, a laptop for data reduction, and a laser, positioned near a sampled lava flow.
 :width: 80%
 
 Differential GPS system for orienting paleomagnetic samples in polar regions. Photo taken during sampling trip to the foothills of the Royal Society Ranges in Antarctica, Jan. 2004.
@@ -105,6 +113,7 @@ A new technique, developed by C. Constable and F. Vernon at Scripps Institution 
 
 :::{figure} ../figures/chapter9/samples.png
 :name: fig:samples
+:alt: Three specimen types with orientation conventions: a cylindrical core slice with lab arrow pointing into the outcrop, a cubic hand sample with field and lab arrows, and a sediment cube with up-core arrow and airhole.
 :width: 100%
 
 Various types of possible specimen shapes and orientation conventions. a) A one inch slice from a drilled core. b) A cubic specimen of sediment sanded from a hand sample. c) A specimen (also sample) from a piston core.
@@ -133,6 +142,7 @@ To correct for tilt, it is simplest to understand if this is performed as three 
 
 :::{figure} ../figures/chapter9/digeo.png
 :name: fig:digeo
+:alt: Two 3D diagrams showing specimen coordinate axes with magnetic moment vector m, and the same specimen in geographic coordinates with azimuth and plunge angles labeled.
 :width: 85%
 
 a) Specimen coordinates with $X_1$ being along the "lab arrow". A magnetic moment $\m$ was measured relative to the specimen coordinate system with components $x_1, x_2, x_3$. The orientation of the lab arrow with respect to geographic coordinates ($X'_1 = N$) is specified by the azimuth and plunge ($Az, Pl$) of the lab arrow.
@@ -140,6 +150,7 @@ a) Specimen coordinates with $X_1$ being along the "lab arrow". A magnetic momen
 
 :::{figure} ../figures/chapter9/comps.png
 :name: fig:comps
+:alt: Four pairs of coercivity histograms and vector demagnetization diagrams showing progressive removal of two magnetization components with varying degrees of spectral overlap.
 :width: 80%
 
 Principle of progressive demagnetization. Specimens with two components of magnetization (shown by heavy arrows on the right hand side), with discrete coercivities (plotted as histograms to the left). The original "NRM" is the sum of the two magnetic components and is shown as the + in the diagrams to the right. Successive demagnetization steps (numbered) remove the component with coercivities lower than the peak field, and the NRM vector changes as a result. a) The two distributions of coercivity are completely separate. b) The two distributions partially overlap resulting in simultaneous removal of both components. c) The two distributions completely overlap. d) One distribution envelopes the other. [Figure redrawn from {cite}`tauxe1998`.]
@@ -162,6 +173,7 @@ There are four different sets of coercivity spectra shown in [Figure %s](#fig:co
 
 :::{figure} ../figures/chapter9/zijd.png
 :name: fig:zijd
+:alt: Four-panel Zijderveld diagrams: a) single-component decay to origin, b) intensity decay curve with mdf, c) two-component specimen with great circle fit, d) specimen showing GRM growth with DANG angle.
 :width: 100%
 
 a) Solid (open) symbols are horizontal (vertical) projections respectively. Peak alternating fields for each demagnetizing step (in mT) are indicated. Inset is equal area plot of the same data. Solid (open) symbols are projections onto the lower (upper) hemisphere. b) Intensity as a function of demagnetization step. Data from a). The median destructive field (mdf of [Chapter 8](#chap:envmag)) also shown. c) Specimen with two components with overlapping stabilities. Inset as in a). Best fit great circle is shown as the curve through the data (dashed portion is upper hemisphere projection). d) Data from specimen showing evidence of GRM (see [Chapter 7](#chap:remanence)). During demagnetization, the vector grows perpendicular the last demagnetization direction (-Y). Deviation ANGle, DANG also shown.
@@ -193,6 +205,7 @@ An equal area projection may be the most useful way to present demagnetization d
 
 :::{figure} ../figures/chapter9/foldtesta.png
 :name: fig:foldtesta
+:alt: Photograph of steeply folded reddish sedimentary beds exposed in an outcrop, with geologists for scale.
 :width: 50%
 
 Example of folded beds. [Photo from G. Dupont-Nivet.]
@@ -200,6 +213,7 @@ Example of folded beds. [Photo from G. Dupont-Nivet.]
 
 :::{figure} ../figures/chapter9/foldtestb.png
 :name: fig:foldtestb
+:alt: Four equal area stereonets comparing pre-tilt and post-tilt directions from two fold limbs, showing improved grouping after tilt correction (top) versus worse grouping (bottom).
 :width: 50%
 
 Sampling units with different bedding attitudes in the "fold test". Hypothetical paleomagnetic directions are shown on equal area projections before and after adjusting for bedding tilt. Top pair represents the case in which the grouping of paleomagnetic directions is improved after adjusting for tilt which would argue for a pre-tilt acquisition of remanence. Lower pair represents a post-tilt acquisition of remanence in which the grouping is worse after restoring beds to the horizontal position.
@@ -218,6 +232,7 @@ $$ (eq:mad)
 
 :::{figure} ../figures/chapter9/congloma.png
 :name: fig:congloma
+:alt: Photograph of an exposed conglomerate outcrop with angular clasts of various sizes embedded in a matrix.
 :width: 50%
 
 The paleomagnetic conglomerate test. The target lithology was involved in a catastrophic event leading to incorporation into a conglomerate bed. Samples are taken from individual clasts.
@@ -225,6 +240,7 @@ The paleomagnetic conglomerate test. The target lithology was involved in a cata
 
 :::{figure} ../figures/chapter9/conglomb.png
 :name: fig:conglomb
+:alt: Three equal area stereonets: b) tightly clustered target lithology directions, c) clustered conglomerate clast directions indicating post-depositional remagnetization, d) randomly scattered clast directions indicating a positive conglomerate test.
 :width: 35%
 
 The paleomagnetic conglomerate test results. The directions of samples from the target lithology are shown in b) indicating that it is relatively homogeneously magnetized. c) Directions from the conglomerate clasts are also homogeneously magnetized; the magnetization must post-date formation of the conglomerate. In a positive conglomerate test d), the magnetization vectors of samples from the conglomerate clasts are random.
@@ -240,6 +256,7 @@ The angle between the best-fitting line through the data and the origin is terme
 
 :::{figure} ../figures/chapter9/baked.png
 :name: fig:baked
+:alt: Photograph of an igneous dike intrusion with labeled baked contact zones on both sides, flanked by undisturbed host rock, with red arrows marking sampling locations.
 :width: 65%
 
 The baked contact test. In a positive test, zones baked by the intrusion are remagnetized and have directions that grade from that of the intrusion to that of the host rock. If all the material is homogeneously magnetized, then the age of the intrusion places an upper bound on the age of magnetization.
@@ -322,6 +339,7 @@ Compare your answer to the one given by **pmag.dogeo** and **pmag.dotilt** that 
 
 :::{figure} ../figures/chapter9/NS034.png
 :name: fig:ns34
+:alt: Three-panel figure showing a) field team on a lakeshore lava flow, b) labeled drill holes in the outcrop, and c) a handwritten field notebook page with orientation data.
 :width: 100%
 
 Paleomagnetic site NS034. a) Photo of the "red" team. b) Photo showing sample holes with labels. The picture was taken in an easterly direction (see look direction in notebook page.) c) Page from the notebook.

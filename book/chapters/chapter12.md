@@ -14,6 +14,7 @@ Paleomagnetists have depended since the 1950's on the special statistical framew
 
 :::{figure} ../figures/chapter12/vgp-di.png
 :name: fig:vgp-di
+:alt: Globe showing scattered VGPs clustered around the geographic pole with a ring at 60 degrees N, and an equal-area plot of the corresponding directions showing elongate asymmetric distribution.
 :width: 100%
 
 a) VGPs from geomagnetic vectors evaluated from the statistical field model of {cite:t}`tauxe2004b` at 30°N (site of observation shown as square). The geographic pole is shown as a triangle. A set of VGP positions at 60°N are shown as the black ring. b) Directions observed at the site of observation [square in a)] converted from black ring of VGPs in a) which correspond to the VGP positions at 60°N. These directions have been projected along expected direction at site of observation (triangle). Note that a circularly symmetric ring about the geographic pole gives an asymmetric distribution of directions with a shallow bias. [Figures from {cite:t}`tauxe2004b`.]
@@ -43,6 +44,7 @@ If we were to collect data from the equatorial region, we might well obtain a se
 
 :::{figure} ../figures/chapter12/confidence.png
 :name: fig:confidence
+:alt: Three equal-area projections of elongate directional data with Fisher circle, Kent ellipse, and Bingham ellipse confidence regions respectively.
 :width: 100%
 
 a) An example of data obtained from a hypothetical equatorial sampling site plotted with the Fisher circle of confidence. The data have been transposed such that the expected direction (0, 0) is at the center of the diagram and "up" is at the top. b) Same data but with the Kent 95% confidence ellipse. c) Data from a) with some directions transposed to the antipode; directions plotted with the Bingham 95% confidence ellipse.
@@ -68,6 +70,7 @@ Estimating the parameters for the Bingham ellipse exactly is computationally tax
 
 :::{figure} ../figures/chapter12/love.png
 :name: fig:love
+:alt: 3D plot with North-East-Down axes showing two antipodal clusters of red spheres representing a bi-Gaussian distribution of vectors.
 :width: 80%
 
 A bi-gaussian set of vectors suitable for treatment using the method of {cite:t}`love2003`.
@@ -80,6 +83,7 @@ Until now we have continued the Fisher assumption of unit vectors. As already me
 
 :::{figure} ../figures/chapter12/hypeq.png
 :name: fig:hypeq
+:alt: Three equal-area projections: bimodal non-Fisherian directions, 500 bootstrapped means as dense clusters, and original data with bootstrap confidence ellipses.
 :width: 100%
 
 a) Hypothetical non-Fisherian data set. Normal and reversed polarity data that are not symmetrically distributed. Filled (open) circles plot on the lower (upper) hemisphere. b) Equal area projection of 500 bootstrapped means for pseudo-samples drawn from the data shown in a). c) Same as a) but with the bootstrapped confidence ellipses shown.
@@ -106,6 +110,7 @@ To separate the data into normal and reverse subsets, we first calculate the pri
 
 :::{figure} ../figures/chapter12/twofiles.png
 :name: fig:twofiles
+:alt: Two equal-area projections: overlapping triangles and circles representing two Fisherian data sets, and their distinct means with non-overlapping alpha-95 circles.
 :width: 80%
 
 Test for common mean with two directional data sets. a) Equal-area projections of two simulated Fisherian data sets (triangles and circles) each with $\kappa$ of 20. b) Means and $\alpha_{95}$s of data sets shown in a).
@@ -120,6 +125,7 @@ For large data sets ($N>25$), the parametric and simple bootstraps yield very si
 
 :::{figure} ../figures/chapter12/cdf.png
 :name: fig:cdf
+:alt: Three panels of cumulative distribution curves for X, Y, and Z Cartesian components of bootstrapped means from two data sets, with 95% confidence bounds shown as vertical lines.
 :width: 100%
 
 Cumulative distributions of Cartesian components of the bootstrapped means from 500 pseudo-samples from data shown in [](#fig:twofiles). a) $X$ components. b) $Y$, and c) $Z$. Also shown are the bounds for each data set that include 95% of the components. The confidence intervals for the different data sets overlap for $X$ and $Z$ but not for $Y$.
@@ -139,6 +145,7 @@ The so-called *reversals test* in paleomagnetism constitutes a test for a common
 
 :::{figure} ../figures/chapter12/revtest.png
 :name: fig:revtest
+:alt: Three panels of cumulative distributions for X, Y, and Z components of normal and flipped-reverse bootstrapped means, with overlapping 95% confidence bounds in all components.
 :width: 100%
 
 Cumulative distributions of Cartesian coordinates of means of pseudo-samples drawn from the data shown in [](#fig:hypeq)a. The reverse polarity mode has been flipped to its antipode. The intervals containing 95% of each set of components are also drawn (vertical lines). Because the confidence bounds from the two data sets overlap in all three components, the means of the reverse and normal modes cannot be distinguished at the 95% level of confidence; they pass the bootstrap reversals test.
@@ -155,6 +162,7 @@ In [Chapter 11](#chap:fisher) we suggested that variances could be compared usin
 
 :::{figure} ../figures/chapter12/unfolding.png
 :name: fig:foldtest
+:alt: Equal-area plots of directions in geographic and stratigraphic coordinates inset within a graph of eigenvalue tau-1 versus percent untilting, with a cumulative distribution showing peak concentration near 100%.
 :width: 100%
 
 a) Equal area projection of a set of directions in geographic coordinates. The data were drawn from the same distribution of directions that gave rise to the VGPs shown in [](#fig:vgp-di)a. They have been rotated about strike on two simulated limbs of the fold, one to the northeast and one to the southwest, resulting in a streaked (girdle) distribution. The original polarity of many data points is ambiguous. b) Data from a) after back tilting by 100% of the original tilt. Polarities are more readily identifiable. c) Red dashed lines: trends of the largest eigenvalues ($\tau_1$s) of the orientation matrices from representative pseudo-samples drawn from a) as they evolve during untilting. The directions are adjusted for tilt incrementally from -10% to 110%. The largest value of $\tau_1$ occurs near 100% in all of the pseudo-sample sets. The cumulative distribution is of 500 maxima of $\tau_1$ and the bounds that enclose 95% of them. These data "pass" the bootstrap fold test.

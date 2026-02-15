@@ -18,6 +18,7 @@ Data from a single continent cannot distinguish between these two hypotheses. Bu
 
 :::{figure} ../figures/chapter16/wandering.png
 :name: fig:wandering
+:alt: Two globes contrasting apparent polar wander (continent drifting past a fixed pole) with true polar wander (pole moving over a fixed continent).
 :width: 100%
 
 a) A moving continent will retain a record of changing paleomagnetic directions through time that reflect the changing orientations and distances to the pole (which is held fixed). The resulting path of observed pole positions is called an "apparent polar wander path" or APWP because in this case the pole is actually fixed and only appears to move when viewed from the continental frame of reference. b) On the other hand, if a continent is held fixed, the same changing paleomagnetic directions reflect the wandering of the pole itself. This is called "true polar wander" or TPW.
@@ -36,6 +37,7 @@ where $a$ is the radius of the Earth as in [Chapter 2](#chap:geomag). As an exam
 
 :::{figure} ../figures/chapter16/plates.png
 :name: fig:plates
+:alt: World map showing major lithospheric plates and a polar projection of North America moving relative to fixed Europe around an Euler pole.
 :width: 100%
 
 a) Some of the major lithospheric plates. b) Motion of North America with respect to Europe around the Euler pole shown as a blue square. Projection is such that current Euler pole North America (NAM) with respect to Europe (EUR) is at the "North pole". Lines of co-latitude are the angular distance from the Euler pole, $\theta$. Velocities of NAM with respect to EUR at two points with different $\theta$ are shown as black arrows.
@@ -43,6 +45,7 @@ a) Some of the major lithospheric plates. b) Motion of North America with respec
 
 :::{figure} ../figures/chapter16/finrot.png
 :name: fig:finrot
+:alt: Globe showing North America rotated by angle Omega about a finite rotation pole, and a sphere diagram relating a paleomagnetic pole to the spin axis via a finite rotation.
 :width: 100%
 
 a) Finite rotation of North America from one frame of reference to another. Finite rotation pole is located at $\lambda_f,\phi_f$ and the finite rotation is $\Omega$. b) Estimating a finite rotation of a continental fragment from a paleomagnetic pole.
@@ -62,6 +65,7 @@ In this way, the points defining a particular continental fragment can be recons
 
 :::{figure} ../figures/chapter16/polarity.png
 :name: fig:polarity
+:alt: Globe with three positions of a continental fragment illustrating ambiguity in polarity (a vs b) and paleolongitude (b vs c).
 :width: 60%
 
 Polarity and paleolongitude can be ambiguous from paleomagnetic data alone. All three positions of the continental fragment (a,b,c) could be reconstructions of the same observed direction. a) and b) differ with assumed polarity. b) and c) differ with assumed longitude.
@@ -80,6 +84,7 @@ which allows searching by pole number (RESULTNO), age, geographic limits, author
 
 :::{figure} ../figures/chapter16/poles-aus.png
 :name: fig:poles-aus
+:alt: Two globe projections of Australian paleomagnetic poles: scattered dots with no selection criteria on the left, and a sparse filtered track meeting BC02 criteria on the right.
 :width: 100%
 
 Paleomagnetic poles from Australia for the last 200 Ma from GPMDB. a) No selection criteria. b) The selection criteria of BC02.
@@ -105,6 +110,7 @@ Picking out the meaningful poles from the published data is part of the art of p
 
 :::{figure} ../figures/chapter16/mkapwp.png
 :name: fig:mkapwp
+:alt: Three globe projections comparing APWP construction methods: discrete windows with averaged poles, key poles sized by reliability, and moving window versus spline fitting.
 :width: 100%
 
 Examples of how to construct an APWP. a) Discrete window. b) Key pole approach. c) Moving window {cite:p}`besse2002` versus spline {cite:p}`torsvik2008`.
@@ -139,6 +145,7 @@ Once selected, the poles must be combined together somehow in order to define an
 
 :::{figure} ../figures/chapter16/PEP.png
 :name: fig:PEP
+:alt: Three panels: a continent rotating about an Euler pole, the resulting small-circle APWP track, and the Jurassic J1/J2 small-circle tracks for North America with their Euler poles.
 :width: 100%
 
 a) Paleomagnetic Euler pole method for determining APWPs. A continent is rotating about a fixed Euler pole (green triangle). As the continent moves, rocks record paleomagnetic directions reflecting the position of the spin axis at that particular age. b) When viewed in the present coordinate system and converted to paleomagnetic poles, these will fall on the small circle APWP track. c) PEP analysis for Jurassic APWP for North America of {cite:t}`may1986`. Poles are interpreted to lie along small circle tracks (J1/J2) separated by a cusp (J2 cusp) located at the LM pole. The J1 and J2 tracks are small circles about their respective Euler poles, shown as blue triangles.
@@ -152,6 +159,7 @@ a) Paleomagnetic Euler pole method for determining APWPs. A continent is rotatin
 
 :::{figure} ../figures/chapter16/APWP.png
 :name: fig:apwp
+:alt: Four continental reconstruction maps at present, 50, 100, and 200 Ma surrounding a polar plot of color-coded APWPs for multiple continents over 200 Myr.
 :width: 100%
 
 Master path approach: Maps of continental reconstructions for a) present, b) 50, c) 100, and d) 200 Ma. e) Poles and APWP for various continents for the last 200 million years, evaluated at five million year intervals. [Reconstructions using finite rotation poles of {cite:t}`torsvik2008` (see [](#app:polerot)).] Paleomagnetic poles from the synthetic APWP constructed by {cite:t}`besse2002` exported to the different continents.
@@ -159,6 +167,7 @@ Master path approach: Maps of continental reconstructions for a) present, b) 50,
 
 :::{figure} ../figures/chapter16/triangulation.png
 :name: fig:triangulation
+:alt: Polar stereographic plot showing three colored small circles from different sampling sites intersecting at a unique point that defines the paleomagnetic pole.
 :width: 60%
 
 Sampling sites are marked by triangles. Inclinations from the sites can be used to calculate the paleomagnetic colatitude of the site using the dipole formula (see [Chapter 2](#chap:geomag)) which defines a small circle along which the paleomagnetic pole must lie. The intersection of three such small circles uniquely defines the position of the paleomagnetic pole.
@@ -170,6 +179,7 @@ Sampling sites are marked by triangles. Inclinations from the sites can be used 
 
 :::{figure} ../figures/chapter16/gondwana-apwp.png
 :name: fig:gondwana
+:alt: Two globes showing Phanerozoic South African poles: scattered age-labeled poles connected by lines on the left, and a smoothed spline APWP for Gondwana on the right.
 :width: 100%
 
 The South African APWP for the Phanerozoic. a) South African poles only (Table 1 of {cite:t}`torsvik2002`). b) Smoothed APWP spline path using master path approach for Gondwana in South African coordinates.
@@ -188,6 +198,7 @@ One of the most useful, in fact essential, assumptions in paleomagnetism is that
 
 :::{figure} ../figures/chapter16/squish.png
 :name: fig:squish
+:alt: Two equal area projections linked by the flattening function: N-S elongated geomagnetic field directions on the left become E-W elongated recorded directions on the right.
 :width: 100%
 
 a) Set of possible geomagnetic field directions plotted in equal area projection. Lower (upper) hemisphere directions are solid (open) symbols. b) Directions recorded by the sediment using the flattening function. [Figure modified from {cite:t}`tauxe2008`.]
@@ -197,6 +208,7 @@ From [Chapter 14](#chap:ancient-field) we know that paleomagnetic directions fro
 
 :::{figure} ../figures/chapter16/EI.png
 :name: fig:EI
+:alt: Three-panel E/I analysis: equal area plot of shallow Asian redbed directions, elongation-inclination curves crossing the TK03.GAD model, and cumulative distribution of corrected inclinations with 95% confidence bounds.
 :width: 100%
 
 a) Paleomagnetic directions of Oligo-Miocene redbeds from Asia in equal area projection (stratigraphic coordinates). [Redrawn from {cite:t}`tauxe2004`; data from {cite:t}`gilder2001`.] b) Plot of elongation versus inclination for the data (heavy red line) and for the TK03.GAD model (dashed green line). Also shown are results from 20 bootstrapped datasets (yellow). The crossing points represents the inclination/elongation pair most consistent with the TK03.GAD model. Elongation direction is shown as a dash-dotted (purple) line and ranges from E-W at low inclination to more N-S at steeper inclinations. c) Cumulative distribution of crossing points from 5000 bootstrapped datasets. The inclination of the whole data set (64.4$^{\circ}$) is consistent with that predicted from the {cite:t}`besse2002` European APWP. The 95% confidence bounds on this estimate are 55.6-71.2$^{\circ}$.
@@ -208,6 +220,7 @@ The *elongation-inclination* (E/I) method of detecting and correcting inclinatio
 
 :::{figure} ../figures/chapter16/pangea.png
 :name: fig:pangea
+:alt: Three globe projections comparing Pangea reconstructions: Pangea A with Gondwana tight against Laurasia, Pangea A-2 shifted slightly, and Pangea B with North America west of South America.
 :width: 100%
 
 a) Pangea A reconstruction ("Bullard fit"; {cite:t}`smith1970`; {cite:t}`bullard1965`). b) Pangea A-2 reconstruction {cite:p}`vandervoo1974`. c) Pangea B reconstruction {cite:p}`morel1981`. Note: a) and b) are reconstructions to fit the continental margins and do not take into account paleolatitudes.
@@ -278,6 +291,7 @@ Many people who have contemplated the globe have had the desire to fit North and
 
 :::{figure} ../figures/chapter16/pangea-poles.png
 :name: fig:pangea-poles
+:alt: Five polar projections with continent-coded paleomagnetic poles testing Pangea A, A-2, and B reconstructions for Jurassic and Permian time intervals.
 :width: 100%
 
 Using paleomagnetic poles as a test for reconstructions. The continental outlines are rotated according to the same finite rotation poles for each reconstruction (in light grey). a) Poles for the period 180-200 Ma Pangea from the {cite:t}`besse2002` and {cite:t}`torsvik2008` compilations rotated to the Pangea A reconstruction of {cite:t}`bullard1965` and {cite:t}`smith1970`. b) Poles for the Permian ($\sim$250-300 Ma) from {cite:t}`torsvik2008` compilation shown in Pangea A reconstruction. c) Same as b) but for Pangea A-2 reconstruction of {cite:t}`vandervoo1974`. d) same as b) but for Pangea B reconstruction {cite:p}`morel1981`. e) Same as d) but just the lower Permian poles.
@@ -292,6 +306,7 @@ Regions with paleomagnetic directions that are different from that expected from
 
 :::{figure} ../figures/chapter16/poles_na_dis.png
 :name: fig:poles-dis
+:alt: Polar projection of North America showing cratonic mean poles as circles clustering near the APWP and discordant western poles as triangles scattered far from the expected path.
 :width: 60%
 
 Circles are "reliable" mean poles from cratonic North America. (Data as listed in {cite:t}`vandervoo1990`). So-called "discordant poles" from western North America are plotted as triangles. [Data from {cite:t}`vandervoo1981`.]
@@ -316,6 +331,7 @@ Use of inclination only data require knowledge of the following:
 
 :::{figure} ../figures/chapter16/inconly.png
 :name: fig:inconlypole
+:alt: Globe in South African coordinates showing green paleocolatitude small circles from mobile-region sites converging in a shaded overlap zone, with fully oriented poles as purple triangles and BC02 predicted poles as blue stars.
 :width: 80%
 
 If local rotations are suspected for a given region, the inclination information can be converted to the equivalent paleo-colatitude small circles (green solid lines) on which the paleopole must lie. Site locations from 'mobile regions' are shown as open circles. LB: Lebanon, SP: Spain; IT: Italy; CH: Chile; NA: Morrison Formation on the Colorado Plateau of North America. Small circles (solid green lines) are the paleomagnetic colatitudes ($\theta$ in [](#tab:inconly)) from inclination data. The dashed line is the paleolatitude from uncorrected inclination data of the Morrison Formation. Shaded ellipse indicates region of overlap among all small circles. Fully oriented poles are shown as purple triangles. Numbers are the GPMDB reference numbers followed by the age in Ma. See [](#tab:inconly). All poles and observation sites have been rotated into South African coordinates for 155 Ma (see [](#app:polerot)) as have the continents. Pole number 268 is the Canelo Hills Volcanics from Arizona. If this region rotated about a vertical axis, the pole would lie along the solid blue line. Blue stars are the predicted poles of {cite:t}`besse2002` in South African coordinates.
