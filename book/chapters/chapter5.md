@@ -168,9 +168,6 @@ The most direct way to measure coercivity of remanence is the *backfield experim
 
 [](#fig:sdloops)a is the loop created in the idealized case in which only uniaxial ferromagnetic particles participated in the hysteresis measurements; in fact the curve is entirely theoretical. In "real" specimens there can be paramagnetic, diamagnetic AND ferromagnetic particles and the loop may well look like that shown in [](#fig:Bcr). The initial slope of a hysteresis experiment starting from a demagnetized state in which the field is ramped from zero up to higher values is the low field magnetic susceptibility or $\chi_{lf}$ (see [](#fig:Bcr)). If the field is then turned off, the magnetization will return again to zero. But as the field increases past the lowest flipping field, the remanence will no longer be zero but some isothermal remanence. Once all particle moments have flipped and saturation magnetization has been achieved, the slope relating magnetization and applied field reflects only the non-ferromagnetic (paramagnetic and/or diamagnetic) susceptibility, here called *high field susceptibility*, $\chi_{hf}$. In order to estimate the saturation magnetization and the saturation remanence, we must first subtract the high field slope. So doing gives us the blue dashed line in [](#fig:Bcr) from which we may read the various hysteresis parameters illustrated in [](#fig:sdloops)b.
 
-### Cubic anisotropy
-
-
 
 :::{figure} ../figures/chapter5/cubicloops.png
 :name: fig:cubic
