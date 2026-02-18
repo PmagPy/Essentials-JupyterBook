@@ -31,7 +31,7 @@ Now think about what would happen if it started raining on one side of the fence
 
 Returning to magnetism, a magnet with uniaxial anisotropy in the absence of a magnetic field will tend to be magnetized along one of the two "easy" directions — parallel or antiparallel to the easy axis (see [Chapter 4](#chap:anisotropy)). In order to "jump over the fence" (the anisotropy energy) and flip from one easy direction to the other, a magnetic particle must have thermal energy in excess of the anisotropy energy. According to the Boltzmann distribution law, the probability of a given particle having an energy $E$ is proportional to $e^{-E/kT}$ where $kT$ is the thermal energy (see [Chapter 4](#chap:anisotropy)). Therefore, it may be that at a certain time, a particular magnetic grain has enough thermal energy for the electronic spins to overcome the energy barrier and flip the magnetization to the other easy direction.
 
-If we had a collection of magnetized particles with some initial statistical alignment of moments giving a net remanence $M_o$, (more sheep on one side than the other), the random "fence jumping" by magnetic moments from one easy axis to another over time will eventually lead to the case where there is no preference and the net moment will have decayed to zero (although the individual grain moments remain at saturation). This approach to *equilibrium magnetization* ($M_e$) is the theoretical underpinning of [Equation %s](#eq:MvT) (plotted in [](#fig:neel)a) and is the essence of what is known as Néel Theory.
+If we had a collection of magnetized particles with some initial statistical alignment of moments giving a net remanence $M_o$, (more sheep on one side than the other), the random "fence jumping" by magnetic moments from one easy axis to another over time will eventually lead to the case where there is no preference and the net moment will have decayed to zero (although the individual grain moments remain at saturation). This approach to *equilibrium magnetization* ($M_e$) is the theoretical underpinning of [Equation %s](#eq:MvT) (plotted in [](#fig:neel_relaxation)) and is the essence of what is known as Néel Theory.
 
 ## Essential Néel theory
 
@@ -51,7 +51,7 @@ $$
 \tau = \frac{1}{C} \exp \frac{Kv}{k_BT},
 $$
 
-At a given temperature, relaxation time is controlled by the competition between anisotropy energy ($Kv$) and thermal energy ($k_BT$). Since both the anisotropy constant $K$ and grain volume $v$ contribute to the energy barrier, grains with different combinations of $K$ and $v$ can have the same relaxation time. We can visualize this by plotting contours of equal relaxation time — iso-$\tau$s — in $v$–$K$ space ([](#fig:neel)b). In [](#fig:neel)b, we see curves with $\tau$s ranging from ~100 seconds to the age of the Earth. 
+At a given temperature, relaxation time is controlled by the competition between anisotropy energy ($Kv$) and thermal energy ($k_BT$). Since both the anisotropy constant $K$ and grain volume $v$ contribute to the energy barrier, grains with different combinations of $K$ and $v$ can have the same relaxation time. We can visualize this by plotting contours of equal relaxation time — iso-$\tau$s — in $v$–$K$ space ([](#fig:neel_grain_population)). In [](#fig:neel_grain_population), we see curves with $\tau$s ranging from ~100 seconds to the age of the Earth. 
 
 :::{figure} ../figures/chapter7/neel_grain_population.png
 :name: fig:neel_grain_population
@@ -131,13 +131,21 @@ $$
 \tau = \frac{1}{C} \exp \frac{\mu_o H_c M_s v}{2kT},
 $$ (eq:tau3)
 
-where $M_s$ is itself a strong function of temperature. The temperature dependence of saturation magnetization can be approximated by:
+where $M_s$ is itself a strong function of temperature ([](#fig:ms_k_temperature)). The temperature dependence of saturation magnetization can be approximated by:
 
 $$
 M_s(T) = M_s(0) \left(1 - \frac{T}{T_c}\right)^\gamma
 $$ (eq:MsT-approx)
 
 where $T_c$ is the Curie temperature and $\gamma$ is an empirical exponent (typically ~0.38 for magnetite). We can see from [Equation %s](#eq:tau3) that relaxation time is a function of magnetization, as well as volume, coercivity and temperature.
+
+:::{figure} ../figures/chapter7/magnetite_ms_k_temperature.png
+:name: fig:ms_k_temperature
+:alt: Two-panel plot showing normalized saturation magnetization and anisotropy energy density for magnetite as a function of temperature. Left panel shows M_s decreasing gradually from 1 at 20°C to 0 at the Curie temperature near 580°C. Right panel shows K decreasing more steeply because K is proportional to the square of M_s, with annotation noting the energy barrier grows rapidly with cooling.
+:width: 100%
+
+Temperature dependence of saturation magnetization $M_s$ (left) and anisotropy energy density $K$ (right) for magnetite, both normalized to their room-temperature values. Because $K \propto M_s^2$, the anisotropy energy barrier decreases far more steeply with increasing temperature than $M_s$ alone — and conversely, the energy barrier grows rapidly during cooling, which is the physical basis for blocking of TRM.
+:::
 
 :::{figure} ../figures/chapter7/relaxation_time_curves_20C_550C.png
 :name: fig:relaxation_time_curves_20C_550C
@@ -147,7 +155,7 @@ where $T_c$ is the Curie temperature and $\gamma$ is an empirical exponent (typi
 Contours of constant relaxation time ($\tau$ = 100 s, 1 Myr, and 4.5 Gyr) for single-domain grains on a plot of grain volume ($v$) against anisotropy energy density ($K$) at 20°C (solid lines) and 550°C (dashed lines). Grains with combinations of $v$ and $K$ that place them toward the lower left have short relaxation times and are superparamagnetic — their moments are in equilibrium with the ambient field. Grains with combinations of $v$ and $K$ toward the upper right are magnetically blocked, preserving remanence over geologically significant timescales. At elevated temperature, the iso-$\tau$ contours shift toward the upper right, so that grains which are blocked at 20°C can become unblocked at 550°C. This temperature dependence of relaxation time is fundamental both to the acquisition of thermoremanent magnetization during cooling and to the progressive unblocking of remanence during thermal demagnetization.
 :::
 
-The $v-K$ diagram shown in [](#fig:neel-trm) illustrates how TRM can be blocked. In [](#fig:neel-trm)a we have a population of magnetic grains with varying volumes and anisotropies. Raising temperature works in two ways on these grains. First, the relaxation time depends on thermal energy, so higher temperatures will result in lower blocking temperatures. Second, anisotropy energy depends on the square of magnetization ([Chapter 4](#chap:anisotropy)). Elevated temperature reduces magnetization, so the anisotropy energy will be depressed relative to lower temperatures. In the diagram, this means that not only do the relaxation time curves move with changing temperature, but the anisotropy energies of the population of grains change as well. This means that a population of grains that are superparamagnetic at high temperature ([](#fig:neel-trm)a) could be "blocked" as cooling causes the grains to "walk" through the superparamagnetic threshold into a region of magnetic stability ([](#fig:neel-trm)b).
+The $v-K$ diagram shown in [](#fig:neel-trm) illustrates how TRM can be blocked. In [](#fig:neel-trm)a we have a population of magnetic grains with varying volumes and anisotropies. Raising temperature works in two ways on these grains. First, the relaxation time depends on thermal energy, so higher temperatures will result in lower blocking temperatures. Second, anisotropy energy depends on the square of magnetization ([Chapter 4](#chap:anisotropy)), so it decreases even more steeply with temperature than $M_s$ alone ([](#fig:ms_k_temperature)). Elevated temperature reduces magnetization, so the anisotropy energy will be depressed relative to lower temperatures. In the diagram, this means that not only do the relaxation time curves move with changing temperature, but the anisotropy energies of the population of grains change as well. This means that a population of grains that are superparamagnetic at high temperature ([](#fig:neel-trm)a) could be "blocked" as cooling causes the grains to "walk" through the superparamagnetic threshold into a region of magnetic stability ([](#fig:neel-trm)b).
 
 :::{figure} ../figures/chapter7/neel-trm.png
 :name: fig:neel-trm
