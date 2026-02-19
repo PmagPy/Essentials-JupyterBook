@@ -5,9 +5,9 @@ numbering:
   enumerator: 7.%s
 ---
 
-The key to the acquisition of magnetic remanence is magnetic anisotropy energy, the dependence of magnetic energy on direction of magnetization within the crystal (see [Chapter 4](#chap:anisotropy)). It is magnetic anisotropy energy that controls the probability of magnetic grains changing their moments from one easy direction to another. Without it, the magnetic moments of individual grains would swing freely and could not retain a "memory" of the ancient field direction.
+The key to the acquisition of magnetic remanence is magnetic anisotropy energy, the dependence of magnetic energy on the direction of magnetization within the crystal (see [Chapter 4](#chap:anisotropy)). It is magnetic anisotropy energy that controls the probability of magnetic grains changing their moments from one easy direction to another. Without it, the magnetic moments of individual grains would swing freely and could not retain a "memory" of the ancient field direction.
 
-Anisotropy energy controls relaxation time, a concept briefly introduced in [Chapter 4](#chap:anisotropy) where we defined it as a time constant for decay of the magnetization of an assemblage of magnetic grains when placed in a null field. [Equation %s](#eq:MvT) predicted exponential decay with relaxation time $\tau$ being the time it takes for the initial magnetization to decay to $1/e$ of its initial value. Relaxation time reflects the probability of magnetic moments jumping over the anisotropy energy barrier between easy axes. Therefore, to preserve a record of an ancient geomagnetic field, there must be a way that the relaxation time changes from short (such that the magnetization is in equilibrium with the ambient geomagnetic field) to long (such that the magnetization is "frozen", or blocked, for geologically significant periods of time).
+Anisotropy energy controls relaxation time, a concept introduced in [Chapter 4](#chap:anisotropy) where we defined it as a time constant for decay of the magnetization of an assemblage of magnetic grains when placed in a null field. [Equation %s](#eq:MvT) predicted exponential decay with relaxation time $\tau$ being the time it takes for the initial magnetization to decay to $1/e$ of its initial value [](#fig:neel_relaxation). Relaxation time reflects the probability of magnetic moments jumping over the anisotropy energy barrier between easy axes. Therefore, to preserve a record of an ancient geomagnetic field, there must be a way that the relaxation time changes from short (such that the magnetization is in equilibrium with the ambient geomagnetic field) to long (such that the magnetization is "frozen", or blocked, for geologically significant periods of time).
 
 Before we begin a more detailed look at the processes governing remanence acquisition, it is helpful to review briefly what is meant by "equilibrium" in physics and chemistry. 
 
@@ -17,7 +17,7 @@ Eager readers are encouraged to delve deeper into statistical mechanics such as 
 
 ## The concept of dynamic equilibrium
 
-We live in a world that is in constant motion down to the atomic level. The state of things is constantly changing, but, looking at the big picture, things often seem to stay the same. Imagine a grassy field full of sheep with a fence running down the middle. The sheep can jump over the fence at will to nibble flowers on the other side, and occasionally they do so. Over time, because the two sides of the fence are pretty much the same, the same number of sheep jump over in both directions, so if you were to count sheep on either side, the numbers would stay about the same. The system is in *equilibrium* — not because nothing is happening, but because the opposing sheep jumps balance out.
+We live in a world that is in constant motion down to the atomic level. The state of things is constantly changing, but, looking at the big picture, things often seem to stay the same. Imagine a grassy field full of sheep with a fence running down the middle. The sheep can jump over the fence at will to nibble grass on the other side, and occasionally they do so. Over time, because the two sides of the fence are pretty much the same, the same number of sheep jump over in both directions, so if you were to count sheep on either side, the numbers would stay about the same. The system is in *equilibrium* — not because nothing is happening, but because the opposing sheep jumps balance out.
 
 :::{figure} ../figures/chapter7/dynamic_equilibrium_sheep.png
 :name: fig:equilibrium
@@ -29,21 +29,13 @@ Illustration of dynamic equilibrium. If conditions on either side of the fence a
 
 Now think about what would happen if it started raining on one side of the fence. At first, sheep on the rainy side would jump to the sunny side faster than the other way around, and the population would shift toward the sunny side. But as more sheep accumulate there, more are available to jump back, until eventually the *rates* equalize again — one sheep jumping each way — even though there are now more sheep on the sunny side than the rainy side (see [](#fig:equilibrium)). This new, lopsided distribution is still a dynamic equilibrium: sheep are still jumping back and forth, but the unequal conditions produce an unequal yet stable distribution. If you are still awake after all this sheep counting, you have begun to understand the concept of dynamic equilibrium.
 
-Returning to magnetism, a magnet with uniaxial anisotropy in the absence of a magnetic field will tend to be magnetized along one of the two "easy" directions — parallel or antiparallel to the easy axis (see [Chapter 4](#chap:anisotropy)). In order to "jump over the fence" (the anisotropy energy) and flip from one easy direction to the other, a magnetic particle must have thermal energy in excess of the anisotropy energy. According to the Boltzmann distribution law, the probability of a given particle having an energy $E$ is proportional to $e^{-E/kT}$ where $kT$ is the thermal energy (see [Chapter 4](#chap:anisotropy)). Therefore, it may be that at a certain time, a particular magnetic grain has enough thermal energy for the electronic spins to overcome the energy barrier and flip the magnetization to the other easy direction.
+Returning to magnetism, a magnet with uniaxial anisotropy in the absence of a magnetic field will tend to be magnetized along one of the two "easy" directions — parallel or antiparallel to the easy axis (see [Chapter 4](#chap:anisotropy)). In order to "jump over the fence" (the anisotropy energy) and flip from one easy direction to the other, a magnetic particle must have thermal energy in excess of the anisotropy energy. According to the Boltzmann distribution law, the probability of a given particle having an energy $E$ is proportional to $e^{-E/k_BT}$ where $k_BT$ is the thermal energy (see [Chapter 4](#chap:anisotropy)). Therefore, it may be that at a certain time, a particular magnetic grain has enough thermal energy for the electronic spins to overcome the energy barrier and flip the magnetization to the other easy direction.
 
 If we had a collection of magnetized particles with some initial statistical alignment of moments giving a net remanence $M_o$, (more sheep on one side than the other), the random "fence jumping" by magnetic moments from one easy axis to another over time will eventually lead to the case where there is no preference and the net moment will have decayed to zero (although the individual grain moments remain at saturation). This approach to *equilibrium magnetization* ($M_e$) is the theoretical underpinning of [Equation %s](#eq:MvT) (plotted in [](#fig:neel_relaxation)) and is the essence of what is known as Néel Theory.
 
 ## Essential Néel theory
 
 The theoretical basis for how ancient magnetic fields might be preserved was established through the work of Nobel Prize winner Louis Néel {cite:p}`neel1949,neel1955`. In the introduction to this chapter, we suggested that the mechanism which controls the approach to magnetic equilibrium is relaxation time [](#fig:neel_relaxation). In the sheep analogy this would be the frequency of fence jumping. 
-
-:::{figure} ../figures/chapter7/neel_exponential_decay.png
-:name: fig:neel_relaxation
-:alt: Exponential decay curve of normalized magnetization M/Mo versus time normalized by relaxation time. Dashed lines mark the point where magnetization has decayed to Mo/e at time t equal to tau.
-:width: 70%
-
-Magnetic relaxation in an assemblage of single domain ferromagnetic grains. The initial magnetization $M_o$ decays exponentially, falling to $1/e$ (~37%) of its original strength in time $\tau$. For example, for grains with a relaxation time ($\tau$) of 100 s, 63% of the original magnetization is lost within 100 seconds.
-:::
 
 We defined relaxation time by [Equation %s](#eq:tau) in [Chapter 4](#chap:anisotropy), sometimes called the *Néel equation*, which relates $\tau$ to volume $v$, the anisotropy constant ($K$) and absolute temperature ($T$) as:
 
@@ -66,7 +58,7 @@ It is instructive to plot distributions of grains on the $v$–$K$ diagram as sh
 In the "sheep in the rain" scenario, jumping over the fence into the sun would occur more frequently than jumping into the rain. It is also true that the energy barrier for magnetic particles to flip into the direction of the applied field $\H$ requires less energy than to flip the other way, so relaxation time must also be a function of the applied field. This tendency is reflected in the more general form of the Néel equation:
 
 $$
-\tau = \frac{1}{C} \exp \frac{Kv}{kT} \left[ 1 - \frac{H}{H_c} \right]^2.
+\tau = \frac{1}{C} \exp \frac{Kv}{k_BT} \left[ 1 - \frac{H}{H_c} \right]^2.
 $$ (eq:tau2)
 
 In this chapter, we are concerned mainly with magnetic remanences acquired in the presence of the Earth's magnetic field, which is tiny compared to the coercivity of the minerals in question and so we can neglect the effect of $H$ on $\tau$ in the next few sections.
@@ -128,7 +120,7 @@ $$
 where $M_s$ is the saturation magnetization. Substituting for $K_u$ in [Equation %s](#eq:tau2) we get:
 
 $$
-\tau = \frac{1}{C} \exp \frac{\mu_o H_c M_s v}{2kT},
+\tau = \frac{1}{C} \exp \frac{\mu_o H_c M_s v}{2k_BT},
 $$ (eq:tau3)
 
 where $M_s$ is itself a strong function of temperature ([](#fig:ms_k_temperature)). The temperature dependence of saturation magnetization can be approximated by:
@@ -192,7 +184,7 @@ The magnetic moments in the lava flow tend to flop from one easy direction to an
 Recalling the energy difference between the two easy axes of a magnetic particle in the presence of a magnetic field ([Equation %s](#eq:deltaE)), we can estimate the fraction of saturation for an equilibrium magnetization at a given temperature. Applying the Boltzmann distribution law to the theory of thermal remanence, we take $\Delta E$ from [Equation %s](#eq:deltaE) to be $2mB\cos \theta$, and the two states to be the two directions along the easy axis, one maximally parallel to and the other antiparallel to the applied field $B$. The total number of particles $N$ equals the sum of those aligned maximally parallel $n_+$ and those aligned maximally antiparallel $n_-$. So from the Boltzmann distribution we have:
 
 $$
-\frac{n_+}{n_-} = e^{2mB\cos \theta/kT}.
+\frac{n_+}{n_-} = e^{2mB\cos \theta/k_BT}.
 $$
 
 The magnetization of such a population, with the moments fully aligned is at saturation, or $M_s$. The strength of magnetization at a given temperature $M(T)$ would be the net moment or $n_+-n_-$. So it follows that:
@@ -204,19 +196,19 @@ $$
 With a little work this can be transformed into:
 
 $$
-\frac{1 - \exp[-2mB\cos \theta / kT]}{1 + \exp[-2mB\cos \theta / kT]},
+\frac{1 - \exp[-2mB\cos \theta / k_BT]}{1 + \exp[-2mB\cos \theta / k_BT]},
 $$
 
 which in turn can be boiled down to:
 
 $$
-\frac{M(T)}{M_s} = \tanh \frac{mB \cos \theta}{kT}.
+\frac{M(T)}{M_s} = \tanh \frac{mB \cos \theta}{k_BT}.
 $$
 
 Now imagine that the process of cooling in the lava continues. The thermal energy will continue to decrease until the magnetic anisotropy energy becomes important enough to "freeze in" the magnetic moment wherever it happens to be. Thus, as the particles cool through their "blocking" temperatures ($T_b$), the moments become fixed with respect to further changes in field and to get the final magnetization for randomly oriented grains, we integrate over $\theta$ or:
 
 $$
-\frac{M_{TRM}}{M_s} = \int_0^{90} \tanh \frac{m_oB\cos \theta}{kT} \cos \theta \sin \theta \, d\theta,
+\frac{M_{TRM}}{M_s} = \int_0^{90} \tanh \frac{m_oB\cos \theta}{k_BT} \cos \theta \sin \theta \, d\theta,
 $$ (eq:trm)
 
 where $m_o$ is the grain moment at the blocking temperature.
@@ -295,7 +287,7 @@ The relationship of the new born CRM to the ambient magnetic field can be compli
 Inspection of [Equation %s](#eq:tau3) for relaxation time reveals that it is a strong function of grain volume. A similar theoretical framework can be built for remanence acquired by grains growing in a magnetic field as for those cooling in a magnetic field. As a starting point for our treatment, consider a non-magnetic porous matrix, say a sandstone. As ground water percolates through the sandstone, it begins to precipitate tiny grains of a magnetic mineral ([](#fig:chinji)c). Each crystal is completely isolated from its neighbors. For very small grains, the thermal energy dominates the system and they are superparamagnetic. When volume becomes sufficient for magnetic anisotropy energy to overcome the thermal energy, the grain moment is blocked and can remain out of equilibrium with the magnetic field for geologically significant time periods. Keeping temperature constant, there is a critical *blocking volume* $v_b$ below which a grain maintains equilibrium with the applied field and above which it does not. We can find this blocking volume by solving for $v$ in the Néel equation:
 
 $$
-v_b = \frac{kT\ln(C\tau)}{K_u}.
+v_b = \frac{k_BT\ln(C\tau)}{K_u}.
 $$ (eq:vb)
 
 The magnetization acquired during grain growth is controlled by the alignment of grain moments at the time that they grow through the blocking volume. Based on these principles, CRM should behave very similarly to TRM.
@@ -374,19 +366,19 @@ In freshwater we expect to have relatively unflocculated particles whose magneti
 To estimate the size of particles affected by Brownian motion, {cite}`collinson1965` used the equation:
 
 $$
-\frac{1}{2} mB\phi^2 = \frac{1}{2} kT,
+\frac{1}{2} mB\phi^2 = \frac{1}{2} k_BT,
 $$ (eq:collinson)
 
-where $\phi$ is the Brownian deflection about the applied field direction (in radians), $k$ is Boltzmann's constant (1.38 × 10$^{-23}$ JK$^{-1}$) and $T$ is the temperature in kelvin. The effect of viscous drag on particles may also be important when the magnetic moments of the particles are low (see {cite}`coffey1996` for a complete derivation), for which we have:
+where $\phi$ is the Brownian deflection about the applied field direction (in radians), $k_B$ is Boltzmann's constant (1.38 × 10$^{-23}$ JK$^{-1}$) and $T$ is the temperature in kelvin. The effect of viscous drag on particles may also be important when the magnetic moments of the particles are low (see {cite}`coffey1996` for a complete derivation), for which we have:
 
 $$
-\frac{\phi^2}{\delta} = \frac{kT}{4\pi \eta r^3},
+\frac{\phi^2}{\delta} = \frac{k_BT}{4\pi \eta r^3},
 $$
 
 where $\delta$ is the time span of observation (say, 1 second). According to this relationship, weakly magnetized particles smaller than about a micron will be strongly affected by Brownian motion. Particles that have a substantial magnetic moment however, will be partially stabilized (according to [Equation %s](#eq:collinson)) and might remain unaffected by Brownian motion to smaller particle sizes (e.g., 0.1 μm). In the case of isolated particles of magnetite, therefore, we should use [Equation %s](#eq:collinson) and BRM should follow the Langevin equation for paramagnetic gases, i.e.:
 
 $$
-\frac{BRM}{sIRM} = \coth \left( \frac{mB}{kT} \right) - \frac{kT}{mB}.
+\frac{BRM}{sIRM} = \coth \left( \frac{mB}{k_BT} \right) - \frac{k_BT}{mB}.
 $$ (eq:brm)
 
 Here the quantity sIRM is a saturation isothermal remanence ($M_r$ in [Chapter 5](#chap:hysteresis)) and is the moment acquired when all the magnetic particles are aligned to the maximum extent possible. To get an idea of how BRMs would behave, we first find $m$ from $M(r)$ [here we use the results from micromagnetic modeling (see [Chapter 4](#chap:anisotropy))]. Then, we evaluate [Equation %s](#eq:brm) as a function of $B$ for a given particle size (see [](#fig:brownian)a). We can also assume any distribution of particle sizes (e.g., that shown as the inset to [](#fig:brownian)b), and predict BRM/sIRM for the distribution (blue line in [](#fig:brownian)b). It is interesting to note that BRMs are almost never linear with the applied field unless the particle sizes are very small.

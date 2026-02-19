@@ -180,20 +180,20 @@ Heavy lines: theoretical behavior of cubic grains of magnetite. Dashed lines are
 (sect:SP)=
 ### Superparamagnetic particles
 
-In superparamagnetic (SP) particles, the total magnetic energy $E_t=\epsilon_tv$ (where $v$ is volume) is balanced by thermal energy $kT$. This behavior can be modeled using statistical mechanics in a manner similar to that derived for paramagnetic grains in [Chapter 3](#chap:inducedremanent). In fact,
+In superparamagnetic (SP) particles, the total magnetic energy $E_t=\epsilon_tv$ (where $v$ is volume) is balanced by thermal energy $k_BT$. This behavior can be modeled using statistical mechanics in a manner similar to that derived for paramagnetic grains in [Chapter 3](#chap:inducedremanent). In fact,
 
 $$
 \frac{M}{M_s} = N\left(\coth \gamma - \frac{1}{\gamma}\right),
 $$ (eq:Lang1)
 
-where $\gamma = M_sBv/(kT)$ and $N$ is the number of particles of volume $v$, is a reasonable approximation. The end result, [Equation %s](#eq:Lang1), is the familiar Langevin function from our discussion of paramagnetic behavior (see [Chapter 3](#chap:inducedremanent)); hence the term "superparamagnetic" for such particles.
+where $\gamma = M_sBv/(k_BT)$ and $N$ is the number of particles of volume $v$, is a reasonable approximation. The end result, [Equation %s](#eq:Lang1), is the familiar Langevin function from our discussion of paramagnetic behavior (see [Chapter 3](#chap:inducedremanent)); hence the term "superparamagnetic" for such particles.
 
 :::{figure} ../figures/chapter5/loops.png
 :name: fig:loops
 :alt: Two-panel figure: (a) Langevin function curve of M/Ms versus gamma showing S-shaped reversible magnetization with B90 marked; (b) log-scale plot of B90 versus particle size d, showing steep increase below about 10 nm.
 :width: 80%
 
-a) The contribution of SP particles with saturation magnetization $M_s$ and cubic edge length $d$. $\gamma = BM_s d^3/kT$. There is no hysteresis. b) The field at which the magnetization reaches 90% of the maximum $B_{90}$ is when $M_s d^3/kT\simeq 10$. [Figure from {cite}`tauxe1996`.]
+a) The contribution of SP particles with saturation magnetization $M_s$ and cubic edge length $d$. $\gamma = BM_s d^3/k_BT$. There is no hysteresis. b) The field at which the magnetization reaches 90% of the maximum $B_{90}$ is when $M_s d^3/k_BT\simeq 10$. [Figure from {cite}`tauxe1996`.]
 :::
 
 The contribution of SP particles for which the Langevin function is valid for given values of $M_s$ and $d$ is shown in [](#fig:loops)a. The field at which the population reaches 90% saturation $B_{90}$ occurs at $\gamma \sim 10$. Assuming particles of magnetite ($M_s$ = 480 kAm$^{-1}$) and room temperature ($T=300$ K), $B_{90}$ can be evaluated as a function of $d$ (see [](#fig:loops)b). Because of its inverse cubic dependence on $d$, $B_{90}$ rises sharply with decreasing $d$ and is hundreds of tesla for particles a few nanometers in size, approaching paramagnetic values. $B_{90}$ is a quick guide to the SP slope (the SP susceptibility $\chi_{sp}$) contributing to the hysteresis response and was used by {cite}`tauxe1996` as a means of explaining distorted loops sometimes observed for populations of SD/SP mixtures. $B_{90}$ (and $\chi_{sp}$) is very sensitive to particle size with very steep slopes for the particles at the SP/SD threshold. The exact threshold size is still rather controversial, but {cite}`tauxe1996` argue that it is ~20 nm.
@@ -201,19 +201,19 @@ The contribution of SP particles for which the Langevin function is valid for gi
 For low magnetic fields, the Langevin function can be approximated as $\sim \frac{1}{3} \gamma$. So we have:
 
 $$
-\frac{M}{M_s} = \frac{1}{3} \frac{M_sBv}{kT}.
+\frac{M}{M_s} = \frac{1}{3} \frac{M_sBv}{k_BT}.
 $$
 
 If we substitute $\mu_o H$ for $B$ and rearrange this equation, we can get the superparamagnetic susceptibility $\chi_{sp}$ as:
 
 $$
-\frac{M}{H} = \frac{\mu_o M_s^2v}{3kT}.
+\frac{M}{H} = \frac{\mu_o M_s^2v}{3k_BT}.
 $$ (eq:chiSP)
 
 We can rearrange [Equation %s](#eq:tau) in [Chapter 4](#chap:anisotropy) to solve for the volume at which a uniaxial grain passes through the superparamagnetic threshold:
 
 $$
-v_b = \frac{kT \ln (C\tau)}{K_u}.
+v_b = \frac{k_BT \ln (C\tau)}{K_u}.
 $$
 
 Finally, we can substitute this volume into [Equation %s](#eq:chiSP) as the maximum volume of an SP grain, giving us:

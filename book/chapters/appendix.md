@@ -95,7 +95,7 @@ Paleomagnetism is famous for its use of a large number of incomprehensible acron
 | $\mathbf{H}$ | Magnetic field: [](#sect:H) |
 | $H_{cr}$ | Coercivity of remanence; field required to reduce saturation IRM to zero: [](#sect:flipping) |
 | $H_c$ | Coercivity; the magnetic field required to change the magnetic moment of a particle from one easy axis to another: [](#sect:flipping) |
-| $k$ | Boltzmann's constant (1.381 x 10$^{-23}$ JK$^{-1}$): [](#sect:para) |
+| $k_B$ | Boltzmann's constant (1.381 x 10$^{-23}$ JK$^{-1}$): [](#sect:para) |
 | $K_i$ | AMS measurement: [](#app:K15) |
 | $K_u$ | Constant of uniaxial anisotropy energy: [](#sect:K1) and [](#sect:shape) |
 | $\mathbf{m}$ | Magnetic moment: [](#sect:moment) |
@@ -156,7 +156,7 @@ Paleomagnetism is famous for its use of a large number of incomprehensible acron
 Here we derive the Langevin function for a paramagnetic substance with magnetic moments $m$ in an applied field $H$ at temperature $T$. If we make the assumption that there is no preferred alignment within the substance, we can assume that the number of moments ($n(\alpha)$) between angles $\alpha$ and $\alpha + d\alpha$ with respect to $\mathbf{H}$ is proportional to the solid angle $\sin\alpha d\alpha$ and the probability density function, i.e.
 
 $$
-n(\alpha) d\alpha \propto \exp \bigl({ -E_m\over {kT}} \bigr) \sin \alpha d\alpha,
+n(\alpha) d\alpha \propto \exp \bigl({ -E_m\over {k_BT}} \bigr) \sin \alpha d\alpha,
 $$ (eq:nalpha)
 
 where $E_m$ is the magnetic energy. When we measure the induced magnetization, we really measure only the component of the moment parallel to the applied field, or $n(\alpha) m \cos\alpha$. The net induced magnetization $M_I$ of a population of particles with volume $v$ is therefore:
@@ -178,10 +178,10 @@ $$
 $$
 
 $$
-= { {\int_0^{\pi} e^{(m\mu_o H \cos \alpha )/kT}\cos \alpha \sin \alpha d\alpha}\over { \int_0^{\pi} e^{(m\mu_o H\cos \alpha )/kT}\sin \alpha d\alpha}}.
+= { {\int_0^{\pi} e^{(m\mu_o H \cos \alpha )/k_BT}\cos \alpha \sin \alpha d\alpha}\over { \int_0^{\pi} e^{(m\mu_o H\cos \alpha )/k_BT}\sin \alpha d\alpha}}.
 $$
 
-By substituting $a=m\mu_oH/kT$ and $\cos \alpha =x$, we write
+By substituting $a=m\mu_oH/k_BT$ and $\cos \alpha =x$, we write
 
 $$
 {M\over {M_s}} = N { {\int_{-1}^{1} e^{a x}xdx} \over {\int_{-1}^1 e^{a x}dx} } = \bigl( { {e^{a} + e^{-a}} \over {e^{a} - e^{-a}} } - {1\over{a} } \bigr),
@@ -199,7 +199,7 @@ $$ (eq:Langapp)
 The derivation of superparamagnetism follows closely that of paramagnetism whereby the probability of finding a magnetization vector an angle $\alpha$ away from the direction of the applied field is given by:
 
 $$
-n(\alpha )d\alpha = 2\pi n_o e^{({{M_sBv\cos \alpha}\over {kT}})}\sin \alpha d\alpha.
+n(\alpha )d\alpha = 2\pi n_o e^{({{M_sBv\cos \alpha}\over {k_BT}})}\sin \alpha d\alpha.
 $$ (eq:ccnalpha)
 
 The total magnetization contributed by the $N$ moments is:
@@ -215,10 +215,10 @@ $$
 $$
 
 $$
-= N { {\int_0^{\pi} e^{(M_sBv\cos \alpha )/kT}\cos \alpha \sin \alpha d\alpha}\over { \int_0^{\pi} e^{(M_sBv\cos \alpha )/kT}\sin \alpha d\alpha}}.
+= N { {\int_0^{\pi} e^{(M_sBv\cos \alpha )/k_BT}\cos \alpha \sin \alpha d\alpha}\over { \int_0^{\pi} e^{(M_sBv\cos \alpha )/k_BT}\sin \alpha d\alpha}}.
 $$
 
-By substituting $a= M_sBv/kT$ and $\cos \alpha =x$, and remembering [Equation %s](#eq:Langapp), we can write:
+By substituting $a= M_sBv/k_BT$ and $\cos \alpha =x$, and remembering [Equation %s](#eq:Langapp), we can write:
 
 $$
 {M\over {M_s}} = N { {\int_1^{-1} e^{a x}xdx} \over {\int_1^{-1} e^{a x}dx} } = N\mathcal{L} (a).
