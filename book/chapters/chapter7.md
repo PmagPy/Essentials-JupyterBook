@@ -100,7 +100,7 @@ $$
 M(t) = M_e(1-e^{-t/\tau}),
 $$ (eq:vgrow)
 
-as shown in [](#fig:vrm1)b. The magnetization that is acquired in this isochemical, isothermal fashion is termed *viscous remanent magnetization* or VRM and the equilibrium magnetization $M_e$ is a function of the external field $B$.
+as shown in [](#fig:vrm1)b. The magnetization that is acquired is called a *viscous remanent magnetization* or VRM with the equilibrium magnetization $M_e$ being a function of the external field $B$. There has been no change in temperature (isothermal) and no change in mineral composition or size (isochemical). There has solely been the effect of time in a field.
 
 The general case, in which the initial magnetization of a specimen is nonzero and the equilibrium magnetization is of arbitrary orientation to the initial remanence, the equation can be written as:
 
@@ -110,7 +110,7 @@ $$ (eq:vrm)
 
 which grows (or decays) exponentially from $\M_o \rightarrow \M_e$ as $t \rightarrow \infty$. The rate is not only controlled by $\tau$, but also by the degree to which the magnetization is out of equilibrium (see [](#fig:vrm1)c).
 
-Some temporally short data sets appear to follow the relation $M(t) \propto \log(t)$ and Néel {cite}`neel1949,neel1955` suggested that VRM = S log $t$. Such a relationship suggests infinite remanence as $t \rightarrow \infty$, so cannot be true over a long period of time. S log $t$ behavior can generally only be observed over a restricted time interval and closely spaced, long-term observations do not show linear log($t$)-behavior, but are all curved in log($t$) space. When under-sampled, these time series can appear segmented, leading to interpretations of several quasi-linear features (multiple values of $S$), when in fact the time series are not linear at all.
+% Some temporally short data sets appear to follow the relation $M(t) \propto \log(t)$ and Néel {cite}`neel1949,neel1955` suggested that VRM = S log $t$. Such a relationship suggests infinite remanence as $t \rightarrow \infty$, so cannot be true over a long period of time. S log $t$ behavior can generally only be observed over a restricted time interval and closely spaced, long-term observations do not show linear log($t$)-behavior, but are all curved in log($t$) space. When under-sampled, these time series can appear segmented, leading to interpretations of several quasi-linear features (multiple values of $S$), when in fact the time series are not linear at all.
 
 VRM is a function of time and the relationship between the remanence vector and the applied field. When the relaxation time is short (say a few hundred seconds), the magnetization is essentially in equilibrium with the applied magnetic field hence is superparamagnetic. Because relaxation time is also a strong function of temperature, VRM will grow more rapidly at higher temperature. As noted in [Chapter 4](#chap:anisotropy) there is a very sharply defined range of temperatures over which $\tau$ increases from geologically short to geologically long time scales. In the next section, we consider the magnetization acquired by manipulating relaxation time by changing temperature: thermal remanent magnetization (TRM).
 
