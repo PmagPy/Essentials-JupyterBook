@@ -3,6 +3,9 @@ title: "Chapter 7: How Rocks Get and Stay Magnetized"
 label: chap:remanence
 numbering:
   enumerator: 7.%s
+kernelspec:
+  name: python3
+  display_name: Python 3
 ---
 
 The key to the acquisition of magnetic remanence is magnetic anisotropy energy, the dependence of magnetic energy on the direction of magnetization within the crystal (see [Chapter 4](#chap:anisotropy)). It is magnetic anisotropy energy that controls the probability of magnetic grains changing their moments from one easy direction to another. Without it, the magnetic moments of individual grains would swing freely and could not retain a "memory" of the ancient field direction.
@@ -29,21 +32,21 @@ Illustration of dynamic equilibrium. If conditions on either side of the fence a
 
 Now think about what would happen if it started raining on one side of the fence. At first, sheep on the rainy side would jump to the sunny side faster than the other way around, and the population would shift toward the sunny side. But as more sheep accumulate there, more are available to jump back, until eventually the *rates* equalize again — one sheep jumping each way — even though there are now more sheep on the sunny side than the rainy side (see [](#fig:equilibrium)). This new, lopsided distribution is still a dynamic equilibrium: sheep are still jumping back and forth, but the unequal conditions produce an unequal yet stable distribution. If you are still awake after all this sheep counting, you have begun to understand the concept of dynamic equilibrium.
 
-Returning to magnetism, a magnet with uniaxial anisotropy in the absence of a magnetic field will tend to be magnetized along one of the two "easy" directions — parallel or antiparallel to the easy axis (see [Chapter 4](#chap:anisotropy)). In order to "jump over the fence" (the anisotropy energy) and flip from one easy direction to the other, a magnetic particle must have thermal energy in excess of the anisotropy energy. According to the Boltzmann distribution law, the probability of a given particle having an energy $E$ is proportional to $e^{-E/k_BT}$ where $k_BT$ is the thermal energy (see [Chapter 4](#chap:anisotropy)). Therefore, it may be that at a certain time, a particular magnetic grain has enough thermal energy for the electronic spins to overcome the energy barrier and flip the magnetization to the other easy direction.
+Returning to magnetism, a magnet with uniaxial anisotropy in the absence of a magnetic field will tend to be magnetized along one of the two "easy" directions — parallel or antiparallel to the easy axis (see [Chapter 4](#chap:anisotropy)). In order to "jump over the fence" (the anisotropy energy) and flip from one easy direction to the other, a magnetic particle must have thermal energy in excess of the anisotropy energy. According to the Boltzmann distribution law, the probability of a given particle having an energy $E$ is proportional to $e^{-E/k_BT}$ where $k_BT$ is the thermal energy (see [Chapter 4](#chap:anisotropy)). Therefore, it may be that at a certain time, a particular magnetic grain has enough thermal energy for the electronic spins to overcome the energy barrier and flip the magnetization to the other easy direction. If the thermal energy becomes quite small relative to the anisotropy energy such magnetization flips will become increasingly rare. This situation is akin to the fence between the sheep fields become very tall so that a normal sheep cannot jump over it. Only every once and a while can a world class athlete of a sheep make the jump.
 
-If we had a collection of magnetized particles with some initial statistical alignment of moments giving a net remanence $M_o$, (more sheep on one side than the other), the random "fence jumping" by magnetic moments from one easy axis to another over time will eventually lead to the case where there is no preference and the net moment will have decayed to zero (although the individual grain moments remain at saturation). This approach to *equilibrium magnetization* ($M_e$) is the theoretical underpinning of [Equation %s](#eq:MvT) (plotted in [](#fig:neel_relaxation)) and is the essence of what is known as Néel Theory.
+If we had a collection of magnetized particles with some initial statistical alignment of moments giving a net remanence $M_o$, (more sheep on one side than the other), and the fence is not too high, the random "fence jumping" by magnetic moments from one easy axis to another over time will eventually lead to the case where there is no preference and the net moment will have decayed to zero (although the individual grain moments remain at saturation). This approach to *equilibrium magnetization* ($M_e$) is the theoretical underpinning of [Equation %s](#eq:MvT) (plotted in [](#fig:neel_relaxation)) and is the essence of what is known as Néel Theory.
 
 ## Essential Néel theory
 
-The theoretical basis for how ancient magnetic fields might be preserved was established through the work of Nobel Prize winner Louis Néel {cite:p}`neel1949,neel1955`. In the introduction to this chapter, we suggested that the mechanism which controls the approach to magnetic equilibrium is relaxation time [](#fig:neel_relaxation). In the sheep analogy this would be the frequency of fence jumping. 
+The theoretical basis for how ancient magnetic fields might be preserved was established through the work of Nobel Prize winner Louis Néel {cite:p}`neel1949,neel1955`. In the introduction to this chapter, we suggested that the mechanism which controls the approach to magnetic equilibrium is relaxation time. In the sheep analogy, this would be the frequency of fence jumping. 
 
-We defined relaxation time by [Equation %s](#eq:tau) in [Chapter 4](#chap:anisotropy), sometimes called the *Néel equation*, which relates $\tau$ to volume $v$, the anisotropy constant ($K$) and absolute temperature ($T$) as:
+We defined relaxation time ($\tau$) by [Equation %s](#eq:tau) in [Chapter 4](#chap:anisotropy), sometimes called the *Néel equation*, which relates $\tau$ to volume ($v$), the anisotropy constant ($K$) and absolute temperature ($T$) as:
 
 $$
 \tau = \frac{1}{C} \exp \frac{Kv}{k_BT},
 $$
 
-At a given temperature, relaxation time is controlled by the competition between anisotropy energy ($Kv$) and thermal energy ($k_BT$). Since both the anisotropy constant $K$ and grain volume $v$ contribute to the energy barrier, grains with different combinations of $K$ and $v$ can have the same relaxation time. We can visualize this by plotting contours of equal relaxation time — iso-$\tau$s — in $v$–$K$ space ([](#fig:neel_grain_population)). In [](#fig:neel_grain_population), we see curves with $\tau$s ranging from ~100 seconds to the age of the Earth. 
+At a given temperature, relaxation time is controlled by the competition between anisotropy energy ($Kv$) and thermal energy ($k_BT$). Since both the anisotropy constant $K$ and grain volume $v$ contribute to the energy barrier, grains with different combinations of $K$ and $v$ can have the same relaxation time. We can visualize this by plotting contours of equal relaxation time (iso-$\tau$s) in $v$–$K$ space as in [](#fig:neel_grain_population) where curves are plotted for $\tau$s ranging from ~100 seconds to the age of the Earth. 
 
 :::{figure} ../figures/chapter7/neel_grain_population.png
 :name: fig:neel_grain_population
@@ -53,7 +56,7 @@ At a given temperature, relaxation time is controlled by the competition between
 Contours of constant relaxation time ($\tau$ = 1 ms, 100 s, 1 Myr, and 4.5 Gyr) at room temperature on a plot of grain volume ($v$, in zm³ = 10⁻²¹ m³) against anisotropy energy density ($K$). Lines of equal $Kv$ are lines of equal $\tau$ at a given temperature. A hypothetical population of single domain magnetic grains is shown as an ellipse, divided into superparamagnetic grains with relaxation times less than 100 s (blue hatched, lower left) and stable single domain grains (gold dotted, upper right) whose relaxation times can exceed the age of the Earth (4.5 Gyr).
 :::
 
-It is instructive to plot distributions of grains on the $v$–$K$ diagram as shown in [](#fig:neel_grain_population), where contours of constant $\tau$ divide the diagram into regions of magnetic stability. By definition, superparamagnetic grains are those whose remanence relaxes quickly. A convenient critical relaxation time for purposes of laboratory experiments may be taken as ~100 s such that grains plotting below the $\tau$ = 100 s contour in [](#fig:neel_grain_population) are superparamagnetic and ones above it stable single domain.  Effective paleomagnetic recorders need to have relaxation times on the order of geological time, so the stablest single domain grains could be those with relaxation times longer than the age of the Earth ($\tau$>4.5 billion years [Gyr]). As can be seen in [](#fig:neel_grain_population), there is a relatively small change in grain volume or anistropy energy density that can take a grain population from being stable for 1 million years to 4.5 billion years.
+It is instructive to plot distributions of grains on the $v$–$K$ diagram as shown in [](#fig:neel_grain_population), where contours of constant $\tau$ divide the diagram into regions of magnetic stability. By definition, superparamagnetic grains are those whose remanence relaxes quickly. A convenient critical relaxation time for purposes of laboratory experiments may be taken as ~100 s such that grains plotting below the $\tau$ = 100 s contour in [](#fig:neel_grain_population) are considered superparamagnetic and ones above it stable single domain.  Effective paleomagnetic recorders need to have relaxation times on the order of geological time, so the stablest single domain grains are those with relaxation times longer than the age of the Earth ($\tau$>4.5 billion years [Gyr]). As can be seen in [](#fig:neel_grain_population) (and as was illustrated in [](#fig:tauvd)), there is a relatively small change in grain volume or anistropy energy density that can take a grain population from being stable for only seconds to being stable for 4.5 billion years.
 
 In the "sheep in the rain" scenario, jumping over the fence into the sun would occur more frequently than jumping into the rain. It is also true that the energy barrier for magnetic particles to flip into the direction of the applied field $\H$ requires less energy than to flip the other way, so relaxation time must also be a function of the applied field. This tendency is reflected in the more general form of the Néel equation:
 
@@ -61,7 +64,8 @@ $$
 \tau = \frac{1}{C} \exp \frac{Kv}{k_BT} \left[ 1 - \frac{H}{H_c} \right]^2.
 $$ (eq:tau2)
 
-In this chapter, we are concerned mainly with magnetic remanences acquired in the presence of the Earth's magnetic field, which is tiny compared to the coercivity of the minerals in question and so we can neglect the effect of $H$ on $\tau$ in the next few sections.
+In this chapter, we are concerned with magnetic behavior in the presence of the Earth’s field, which is tiny compared to the coercivities of the minerals in question. As a result, the field does not significantly alter the relaxation time (\tau) and we can neglect its effect in the next few sections. Nevertheless, even such a small field is sufficient to bias the relative populations of magnetic moments among the available local energy minima, an imbalance that ultimately becomes important for the acquisition of magnetization once the system can no longer re-equilibrate.
+
 
 We will now consider various mechanisms by which rocks can become magnetized.  Naturally acquired remanences are generally referred to as *natural remanent magnetizations* or NRMs. We will explore how changing temperature, changing grain volume, and changing the time span of observation each result in a different mode of remanence acquisition (thermal, chemical, and viscous remanences respectively). We will finish this chapter with other remanences which are either rare or non-existent in nature but are nonetheless useful in paleomagnetism.
 
@@ -104,7 +108,36 @@ which grows (or decays) exponentially from $\M_o \rightarrow \M_e$ as $t \righta
 
 % Some temporally short data sets appear to follow the relation $M(t) \propto \log(t)$ and Néel {cite}`neel1949,neel1955` suggested that VRM = S log $t$. Such a relationship suggests infinite remanence as $t \rightarrow \infty$, so cannot be true over a long period of time. S log $t$ behavior can generally only be observed over a restricted time interval and closely spaced, long-term observations do not show linear log($t$)-behavior, but are all curved in log($t$) space. When under-sampled, these time series can appear segmented, leading to interpretations of several quasi-linear features (multiple values of $S$), when in fact the time series are not linear at all.
 
-VRM is a function of time and the relationship between the remanence vector and the applied field. When the relaxation time is short (say a few hundred seconds), the magnetization is essentially in equilibrium with the applied magnetic field hence is superparamagnetic. Because relaxation time is also a strong function of temperature, VRM will grow more rapidly at higher temperature. As noted in [Chapter 4](#chap:anisotropy) there is a very sharply defined range of temperatures over which $\tau$ increases from geologically short to geologically long time scales. In the next section, we consider the magnetization acquired by manipulating relaxation time by changing temperature: thermal remanent magnetization (TRM).
+VRM is a function of time and the relationship between the remanence vector and the applied field. When the relaxation time is short (say a millisecond), the magnetization stays in equilibrium with the applied magnetic field hence is superparamagnetic. As an assemblage of grains is exposed to a field for a longer and longer interval of time, more and more of the grains will have relaxation times that are shorter than the time that has passed. These grains will equilibrate with the field that there are in -- recording a VRM. In paleomagnetic data, what is often seen is that there will be a VRM that corresponds to the present local field direction at a study locality as rocks have been sitting in a similar field direction for the past 770,000 years (since the last geomagnetic polarity reversal).The **interactive visualization below** demonstrates this VRM acquisition process. Use the slider (or press Play) to advance elapsed time from 1 second to 1 billion years and observe how the blocking boundary (dashed line) sweeps upward through the grain population, progressively converting stable NRM (gold) to VRM (blue).
+
+(fig:vrm_widget)=
+```{code-cell} python
+:tags: [remove-input]
+
+from IPython.display import HTML
+from pathlib import Path
+import base64
+
+# Read the HTML widget file
+widget_path = Path('..') / 'figures' / 'chapter7' / 'vrm_widget.html'
+with open(widget_path, 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# Encode as base64 data URI and embed in iframe
+html_b64 = base64.b64encode(html_content.encode('utf-8')).decode('utf-8')
+iframe_html = f'''
+<iframe
+    src="data:text/html;base64,{html_b64}"
+    width="700"
+    height="640"
+    frameborder="0"
+    style="border: 1px solid #ddd;">
+</iframe>
+'''
+HTML(iframe_html)
+```
+
+ Because relaxation time is also a strong function of temperature, VRM will grow more rapidly at higher temperature. As noted in [Chapter 4](#chap:anisotropy) there is a very sharply defined range of temperatures over which $\tau$ increases from geologically short to geologically long time scales. In the next section, we consider the magnetization acquired by manipulating relaxation time by changing temperature: thermal remanent magnetization (TRM).
 
 (sect:trm)=
 ## Thermal remanent magnetization
@@ -156,6 +189,35 @@ The $v-K$ diagram shown in [](#fig:neel-trm) illustrates how TRM can be blocked.
 
 Migration of the relaxation times of a population of magnetic grains from a) low anisotropy energy at high temperature to b) high anisotropy energy at lower temperatures and the resulting change in relaxation times. The relaxation time curves also migrate up and to the right with lower thermal energy. Any particle initially to the right or above the superparamagnetic line would acquire a TRM its anisotropy energy density migrated across the line by cooling. Note that the anisotropy energy density ($K$ from [Chapter 4](#chap:anisotropy)) itself is a function of temperature through its dependence on magnetization, so a given population of grains will change with changing temperature, migrating to the left with higher temperature as magnetization goes down.
 :::
+
+The **interactive visualization below** demonstrates TRM acquisition during cooling assuming uniaxial shape anisotropy for magnetite ($K \propto M_s^2$). Use the slider (or press Cool) to decrease temperature from near the Curie point to room temperature. Observe how the grain population (ellipse) migrates rightward as anisotropy energy grows with increasing $M_s$, while the iso-$\tau$ curves descend, progressively converting superparamagnetic grains (blue) to blocked TRM carriers (gold).
+
+(fig:trm_widget)=
+```{code-cell} python
+:tags: [remove-input]
+
+from IPython.display import HTML
+from pathlib import Path
+import base64
+
+# Read the HTML widget file
+widget_path = Path('..') / 'figures' / 'chapter7' / 'trm_widget.html'
+with open(widget_path, 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# Encode as base64 data URI and embed in iframe
+html_b64 = base64.b64encode(html_content.encode('utf-8')).decode('utf-8')
+iframe_html = f'''
+<iframe
+    src="data:text/html;base64,{html_b64}"
+    width="700"
+    height="640"
+    frameborder="0"
+    style="border: 1px solid #ddd;">
+</iframe>
+'''
+HTML(iframe_html)
+```
 
 The key to Néel theory is that very small changes in conditions (temperature, volume, anisotropy energy) can result in enormous changes in relaxation time. In order to work out how relaxation time varies with temperature, we need to know how saturation magnetization varies with temperature. We found in [Chapter 3](#chap:inducedremanent) that calculating $M_s(T)$ exactly is a rather messy process. If we take a reasonable value for $\gamma$ in [Equation %s](#eq:MsT) from the data in [Chapter 3](#chap:inducedremanent) or $\gamma \simeq$ 0.38 and $M_s$ = 480 kAm$^{-1}$ (from [Chapter 6](#chap:mineralogy)) we can calculate the variation of relaxation time as a function of temperature for ellipsoidal grains of various widths using [Equation %s](#eq:tau3) (see [](#fig:tauT)). At room temperature, a 25 nm ellipsoid of magnetite (length to width ratio of 1.3:1) would have a relaxation time of billions of years, while at 300°C, the grain would be superparamagnetic.
 
@@ -260,7 +322,7 @@ Rapidly cooled volcanic rocks generally have grain-size distributions with a maj
 (sect:crm)=
 ## Chemical remanent magnetization
 
-[Equation %s](#eq:tau3) shows that blocking energy depends on volume. This means that relaxation time could change from very short to very long by increasing the size of the grain (see [](#fig:neel-crm)). Chemical changes that form ferromagnetic minerals below their blocking temperatures which then grow in a magnetizing field result in acquisition of a *chemical remanent magnetization* or CRM. Chemical reactions involving ferromagnetic minerals include a) alteration of a pre-existing mineral (possibly also ferromagnetic) to a ferromagnetic mineral—*alteration chemical remanence* (aCRM)—or b) precipitation of a ferromagnetic mineral from solution—*grain-growth* CRM (gCRM).
+[Equation %s](#eq:tau3) shows that blocking energy depends on volume. This means that relaxation time could change from very short to very long by increasing the size of the grain (see [](#fig:neel-crm)). Chemical changes that form ferromagnetic minerals below their blocking temperatures which then grow in a magnetizing field result in acquisition of a *chemical remanent magnetization* or CRM. Chemical reactions involving ferromagnetic minerals include a) alteration of a pre-existing mineral (possibly also ferromagnetic) to a ferromagnetic mineral—*alteration chemical remanence* (aCRM)—or b) precipitation of a ferromagnetic mineral from solution—*grain-growth* CRM (CRM).
 
 :::{figure} ../figures/chapter7/neel-crm.png
 :name: fig:neel-crm
@@ -269,6 +331,35 @@ Rapidly cooled volcanic rocks generally have grain-size distributions with a maj
 
 Migration of the blocking energy of grains by increasing volume. The relaxation times of a population of magnetic grains from a) short relaxation times when the particles are small to b) long relaxation times when the grains have grown through their blocking volumes.
 :::
+
+The **interactive visualization below** demonstrates CRM acquisition by grain growth for a hypothetical population of hematite grains at room temperature. Use the slider (or press Grow) to increase grain volume and observe how grains growing through their blocking volumes transition from superparamagnetic (blue) to blocked CRM carriers (gold), while the iso-$\tau$ curves remain fixed.
+
+(fig:crm_widget)=
+```{code-cell} python
+:tags: [remove-input]
+
+from IPython.display import HTML
+from pathlib import Path
+import base64
+
+# Read the HTML widget file
+widget_path = Path('..') / 'figures' / 'chapter7' / 'crm_widget.html'
+with open(widget_path, 'r', encoding='utf-8') as f:
+    html_content = f.read()
+
+# Encode as base64 data URI and embed in iframe
+html_b64 = base64.b64encode(html_content.encode('utf-8')).decode('utf-8')
+iframe_html = f'''
+<iframe
+    src="data:text/html;base64,{html_b64}"
+    width="700"
+    height="640"
+    frameborder="0"
+    style="border: 1px solid #ddd;">
+</iframe>
+'''
+HTML(iframe_html)
+```
 
 Magnetic mineralogy can change after a rock is formed in response to changing chemical environments. Red beds (see [](#fig:chinji)a), a dominant sedimentary facies in earlier times, are red because pigmentary hematite grew at some point after deposition. Hematite is a magnetic phase and the magnetic remanence it carries when grown at low temperatures is an example of gCRM.
 
