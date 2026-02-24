@@ -119,8 +119,6 @@ Let us begin by considering what happens to single particles when subjected to a
 
 Imagine a single domain particle with uniaxial anisotropy. Because the particle is single domain, the magnetization is at saturation and, in the absence of an applied field, is constrained to lie along the easy axis. Now suppose we apply a magnetic field in the opposite direction (see track #1 in [](#fig:outerloop)a). When $B$ reaches $\mu_oH_f$ in magnitude, the magnetization flips to the opposite direction (track #2 in [](#fig:outerloop)) and will not change further regardless of how high the field goes. The field then is decreased to zero and then increased along track #3 in [](#fig:outerloop) until $\mu_oH_f$ is reached again. The magnetization then flips back to the original direction (track #4 in [](#fig:outerloop)a).
 
-Applying fields at arbitrary angles to the easy axis results in loops of various shapes (see [](#fig:outerloop)b). As $\phi$ approaches 90°, the loops become thinner. Remember that the flipping fields for $\phi$ = 22° and $\phi = 70°$ are similar (see [](#fig:bf)) and are lower than that when $\phi=0°$, but the flipping field for $\phi = 90°$ is infinite, so that "loop" is closed and completely reversible.
-
 :::{figure} ../figures/chapter5/outerloop.png
 :name: fig:outerloop
 :alt: Two-panel figure: (a) rectangular hysteresis loop for phi=0 with numbered tracks showing moment flipping at the flipping field; (b) overlaid loops for phi = 0, 22, 45, 70, and 90 degrees becoming progressively thinner.
@@ -128,6 +126,8 @@ Applying fields at arbitrary angles to the easy axis results in loops of various
 
 a) Moment measured for the particle ($\phi=0°$) with applied field starting at 0 mT and increasing in the opposite direction along track #1. When the flipping field $\mu_oH_f$ is reached, the moment switches to the other direction along track #2. The field then switches sign and decreases along track #3 to zero, then increases again to the flipping field. The moment flips and the field increases along track #4. b) The component of magnetization parallel to +B$_{max}$ versus $B$ for field applied with various angles $\phi$. 
 :::
+
+Applying fields at arbitrary angles to the easy axis results in loops of various shapes (see [](#fig:outerloop)b). As $\phi$ approaches 90°, the loops become thinner. Remember that the flipping fields for $\phi$ = 22° and $\phi = 70°$ are similar (see [](#fig:bf)) and are lower than that when $\phi=0°$, but the flipping field for $\phi = 90°$ is infinite, so that "loop" is closed and completely reversible.
 
 :::{figure} ../figures/chapter5/sdloops.png
 :name: fig:sdloops
@@ -167,15 +167,6 @@ The most direct way to measure coercivity of remanence is the *backfield experim
 ### Magnetic susceptibility
 
 [](#fig:sdloops)a is the loop created in the idealized case in which only uniaxial ferromagnetic particles participated in the hysteresis measurements; in fact the curve is entirely theoretical. In "real" specimens there can be paramagnetic, diamagnetic AND ferromagnetic particles and the loop may well look like that shown in [](#fig:Bcr). The initial slope of a hysteresis experiment starting from a demagnetized state in which the field is ramped from zero up to higher values is the low field magnetic susceptibility or $\chi_{lf}$ (see [](#fig:Bcr)). If the field is then turned off, the magnetization will return again to zero. But as the field increases past the lowest flipping field, the remanence will no longer be zero but some isothermal remanence. Once all particle moments have flipped and saturation magnetization has been achieved, the slope relating magnetization and applied field reflects only the non-ferromagnetic (paramagnetic and/or diamagnetic) susceptibility, here called *high field susceptibility*, $\chi_{hf}$. In order to estimate the saturation magnetization and the saturation remanence, we must first subtract the high field slope. So doing gives us the blue dashed line in [](#fig:Bcr) from which we may read the various hysteresis parameters illustrated in [](#fig:sdloops)b.
-
-
-:::{figure} ../figures/chapter5/cubicloops.png
-:name: fig:cubic
-:alt: Hysteresis loops for cubic magnetite grains plotting M/Ms versus H/Hk, with heavy dashed curves for [001] and [111] directions, thin black curves for individual orientations, and heavy red curve for the random assemblage.
-:width: 50%
-
-Heavy lines: theoretical behavior of cubic grains of magnetite. Dashed lines are the responses along particular directions. Light grey lines: hysteresis response for single particles with various orientations with respect to the applied field. [Figure from {cite}`tauxe2002`.]
-:::
 
 (sect:SP)=
 ### Superparamagnetic particles
