@@ -680,7 +680,7 @@ Another common method for imaging magnetic domains employs a technique known as 
 We have gone some way toward answering the questions posed at the beginning of the chapter. We see now that anisotropy energy, with contributions from crystal structure, shape and stress, inhibits changes in the magnetic direction thereby offering a possible mechanism whereby a given magnetization could be preserved for posterity. We also asked the question of what allows the magnetization to come into equilibrium with the applied magnetic field in the first place; this question requires a little more work to answer. The key to this question is to find some mechanism which allows the moments to "jump over" magnetic anisotropy energy barriers. One such mechanism is thermal energy $E_T$, which was given in [Chapter 3](#chap:inducedremanent) as:
 
 $$
-E_T = kT.
+E_T = k_BT.
 $$
 
 We know from statistical mechanics that the probability $P$ of finding a grain with a given thermal energy sufficient to overcome some anisotropy energy $E_a$ and change from one easy axis to another is $P=\exp (-E_a/E_T )$. Depending on the temperature, such grains may be quite rare, and we may have to wait some time $t$ for a particle to work itself up to jumping over the energy barrier.
@@ -691,15 +691,25 @@ $$
 M(t) = M_o \exp \left(\frac{-t}{\tau}\right),
 $$ (eq:MvT)
 
-where $t$ is time and $\tau$ is an empirical constant called the *relaxation time*. Relaxation time is the time required for the remanence to decay to $1/e$ of $M_o$. This equation is the essence of what is called *Néel theory* (see, e.g., {cite}`neel1955`). The value of $\tau$ depends on the competition between magnetic anisotropy energy and thermal energy. It is a measure of the probability that a grain will have sufficient thermal energy to overcome the anisotropy energy and switch its moment. Therefore in zero external field:
+where $t$ is time and $\tau$ the *relaxation time*. Relaxation time is the time required for the remanence to decay to $1/e$ of $M_o$. This equation is the essence of what is called *Néel theory* (see {cite}`neel1955`). 
+
+:::{figure} ../figures/chapter4/neel_exponential_decay.png
+:name: fig:neel_relaxation
+:alt: Exponential decay curve of normalized magnetization M/Mo versus time normalized by relaxation time. Dashed lines mark the point where magnetization has decayed to Mo/e at time t equal to tau.
+:width: 70%
+
+Magnetic relaxation in an assemblage of single domain ferromagnetic grains. The initial magnetization $M_o$ decays exponentially, falling to $1/e$ (~37%) of its original strength in time $\tau$. For example, for grains with a relaxation time ($\tau$) of 100 s, 63% of the original magnetization is lost within 100 seconds.
+:::
+
+The value of the relaxation time ($\tau$) depends on the competition between magnetic anisotropy energy and thermal energy. It is a measure of the probability that a grain will have sufficient thermal energy to overcome the anisotropy energy and switch its moment. Therefore in zero external field:
 
 $$
-\tau = \frac{1}{C} \exp \frac{Kv}{kT},
+\tau = \frac{1}{C} \exp \frac{Kv}{k_BT},
 $$ (eq:tau)
 
 where $C$ is a frequency factor with a value of something like $10^{10}$ s$^{-1}$. The anisotropy energy is given by the dominant anisotropy parameter $K$ (either $K_u, K_1$, or $\lambda$) times the grain volume $v$.
 
-Thus, the relaxation time is proportional to anisotropy constant and volume, and is inversely related to temperature. Relaxation time $\tau$ varies rapidly with small changes in $v$ and $T$. To see how this works, we can take $K_u$ for slightly elongate cuboids of magnetite (length to width ratio of 1.3 to 1) and evaluate relaxation time as a function of particle width (see [](#fig:tauvd)). There is a sharp transition between grains with virtually no stability ($\tau$ is on the order of seconds) and grains with stabilities of billions of years.
+Thus, the relaxation time is proportional to anisotropy constant and volume, and is inversely related to temperature. In [Chapter 7](#chap:remanence), we will see how these relationships are central to rock's acquiring (and losing) magnetization. Relaxation time $\tau$ varies rapidly with small changes in $v$ and $T$. To see how this works, we can take $K_u$ for slightly elongate cuboids of magnetite (length to width ratio of 1.3 to 1) and evaluate relaxation time as a function of particle width (see [](#fig:tauvd)). There is a sharp transition between grains with virtually no stability ($\tau$ is on the order of seconds) and grains with stabilities of billions of years.
 
 :::{figure} ../figures/chapter4/tauvd.png
 :name: fig:tauvd

@@ -35,5 +35,5 @@ ax.set_xlabel(r'$t\,/\,\tau$', fontsize=16)
 ax.set_ylabel(r'$M\,/\,M_o$', fontsize=16)
 ax.tick_params(axis='both', labelsize=14)
 
-fig.savefig('../book/figures/chapter7/neel_exponential_decay.png', dpi=200,
+fig.savefig('../book/figures/chapter4/neel_exponential_decay.png', dpi=200,
             bbox_inches='tight', facecolor='white')

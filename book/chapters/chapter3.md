@@ -132,7 +132,7 @@ We learned in [Chapter 1](#chap:physics) that the proportionality between induce
 :alt: Two plots: (a) Langevin function M/Ms rising from zero and saturating near 1 versus a, and (b) M/Ms versus T showing inverse-temperature Curie law decay.
 :width: 100%
 
-a) Paramagnetic magnetization (obtained from the Langevin function $\mathcal{L}(a)$ versus $a= mB/kT$.) b) Paramagnetic magnetization as a function of temperature (Curie Law).
+a) Paramagnetic magnetization (obtained from the Langevin function $\mathcal{L}(a)$ versus $a= mB/k_BT$.) b) Paramagnetic magnetization as a function of temperature (Curie Law).
 :::
 
 (sect:para)=
@@ -154,14 +154,14 @@ $$ (eq:Em)
 
 Magnetic energy is at a minimum when the magnetic moment is lined up with the magnetic field.
 
-4. There is competition between the magnetic energy $E_m$ and the thermal energy $kT$ where $k$ is Boltzmann's constant (1.38 × 10$^{-23}$ m$^2$ kg s$^{-2}$ K$^{-1}$) and $T$ is temperature in kelvin.
+4. There is competition between the magnetic energy $E_m$ and the thermal energy $k_BT$ where $k_B$ is Boltzmann's constant (1.38 × 10$^{-23}$ m$^2$ kg s$^{-2}$ K$^{-1}$) and $T$ is temperature in kelvin.
 
 Consider an atomic magnetic moment, ($m$ = 2$m_b$ = 1.85 × 10$^{-23}$ Am$^2$), in a magnetic field of 10$^{-2}$ T, (for reference, the largest geomagnetic field at the surface is about 65 $\mu$T — see [Chapter 2](#chap:geomag)). The aligning energy is therefore $mB$ = 1.85 × 10$^{-25}$ J. However, thermal energy at 300K (traditionally chosen as a temperature close to room temperature providing easy arithmetic) is Boltzmann's constant times the temperature, or about 4 × 10$^{-21}$ J. So thermal energy is several orders of magnitude larger than the aligning energy and the net magnetization is small even in this rather large (compared to the Earth's field) magnetizing field.
 
 Using the principles of statistical mechanics, we find that the probability density of a particular magnetic moment having a magnetic energy of $E_m$ is given by:
 
 $$
-P(E) \propto \exp (-E_m/kT).
+P(E) \propto \exp (-E_m/k_BT).
 $$ (eq:PE)
 
 From this we see that the degree of alignment depends exponentially on the ratio of magnetic energy to thermal energy. The degree of alignment with the magnetic field controls the net magnetization $M$. When spins are completely aligned, the substance has a *saturation magnetization* $M_s$. The probability density function leads directly to the following relation (derived in [](#app:langevin)):
@@ -170,18 +170,18 @@ $$
 {M\over {M_s}} = \left[\coth a - {1\over{a}}\right]=\mathcal{L}(a).
 $$ (eq:Lang)
 
-where $a=mB/kT$. The function enclosed in square brackets is known as the *Langevin function* ($\mathcal{L}$).
+where $a=mB/k_BT$. The function enclosed in square brackets is known as the *Langevin function* ($\mathcal{L}$).
 
-[Equation %s](#eq:Lang) is plotted in [](#fig:para)a and predicts several intuitive results: 1) $M = 0$ when $B=0$ and 2) $M/M_s = 1$ when the applied magnetic field is infinite. Furthermore, $M$ is some 90% of $M_s$ when $mB$ is some 10-20 times $kT$. When $kT>> mB$, $\mathcal{L}(a)$ is approximately linear with a slope of $\sim 1/3$. At room temperature and fields up to many tesla, $\mathcal{L}(a)$ is approximately $mB/3kT$. If the moments are unpaired spins ($m=m_b$), then the maximum magnetization possible ($M_s$) is given by the number of moments $N$, their magnitude ($m_b$) normalized by the volume of the material $v$ or $M_s=Nm_b/v$, and
+[Equation %s](#eq:Lang) is plotted in [](#fig:para)a and predicts several intuitive results: 1) $M = 0$ when $B=0$ and 2) $M/M_s = 1$ when the applied magnetic field is infinite. Furthermore, $M$ is some 90% of $M_s$ when $mB$ is some 10-20 times $k_BT$. When $k_BT>> mB$, $\mathcal{L}(a)$ is approximately linear with a slope of $\sim 1/3$. At room temperature and fields up to many tesla, $\mathcal{L}(a)$ is approximately $mB/3k_BT$. If the moments are unpaired spins ($m=m_b$), then the maximum magnetization possible ($M_s$) is given by the number of moments $N$, their magnitude ($m_b$) normalized by the volume of the material $v$ or $M_s=Nm_b/v$, and
 
 $$
-{M\over{M_s}} \simeq { { m_b \mu_o }\over {3kT} } H .
+{M\over{M_s}} \simeq { { m_b \mu_o }\over {3k_BT} } H .
 $$
 
 Please note that we have neglected all deviations from isotropy including quantum mechanical effects as well as crystal shape, lattice defects, and state of stress. These complicate things a little, but to first order the treatment followed here provides a good approximation. We can rewrite the above equation as:
 
 $$
-{M\over H} = {{m_b\mu_o}\over {3kT}}\cdot M_s = {{Nm_b^2\mu_o}\over{3kv}}\cdot {1\over T} = \chi_p.
+{M\over H} = {{m_b\mu_o}\over {3k_BT}}\cdot M_s = {{Nm_b^2\mu_o}\over{3k_Bv}}\cdot {1\over T} = \chi_p.
 $$ (eq:chip)
 
 To first order, paramagnetic susceptibility $\chi_p$ is positive, larger than diamagnetism and inversely proportional to temperature. This inverse T dependence (see [](#fig:para)b) is known as Curie's law of paramagnetism. The paramagnetic susceptibility of, for example, biotite is 790 × 10$^{-9}$ m$^3$ kg$^{-1}$, or about three orders of magnitude larger than quartz (and of the opposite sign!).
@@ -227,16 +227,16 @@ $$
 H_{tot} = H + H_w = H + \beta M,
 $$
 
-where $H$ is the external field. By analogy to paramagnetism, we can substitute $a=\mu_om_b(H_{tot})/kT)$ for $H$ in the Langevin function:
+where $H$ is the external field. By analogy to paramagnetism, we can substitute $a=\mu_om_b(H_{tot})/k_BT)$ for $H$ in the Langevin function:
 
 $$
-{M \over {M_s}} {= \mathcal{L} \left({ {\mu_o m_b(H+\beta M)}\over{kT} } \right)}.
+{M \over {M_s}} {= \mathcal{L} \left({ {\mu_o m_b(H+\beta M)}\over{k_BT} } \right)}.
 $$ (eq:Mweiss)
 
 For temperatures above the Curie temperature $T_c$ (i.e. $T-T_c>0$) there is by definition no internal field, hence $\beta M$ is zero. Substituting $N m_b/v$ for $M_s$, and using the low-field approximation for $\mathcal{L} (a)$, [Equation %s](#eq:Mweiss) can be rearranged to get:
 
 $$
-{M\over H} = { {\mu_o N m_b^2}\over {v3k(T-T_c)} } \equiv \chi_f.
+{M\over H} = { {\mu_o N m_b^2}\over {v3k_B(T-T_c)} } \equiv \chi_f.
 $$ (eq:curieweiss)
 
 [Equation %s](#eq:curieweiss) is known as the Curie-Weiss law and governs ferromagnetic susceptibility above the Curie temperature (dashed line in [](#fig:MsT)).
@@ -252,13 +252,13 @@ Various data sets for the behavior of $M_s(T)$ for magnetite.
 Below the Curie temperature $H_w>>H$; we can neglect the external field $H$ and get:
 
 $$
-{M\over {M_s}} = \mathcal{L} \left( {{\mu_o m_b \beta M}\over{kT}}\right).
+{M\over {M_s}} = \mathcal{L} \left( {{\mu_o m_b \beta M}\over{k_BT}}\right).
 $$
 
 Substituting again for $M_s$ and rearranging, we get:
 
 $$
-{M\over M_s} = \mathcal{L} \left( {{Nm_b^2 \beta}\over{vkT}}\cdot {M\over M_s} \right) = \mathcal{L} \left( {T_c \over T} \cdot {M\over M_s} \right),
+{M\over M_s} = \mathcal{L} \left( {{Nm_b^2 \beta}\over{vk_BT}}\cdot {M\over M_s} \right) = \mathcal{L} \left( {T_c \over T} \cdot {M\over M_s} \right),
 $$ (eq:Mferro)
 
 where $T_c$ is the Curie temperature and is given by:
