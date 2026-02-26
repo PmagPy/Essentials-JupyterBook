@@ -1,4 +1,3 @@
-#@title Backfield Demagnetization (Conceptual)
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -35,9 +34,9 @@ axL.axis("off")
 axL.set_title("Protocol", fontsize=14, pad=10, loc="center")
 
 n_pairs = 8
-y0, dy = 0.8, 0.037
+y0, dy = 0.8, 0.036
 blue_field_T = 2.0                   # scale reference for blue arrow (+2.0 T)
-brown_fields_mT = np.array([-15, -30, -60, -120, -240, -480, -960, -1920], dtype=float)
+brown_fields_mT = np.array([-0, -30, -60, -120, -240, -480, -960, -1920], dtype=float)
 brown_fields_T = brown_fields_mT / 1000.0
 
 # Place caption text right-justified, then measure width to set arrow length
@@ -75,19 +74,20 @@ for k in range(n_pairs):
         width=0.0050, head_width=0.022, head_length=0.032,
         length_includes_head=True, color="#0072B2"
     )
-
+    
+    if k > 0:
     # Reverse backfield step (left-pointing)
-    axL.arrow(
-        x_right, y_brown, -brown_lens[k], 0,
-        width=0.0045, head_width=0.020, head_length=0.028,
-        length_includes_head=True, color="#8C510A"
-    )
+        axL.arrow(
+            x_right, y_brown, -brown_lens[k], 0,
+            width=0.0045, head_width=0.020, head_length=0.028,
+            length_includes_head=True, color="#8C510A"
+        )
 
     # Field labels past arrow tips
     axL.text(x_right + 0.02, y_blue, f"+{blue_field_T:.1f} T",
-             fontsize=7.5, color="#0072B2", va="center", ha="left")
+            fontsize=7.5, color="#0072B2", va="center", ha="left")
     axL.text(x_right + 0.02, y_brown, f"{brown_fields_T[k]:.3g} T",
-             fontsize=7.5, color="#8C510A", va="center", ha="left")
+            fontsize=7.5, color="#8C510A", va="center", ha="left")
 
     # Measure step — right-aligned
     axL.text(1.0, y_meas, r"measure $M_r$ at 0 T",
