@@ -99,8 +99,8 @@ ax = fig.add_subplot(gs[0, 1])
 ax.plot(B, Mr, color="#009E73", lw=2.7, label="Backfield demagnetization curve")
 ax.axhline(0, color="black", lw=1)
 
-ax.axvspan(-248, -72, color="#56B4E9", alpha=0.14, label="Soft fraction switches")
-ax.axvspan(-620, -320, color="#CC79A7", alpha=0.12, label="Hard fraction switches")
+ax.axvspan(-260, -72, color="#56B4E9", alpha=0.14, label="Soft fraction switches")
+ax.axvspan(-620, -360, color="#CC79A7", alpha=0.12, label="Hard fraction switches")
 
 if np.isfinite(Bcr):
     ax.axvline(Bcr, color="#E69F00", lw=2, ls="--",
