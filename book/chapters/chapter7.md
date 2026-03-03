@@ -15,7 +15,7 @@ Anisotropy energy controls relaxation time, a concept introduced in [Chapter 4](
 Before we begin a more detailed look at the processes governing remanence acquisition, it is helpful to review briefly what is meant by "equilibrium" in physics and chemistry. 
 
 :::{seealso}
-Eager readers are encouraged to delve deeper into statistical mechanics such as by reading Chapter 1 of {cite}`widom2002`, Chapter 1. What is covered here is the bare bones necessary to understand natural remanence.
+Eager readers are encouraged to delve deeper into statistical mechanics such as by reading Chapter 1 of {cite:t}`widom2002`, Chapter 1. What is covered here is the bare bones necessary to understand natural remanence.
 :::
 
 ## The concept of dynamic equilibrium
@@ -105,7 +105,7 @@ $$ (eq:vrm)
 
 which grows (or decays) exponentially from $\M_o \rightarrow \M_e$ as $t \rightarrow \infty$. The rate is not only controlled by $\tau$, but also by the degree to which the magnetization is out of equilibrium (see [](#fig:vrm1)c).
 
-% Some temporally short data sets appear to follow the relation $M(t) \propto \log(t)$ and Néel {cite}`neel1949,neel1955` suggested that VRM = S log $t$. Such a relationship suggests infinite remanence as $t \rightarrow \infty$, so cannot be true over a long period of time. S log $t$ behavior can generally only be observed over a restricted time interval and closely spaced, long-term observations do not show linear log($t$)-behavior, but are all curved in log($t$) space. When under-sampled, these time series can appear segmented, leading to interpretations of several quasi-linear features (multiple values of $S$), when in fact the time series are not linear at all.
+% Some temporally short data sets appear to follow the relation $M(t) \propto \log(t)$ and {cite:t}`neel1949,neel1955` suggested that VRM = S log $t$. Such a relationship suggests infinite remanence as $t \rightarrow \infty$, so cannot be true over a long period of time. S log $t$ behavior can generally only be observed over a restricted time interval and closely spaced, long-term observations do not show linear log($t$)-behavior, but are all curved in log($t$) space. When under-sampled, these time series can appear segmented, leading to interpretations of several quasi-linear features (multiple values of $S$), when in fact the time series are not linear at all.
 
 VRM is a function of time and the relationship between the remanence vector and the applied field. When the relaxation time is short (say a millisecond), the magnetization stays in equilibrium with the applied magnetic field hence is superparamagnetic. As an assemblage of grains is exposed to a field for a longer and longer interval of time, more and more of the grains will have relaxation times that are shorter than the time that has passed. These grains will equilibrate with the field that there are in -- recording a VRM. In paleomagnetic data, what is often seen is that there will be a VRM that corresponds to the present local field direction at a study locality as rocks have been sitting in a similar field direction for the past 770,000 years (since the last geomagnetic polarity reversal).The **interactive visualization below** demonstrates this VRM acquisition process. Use the slider (or press Play) to advance elapsed time from 1 second to 1 billion years and observe how the blocking boundary (dashed line) sweeps upward through the grain population, progressively converting previously stable NRM (gold) to VRM (blue).
 
@@ -235,7 +235,7 @@ The sharpness of the relationship between relaxation time and temperature allows
 :alt: Three-panel figure. a) Photo of glowing red lava flow. b) Schematic of non-magnetic crystals above the Curie temperature with randomly oriented moments. c) Below blocking temperature, magnetic moments become fixed with a statistical bias toward the ambient field direction.
 :width: 100%
 
-a) Picture of lava flow courtesy of Daniel Staudigel. b) While the lava is still well above the Curie temperature, crystals start to form, but are non-magnetic. c) Below the Curie temperature but above the blocking temperature, certain minerals become magnetic, but their moments continually flip among the easy axes with a statistical preference for the applied magnetic field. As the lava cools down, the moments become fixed, preserving a thermal remanence. [b) and c) modified from animation of Genevieve Tauxe.] [Figure from {cite}`tauxe2007`.]
+a) Picture of lava flow courtesy of Daniel Staudigel. b) While the lava is still well above the Curie temperature, crystals start to form, but are non-magnetic. c) Below the Curie temperature but above the blocking temperature, certain minerals become magnetic, but their moments continually flip among the easy axes with a statistical preference for the applied magnetic field. As the lava cools down, the moments become fixed, preserving a thermal remanence. [b) and c) modified from animation of Genevieve Tauxe.] [Figure from {cite:t}`tauxe2007`.]
 :::
 
 Now let us put some of these concepts into practice. Consider a lava flow which has just been extruded ([](#fig:lava)a). Upon meeting the chilly air (or water), molten lava solidifies quickly into rock. While the rock is above the Curie Temperature, there is no remanent magnetization; thermal energy dominates the system and the system behaves as a paramagnet. As the rock cools through the Curie Temperature of its magnetic phase, exchange energy becomes more important and the magnetic minerals become ferromagnetic. The magnetization, however, is free to track the prevailing magnetic field because anisotropy energy is still less important than the magnetostatic energy. The magnetic grains are superparamagnetic and the magnetization is in magnetic equilibrium with the ambient field.
@@ -279,10 +279,10 @@ where $m_o$ is the grain moment at the blocking temperature.
 :alt: Two-panel plot of TRM versus applied field. a) Theoretical curves for magnetite ellipsoids of different sizes and aspect ratios showing linear to nonlinear TRM acquisition. b) Experimental TRM data for three natural specimens with nonlinear field dependence.
 :width: 100%
 
-Relationship of TRM with respect to the applied field for different assemblages of magnetite grains. a) Theoretical calculations of TRM acquisition for different assemblages of randomly oriented non-interacting single domain ellipsoids of magnetite. b) Experimentally determined TRM acquisition in three natural specimens. [Redrawn from {cite}`selkin2007`.]
+Relationship of TRM with respect to the applied field for different assemblages of magnetite grains. a) Theoretical calculations of TRM acquisition for different assemblages of randomly oriented non-interacting single domain ellipsoids of magnetite. b) Experimentally determined TRM acquisition in three natural specimens. [Redrawn from {cite:t}`selkin2007`.]
 :::
 
-We show the theoretical behavior of TRM as a function of applied field for different assemblages of particles in [](#fig:trm)a. This plot was constructed assuming ellipsoidal particles whose saturation magnetization varied according to [Equation %s](#eq:MsT) from [Chapter 3](#chap:inducedremanent) with $\gamma=0.38$. For small, equant particles, TRM is approximately linear with applied field for values of $B$ as small as the Earth's (~20-65 μT). However, the more elongate and the larger the particle, the more non-linear the theoretically predicted TRM behaves. This non-linear behavior has been experimentally verified by {cite}`selkin2007` for geologically important materials (see [](#fig:trm)b).
+We show the theoretical behavior of TRM as a function of applied field for different assemblages of particles in [](#fig:trm)a. This plot was constructed assuming ellipsoidal particles whose saturation magnetization varied according to [Equation %s](#eq:MsT) from [Chapter 3](#chap:inducedremanent) with $\gamma=0.38$. For small, equant particles, TRM is approximately linear with applied field for values of $B$ as small as the Earth's (~20-65 μT). However, the more elongate and the larger the particle, the more non-linear the theoretically predicted TRM behaves. This non-linear behavior has been experimentally verified by {cite:t}`selkin2007` for geologically important materials (see [](#fig:trm)b).
 
 :::{figure} ../figures/chapter7/pTRM.png
 :name: fig:ptrm
@@ -307,7 +307,7 @@ As an example of the laws of additivity and reciprocity of pTRM, again consider 
 :alt: Log-log plot of fractional TRM versus grain diameter for dispersed magnetite particles, showing a d-inverse trend with highest TRM efficiency below 0.1 micrometers and decreasing efficiency for larger grains.
 :width: 80%
 
-Dependence of intensity of TRM on particle diameter of magnetite. Magnetite particles were dispersed in a non-magnetic matrix; the intensity of TRM is determined per unit volume of magnetite and normalized to the maximum TRM observed to allow comparison between experiments that used varying concentrations of dispersed magnetite; the magnetizing field was 100 μT. [Data compiled by {cite}`dunlop1997`.]
+Dependence of intensity of TRM on particle diameter of magnetite. Magnetite particles were dispersed in a non-magnetic matrix; the intensity of TRM is determined per unit volume of magnetite and normalized to the maximum TRM observed to allow comparison between experiments that used varying concentrations of dispersed magnetite; the magnetizing field was 100 μT. [Data compiled by {cite:t}`dunlop1997`.]
 :::
 
 Perhaps the most severe simplification in the above model of TRM acquisition is that it considers only single-domain grains. Given the restricted range of grain size and shape distributions for stable SD grains of magnetite or titanomagnetite (see [Chapter 4](#chap:anisotropy)), at most a small percentage of grains in a typical igneous rock are truly SD. The question then arises as to whether larger grains can acquire TRM.
@@ -382,7 +382,7 @@ $$ (eq:vb)
 
 The magnetization acquired during grain growth is controlled by the alignment of grain moments at the time that they grow through the blocking volume. Based on these principles, CRM should behave very similarly to TRM.
 
-There have been a few experiments carried out with an eye to testing the grain growth CRM model and although the theory predicts the zeroth order results quite well (that a simple CRM parallels the field and is proportional to it in intensity), the details are not well explained, primarily because the magnetic field affects the growth of magnetic crystals and the results are not exactly analogous to TRM conditions (see e.g. {cite}`stokking1990a`). Moreover, gCRMs acquired in changing fields can be much more complicated than a simple single generation, single field gCRM {cite}`stokking1990b`.
+There have been a few experiments carried out with an eye to testing the grain growth CRM model and although the theory predicts the zeroth order results quite well (that a simple CRM parallels the field and is proportional to it in intensity), the details are not well explained, primarily because the magnetic field affects the growth of magnetic crystals and the results are not exactly analogous to TRM conditions (see e.g. {cite:t}`stokking1990a`). Moreover, gCRMs acquired in changing fields can be much more complicated than a simple single generation, single field gCRM {cite:p}`stokking1990b`.
 
 Alteration CRM can also be much more complicated than simple gCRM in a single field. Suffice it to say that the reliability of CRM for recording the external field must be verified (as with any magnetic remanence) with geological field tests and other techniques as described in future chapters.
 
@@ -391,15 +391,15 @@ Alteration CRM can also be much more complicated than simple gCRM in a single fi
 :alt: Plot of magnetization M versus normalized applied field B/Bo showing nonlinear increase that curves toward saturation, with data points and a best-fit curve.
 :width: 60%
 
-Depositional remanence versus applied field for redeposited glacial varves. $B_o$ was the field in the lab. [Data from {cite}`johnson1948`; figure from {cite}`tauxe1993`.]
+Depositional remanence versus applied field for redeposited glacial varves. $B_o$ was the field in the lab. [Data from {cite:t}`johnson1948`; figure from {cite:t}`tauxe1993`.]
 :::
 
 (sect:drm)=
 ## Detrital remanent magnetization
 
-Sediments become magnetized in quite a different manner from igneous bodies. Detrital grains are already magnetized, unlike igneous rocks which crystallize above their Curie temperatures. Magnetic particles that can rotate freely will turn into the direction of the applied field just as compass needles do. The net magnetization of such particles, if locked in place can result in a *depositional remanent magnetization* (DRM). Sediments are also subject to post-depositional modification through the action of organisms, compaction, diagenesis and the acquisition of VRM all of which will affect the magnetization. This magnetization is usually called *post-depositional remanent magnetization* or pDRM. In the following, we will consider the syn-depositional processes of physical alignment of magnetic particles in viscous fluids (giving rise to the primary DRM).
+Sediments become magnetized in quite a different manner from igneous rocks. Detrital grains are already magnetized, unlike igneous rocks which crystallize above their Curie temperatures. Magnetic particles that can rotate freely will turn into the direction of the applied field like compass needles do. The net magnetization of a population of such particles, if locked in place, can result in a *depositional remanent magnetization* (DRM). After deposition, physical realignment of magnetic particles within unconsolidated sediment can modify the original DRM, giving rise to what is termed *post-depositional remanent magnetization* (pDRM). Other post-depositional processes such as compaction, bioturbation, and diagenesis can further alter the magnetic signal. In the following, we will consider the syn-depositional processes of physical alignment of magnetic particles in fluids (giving rise to the primary DRM).
 
-### Physical alignment of magnetic moments in viscous fluids
+### Physical alignment of magnetic moments in fluids
 
 The theoretical and experimental foundation for DRM is less complete than for TRM. Placing a magnetic moment $\bf m$ in an applied field $\bf B$ results in a torque $\Gamma$ on the particle ${\bf \Gamma} = {\bf m} \times {\bf B} = mB\sin \theta$, where $\theta$ is the angle between the moment and the magnetic field vector. In a fluid like water, the torque is opposed by the viscous drag and inertia so the equation of motion governing the approach to alignment is:
 
@@ -413,7 +413,7 @@ $$
 \tan \frac{\theta}{2} = \tan \frac{\theta_o}{2} e^{-m B t/\lambda},
 $$ (eq:nagata)
 
-where $\theta_o$ is the initial angle between ${\bf m}$ and ${\bf B}$ {cite}`nagata1961`. By setting $\lambda = 8\pi r^3 \eta$ where $r$ is the particle radius and $\eta$ to the viscosity of water (~10$^{-3}$ kg m$^{-1}$s$^{-1}$), the time constant $\Upsilon$ of [Equation %s](#eq:nagata) over which an initial $\theta_o$ reduces to $1/e$ of its value would be:
+where $\theta_o$ is the initial angle between ${\bf m}$ and ${\bf B}$ {cite}`nagata1961`. The exponential decay in [Equation %s](#eq:nagata) defines a characteristic time constant $\Upsilon = \lambda/(mB)$. By setting $\lambda = 8\pi r^3 \eta$ (the rotational drag coefficient for a sphere) where $r$ is the particle radius and $\eta$ to the viscosity of water (~10$^{-3}$ kg m$^{-1}$s$^{-1}$), this becomes:
 
 $$
 \Upsilon = \frac{\lambda}{mB} = \frac{6 \eta}{MB},
@@ -421,51 +421,43 @@ $$ (eq:Upsilon)
 
 where $M$ is the volume normalized magnetization.
 
-Plugging in reasonable values for $\eta, M$ and $B$ and assuming isolated magnetic particles yields a time constant that is extremely short (microseconds). The simple theory of unconstrained rotation of magnetic particles in water as developed by {cite}`nagata1961` predicts that sediments with isolated magnetic particles should have magnetic moments that are fully aligned and insensitive to changes in magnetic field strength; DRM should be at saturation. Yet even from the earliest days of laboratory redeposition experiments (e.g., {cite}`johnson1948`; see [](#fig:lit-redep)a) we have known that depositional remanence (DRM) can have a strong field dependence and that DRMs are generally far less than saturation remanences (~0.1%). Much of the research on DRM has focussed on explaining the strong field dependence observed for laboratory redepositional DRM.
+Plugging in reasonable values for $\eta, M$ and $B$ and assuming isolated magnetic particles yields a time constant that is extremely short (microseconds). Non-spherical particle shapes would increase $\lambda$ somewhat, but not by enough to change this conclusion. The simple theory of unconstrained rotation of magnetic particles in water as developed by {cite:t}`nagata1961` predicts that sediments with isolated magnetic particles should have magnetic moments that are fully aligned and insensitive to changes in magnetic field strength; DRM should be at saturation. Yet even from the earliest days of laboratory redeposition experiments (e.g., {cite:t}`johnson1948`; see [](#fig:lit-redep)a) we have known that depositional remanence (DRM) can have a strong field dependence and that DRMs are generally far less than saturation remanences (~0.1%; e.g., {cite:t}`tauxe2006`).
 
 :::{figure} ../figures/chapter7/drmprocesses.png
 :name: fig:drmprocesses
 :alt: Two-panel schematic: a) freshwater non-flocculating environment showing magnetic particles settling through turbulent then still water to lock-in depth, b) marine flocculating environment with floc formation, bioturbation, and consolidation zones.
 :width: 100%
 
-a) Schematic drawing of traditional view of the journey of magnetic particles from the water column to burial in a non-flocculating (freshwater) environment. Magnetic particles are black. b) View of depositional remanence in a flocculating (marine) environment. [Figure from {cite}`tauxe2007`.]
+a) Schematic drawing of traditional view of the journey of magnetic particles from the water column to burial in a non-flocculating (freshwater) environment. Magnetic particles are black. b) View of depositional remanence in a flocculating (marine) environment. [Figure from {cite:t}`tauxe2007`.]
 :::
 
-The observation that DRM is usually orders of magnitude less than saturation and that it appears to be sensitive to changing geomagnetic field strengths implies that the time constant of alignment is much longer than predicted by [Equation %s](#eq:Upsilon). Either there is a disruption of alignment by some mechanism, or we have underestimated $\Upsilon$ somehow.
+The observation that DRM is usually orders of magnitude less than saturation and that it appears to be sensitive to changing geomagnetic field strengths implies that the time constant of alignment is much longer than predicted by [Equation %s](#eq:Upsilon). Either there is a disruption of alignment by some mechanism, or we have underestimated $\Upsilon$ somehow. We first consider disruption of alignment through Brownian motion, then turn to mechanisms that increase $\Upsilon$ by reducing the effective magnetization of settling particles.
 
-{cite}`collinson1965` invoked Brownian motion to disrupt alignment. Reasonable parameter assumptions suggest that particles smaller than about 100 nm could be affected by Brownian motion suggesting a possible role in DRM of isolated magnetite grains free to rotate in water. The problem with this suggestion is that such small particles take an extremely long time to settle. Also, in almost all natural waters, magnetite particles will adhere to clay particles making isolated magnetic particles in nature unlikely (see, e.g., {cite}`katari2000`).
+{cite:t}`collinson1965` invoked Brownian motion to disrupt alignment. Reasonable parameter assumptions suggest that particles smaller than about 100 nm could be affected by Brownian motion suggesting a possible role in DRM of isolated magnetite grains free to rotate in water. The problem with this suggestion is that such small particles take an extremely long time to settle. Also, in almost all natural waters, magnetite particles will adhere to clay particles making isolated magnetic particles in nature unlikely (see, e.g., {cite:t}`katari2000`).
 
-To increase $\Upsilon$, one can either assume a larger viscosity than that of pure water, or decrease magnetization by for example, using values for $M$ much lower than the saturation magnetizations of common magnetic minerals (e.g., {cite}`collinson1965`) or padding the magnetic particles with non-magnetic "fluff" through the process of flocculation {cite}`shcherbakov1983`. Using the viscosity in the sediment itself in [Equation %s](#eq:Upsilon) fails to explain laboratory remanences that are demonstrably "fixed" after settling—the viscosity of the mud appears to be too high to allow post-depositional re-alignment, yet these sediments exhibit field dependence (e.g., {cite}`tauxe2006`). Alternatively, one could increase $\Upsilon$ by assuming a reduced value for $M$. However, even using the magnetization of hematite, which is two orders of magnitude lower than magnetite, results in values for $\Upsilon$ that are still less than a second.
+To increase $\Upsilon$, one can either assume a larger viscosity than that of pure water, or decrease magnetization by for example, using values for $M$ much lower than the saturation magnetizations of common magnetic minerals (e.g., {cite:t}`collinson1965`) or padding the magnetic particles with non-magnetic "fluff" through the process of flocculation {cite:p}`shcherbakov1983`. Using the viscosity in the sediment itself in [Equation %s](#eq:Upsilon) fails to explain laboratory remanences that are demonstrably "fixed" after settling—the viscosity of the mud appears to be too high to allow post-depositional re-alignment, yet these sediments exhibit field dependence (e.g., {cite:t}`tauxe2006`). Alternatively, one could increase $\Upsilon$ by assuming a reduced value for $M$. However, even using the magnetization of hematite, which is two orders of magnitude lower than magnetite, results in values for $\Upsilon$ that are still less than a second.
 
 In saline environments, sedimentary particles tend to flocculate. For magnetic particles embedded in a non-magnetic matrix, the magnetic field must turn the entire particle and the net magnetization of the floc must be used in [Equation %s](#eq:Upsilon).
-
-:::{figure} ../figures/chapter7/brownian.png
-:name: fig:brownian
-:alt: Two panels: a) BRM/sIRM versus applied field B curves for magnetite particles of 25-70 nm radius showing nonlinear saturation behavior, b) BRM/sIRM for a particle size distribution (shown in inset) versus B.
-:width: 100%
-
-a) Numerical simulations of Brownian remanent magnetization (BRM) for various sizes of magnetite. b) BRM simulated for distribution of particle sizes of magnetite shown in inset. [Figure from {cite}`tauxe2007`.]
-:::
 
 The tendency to flocculate increases with increasing salinity. There are therefore two completely different systems when discussing DRM: ones in which magnetic particles remain essentially isolated or embedded in very small flocs (e.g., in freshwater lakes; see [](#fig:drmprocesses)a) and ones in which flocculation plays a role (e.g., marine environments; see [](#fig:drmprocesses)b). For the case of magnetite in freshwater, Brownian motion may reduce DRM efficiency and give rise to the dependence on $B$. In saline waters, however, the most important control on DRM is the size of the flocs in which the magnetic particles are embedded. In the following we briefly explore these two very different environments.
 
 #### Non-flocculating environments
 
-In freshwater we expect to have relatively unflocculated particles whose magnetic moments are presumably a saturation remanence. Although, even in fresh water, the magnetic particles are likely to be attached to clays through van der Waals attraction the clays themselves have no great mutual attraction. It is possible, therefore that magnetic particles could be subject to Brownian motion. Here we outline the theory to investigate the behavior of DRM that would be expected from a Brownian motion mechanism (henceforth a *Brownian remanent magnetization* or BRM).
+In freshwater, we expect to have relatively unflocculated particles whose magnetic moments are presumably a saturation remanence. Although, even in fresh water, the magnetic particles are likely to be attached to clays through van der Waals attraction the clays themselves have no great mutual attraction. It is possible, therefore that magnetic particles could be subject to Brownian motion. Here we outline the theory to investigate the behavior of DRM that would be expected from a Brownian motion mechanism (henceforth a *Brownian remanent magnetization* or BRM).
 
-To estimate the size of particles affected by Brownian motion, {cite}`collinson1965` used the equation:
+To estimate the size of particles affected by Brownian motion, {cite:t}`collinson1965` used the equation:
 
 $$
 \frac{1}{2} mB\phi^2 = \frac{1}{2} k_BT,
 $$ (eq:collinson)
 
-where $\phi$ is the Brownian deflection about the applied field direction (in radians), $k_B$ is Boltzmann's constant (1.38 × 10$^{-23}$ JK$^{-1}$) and $T$ is the temperature in kelvin. The effect of viscous drag on particles may also be important when the magnetic moments of the particles are low (see {cite}`coffey1996` for a complete derivation), for which we have:
+where $\phi$ is the Brownian deflection about the applied field direction (in radians), $k_B$ is Boltzmann's constant (1.38 × 10$^{-23}$ JK$^{-1}$) and $T$ is the temperature in kelvin. The effect of viscous drag on particles may also be important when the magnetic moments of the particles are low (see {cite:t}`coffey1996` for a complete derivation), for which we have:
 
 $$
 \frac{\phi^2}{\delta} = \frac{k_BT}{4\pi \eta r^3},
 $$
 
-where $\delta$ is the time span of observation (say, 1 second). According to this relationship, weakly magnetized particles smaller than about a micron will be strongly affected by Brownian motion. Particles that have a substantial magnetic moment however, will be partially stabilized (according to [Equation %s](#eq:collinson)) and might remain unaffected by Brownian motion to smaller particle sizes (e.g., 0.1 μm). In the case of isolated particles of magnetite, therefore, we should use [Equation %s](#eq:collinson) and BRM should follow the Langevin equation for paramagnetic gases, i.e.:
+where $\delta$ is the time span of observation (say, 1 second). According to this relationship, weakly magnetized particles smaller than about a micron will be strongly affected by Brownian motion. Particles that have a substantial magnetic moment however, will be partially stabilized (according to [Equation %s](#eq:collinson)) and might remain unaffected by Brownian motion to smaller particle sizes (e.g., 0.1 μm). In the case of isolated particles of magnetite, therefore, we should use [Equation %s](#eq:collinson) and BRM should follow the Langevin equation for paramagnetic substances. The mathematical form is the same because in both cases thermal energy competes with magnetic torque to randomize otherwise aligned moments, though here the "thermal" disruption is physical Brownian motion of particles rather than thermal fluctuations of atomic dipoles. The Langevin equation gives:
 
 $$
 \frac{BRM}{sIRM} = \coth \left( \frac{mB}{k_BT} \right) - \frac{k_BT}{mB}.
@@ -473,69 +465,77 @@ $$ (eq:brm)
 
 Here the quantity sIRM is a saturation isothermal remanence ($M_r$ in [Chapter 5](#chap:hysteresis)) and is the moment acquired when all the magnetic particles are aligned to the maximum extent possible. To get an idea of how BRMs would behave, we first find $m$ from $M(r)$ [here we use the results from micromagnetic modeling (see [Chapter 4](#chap:anisotropy))]. Then, we evaluate [Equation %s](#eq:brm) as a function of $B$ for a given particle size (see [](#fig:brownian)a). We can also assume any distribution of particle sizes (e.g., that shown as the inset to [](#fig:brownian)b), and predict BRM/sIRM for the distribution (blue line in [](#fig:brownian)b). It is interesting to note that BRMs are almost never linear with the applied field unless the particle sizes are very small.
 
-BRMs are fixed when the particles are no longer free to move. The fixing of this magnetization presumably occurs during consolidation, at a depth (known as the lock-in depth) where the porosity of the sediment reduces to the point that the particles are pinned (see [](#fig:drmprocesses)a). Below that, the magnetization may be further affected by compaction (e.g., {cite}`deamer1990`) and diagenesis (e.g., {cite}`roberts1995`).
+:::{figure} ../figures/chapter7/brownian.png
+:name: fig:brownian
+:alt: Two panels: a) BRM/sIRM versus applied field B curves for magnetite particles of 25-70 nm radius showing nonlinear saturation behavior, b) BRM/sIRM for a particle size distribution (shown in inset) versus B.
+:width: 100%
+
+a) Numerical simulations of Brownian remanent magnetization (BRM) for various sizes of magnetite. b) BRM simulated for distribution of particle sizes of magnetite shown in inset. [Figure from {cite:t}`tauxe2007`.]
+:::
+
+BRMs are fixed when the particles are no longer free to move. The fixing of this magnetization presumably occurs during consolidation, at a depth (known as the lock-in depth) where the porosity of the sediment reduces to the point that the particles are pinned (see [](#fig:drmprocesses)a). Below that, the magnetization may be further affected by compaction (e.g., {cite:t}`deamer1990`) and diagenesis (e.g., {cite:t}`roberts1995`).
+
+(sect:flocs)=
+#### Flocculating environments
+
+[Equation %s](#eq:nagata) predicts that a magnetic moment $\bf m$ making an initial angle $\theta_o$ with the applied field $\bf B$ will make an angle $\theta$ with the field after time $t$. From this, we can make a simple numerical model to predict the DRM for an initially randomly oriented assemblage of magnetic moments, after time $t$ [or the equivalent settling length $l$ using some settling law (e.g., {cite:t}`gibbs1985`; see {cite:t}`katari2001`)]. In [](#fig:flocs)a and b, we show the DRM curves predicted by {cite:t}`tauxe2006` for simple flocs with a single magnetite grain in each as a function of magnetic field and radius.
 
 :::{figure} ../figures/chapter7/flocs.png
 :name: fig:flocs
 :alt: Two panels: a) DRM/sIRM versus floc radius for different applied field strengths showing sharp transitions from aligned to random, b) DRM/sIRM versus applied field B for different floc radii showing larger flocs yield weaker, more linear DRM.
 :width: 100%
 
-a) Results of numerical experiments of the flocculation model using the parameters: $l=0.2$ m and the viscosity of water. $M/M_o$ is the DRM expressed as a fraction of saturation, holding $\bar m$ constant and varying $B$. For a given field strength, particles are either at saturation or randomly oriented, except for within a very narrow size range. b) Same as a) but plotted versus applied field ($B$). [Figures from {cite}`tauxe2006`.]
+a) Results of numerical experiments of the flocculation model using the parameters: $l=0.2$ m and the viscosity of water. $M/M_o$ is the DRM expressed as a fraction of saturation, holding $\bar m$ constant and varying $B$. For a given field strength, particles are either at saturation or randomly oriented, except for within a very narrow size range. b) Same as a) but plotted versus applied field ($B$). [Figures from {cite:t}`tauxe2006`.]
 :::
 
-(sect:flocs)=
-#### Flocculating environments
-
-[Equation %s](#eq:nagata) predicts that a magnetic moment $\bf m$ making an initial angle $\theta_o$ with the applied field $\bf B$ will make an angle $\theta$ with the field after time $t$. From this, we can make a simple numerical model to predict the DRM for an initially randomly oriented assemblage of magnetic moments, after time $t$ [or the equivalent settling length $l$ using some settling law (e.g., {cite}`gibbs1985`; see {cite}`katari2001`)]. In [](#fig:flocs)a and b, we show the DRM curves predicted by {cite}`tauxe2006` for simple flocs with a single magnetite grain in each as a function of magnetic field and radius.
-
 In general, the magnetic flocs are either nearly aligned with the magnetic field, or nearly random with only a narrow band of floc sizes in between the two states for a given value of $B$. Increasing $B$ increases the size for which particles can rotate into the field, giving rise to the dependence of DRM intensity on applied field strength. Taking a given particle size and evaluating DRM as a function of the applied field ([](#fig:flocs)b) predicts the opposite behavior for DRM than the Brownian motion approach ([](#fig:brownian)) in that the larger the floc size, the weaker the DRM and also the more linear with respect to the applied field. Brownian motion, therefore, predicts low DRM efficiency for the smallest particles increasing to near saturation values for particles around 0.1 μm while composite floc theory predicts decreased DRM efficiency for larger floc sizes.
+
+The flocculation model of DRM makes specific predictions which can in principle be tested if the model parameters can be estimated or controlled. {cite:t}`tauxe2006` tested the flocculation hypothesis by dispersing natural sediments in settling tubes to which varying amounts of NaCl had been introduced. Prior to dispersal, each specimen of mud was given a saturation remanence. They measured DRM as a function of salinity (and therefore floc size) and the applied field (see [](#fig:drm-exp)). In general their results suggested the following: 1) the higher the salinity (and therefore the larger the flocs), the lower the net moment and the faster the particles settled, 2) the higher the applied field, the higher the net moment, although a saturation DRM appeared to be nearly achieved in the 1 ppt NaCl set of tubes (lowest salinity, smallest flocs, highest DRM efficiency) by 30 μT ([](#fig:drm-exp)), 3) the relationship of DRM to $B$ was far from linear with applied field in all cases, and 4) even at saturation, DRM was less than sIRM, implying that each floc contains multiple magnetic particles whose moments partially cancel.
 
 :::{figure} ../figures/chapter7/drm-exp.png
 :name: fig:drm-exp
 :alt: DRM/sIRM percentage versus applied field B for settling experiments at different salinities (1-5 ppt NaCl), showing nonlinear increase with field and decreasing DRM efficiency at higher salinity, with model fits.
 :width: 70%
 
-Results of settling experiments as a function of field ($B$) in a flocculating environment. The assumed mean and standard deviations of truncated log-normal distributions for floc radii are shown in the legends and are indicated using the different line styles in the figure. [Figure from {cite}`tauxe2007` after {cite}`tauxe2006`.]
+Results of settling experiments as a function of field ($B$) in a flocculating environment. Salinity of the NaCl solutions used in the experiments is indicated in parts per thousand (ppt); higher salinity produces larger flocs and lower DRM efficiency. The assumed mean and standard deviations of truncated log-normal distributions for floc radii (in μm) are labeled on each model curve. [Figure from {cite:t}`tauxe2007` after {cite:t}`tauxe2006`.]
 :::
 
-The flocculation model of DRM makes specific predictions which can in principle be tested if the model parameters can be estimated or controlled. {cite}`tauxe2006` tested the flocculation hypothesis by dispersing natural sediments in settling tubes to which varying amounts of NaCl had been introduced. Prior to dispersal, each specimen of mud was given a saturation remanence. They measured DRM as a function of salinity (and therefore floc size) and the applied field (see [](#fig:drm-exp)). In general their results suggested the following: 1) the higher the salinity, the lower the net moment and the faster the particles settled, 2) the higher the applied field, the higher the net moment, although a saturation DRM appeared to be nearly achieved in the 1 ppt NaCl set of tubes by 30 μT ([](#fig:drm-exp)), 3) the relationship of DRM to $B$ was far from linear with applied field in all cases, and 4) the saturation DRM was less than the saturation IRM so the simplest idea of one floc/one magnetic particle failed to explain the data.
-
-In nature, flocs are formed by coalescing of "fundamental flocs" into composite flocs. Each fundamental floc would have tiny magnetic particles adhering to them and would have the sIRM imparted prior to settling. As the composite flocs grow by chance encounters with other flocs, the net moment of the composite floc will be the vector sum of the moments of the fundamental flocs. {cite}`tauxe2006` used the composite floc hypothesis to model experimental DRMs (see examples in [](#fig:drm-exp)); model predictions were in excellent agreement with the redeposition data.
+In nature, flocs are formed by coalescing of "fundamental flocs" into composite flocs. Each fundamental floc would have tiny magnetic particles adhering to them and would have the sIRM imparted prior to settling. As the composite flocs grow by chance encounters with other flocs, the net moment of the composite floc will be the vector sum of the moments of the fundamental flocs. {cite:t}`tauxe2006` used the composite floc hypothesis to model experimental DRMs (see examples in [](#fig:drm-exp)); model predictions were in excellent agreement with the redeposition data.
 
 ### Post-depositional processes
 
-It appears that by combining the effects of Brownian motion for non-flocculating environments and a composite floc model for flocculating environments we are on the verge of a quantitative physical theory that can account for the acquisition of depositional remanence near the sediment/water interface. The DRM will be fixed when no further physical rotation of the magnetic particles in response to the geomagnetic field is possible. The depth at which moments are pinned is called the lock-in depth. In the "standard model" of depositional remanence (DRM) acquisition (see, e.g., {cite}`verosub1977`) detrital remanence is acquired by locking in different grains over a range of depths. This phased lock-in leads to both significant smoothing and to an offset between the sediment/water interface and the fixing of the DRM. Many practitioners of paleomagnetism still adhere to this concept of DRM which stems from the early laboratory redeposition experiments which were carried out under non-flocculating conditions, however. As summarized by {cite}`tauxe2006`, the evidence for substantial smoothing and a deep (>10 cm) lock in remains weak.
+It appears that by combining the effects of Brownian motion for non-flocculating environments and a composite floc model for flocculating environments we are on the verge of a quantitative physical theory that can account for the acquisition of depositional remanence near the sediment/water interface. The DRM will be fixed when no further physical rotation of the magnetic particles in response to the geomagnetic field is possible. The depth at which moments are pinned is called the lock-in depth. In the "standard model" of depositional remanence (DRM) acquisition (see, e.g., {cite:t}`verosub1977`) detrital remanence is acquired by locking in different grains over a range of depths. This phased lock-in leads to both significant smoothing and to an offset between the sediment/water interface and the fixing of the DRM. Many practitioners of paleomagnetism still adhere to this concept of DRM which stems from the early laboratory redeposition experiments which were carried out under non-flocculating conditions, however. As summarized by {cite:t}`tauxe2006`, the evidence for substantial smoothing and a deep (>10 cm) lock in remains weak.
 
-Physical rotation of particles in response to compaction can also change the magnetic remanence. As sediments lose water and consolidate, compaction can have a strong effect on DRM intensity (e.g., {cite}`anson1987`). Consolidation is a continuous process starting from the sediment water interface when sedimentary particles first gel (see, e.g., [](#fig:drmprocesses)b) and continuing until the sediment is completely compacted, perhaps as deep as hundreds of meters. The effect on magnetic remanence depends on volume loss during compaction which depends largely on clay content, so clay rich sediments will have the largest effect.
+Physical rotation of particles in response to compaction can also change the magnetic remanence. As sediments lose water and consolidate, compaction can have a strong effect on DRM intensity (e.g., {cite:t}`anson1987`). Consolidation is a continuous process starting from the sediment water interface when sedimentary particles first gel (see, e.g., [](#fig:drmprocesses)b) and continuing until the sediment is completely compacted, perhaps as deep as hundreds of meters. The effect on magnetic remanence depends on volume loss during compaction which depends largely on clay content, so clay rich sediments will have the largest effect.
 
 Other processes not involving post-depositional physical rotation of magnetic particles including "viscous" (in the sense of magnetic viscosity) remagnetization and diagenetic alteration resulting in a chemical remanence may also modify the DRM. All of these processes influence the intensity of remanence and hamper our efforts to decipher the original geomagnetic signal.
 
 ### Inclination Error
+
+Some sedimentary remanences show a remanence vector that is generally shallower than the applied field, a phenomenon known as *inclination error*. We show the results of a typical laboratory redeposition experiment {cite:p}`tauxe1984` in [](#fig:incerror). The tangent of the observed inclination is usually some fraction (~0.4-0.6) of the tangent of the applied field {cite:p}`king1955`. Thus, inclination error is at a maximum at 45° and is negligible at high and low inclinations. {cite:t}`tauxe1984` also demonstrated a strong link between DRM efficiency and inclination error. Sediments exhibiting inclination error have the strongest remanences in horizontal fields and the weakest in vertical fields.
 
 :::{figure} ../figures/chapter7/ifio.png
 :name: fig:incerror
 :alt: Observed inclination versus applied field inclination with data points falling below the 1:1 line, and a best-fit dashed curve with f=0.55 showing systematic inclination shallowing.
 :width: 60%
 
-Applied field inclination versus remanent inclination for redeposited river sediments. Best fit line is with $f=0.55$. [Data from {cite}`tauxe1984`.]
+Applied field inclination versus remanent inclination for redeposited river sediments. Best fit line is with $f=0.55$. [Data from {cite:t}`tauxe1984`.]
 :::
 
-Some sedimentary remanences show a remanence vector that is generally shallower than the applied field, a phenomenon known as *inclination error*. We show the results of a typical laboratory redeposition experiment {cite}`tauxe1984` in [](#fig:incerror). The tangent of the observed inclination is usually some fraction (~0.4-0.6) of the tangent of the applied field {cite}`king1955`. Thus, inclination error is at a maximum at 45° and is negligible at high and low inclinations. {cite}`tauxe1984` also demonstrated a strong link between DRM efficiency and inclination error. Sediments exhibiting inclination error have the strongest remanences in horizontal fields and the weakest in vertical fields.
+Interestingly, many natural sediments (e.g. deep sea or slowly deposited lake sediments) display no inclination error. The worst culprits appear to be sediments whose NRM is carried by detrital hematite, a flaky particle with a small saturation remanence whose platy shape promotes preferential rotation into the bedding plane during compaction (see [](#sect:tk03) for further discussion of inclination shallowing).
 
-Interestingly, many natural sediments (e.g. deep sea or slowly deposited lake sediments) display no inclination error. The worst culprits appear to be sediments whose NRM is carried by detrital hematite, a flakey particle with a small saturation remanence.
+(sect:irm)=
+## Isothermal remanent magnetization
+
+Examination of [Equations %s](#eq:tau2) and [%s](#eq:tau3) reveals an interesting dependence of relaxation time on the coercivity of magnetic particles. We can coax the magnetization of otherwise firmly entrenched particles to follow an applied field, if that field is larger than the coercivity. Exposing a particle to a large magnetic field, will allow magnetic particles whose coercivity is below that field to flip their magnetic moments to a direction at a more favorable angle to the applied field, resulting in a gain in magnetic remanence in that direction. This type of magnetic remanence is called an *isothermal remanent magnetization* or IRM (see [Chapter 4](#chap:anisotropy) and [Chapter 5](#chap:hysteresis)).
 
 :::{figure} ../figures/chapter7/lightning.png
 :name: fig:lightning
 :alt: Two panels: a) outcrop photo with labeled sampling sites and charred tree stump from lightning strike, b) plot of impulse field versus distance from tree showing decay with a best-fit curve for a 300,000 Amp line current.
 :width: 100%
 
-Outcrop photo showing sampling locations and charred stump of tree that was hit by lightning in foreground. b) Impulse field required to reproduce the NRM intensity as an IRM, plotted as a function of distance from the tree shown in a). Dashed line is best-fit to the data assuming that the tree at the center of the photo was the site of a remagnetizing line current (lightning bolt) of 300,000 Amps. [Figures from {cite}`tauxe2003`.]
+Outcrop photo showing sampling locations and charred stump of tree that was hit by lightning in foreground. b) Impulse field required to reproduce the NRM intensity as an IRM, plotted as a function of distance from the tree shown in a). Dashed line is best-fit to the data assuming that the tree at the center of the photo was the site of a remagnetizing line current (lightning bolt) of 300,000 Amps. [Figures from {cite:t}`tauxe2003`.]
 :::
-
-(sect:irm)=
-## Isothermal remanent magnetization
-
-Examination of [Equations %s](#eq:tau2) and [%s](#eq:tau3) reveals an interesting dependence of relaxation time on the coercivity of magnetic particles. We can coax the magnetization of otherwise firmly entrenched particles to follow an applied field, if that field is larger than the coercivity. Exposing a particle to a large magnetic field, will allow magnetic particles whose coercivity is below that field to flip their magnetic moments to a direction at a more favorable angle to the applied field, resulting in a gain in magnetic remanence in that direction. This type of magnetic remanence is called an *isothermal remanent magnetization* or IRM (see [Chapter 4](#chap:anisotropy) and [Chapter 5](#chap:hysteresis)).
 
 IRM is unfortunately a naturally occurring remanence. When lightning strikes in the neighborhood, rocks can become either partially or entirely remagnetized (see [](#fig:lightning)). These magnetizations often mask the primary magnetization (TRM or DRM), but can sometimes be removed.
 
@@ -555,7 +555,7 @@ By now we have encountered four different methods for estimating the coercivity 
 
 ## Thermo-viscous remanent magnetization
 
-Sometimes rocks are exposed to elevated temperatures for long periods of time (for example during deep burial). The grains with relaxation times (at the elevated temperature) shorter than the exposure time may have acquired a so-called *thermo-viscous remanent magnetization* (TVRM). To erase this remanence, the rock must be heated in the laboratory (in zero field) hot enough and long enough. We cannot wait for geologically meaningful periods of time, so we must estimate what the effective blocking temperature of the TVRM component will be on laboratory time scales. To do this, we follow the logic of {cite}`pullaiah1975`. If we hold $H_c, M_s$ and $v$ constant in [Equation %s](#eq:tau3), we could calculate the relationship of $\tau$ to temperature by:
+Sometimes rocks are exposed to elevated temperatures for long periods of time (for example during deep burial). The grains with relaxation times (at the elevated temperature) shorter than the exposure time may have acquired a so-called *thermo-viscous remanent magnetization* (TVRM). To erase this remanence, the rock must be heated in the laboratory (in zero field) hot enough and long enough. We cannot wait for geologically meaningful periods of time, so we must estimate what the effective blocking temperature of the TVRM component will be on laboratory time scales. To do this, we follow the logic of {cite:t}`pullaiah1975`. If we hold $H_c, M_s$ and $v$ constant in [Equation %s](#eq:tau3), we could calculate the relationship of $\tau$ to temperature by:
 
 $$
 T_1 \ln C \tau_1 = T_2 \ln C \tau_2.
@@ -573,9 +573,9 @@ $$
 \frac{T_1 \ln C \tau_1}{M_s^2(T_1)} = \frac{T_2 \ln C \tau_2}{M_s^2(T_2)}.
 $$ (eq:pullaiahM)
 
-Now all we need is the variation of saturation magnetization with temperature. As previously noted, this is not perfectly known. However, using the approximate relationship from [Chapter 3](#chap:inducedremanent) of $M_s(T)$ ($\gamma=0.38$ in [Equation %s](#eq:MsT) and assuming $T_c=580°$C as in [Chapter 6](#chap:mineralogy)), we can draw the plot shown in [](#fig:pullaiah)a for $\tau$ versus $T_b$. This plot is different in detail from that of {cite}`pullaiah1975` because of the difference in assumed $M_s(T)$ behavior.
+Now all we need is the variation of saturation magnetization with temperature. As previously noted, this is not perfectly known. However, using the approximate relationship from [Chapter 3](#chap:inducedremanent) of $M_s(T)$ ($\gamma=0.38$ in [Equation %s](#eq:MsT) and assuming $T_c=580°$C as in [Chapter 6](#chap:mineralogy)), we can draw the plot shown in [](#fig:pullaiah)a for $\tau$ versus $T_b$. This plot is different in detail from that of {cite:t}`pullaiah1975` because of the difference in assumed $M_s(T)$ behavior.
 
-The theoretical treatment for hematite is different than for magnetite because the dominant source of anisotropy is either a defect moment or magnetocrystalline anisotropy, and the relationship of coercivity with temperature is different than for shape anisotropy. In fact, this relationship for hematite is very poorly constrained. {cite}`pullaiah1975` assumed $H_c(T) \propto M_s^3(T)$ from which they derived:
+The theoretical treatment for hematite is different than for magnetite because the dominant source of anisotropy is either a defect moment or magnetocrystalline anisotropy, and the relationship of coercivity with temperature is different than for shape anisotropy. In fact, this relationship for hematite is very poorly constrained. {cite:t}`pullaiah1975` assumed $H_c(T) \propto M_s^3(T)$ from which they derived:
 
 $$
 \frac{T_1 \ln C \tau_1}{M_s^4(T_1)} = \frac{T_2 \ln C \tau_2}{M_s^4(T_2)}.
@@ -591,7 +591,7 @@ Using experimental values of blocking temperature for hematite, they calculated 
 Theoretical nomogram relating relaxation time and blocking temperature. a) magnetite and b) hematite.
 :::
 
-Curves like those shown in [](#fig:pullaiah) allow us to predict what the blocking temperature of a viscous magnetization acquired over many years will be under laboratory conditions (relaxation times of hundreds of seconds). There are many assumptions built into the plot shown in [](#fig:pullaiah) and some discussion in the literature (see {cite}`dunlop1997` for a good summary). Because of the sensitivity to the $M_s(T)$ behavior and the even more poorly constrained (at least for hematite) $H_c(T)$ behavior, these plots should be used with caution.
+Curves like those shown in [](#fig:pullaiah) allow us to predict what the blocking temperature of a viscous magnetization acquired over many years will be under laboratory conditions (relaxation times of hundreds of seconds). There are many assumptions built into the plot shown in [](#fig:pullaiah) and some discussion in the literature (see {cite:t}`dunlop1997` for a good summary). Because of the sensitivity to the $M_s(T)$ behavior and the even more poorly constrained (at least for hematite) $H_c(T)$ behavior, these plots should be used with caution.
 
 ## Natural remanent magnetization
 
@@ -612,9 +612,9 @@ Another way to magnetize rocks (although not in nature) is to subject a sample t
 
 If there is a small DC bias field superposed on the alternating field, then there will be a statistical preference in the remagnetized grains for the direction of the bias field, analogous to TRM acquired during cooling. This net magnetization is termed the *anhysteretic remanent magnetization* or ARM. By analogy to partial thermal remanence, one can impart a partial anhysteretic remanence (pARM) by only turning on the DC field for part of the AF cycle (solid blue line in [](#fig:arm)). Also, by normalizing the magnetization (volume normalized with units of Am$^{-1}$) by the DC field (also converted to Am$^{-1}$), one has the dimensionless parameter known as ARM susceptibility ($\chi_{ARM}$). This parameter assumes that ARM is linearly related to the inducing field so that $\chi_{ARM}$ is independent of the applied field. This is of course only true for small DC fields and may not be true for the fields used in most laboratories (50-100 μT).
 
-A related remanence known as the *gyromagnetic remanent magnetization* or GRM is a somewhat mysterious remanence that is acquired by stationary specimens in moving fields or by rotating specimens in either steady or moving fields. It is most frequently observed as a component of magnetization acquired during alternating field demagnetization that is perpendicular to the last axis of demagnetization. It was originally thought to arise from the gyroscopic response of SD moments to the torque of an applied field which, in anisotropic distributions of SD moments resulted in a net moment perpendicular to the applied field {cite}`stephenson1981`. But, truly uniaxial single domain particles will have no net remanence if demagnetized along all three axes, no matter how anisotropic the distribution of easy axes is. More recently, {cite}`potter2005` hypothesized that small deviations from the uniaxial constraint for small acicular magnetic particles could explain the behavior. They performed experiments on elongate particles of maghemite (1 μm in length and 0.22 μm in diameter) and confirmed that the non-ideal (not strictly uniaxial) behavior could explain the GRM. They referred to these particles as being single domain, and while they may not have had domain walls, it is likely that such large particles were in fact in the size range that exhibit vortex remanent states (see [Chapter 4](#chap:anisotropy)). It is therefore likely that anisotropic distributions of vortex state particles is the cause of GRM.
+A related remanence known as the *gyromagnetic remanent magnetization* or GRM is a somewhat mysterious remanence that is acquired by stationary specimens in moving fields or by rotating specimens in either steady or moving fields. It is most frequently observed as a component of magnetization acquired during alternating field demagnetization that is perpendicular to the last axis of demagnetization. It was originally thought to arise from the gyroscopic response of SD moments to the torque of an applied field which, in anisotropic distributions of SD moments resulted in a net moment perpendicular to the applied field {cite:p}`stephenson1981`. But, truly uniaxial single domain particles will have no net remanence if demagnetized along all three axes, no matter how anisotropic the distribution of easy axes is. More recently, {cite:t}`potter2005` hypothesized that small deviations from the uniaxial constraint for small acicular magnetic particles could explain the behavior. They performed experiments on elongate particles of maghemite (1 μm in length and 0.22 μm in diameter) and confirmed that the non-ideal (not strictly uniaxial) behavior could explain the GRM. They referred to these particles as being single domain, and while they may not have had domain walls, it is likely that such large particles were in fact in the size range that exhibit vortex remanent states (see [Chapter 4](#chap:anisotropy)). It is therefore likely that anisotropic distributions of vortex state particles is the cause of GRM.
 
-**Supplemental Readings:** {cite}`dunlop1997`, Chapters 8, 10, 11, 13.
+**Supplemental Readings:** {cite:t}`dunlop1997`, Chapters 8, 10, 11, 13.
 
 ## Problems
 
