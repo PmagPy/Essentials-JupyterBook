@@ -23,12 +23,12 @@ Most of the statistical methods used in paleomagnetism have direct analogies to 
 
 Any statistical method for determining a mean (and confidence limit) from a set of observations is based on a probability density function. This function describes the distribution of observations for a hypothetical, infinite set of observations called a population. The Gaussian probability density function (normal distribution) has the familiar bell-shaped form shown in [Figure %s](#fig:gauss)a. The meaning of the probability density function $f(z)$ is that the proportion of observations within an interval of incremental width $dz$ centered on $z$ is $f(z) dz$.
 
-:::{figure} ../figures/chapter11/gauss.png
+:::{figure} ../figures/chapter11/gauss_code.png
 :name: fig:gauss
-:alt: Four-panel plot: a) bell-shaped Gaussian PDF, b) histogram of 1000 bed thickness measurements with normal curve overlay, c) narrow histogram of 100 sample means, d) skewed chi-squared histogram of variances.
+:alt: Four-panel plot: a) bell-shaped Gaussian PDF, b) histogram of 1000 simulated bed thickness measurements with normal curve overlay, c) narrow histogram of 100 sample means, d) skewed chi-squared histogram of variances.
 :width: 100%
 
-a) The Gaussian probability density function (normal distribution, [Equation %s](#eq:normal)). The proportion of observations within an interval $dz$ centered on $z$ is $f(z)dz$. b) Histogram of 1000 measurements of bed thickness in a sedimentary formation. Also shown is the smooth curve of a normal distribution with a mean of 10 and a standard deviation of 3. c) Histogram of the means from 100 repeated sets of 1000 measurements from the same sedimentary formation. The distribution of the means is much tighter. d) Histogram of the variances ($s^2$) from the same set of experiments as in c). The distribution of variances is not bell shaped; it is $\chi^2$.
+a) The Gaussian probability density function (normal distribution, [Equation %s](#eq:normal)). The proportion of observations within an interval $dz$ centered on $z$ is $f(z)dz$. b) Histogram of 1000 simulated measurements of bed thickness in a sedimentary formation, drawn from a normal distribution with a mean of 15 and a standard deviation of 3. Also shown is the smooth curve of the generating distribution. c) Histogram of the means from 100 repeated sets of 1000 measurements from the same distribution. The distribution of the means is much tighter. d) Histogram of the variances ($s^2$) from the same set of experiments as in c). The distribution of variances is not bell shaped; it is $\chi^2$.
 :::
 
 The Gaussian probability density function is given by:
@@ -55,7 +55,7 @@ $$
 
 where $N$ is the number of measurements and $x_i$ is an individual measurement.
 
-The mean estimated from the data shown in [Figure %s](#fig:gauss)b is 10.09. If we had measured an infinite number of bed thicknesses, we would have gotten the bell curve shown as the dashed line and calculated a mean of 10.
+The mean estimated from the data shown in [Figure %s](#fig:gauss)b is 14.91. If we had measured an infinite number of bed thicknesses, we would have gotten the bell curve shown as the dashed line and calculated a mean of 15.
 
 The "spread" in the data is characterized by the *variance* $\sigma^2$. Variance for normal distributions can be estimated by the statistic $s^2$:
 
@@ -65,7 +65,7 @@ $$ (eq:sigma)
 
 In order to get the units right on the spread about the mean (cm -- not cm$^2$), we have to take the square root of $s^2$. The statistic $s$ gives an estimate of the standard deviation $\sigma$ and is the bounds around the mean that includes 68% of the values. The 95% confidence bounds are given by 1.96$s$ (this is what a "2-$\sigma$ error" is), and should include 95% of the observations. The bell curve shown in [Figure %s](#fig:gauss)b has a $\sigma$ (standard deviation) of 3, while the $s$ is 2.97.
 
-If you repeat the bed measuring experiment a few times, you will never get exactly the same measurements in the different trials. The mean and standard deviations measured for each trial then are "sample" means and standard deviations. If you plotted up all those sample means, you would get another normal distribution whose mean should be pretty close to the true mean, but with a much more narrow standard deviation. In [Figure %s](#fig:gauss)c we plot a histogram of means from 100 such trials of 1000 measurements each drawn from the same distribution of $\mu = 10, \sigma = 3$. In general, we expect the standard deviation of the means (or *standard error of the mean*, $s_m$) to be related to $s$ by
+If you repeat the bed measuring experiment a few times, you will never get exactly the same measurements in the different trials. The mean and standard deviations measured for each trial then are "sample" means and standard deviations. If you plotted up all those sample means, you would get another normal distribution whose mean should be pretty close to the true mean, but with a much more narrow standard deviation. In [Figure %s](#fig:gauss)c we plot a histogram of means from 100 such trials of 1000 measurements each drawn from the same distribution of $\mu = 15, \sigma = 3$. In general, we expect the standard deviation of the means (or *standard error of the mean*, $s_m$) to be related to $s$ by
 
 $$
 s_m = \frac{s}{\sqrt{N_{trials}}}.
@@ -73,9 +73,9 @@ $$
 
 What if we were to plot up a histogram of the estimated variances as in [Figure %s](#fig:gauss)c? Are these also normally distributed? The answer is no, because variance is a squared parameter relative to the original units. In fact, the distribution of variance estimates from normal distributions is expected to be *chi-squared* ($\chi^2$). The width of the $\chi^2$ distribution is also governed by how many measurements were made. The so-called number of *degrees of freedom* ($\nu$) is given by the number of measurements made minus the number of measurements required to make the estimate, so $\nu$ for our case is $N-1$. Therefore we expect the variance estimates to follow a $\chi^2$ distribution with $N-1$ degrees of freedom of $\chi^2_{\nu}$.
 
-The estimated standard error of the mean, $s_m$, provides a confidence limit for the calculated mean. Of all the possible samples that can be drawn from a particular normal distribution, 95% have means, $\bar x$, within 2$s_m$ of $\bar x$. (Only 5% of possible samples have means that lie farther than 2$s_m$ from $\bar x$.) Thus the 95% confidence limit on the calculated mean, $\bar x$, is 2$s_m$, and we are 95% certain that the true mean of the population from which the sample was drawn lies within 2$s_m$ of $\bar x$. The estimated standard error of the mean, $s_m$ decreases 1/$\sqrt{N}$. Larger samples provide more precise estimations of the true mean; this is reflected in the smaller confidence limit with increasing $N$.
+The estimated standard error of the mean, $s_m$, provides a confidence limit for the calculated mean. Of all the possible samples that can be drawn from a particular normal distribution, 95% have means, $\bar x$, within 2$s_m$ of $\bar x$. (Only 5% of possible samples have means that lie farther than 2$s_m$ from $\bar x$.) Thus, the 95% confidence limit on the calculated mean, $\bar x$, is 2$s_m$, and we are 95% certain that the true mean of the population from which the sample was drawn lies within 2$s_m$ of $\bar x$. The estimated standard error of the mean, $s_m$ decreases 1/$\sqrt{N}$. Larger samples provide more precise estimations of the true mean; this is reflected in the smaller confidence limit with increasing $N$.
 
-We often wish to consider ratios of variances derived from normal distributions (for example to decide if the data are more scattered in one data set relative to another). In order to do this, we must know what ratio would be expected from data sets drawn from the same distributions. Ratios of such variances follow a so-called $F$ distribution with $\nu_1$ and $\nu_2$ degrees of freedom for the two data sets. This is denoted $F[\nu_1,\nu_2]$. Thus if the ratio $F$, given by:
+We often wish to consider ratios of variances derived from normal distributions (for example to decide if the data are more scattered in one data set relative to another). In order to do this, we must know what ratio would be expected from data sets drawn from the same distributions. Ratios of such variances follow a so-called $F$ distribution with $\nu_1$ and $\nu_2$ degrees of freedom for the two data sets. This is denoted $F[\nu_1,\nu_2]$. Thus, if the ratio $F$, given by:
 
 $$
 F = \frac{s_1^2}{s_2^2},
@@ -99,7 +99,7 @@ Here $\nu = N_1 + N_2 - 2$. If this number is below a critical value for $t$ the
 
 ## Statistics of Vectors
 
-We turn now to the trickier problem of sets of measured vectors. We will consider the case in which all vectors are assumed to have a length of one, i.e., these are unit vectors. Unit vectors are just "directions". Paleomagnetic directional data are subject to a number of factors that lead to scatter. These include:
+We turn now to the trickier problem of sets of measured vectors. We will consider the case in which all vectors are assumed to have a length of one, i.e., these are unit vectors. Unit vectors are just "directions." Paleomagnetic directional data are subject to a number of factors that lead to scatter. These include:
 
 1. uncertainty in the measurement caused by instrument noise or specimen alignment errors,
 2. uncertainties in sample orientation,
