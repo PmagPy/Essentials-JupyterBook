@@ -11,15 +11,13 @@ kernelspec:
   display_name: Python 3
 ---
 
-# Fisher Statistics
+We have laid out the need for statistical analysis of paleomagnetic data in the preceding chapters. For instance, we require a method for determining a mean direction from a set of observations. Such a method should provide some measure of uncertainty of the mean direction. Additionally, we need methods for assessing the significance of field tests of paleomagnetic stability. In this chapter, we introduce basic statistical methods for analysis of directional data. It is sometimes said that statistical analyses are used by scientists in the same manner that a drunk uses a light pole: more for support than for illumination. Although this might be true, statistical analysis is fundamental to any paleomagnetic investigation. An appreciation of the basic statistical methods is required to understand paleomagnetism.
+
+Most of the statistical methods used in paleomagnetism have direct analogies to "planar" statistics. We begin by reviewing the basic properties of the normal distribution. This distribution is used for statistical analysis of a wide variety of observations and will be familiar to many readers. We then tackle statistical analysis of directional data by analogy with the normal distribution. Although the reader might not follow all aspects of the mathematical formalism, this is no cause for alarm. Graphical displays of functions and examples of statistical analysis will provide the more important intuitive appreciation for the statistics.
 
 :::{seealso}
 Read {cite}`taylor1982`, Chapters 1-5.
 :::
-
-We have laid out the need for statistical analysis of paleomagnetic data in the preceding chapters. For instance, we require a method for determining a mean direction from a set of observations. Such a method should provide some measure of uncertainty of the mean direction. Additionally, we need methods for assessing the significance of field tests of paleomagnetic stability. In this chapter, we introduce basic statistical methods for analysis of directional data. It is sometimes said that statistical analyses are used by scientists in the same manner that a drunk uses a light pole: more for support than for illumination. Although this might be true, statistical analysis is fundamental to any paleomagnetic investigation. An appreciation of the basic statistical methods is required to understand paleomagnetism.
-
-Most of the statistical methods used in paleomagnetism have direct analogies to "planar" statistics. We begin by reviewing the basic properties of the normal distribution. This distribution is used for statistical analysis of a wide variety of observations and will be familiar to many readers. We then tackle statistical analysis of directional data by analogy with the normal distribution. Although the reader might not follow all aspects of the mathematical formalism, this is no cause for alarm. Graphical displays of functions and examples of statistical analysis will provide the more important intuitive appreciation for the statistics.
 
 ## The Normal Distribution
 
@@ -118,7 +116,7 @@ Some of these sources of scatter (e.g., items 1, 2 and perhaps 6 above) lead to 
 :alt: Nine equal area projections in a 3x3 grid showing Fisher-distributed directions with increasing concentration from top (kappa=5, scattered) to bottom (kappa=50, tightly clustered), with mean directions and confidence circles.
 :width: 100%
 
-Hypothetical data sets drawn from Fisher distributions with vertical true directions. Each row shows three realizations for $\kappa$ = 5 (top row), $\kappa$ = 10 (middle row), and $\kappa$ = 50 (bottom row). Estimated $\bar D, \bar I, \kappa, \alpha_{95}$ shown in insets. Blue circles are individual directions; orange triangles are the estimated mean directions with $\alpha_{95}$ confidence circles.
+Hypothetical data sets drawn from Fisher distributions with vertical true directions. Each row shows three realizations for $\kappa$ = 5 (top row), $\kappa$ = 10 (middle row), and $\kappa$ = 50 (bottom row). Estimated mean declination ($\bar D$), mean inclination ($\bar I$), precision parameter ($\kappa$), and 95% confidence angle ($\alpha_{95}$) shown in insets. Blue circles are individual directions; orange triangles are the estimated mean directions with $\alpha_{95}$ confidence circles.
 :::
 
 In order to calculate mean directions with confidence limits, paleomagnetists rely heavily on the special statistics known as *Fisher statistics* {cite}`fisher1953`, which were developed for assessing dispersion of unit vectors on a sphere. It is applicable to directional data that are dispersed in a symmetric manner about the true direction. We show some examples of such data in [Figure %s](#fig:fisher) with varying amounts of scatter from highly scattered in the top row to rather concentrated in the bottom row. All the data sets were drawn from a Fisher distribution with a vertical true direction.
@@ -138,12 +136,12 @@ where $\alpha$ is the angle between the unit vector and the true direction and $
 
 We can see in [Figure %s](#fig:P)a the probability of finding a direction within an angular area $dA$ centered $\alpha$ degrees away from the true mean for different values of $\kappa$. $\kappa$ is a measure of the concentration of the distribution about the true mean direction. The larger the value of $\kappa$, the more concentrated the direction; $\kappa$ is 0 for a distribution of directions that is uniform over the sphere and approaches $\infty$ for directions concentrated at a point.
 
-:::{figure} ../figures/chapter11/P.png
+:::{figure} ../figures/chapter11/P_new.png
 :name: fig:P
-:alt: Two panels showing Fisher probability density versus angle from true mean for kappa=5, 10, 50, 100: a) probability per unit area decreasing from the mean, b) probability per angular band peaking away from zero due to the sin(alpha) factor.
+:alt: Two panels showing Fisher probability density versus angle from true mean for kappa=5, 10, 50, 100: left panel shows probability per unit area decreasing from the mean, right panel shows probability per angular band peaking away from zero due to the sin(alpha) factor.
 :width: 100%
 
-a) Probability of finding a direction within an angular area, $dA$ centered at an angle $\alpha$ from the true mean. b) Probability of finding a direction at angle $\alpha$ away from the true mean direction.
+Fisher probability density functions for $\kappa$ = 5, 10, 50, and 100. Left: probability of finding a direction within an angular area $dA$ centered at angle $\alpha$ from the true mean. Right: probability of finding a direction at angle $\alpha$ away from the true mean direction, which includes the $\sin(\alpha)$ factor that accounts for the decreasing area of angular bands near the poles.
 :::
 
 If $\phi$ is taken as the azimuthal angle about the true mean direction, the probability of a direction within an angular area, $dA$, can be expressed as
