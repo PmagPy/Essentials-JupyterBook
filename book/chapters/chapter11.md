@@ -113,12 +113,12 @@ We turn now to the trickier problem of sets of measured vectors. We will conside
 
 Some of these sources of scatter (e.g., items 1, 2 and perhaps 6 above) lead to a symmetric distribution about a mean direction. Other sources of scatter contribute to distributions that are wider in one direction than another. For example, in the extreme case, item 4 leads to a girdle distribution whereby directions are smeared along a great circle. It would be handy to be able to calculate a mean direction for data sets and to quantify the scatter.
 
-:::{figure} ../figures/chapter11/fisher.png
+:::{figure} ../figures/chapter11/fisher_new.png
 :name: fig:fisher
 :alt: Nine equal area projections in a 3x3 grid showing Fisher-distributed directions with increasing concentration from top (kappa=5, scattered) to bottom (kappa=50, tightly clustered), with mean directions and confidence circles.
 :width: 100%
 
-Hypothetical data sets drawn from Fisher distributions with vertical true directions with $\kappa$ = 5 (a-c), $\kappa$ = 10 (d-f), $\kappa$ = 50 (g-i). Estimated $\bar D, \bar I, \kappa, \alpha_{95}$ shown in insets.
+Hypothetical data sets drawn from Fisher distributions with vertical true directions. Each row shows three realizations for $\kappa$ = 5 (top row), $\kappa$ = 10 (middle row), and $\kappa$ = 50 (bottom row). Estimated $\bar D, \bar I, \kappa, \alpha_{95}$ shown in insets. Blue circles are individual directions; orange triangles are the estimated mean directions with $\alpha_{95}$ confidence circles.
 :::
 
 In order to calculate mean directions with confidence limits, paleomagnetists rely heavily on the special statistics known as *Fisher statistics* {cite}`fisher1953`, which were developed for assessing dispersion of unit vectors on a sphere. It is applicable to directional data that are dispersed in a symmetric manner about the true direction. We show some examples of such data in [Figure %s](#fig:fisher) with varying amounts of scatter from highly scattered in the top row to rather concentrated in the bottom row. All the data sets were drawn from a Fisher distribution with a vertical true direction.
