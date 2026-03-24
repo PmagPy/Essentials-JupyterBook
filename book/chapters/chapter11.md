@@ -1,9 +1,6 @@
 ---
 title: "Chapter 11: Fisher Statistics"
 label: chap:fisher
-authors:
-  - name: Lisa Tauxe
-    affiliation: Scripps Institution of Oceanography, UC San Diego
 numbering:
   enumerator: 11.%s
 kernelspec:
@@ -187,7 +184,7 @@ These Cartesian coordinates can, of course, be converted back to geomagnetic ele
 :alt: Diagram of eight unit vectors m1 through m8 arranged head-to-tail with their resultant vector R shown as a bold red arrow, illustrating vector addition of directional data.
 :width: 70%
 
-Vector addition of eight unit vectors ($m_i$) to yield resultant vector $R$. [Figure redrawn from {cite}`butler1992`.]
+Vector addition of eight unit vectors m1 through m8 arranged head-to-tail to yield the resultant vector $R$.
 :::
 
 Having calculated the mean direction, the next objective is to determine a statistic that can provide a measure of the dispersion of the population of directions from which the sample data set was drawn. One measure of the dispersion of a population of directions is the precision parameter, $\kappa$. From a finite sample set of directions, $\kappa$ is unknown, but a best estimate of $\kappa$ can be calculated by
@@ -236,11 +233,11 @@ When we calculate the mean direction, a dispersion estimate, and a confidence li
 
 Having buried the reader in mathematical formulations, we present the following illustrations to develop some intuitive appreciation for the statistical quantities. One essential concept is the distinction between statistical quantities calculated from a directional data set and the unknown parameters of the sampled population.
 
-Consider the various sets of directions plotted as equal area projections (see [Chapter 2](#chap:geomag)) in [Figure %s](#fig:fisher). These are all synthetic data sets drawn from Fisher distributions with means of a single, vertical direction. Each of the three diagrams in a row is a replicate sample from the same distribution. The top row were all drawn from a distribution with $\kappa = 5$, the middle with $\kappa = 10$ and the bottom row with $\kappa = 50$. For each synthetic data set, we estimated $\bar D, \bar I, \kappa$ and $\alpha_{95}$ (shown as insets to the equal area diagrams).
+Consider the various sets of directions plotted as equal area projections in [Figure %s](#fig:fisher). These are all synthetic data sets drawn from Fisher distributions with means of a single, vertical direction. Each of the three diagrams in a row is a replicate sample from the same distribution. The top row were all drawn from a distribution with $\kappa = 5$, the middle with $\kappa = 10$ and the bottom row with $\kappa = 50$. For each synthetic data set, we estimated $\bar D, \bar I, \kappa$ and $\alpha_{95}$ (shown as insets to the equal area diagrams).
 
-There are several important observations to be taken from these examples. Note that the calculated mean direction is never exactly the true mean direction ($I$ = +90$^{\circ}$). The calculated mean inclination $\bar I$ varies from 78.6$^{\circ}$ to 89.3$^{\circ}$, and the mean declinations fall within all quadrants of the equal-area projection. The calculated mean direction thus randomly dances about the true mean direction and deviates from the true mean by between 0.7$^{\circ}$ and 11.4$^{\circ}$. The calculated $k$ statistic varies considerably among replicate samples as well. The variation of $k$ and differences in angular variance of the data sets with the same underlying distribution are simply due to the vagaries of random sampling.
+There are several important observations to be taken from these examples. Note that the calculated mean direction is never exactly the true mean direction ($I$ = +90$^{\circ}$). The calculated mean inclination $\bar I$ varies from 79.7$^{\circ}$ to 89.1$^{\circ}$, and the mean declinations fall within all quadrants of the equal-area projection. The calculated mean direction thus randomly dances about the true mean direction and deviates from the true mean by between 0.9$^{\circ}$ and 10.3$^{\circ}$. The calculated $k$ statistic varies considerably among replicate samples as well. The variation of $k$ and differences in angular variance of the data sets with the same underlying distribution are simply due to the vagaries of random sampling.
 
-The confidence limit $\alpha_{95}$ varies from 19.9$^{\circ}$ to 4.3$^{\circ}$ and is shown by the circle surrounding the calculated mean direction (shown as a triangle). For these directional data sets, only one ([Figure %s](#fig:fisher)e) has a calculated mean that is more than $\alpha_{95}$ from the true mean. However, if 100 such synthetic data sets had been analyzed, on average five would have a calculated mean direction removed from the true mean direction by more than the calculated confidence limit $\alpha_{95}$. That is, the true mean direction would lie outside the circle of 95% confidence, on average, in 5% of the cases.
+The confidence limit $\alpha_{95}$ varies from 3.4$^{\circ}$ to 14.3$^{\circ}$ and is shown by the circle surrounding the calculated mean direction (shown as a triangle). For these directional data sets, none of the calculated means falls more than $\alpha_{95}$ from the true mean. However, if 100 such synthetic data sets had been analyzed, on average five would have a calculated mean direction removed from the true mean direction by more than the calculated confidence limit $\alpha_{95}$. That is, the true mean direction would lie outside the circle of 95% confidence, on average, in 5% of the cases.
 
 It is also important to appreciate which statistical quantities are fundamentally dependent upon the number of observations $N$. Neither the $k$ value ([Equation %s](#eq:k)) nor the estimated angular deviation CSD ([Equation %s](#eq:csd)) is fundamentally dependent upon $N$. These statistical quantities are estimates of the intrinsic dispersion of directions in the Fisherian population from which the data set was sampled. Because that dispersion is not affected by the number of times the population is sampled, the calculated statistics estimating that dispersion should not depend fundamentally on the number of observations $N$. However, the confidence limit $\alpha_{95}$ should depend on $N$; the more individual measurements there are in our sample, the greater must be the precision (and accuracy) in estimating the true mean direction. This increased precision should be reflected by a decrease in $\alpha_{95}$ with increasing $N$. Indeed [Equation %s](#eq:a95) indicates that $\alpha_{95}$ depends approximately on $1/\sqrt{N}$.
 
@@ -302,30 +299,6 @@ R_o = \sqrt{\frac{7.815 \cdot N}{3}}.
 $$ (eq:Ro)
 
 The estimation works well for $N > 10$, but is somewhat biased for smaller data sets. The critical values of $R$ for $5 < N < 20$ from {cite}`watson1956` are listed for convenience in [Table %s](#tab:Ro).
-
-:::{table} Critical values of $R$ for Watson's test for randomness at the 95% confidence level (from Watson, 1956).
-:name: tab:Ro
-
-| $N$ | $R_o$ (95%) |
-|-----|-------------|
-| 5   | 3.04        |
-| 6   | 3.35        |
-| 7   | 3.63        |
-| 8   | 3.89        |
-| 9   | 4.12        |
-| 10  | 4.34        |
-| 11  | 4.54        |
-| 12  | 4.73        |
-| 13  | 4.91        |
-| 14  | 5.08        |
-| 15  | 5.24        |
-| 16  | 5.40        |
-| 17  | 5.55        |
-| 18  | 5.69        |
-| 19  | 5.83        |
-| 20  | 5.96        |
-
-:::
 
 The test for randomness is particularly useful for determining if, for example, the directions from a given site are randomly oriented (the data for the site should therefore be thrown out). Also, one can determine if directions from the conglomerate test are random or not (see [Chapter 9](#chap:direction)).
 
@@ -500,3 +473,29 @@ a) Unpack the Chapter_11 datafile from the data_files archive (see the Preface f
 - Calculate the means using one of the options described in Problem 1.
 
 b) Use the function **pmag.dotilt** to "untilt" the data. Repeat the procedure in a). Would the two data sets pass a simple (McElhinny $F$ test) fold test?
+
+## Supplemental Tables
+
+:::{table} Critical values of $R$ for Watson's test for randomness at the 95% confidence level (from Watson, 1956).
+:name: tab:Ro
+
+| $N$ | $R_o$ (95%) |
+|-----|-------------|
+| 5   | 3.04        |
+| 6   | 3.35        |
+| 7   | 3.63        |
+| 8   | 3.89        |
+| 9   | 4.12        |
+| 10  | 4.34        |
+| 11  | 4.54        |
+| 12  | 4.73        |
+| 13  | 4.91        |
+| 14  | 5.08        |
+| 15  | 5.24        |
+| 16  | 5.40        |
+| 17  | 5.55        |
+| 18  | 5.69        |
+| 19  | 5.83        |
+| 20  | 5.96        |
+
+:::
