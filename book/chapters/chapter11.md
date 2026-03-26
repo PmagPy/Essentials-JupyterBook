@@ -182,7 +182,7 @@ These Cartesian coordinates can, of course, be converted back to geomagnetic ele
 :::{figure} ../figures/chapter11/vecsum.png
 :name: fig:vecsum
 :alt: Diagram of eight unit vectors m1 through m8 arranged head-to-tail with their resultant vector R shown as a bold red arrow, illustrating vector addition of directional data.
-:width: 70%
+:width: 90%
 
 Vector addition of eight unit vectors m1 through m8 arranged head-to-tail to yield the resultant vector $R$.
 :::
@@ -247,7 +247,7 @@ It is also important to appreciate which statistical quantities are fundamentall
 2. Starting with the first four directions in the synthetic data set, a subset of $N$ = 4 was used to calculate $k$, CSD and $\delta$ using [Equations %s](#eq:k), [%s](#eq:csd), and [%s](#eq:del) respectively. In addition, $\alpha_{95}$ (using [Equation %s](#eq:a95)) was calculated. Resulting values of CSD, $\delta$ and $\alpha_{95}$ are shown in [Figure %s](#fig:a95-csd) as a function of $N$.
 3. For each succeeding value of $N$ in [Figure %s](#fig:a95-csd), the next direction from the $N$ = 30 synthetic data set was added to the previous subset of directions, continuing until the full $N$ = 30 synthetic data set was used.
 
-The effects of increasing $N$ are readily apparent in [Figure %s](#fig:a95-csd) in which we show a comparison of the two estimates of $S$, CSD and $\delta$. Although not fundamentally dependent upon $N$, in practice the estimated angular standard deviation, CSD, deviates from $S$ for values of $N < 15$, only approaching the correct value when $N \ge 15$. As expected, the calculated confidence limit $\alpha_{95}$ decreases approximately as $1/\sqrt{N}$, showing a dramatic decrease in the range $4 < N < 10$ and more gradual decrease for $N > 10$.
+The effects of increasing $N$ are apparent in [Figure %s](#fig:a95-csd) in which we show a comparison of the two estimates of $S$, CSD and $\delta$. Although not fundamentally dependent upon $N$, in practice the estimated angular standard deviation, CSD, deviates from $S$ for values of $N < 15$, only approaching the correct value when $N \ge 15$. As expected, the calculated confidence limit $\alpha_{95}$ decreases approximately as $1/\sqrt{N}$, showing a dramatic decrease in the range $4 < N < 10$ and more gradual decrease for $N > 10$.
 
 :::{figure} ../figures/chapter11/a95-csd.png
 :name: fig:a95-csd
