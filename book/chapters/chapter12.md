@@ -24,7 +24,7 @@ In many important situations, the Fisher distribution fails to represent paleoma
 
 Another example of the inadequacy of the Fisher distribution is the fact that the magnetic field exists in two stable polarity states. Because the Fisher distribution allows only uni-modal data, bi-polar data must be separated into separate modes or one mode must be "flipped" to the antipode prior to calculating a mean. Remanence vectors composed of several components tend to form streaked distributions. Structural complications (e.g., folding) can lead to streaked distributions of directional data. And, inclination error arising from flattening of directions tends to form "squashed" directional distributions that are wider in the horizontal plane than in the vertical. These are all commonly observed pathologies in directional data sets that lead to non-Fisherian data distributions.
 
-Thus, non-Fisherian data are a fact of paleomagnetic life. The Fisher-based tests can frequently be inappropriate and could result in flawed interpretations. In [Chapter 11](#chap:fisher), we learned the basics of Fisher statistics and how to test data sets against a Fisher distribution. In this chapter, we will discuss what to do when Fisher statistics fail. We will begin with parametric approaches that treat certain types of non-Fisherian data. We then turn to the use of non-parametric methods such as the bootstrap and jackknife in paleomagnetic applications.
+Thus, non-Fisherian data are a fact of paleomagnetic life. The Fisher-based tests can frequently be inappropriate and could result in flawed interpretations. In [Chapter 11](#chap:fisher), we learned the basics of Fisher statistics and how to test data sets against a Fisher distribution. In this chapter, we will discuss what to do when Fisher statistics fail. We will begin with parametric approaches that treat certain types of non-Fisherian data. We then turn to non-parametric methods for paleomagnetic applications, focusing on the bootstrap.
 
 (sect:nonfisherian-parametric)=
 ## Non-Fisherian Parametric Approaches
@@ -38,7 +38,7 @@ $$
 F = c(\kappa,\beta)^{-1} \exp(\kappa \cos \alpha + \beta \sin^2 \alpha \cos 2\phi)
 $$ (eq:kent)
 
-The mean direction in a Kent distribution is estimated in the same way as for the Fisher distribution (see [Chapter 11](#chap:fisher)). The difference is that when transformed to the mean direction, Kent declinations are not uniformly distributed around the mean. If we calculate eigenparameters for the orientation matrix of the data (see [](#app:eigen)), then the major and minor eigenvectors ($\V_2, \V_3$) lie in a plane orthogonal to the mean direction along the axis with the most and least scatter respectively. In [Equation %s](#eq:kent), $\alpha$ is the angle between a given direction and the true mean direction, and $\phi$ is the angle in the $\V_2, \V_3$ plane with $\phi$ = 0 parallel to $\V_2$. $\kappa$ is a concentration parameter similar to the Fisher $\kappa$ and $\beta$ is the "ovalness" parameter. $c(\kappa,\beta)$ is a complicated function of $\kappa$ and $\beta$. When $\beta$ is zero, the Kent distribution reduces to a Fisher distribution. Details of the calculation of Kent 95% confidence ellipses are given in [](#app:kent).
+The mean direction in a Kent distribution is estimated in the same way as for the Fisher distribution (see [Chapter 11](#chap:fisher)). The difference is that when transformed  into coordinates centered on the mean direction, Kent declinations are not uniformly distributed around the mean. If we calculate eigenparameters for the orientation matrix of the data (see [](#app:eigen)), then the major and minor eigenvectors ($\V_2, \V_3$) lie in a plane orthogonal to the mean direction along the axis with the most and least scatter respectively. In [Equation %s](#eq:kent), $\alpha$ is the angle between a given direction and the true mean direction, and $\phi$ is the angle in the $\V_2, \V_3$ plane with $\phi$ = 0 parallel to $\V_2$. $\kappa$ is a concentration parameter similar to the Fisher $\kappa$ and $\beta$ is the "ovalness" parameter. $c(\kappa,\beta)$ is a complicated function of $\kappa$ and $\beta$. When $\beta$ is zero, the Kent distribution reduces to a Fisher distribution. Details of the calculation of Kent 95% confidence ellipses are given in [](#app:kent).
 
 If we were to collect data from the equatorial region, we might well obtain a set of directions such as those shown in [](#fig:confidence)a. [Note that the center of the diagram is the expected direction -- not down as is more common.] The Fisher $\alpha_{95}$ circle of confidence for this data set is shown in [](#fig:confidence)a. The Kent ellipse ([](#fig:confidence)b) clearly represents the distribution of data better than the Fisher $\alpha_{95}$, being elongate in the same sense as the data themselves.
 
@@ -68,12 +68,12 @@ The principal drawback of the Bingham distribution is that because the orientati
 
 Estimating the parameters for the Bingham ellipse exactly is computationally taxing and all of the available "canned" programs use the look up table of {cite:t}`mardia1977` (see [](#app:bing)). {cite:t}`legoff1992` suggested some approximations which may be valid for concentrated distributions. They also introduced the concept of weighting results according to some reliability criteria. For the general case, however, it seems preferable to use the exact {cite:t}`kent1982` ellipses on uni-modal data sets. These could of course be weighted if such weighting is desired.
 
-:::{figure} ../figures/chapter12/love.png
+:::{figure} ../figures/chapter12/eigenvector.png
 :name: fig:love
-:alt: 3D plot with North-East-Down axes showing two antipodal clusters of red spheres representing a bi-Gaussian distribution of vectors.
+:alt: 3D plot with North-East-Down coordinate axes (dashed lines) showing two antipodal clusters of red spheres representing a bi-Gaussian distribution of vectors, with the principal eigenvector V1 (solid line) passing through both clusters.
 :width: 80%
 
-A bi-gaussian set of vectors suitable for treatment using the method of {cite:t}`love2003`.
+A bi-Gaussian set of vectors suitable for treatment using the method of {cite:t}`love2003`. The dashed lines show the North-East-Down coordinate axes. The solid line is the principal eigenvector $\V_1$ of the orientation matrix, which defines the axis about which the moment of inertia of the data is least.
 :::
 
 (sect:bigaussian)=
