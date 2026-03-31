@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
 
 
 def unit_vector_from_dec_inc(dec_deg: float, inc_deg: float) -> np.ndarray:
@@ -167,7 +168,7 @@ def set_equal_axes(ax: plt.Axes) -> None:
     y_middle = np.mean(y_limits)
     z_middle = np.mean(z_limits)
 
-    radius = 0.5 * max([x_range, y_range, z_range])
+    radius = 0.4 * max([x_range, y_range, z_range])
 
     ax.set_xlim3d([x_middle - radius, x_middle + radius])
     ax.set_ylim3d([y_middle - radius, y_middle + radius])
@@ -234,8 +235,9 @@ def make_figure(vectors, mean_dir, outpath, title=""):
     if np.dot(v1, mean_dir) < 0:
         v1 = -v1
 
-    fig = plt.figure(figsize=(8, 8))
+    fig = plt.figure(figsize=(6, 6))
     ax = fig.add_subplot(111, projection="3d")
+    ax.set_position([0, 0, 1, 1])
 
     draw_spheres(ax, vectors, radius=0.04, color="#d9534f")
 
@@ -252,29 +254,44 @@ def make_figure(vectors, mean_dir, outpath, title=""):
         lw=4,
     )
 
-    # Emphasize both ends of the principal axis.
-    endpoints = np.array([line_len * v1, -line_len * v1])
-    draw_spheres(ax, endpoints, radius=0.05, color="black")
-
     ax.text(
         1.42 * v1[0],
         1.42 * v1[1],
-        1.42 * v1[2],
+        1.42 * v1[2] + 0.12,
         r"$\mathbf{V}_1$",
         fontsize=18,
     )
 
     ax.set_axis_off()
     set_equal_axes(ax)
-    ax.view_init(elev=18, azim=-35)
+    ax.view_init(elev=18, azim=-50)
 
     print(f"{title}")
     print(f"  Eigenvalues: {evals}")
     print(f"  Principal eigenvector V1: {v1}")
 
-    plt.tight_layout()
-    fig.savefig(outpath, dpi=300, bbox_inches="tight")
+    fig.savefig(outpath, dpi=300, bbox_inches="tight", pad_inches=0.05)
     plt.close(fig)
+
+    # Autocrop white space from the saved image.
+    img = Image.open(outpath)
+    arr = np.array(img)
+    bg = arr[0, 0]
+    mask = np.any(arr != bg, axis=2)
+    rows = np.any(mask, axis=1)
+    cols = np.any(mask, axis=0)
+    if rows.any() and cols.any():
+        rmin, rmax = np.where(rows)[0][[0, -1]]
+        cmin, cmax = np.where(cols)[0][[0, -1]]
+        margin = 20
+        crop_box = (
+            max(cmin - margin, 0),
+            max(rmin - margin, 0),
+            min(cmax + margin, arr.shape[1]),
+            min(rmax + margin, arr.shape[0]),
+        )
+        img.crop(crop_box).save(outpath)
+
     print(f"  Saved to {outpath}")
 
 
