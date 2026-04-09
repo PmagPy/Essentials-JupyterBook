@@ -8,7 +8,9 @@ numbering:
   enumerator: 12.%s
 ---
 
-**BACKGROUND:** read {cite:t}`efron1993`; {cite:t}`tauxe1991`.
+:::{seealso}
+Read {cite:t}`efron1993`; {cite:t}`tauxe1991`.
+:::
 
 Paleomagnetists have depended since the 1950's on the special statistical framework developed by {cite:t}`fisher1953` for the analysis of unit vector data. The power and flexibility of a variety of tools based on Fisher statistics enables quantification of parameters such as the degree of rotation of a crustal block, or whether the geomagnetic field really averages to a geocentric axial dipole independent of polarity. These tools, however, require that the paleomagnetic data belong to a particular parametric distribution -- the Fisher distribution.
 
@@ -184,7 +186,9 @@ We can incorporate uncertainties in bedding into the bootstrap. If we assume tha
 
 Finally, it is important to remember that peaks in concentration between 0 and 100% unfolding can result from a variety of causes. Traditionally, intermediate peaks have been interpreted as resulting from remagnetization of the rock units during folding (see, e.g., {cite:t}`mccabe1983`). Such behavior could also result from failure to account for plunging folds, or vertical axis rotation between blocks (see {cite:t}`tauxe1994`), so some caution should be exercised when interpreting fold test results.
 
-**SUPPLEMENTAL READINGS:** {cite:t}`fisher1987`, Chapters 2--5.
+:::{seealso}
+**Supplemental readings:** {cite:t}`fisher1987`, Chapters 2--5.
+:::
 
 (sect:problems-ch12)=
 ## Problems
