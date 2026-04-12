@@ -1,20 +1,17 @@
 ---
 title: "Chapter 16: Tectonic Applications of Paleomagnetism"
 label: chap:tectonic-applications
-authors:
-  - name: Lisa Tauxe
-    affiliation: Scripps Institution of Oceanography, UC San Diego
 numbering:
   enumerator: 16.%s
 ---
 
-**BACKGROUND:** read {cite:t}`mcelhinny2000`.
+:::{caution} Chapter under construction
+This chapter contains a mix of newly updated material and content from earlier editions. Some sections are actively being revised. Significant additional work is needed to modernize content.
+:::
 
-No book on paleomagnetism would be complete without a chapter on apparent polar wander and tectonic applications of paleomagnetism. So what is apparent polar wander? The simple notion of a centered dipole giving rise to an observed direction at an observation point on the surface of the Earth led to the definition of an equivalent pole position, the VGP of [Chapter 2](#chap:geomag). In [Chapter 14](#chap:ancient-field) we mentioned that averages of a number of VGPs sufficient to "average out" secular variation are known as paleomagnetic poles. When these are plotted on a map, they tend to "wander" away from the spin axis with increasing age of the rock unit sampled (e.g., {cite:t}`hospers1955`; {cite:t}`irving1958`).
+Apparent polar wander is a central concept in paleomagnetism that provides quantitative constraints on tectonic plate motion through time. Interpreting paleomagnetic directions measured at Earth’s surface in terms of a geomagnetic field dominated by a geocentric dipole led to the definition of an equivalent pole position, the virtual geomagnetic pole (VGP), introduced in [Chapter 2](#chap:geomag). In [Chapter 14](#chap:ancient-field), we mentioned that averages of a number of VGPs that are considered to "average out" secular variation are known as paleomagnetic poles. When these are plotted on a map, such paleomagnetic poles "wander" away from the spin axis with increasing age of the rock unit sampled (e.g., {cite:t}`hospers1955`; {cite:t}`irving1958`).
 
-As illustrated in [](#fig:wandering), the apparent wandering of the north pole could be interpreted in two ways: wandering of continents whose paleomagnetic directions reflect the changing orientations and distances to the (fixed) pole ([](#fig:wandering)a), or alternatively, the pole itself could be wandering, as in [](#fig:wandering)b while the continent remains fixed.
-
-Data from a single continent cannot distinguish between these two hypotheses. But data from multiple continents and a firm belief in the essential dipolar nature of the geomagnetic field (dating back to 1600!) can. If the pole paths from two or more continents diverge back in time and there is a dipolar field (only one north pole), then it must be the continents that are doing the wandering. It was data of this kind that convinced paleomagnetists in the 50s of the reality of continental drift. In this chapter we will consider how apparent polar wander paths for the various continents can be constructed and briefly discuss a few tectonic applications.
+As illustrated in [](#fig:wandering), the apparent wandering of the north pole could be interpreted in two ways: wandering of continents whose paleomagnetic directions reflect the changing orientations and distances to the (fixed) pole ([](#fig:wandering)a), or alternatively, the pole itself could be wandering, as in [](#fig:wandering)b, while the continent remains fixed.
 
 :::{figure} ../figures/chapter16/wandering.png
 :name: fig:wandering
@@ -24,24 +21,58 @@ Data from a single continent cannot distinguish between these two hypotheses. Bu
 a) A moving continent will retain a record of changing paleomagnetic directions through time that reflect the changing orientations and distances to the pole (which is held fixed). The resulting path of observed pole positions is called an "apparent polar wander path" or APWP because in this case the pole is actually fixed and only appears to move when viewed from the continental frame of reference. b) On the other hand, if a continent is held fixed, the same changing paleomagnetic directions reflect the wandering of the pole itself. This is called "true polar wander" or TPW.
 :::
 
+Data from a single continent cannot distinguish between these two hypotheses. Paleomagnetic data from multiple continents can, given our understanding that the time-averaged geomagnetic field is well approximated by a geocentric axial dipole. If the pole paths from two or more continents diverge back in time and there is a dipolar field (only one north pole), then it must be the continents that are doing the wandering. The initial discovery of divergent apparent polar wander paths between Europe and North America in the 1950s pointed towards the reality of continental drift that set the stage for the plate tectonic revolution {cite:t}`irving1956`. In this chapter, we will consider how apparent polar wander paths can be constructed and briefly discuss a few tectonic applications.
+
 (sect:plate-tectonics)=
 ## Essentials of Plate Tectonic Theory
 
-Well after the concept of continental drift and apparent polar wander had been accepted by most of the paleomagnetic community, the idea of sea-floor spreading and plate tectonics was developed to explain it. In plate tectonics, the hard outer shell of the Earth, the *lithosphere* is composed of many rigid or semi-rigid plates, the most important of which are shown in [](#fig:plates). These plates are in constant motion with respect to one another. The relative motion of two plates can be described by rotation about an Euler rotation vector, which is usually specified by a pole latitude/longitude on the surface of the Earth ($\lambda_{e},\phi_e$) and a rotation rate $\omega$ in $^{\circ}$Myr$^{-1}$. The velocity $v$ at a given point on a plate with respect to its "fixed" partner varies as a function of angular distance from the Euler pole ($\theta$) as:
+The rigid outer shell of the Earth, the *lithosphere*, is composed of many plates as shown in [](#fig:plates). These plates are in constant motion with respect to one another, driven by convective flow in the underlying mantle and the gravitational pull of subducting slabs. 
+
+:::{figure} ../figures/chapter16/plates_new.png
+:name: fig:plates
+:alt: World map showing major lithospheric plates with divergent and convergent arrows on boundaries.
+:width: 100%
+
+Major lithospheric plates with plate boundaries from the PB2002 model of {cite:t}`bird2003`. Blue arrows show the sense of divergent motion at oceanic spreading ridges; green arrows show convergent motion at subduction zones and continental collision boundaries.
+:::
+
+The relative motion of two plates can be described by rotation about an Euler rotation vector, which is usually specified by a pole latitude/longitude on the surface of the Earth ($\lambda_{e},\phi_e$) and a rotation rate $\omega$ in $^{\circ}$Myr$^{-1}$. The velocity $v$ at a given point on a plate with respect to its "fixed" partner varies as a function of angular distance from the Euler pole ($\theta$) as:
 
 $$
 v = a \omega \sin \theta,
 $$ (eq:spreadingrate)
 
-where $a$ is the radius of the Earth as in [Chapter 2](#chap:geomag). As an example, we show the motion of North America (NAM) with respect to "fixed" Europe (EUR) in [](#fig:plates)b. For simplicity, we have rotated the reference frame such that the current Euler pole {cite:p}`demets1994` is shown as the square. Lines of co-latitude correspond to $\theta$ in this projection, so the velocities (usually expressed in cm/yr; see black arrows in [](#fig:plates)b) increase away from the pole, with a maximum at $\theta = 90^{\circ}$. Beyond 90$^{\circ}$ the velocities decrease to the antipode of the Euler pole. Spreading rates can be determined from marine magnetic anomalies and their variation along the ridge crest can be fit with [Equation %s](#eq:spreadingrate) to find both $\omega$ and $\theta$, and helping to constrain the location of the Euler pole.
+where $a$ is the radius of the Earth as in [Chapter 2](#chap:geomag). As an example, we show the motion of North America (NAM) with respect to "fixed" Europe (EUR) in [](#fig:euler-pole). The current NUVEL-1A Euler pole {cite:p}`demets1994` is shown as the red circle. Lines of co-latitude correspond to $\theta$ in this projection, so the velocities (usually expressed in cm/yr; see red arrows in [](#fig:euler-pole)) increase away from the pole, with a maximum at $\theta = 90^{\circ}$. Spreading rates can be determined from marine magnetic anomalies and their variation along the ridge crest can be fit with [Equation %s](#eq:spreadingrate) to determine the Euler pole position and rotation rate.
 
-:::{figure} ../figures/chapter16/plates.png
-:name: fig:plates
-:alt: World map showing major lithospheric plates and a polar projection of North America moving relative to fixed Europe around an Euler pole.
+:::{figure} ../figures/chapter16/euler_pole.png
+:name: fig:euler-pole
+:alt: Orthographic projection centered on North America showing velocity arrows from the NAM-EUR Euler pole rotation, with small circles of constant angular distance from the Euler pole.
+:width: 60%
+
+Motion of North America with respect to fixed Eurasia computed from the NUVEL-1A Euler pole {cite:p}`demets1994` at ($\lambda_e$, $\phi_e$) = (62.4°N, 135.8°E) with $\omega$ = 0.21°/Myr. Red arrows show velocity vectors at grid points within the North American plate, with length proportional to speed (scale bar at bottom). Dashed blue lines are small circles of constant angular distance $\theta$ from the Euler pole at 30° intervals. Velocities increase with $\theta$, reaching a maximum at $\theta = 90°$.
+:::
+
+An Euler pole describes the instantaneous rotation of one plate or continental fragment relative to another. For paleogeographic reconstruction, however, what is needed is the total rotation that restores a plate to a previous configuration (see [](#fig:finrot)a). Such a rotation, defined by a pole and a specified rotation angle, is called a *finite rotation pole*. These can be found in several ways. Transforms and ridges define plate boundaries between two lithospheric plates and are to first order perpendicular and parallel to the direction of the finite rotation pole respectively. Marine magnetic anomalies can also be restored to the spreading centers via finite rotations. Also, a finite rotation can be found that restores a position defined for example by the continental margins (e.g., the *Bullard fit* of the Atlantic bordering continents, {cite:t}`bullard1965`) or that maximizes agreement of paleomagnetic poles after rotation. To illustrate what finite rotations accomplish, [](#fig:reconstruction) shows a paleogeographic reconstruction using the CEED6 plate model of {cite:t}`torsvik2017`. The present-day configuration of continents is shown alongside their positions at 200 Ma, when North America and Europe were joined as part of the supercontinent Pangea, prior to the opening of the Atlantic Ocean.
+
+:::{figure} ../figures/chapter16/reconstruction.png
+:name: fig:reconstruction
+:alt: Two orthographic globe projections comparing present-day continental configuration with the 200 Ma Pangea reconstruction from the CEED6 plate model. North America is highlighted in red and Europe in blue.
 :width: 100%
 
-a) Some of the major lithospheric plates. b) Motion of North America with respect to Europe around the Euler pole shown as a blue square. Projection is such that current Euler pole North America (NAM) with respect to Europe (EUR) is at the "North pole". Lines of co-latitude are the angular distance from the Euler pole, $\theta$. Velocities of NAM with respect to EUR at two points with different $\theta$ are shown as black arrows.
+Paleogeographic reconstruction using the CEED6 plate model {cite:p}`torsvik2017` in a paleomagnetic (spin axis) reference frame. a) Present-day configuration. b) 200 Ma (Pangea). North America (red) and Europe (blue) are highlighted; other continental blocks are shown in grey. Coastlines are drawn from the CEED6 land polygon dataset.
 :::
+
+Paleomagnetic studies of apparent polar wander provided compelling evidence for continental mobility as early as the 1950s with the idea of drifting continents eventually gaining broad acceptance in the late 1960s, when sea-floor spreading and plate tectonics provided a coherent framework for large-scale lithospheric motion. A classic comparison is between the apparent polar wander paths of North America and Europe when the two continents were joined as part of Pangea prior to the opening of the Atlantic Ocean ([](#fig:reconstruction)). In their present-day reference frames, the two APWPs diverge significantly ([](#fig:apwp-closure), left) — the angular distance between coeval poles reaches 15° or more. However, when the European APWP is rotated into the North American reference frame that closes the Atlantic Ocean, the two paths converge ([](#fig:apwp-closure), right). The angular mismatch drops is much smalled ([](#fig:apwp-closure), bottom), consistent with the two continents sharing a common polar wander path before the opening of the Atlantic.
+
+:::{figure} ../figures/chapter16/apwp_closure.png
+:name: fig:apwp-closure
+:alt: Three-panel figure showing NAM and EUR apparent polar wander paths for 200-270 Ma before and after applying the Atlantic closure rotation, with a bottom panel showing the angular mismatch.
+:width: 100%
+
+Apparent polar wander paths of North America (circles) and Europe (squares) for 200–270 Ma, colored by age. Pole positions are from {cite:t}`torsvik2012`. Left: each APWP in its own present-day reference frame — the paths are separated because the Atlantic Ocean now lies between the two continents. Right: the European APWP rotated into North American coordinates using the age-appropriate finite rotation {cite:p}`torsvik2017` — the paths converge, consistent with the two continents having been joined within Pangea. Bottom: angular distance between coeval NAM and EUR poles before (grey) and after (blue) applying the closure rotation.
+:::
+
+Tremendous effort has been put into compiling finite rotations for various lithospheric plates through time. The most recent and comprehensive compilation is that of {cite:t}`torsvik2008`, which goes back more than 300 Myr. Reconstructions for the last 200 Ma are based mostly on marine geophysical data like marine magnetic anomalies, spreading center and transform azimuths, etc. Pressing back in time, we run out of sea-floor when the Atlantic Ocean is completely closed and finite rotations between blocks must be constrained in other ways, for example, fit of geological observations or paleomagnetic poles. Therefore finite rotations for times prior to about 200 Ma are not independent of the paleomagnetic pole data themselves. Nonetheless, they provide a useful straw man frame of reference. We include a partial list of finite rotations in [](#app:polerot). Details of how to rotate points on the globe using finite rotations are given in [](#app:polerot), a technique that will be used extensively in this chapter.
 
 :::{figure} ../figures/chapter16/finrot.png
 :name: fig:finrot
@@ -50,10 +81,6 @@ a) Some of the major lithospheric plates. b) Motion of North America with respec
 
 a) Finite rotation of North America from one frame of reference to another. Finite rotation pole is located at $\lambda_f,\phi_f$ and the finite rotation is $\Omega$. b) Estimating a finite rotation of a continental fragment from a paleomagnetic pole.
 :::
-
-Euler poles describe instantaneous rates of rotation of one plate or continental fragment with respect to another. Often, what is known is not the rate, but the total rotation about a given pole that restores a plate to some prior state (see [](#fig:finrot)a). Such a pole is called a *finite rotation pole*. These can be found in several ways. Transforms and ridges define plate boundaries between two lithospheric plates and are to first order perpendicular and parallel to the direction of the finite rotation pole respectively. Marine magnetic anomalies can also be restored to the spreading centers via finite rotations. Also, a finite rotation can be found that restores a position defined for example by the continental margins (e.g., the *Bullard fit* of the Atlantic bordering continents, {cite:t}`bullard1965`) or that maximizes agreement of paleomagnetic poles after rotation.
-
-Tremendous effort has been put into compiling finite rotations for various lithospheric plates through time. The most recent and comprehensive compilation is that of {cite:t}`torsvik2008`, which goes back more than 300 Myr. Reconstructions for the last 200 Ma are based mostly on marine geophysical data like marine magnetic anomalies, spreading center and transform azimuths, etc. Pressing back in time, we run out of sea-floor when the Atlantic Ocean is completely closed and finite rotations between blocks must be constrained in other ways, for example, fit of geological observations or paleomagnetic poles. Therefore finite rotations for times prior to about 200 Ma are not independent of the paleomagnetic pole data themselves. Nonetheless, they provide a useful straw man frame of reference. We include a partial list of finite rotations in [](#app:polerot). Details of how to rotate points on the globe using finite rotations are given in [](#app:polerot), a technique that will be used extensively in this chapter.
 
 Defining finite rotations based on paleomagnetic poles finds a pole of rotation that transforms the paleomagnetic poles observed on continents back to the spin axis. There are multiple possible finite rotations that achieve this and the problem is inherently non-unique. We show one simple example in [](#fig:finrot)b. The latitude ($\lambda_{f}$) and longitude ($\phi_{f}$) of a finite pole of rotation can be found from a specified paleomagnetic pole ($\lambda_p, \phi_p$) by:
 
@@ -76,11 +103,23 @@ There are two problems with using paleomagnetic poles for constraining finite ro
 (sect:apwp)=
 ## Poles and Apparent Polar Wander
 
-There have been over 10,000 paleomagnetic poles published since 1925. These range in age from the Archean to quite recent and in quality from excellent to highly questionable. Paleomagnetic poles were assembled into the IAGA Global Paleomagnetic Database (GPMDB) accessible at Norwegian Geological Survey (*Dragon Project*) website:
+### Calculating a Paleomagnetic Pole
 
-<http://www.ngu.no/geodynamics/gpmdb/>
+In [Chapter 2](#chap:geomag), we introduced the virtual geomagnetic pole (VGP) — the position of the equivalent magnetic pole calculated from a single observation of the field direction at a known location using the dipole formula. A collection of VGPs from multiple lava flows or other independent records of the geomagnetic field, obtained from rocks of similar age, can be averaged to yield a paleomagnetic pole. If the data set includes enough independent recordings of the field, paleosecular variation is effectively averaged out and the resulting mean pole approximates the position of the geographic (spin) axis as viewed from the sampling locality. When both normal and reversed polarity directions are present, one polarity must be flipped to the other (by taking the antipode) before averaging, so that all VGPs cluster in the same hemisphere.
 
-which allows searching by pole number (RESULTNO), age, geographic limits, author, etc.
+Once a paleomagnetic pole has been determined, it provides a direct constraint on the paleolatitude of the sampling locality. The angular distance from the study location to the paleomagnetic pole is the *paleomagnetic colatitude*. The *paleolatitude* of the site is simply 90° minus the colatitude — equivalent to the angular distance from the site to the *paleoequator*, the great circle 90° from the pole (see [](#fig:osler-pole)). Because the time-averaged geomagnetic field is axially symmetric under the GAD assumption, paleomagnetic data constrain paleolatitude but not paleolongitude — a fundamental limitation that we will return to throughout this chapter. Similarly, the polarity ambiguity means that a pole position and its antipode are equally valid without independent constraints on which hemisphere the continent occupied.
+
+As a concrete example, [](#fig:osler-pole) shows a paleomagnetic pole calculated from 59 reversed polarity lava flows of the upper Osler Volcanic Group (ca. 1105 Ma), erupted during the Midcontinent Rift and exposed along the north shore of Lake Superior {cite:p}`halls1974,swanson-hysell2014`. The individual VGPs scatter about the mean pole — a consequence of paleosecular variation recorded by successive flows. The colatitude from the study location to the pole is 47.9°, yielding a paleolatitude of 42.1°N and indicating that this part of Laurentia was at mid-latitudes at ca. 1105 Ma.
+
+:::{figure} ../figures/chapter16/osler_vgp_pole.png
+:name: fig:osler-pole
+:alt: Orthographic projection showing VGPs from the upper Osler Volcanic Group as blue circles, the Fisher mean paleomagnetic pole as a red square with A95 circle, the study location as a gold star, the paleoequator as a green great circle, and dashed/dotted arcs annotating the colatitude and paleolatitude.
+:width: 60%
+
+Virtual geomagnetic poles (VGPs; blue circles) calculated from tilt-corrected site-mean directions of 59 reversed polarity lava flows of the upper Osler Volcanic Group (ca. 1105 Ma), flipped to normal polarity. The red square marks the Fisher mean paleomagnetic pole (42.5°N, 201.6°E, A$_{95}$ = 3.7°, N = 59) with its 95% confidence circle. The gold star is the study location on the north shore of Lake Superior. The green great circle is the paleoequator — the locus of points 90° from the paleomagnetic pole. The dashed line from the pole to the study location spans the paleomagnetic colatitude (47.9°), while the dotted line from the study location to the paleoequator spans the paleolatitude (42.1°).
+:::
+
+The goal of much paleomagnetic research has been to assemble the various poles or some subset of poles into *apparent polar wander paths* (APWPs) for the many different continental fragments. There are two issues that guide the construction of APWP: selection of poles which can be considered "reliable" and curve fitting.
 
 :::{figure} ../figures/chapter16/poles-aus.png
 :name: fig:poles-aus
@@ -89,8 +128,6 @@ which allows searching by pole number (RESULTNO), age, geographic limits, author
 
 Paleomagnetic poles from Australia for the last 200 Ma from GPMDB. a) No selection criteria. b) The selection criteria of BC02.
 :::
-
-The goal of much paleomagnetic research has been to assemble the various poles or some subset of poles into *apparent polar wander paths* (APWPs) for the many different continental fragments. There are two issues that guide the construction of APWP: selection of poles which can be considered "reliable" and curve fitting.
 
 Picking out the meaningful poles from the published data is part of the art of paleomagnetism. We have been building a tool kit for dealing with this problem throughout this book. There is some agreement in what constitutes a "good" pole among various workers. The general selection criteria used by most paleomagnetists are based on those summarized by {cite:t}`vandervoo1990`. They have been modified for particular applications, for example, by {cite:t}`besse2002`.
 
@@ -189,7 +226,7 @@ Gondwana was a supercontinent that coalesced about 550 Ma and was incorporated i
 
 As an example of the kind of pole paths available for an individual continent, we show all the poles selected by {cite:t}`torsvik2002` from the South African continental fragment in [](#fig:gondwana)a. The inferred path is quite complicated in the Mesozoic and the poles are sparse prior to about 250 Ma leading to the suspicion that the path is somewhat undersampled. By rotating poles from all the Gondwana continental fragments into South African coordinates and fitting them with a smoothed path using splines, {cite:t}`torsvik2002` produced the APWP shown in [](#fig:gondwana)b.
 
-Pushing back to times before Gondwana gets increasingly difficult because indigenous poles become more sparse and more poorly dated and reconstruction of the pre-Gondwana continental bits becomes less well constrained. Nonetheless, some authors have pushed their interpretations of Cambrian data reach rather extreme conclusions. For example, large swings in the APWP for Australia led to the conclusion that the entire spin axis of the Earth changed by 90$^{\circ}$ suddenly in a feat termed "inertial interchange true polar wander" (see, e.g., {cite:t}`kirschvink1997`).
+Pushing back to times before Gondwana gets increasingly difficult because indigenous poles become more sparse and more poorly dated and reconstruction of the pre-Gondwana continental bits becomes less well constrained. Nonetheless, some authors have pushed their interpretations of Cambrian data to rather extreme conclusions. For example, large swings in the APWP for Australia led to the conclusion that the entire spin axis of the Earth changed by 90$^{\circ}$ suddenly in a feat termed "inertial interchange true polar wander" (see, e.g., {cite:t}`kirschvink1997`).
 
 (sect:tk03)=
 ## Inclination Shallowing and GAD
@@ -319,7 +356,7 @@ To illustrate this, we plot the data from North America that meet minimum V90 st
 
 If a paleomagnetic data set comes from only vertically oriented cores, or if a particular region has undergone relative rotation with respect to the craton, the inclinations can still provide constraints on the APWP. Data from azimuthally un-oriented deep sea sediment cores were used by {cite:t}`tauxe1983` to help constrain the motion of the African plate during the Cenozoic and subsequent compilations have continued the practice (see, e.g., {cite:t}`besse2002`). {cite:t}`vandervoo1992` used data from "mobile belts" that experienced relative rotation with respect to the craton to provide constraints on the Jurassic APWP of North America, a subject of some contention (see, e.g., {cite:t}`vanfossen1990`; {cite:t}`butler1992b`; {cite:t}`vanfossen1992`; {cite:t}`vanfossen1993`). We re-do the analysis for one specific time window ($\sim$150 Ma) here as an example of the technique.
 
-Use of inclination only data require knowledge of the following:
+Use of inclination only data requires knowledge of the following:
 
 1. **The precise age of the rock unit under study:** This is frequently constrained by magnetostratigraphy, biostratigraphy or radioisotopic data.
 
@@ -386,7 +423,9 @@ The paleomagnetic poles from the 'mobile' regions must lie along the small circl
 
 And so we return to where we started at the beginning of this book with an assumption that the geomagnetic field is essentially that of a centered dipole. There is no compelling evidence that the field has operated in a vastly different way in ancient times, apart from the puzzling change in reversal frequency. We are getting better at all aspects of paleomagnetic research from better designed field programs to better laboratory analyses to more sophisticated data analysis. There remains much to be done. Enjoy.
 
-**SUPPLEMENTAL READINGS:** {cite:t}`torsvik2008`.
+:::{seealso}
+**Supplemental readings:** {cite:t}`torsvik2008`.
+:::
 
 ## Problems
 
@@ -422,4 +461,4 @@ c) Put the pole latitudes and longitudes into form that you can use with **pmag.
 
 Compare your rotated pole with the synthetic pole of {cite:t}`besse2002`. You can find what this is by using the function **pmag.apwp( )**.
 
-d) Make a plot of the continental configurations at 100 Ma using the function **continents.get_continent** in the **pmagpy.continents** module along with the **pmagplotlib.plot_map( )** function. You will of course also need **frp.get_pole( )** and **pmag.pmag.pt_rot( )**. Select the European, North American, African, South American, Indian, Australian and Antarctic continents.
+d) Make a plot of the continental configurations at 100 Ma using the function **continents.get_continent** in the **pmagpy.continents** module along with the **pmagplotlib.plot_map( )** function. You will of course also need **frp.get_pole( )** and **pmag.pt_rot( )**. Select the European, North American, African, South American, Indian, Australian and Antarctic continents.
