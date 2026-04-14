@@ -8,8 +8,6 @@ numbering:
   enumerator: 15.%s
 ---
 
-**BACKGROUND:** Browse the website: <http://stratigraphy.org>
-
 The geological time scale is a list of ordered events placed in a temporal/spatial context. Time is broken into Eons (e.g., Phanerozoic, Proterozoic), Eras (e.g., Mesozoic, Cenozoic), Periods (e.g., Cretaceous, Paleogene), Series (e.g., Oligocene, Miocene) and Stages (e.g., Messinian, Zanclean). The fundamental unit, the stage, is ideally defined by its base at a particular place and many such *Global Standard Section and Points*, or GSSPs have been identified. Numerical ages are attached to these stage boundaries by a variety of methods. Some methods have explicit numerical age control (e.g., from the predictable decay of radioactive isotopes or variations in climate caused by the relationship of the Earth, the sun and the major planets), while others have only relative age information (e.g., the progressive change of fossil assemblages, or the identification of contemporaneous events in the geological record). Numerical ages are almost always estimated by correlation, interpolation, and/or extrapolation. As such, the geological time scale is a work in constant revision. The website of the International Stratigraphic Commission at <http://stratigraphy.org> has a wealth of information about ages, stages, GSSPs, etc.
 
 One of the important tools in assembling the geological time scale is the geomagnetic polarity time scale (GPTS). Identification of a particular polarity reversal allows direct correlation of isochronous events between continental and marine sequences, between northern and southern hemispheres and between the Pacific and Atlantic realms. Apart from the identification of unique ash layers or the very rare geochemical tracers like an iridium spike, there is no better way to tie together the stratigraphic record. In fact, it is increasingly the case that stages are defined by certain polarity intervals, as opposed to biostratigraphic information (see for example, the definition of the Messinian Stage on the <http://stratigraphy.org> website.) In this chapter we will review how the modern GPTS was constructed and will briefly consider some applications of the GPTS to geological problems.
@@ -169,7 +167,9 @@ One very useful application of the GPTS is to infer rates of spreading, sediment
 
 Most magnetostratigraphic applications involve determination of a magnetostratigraphy through a stratigraphic sequence of sediments. Because polarity transitions occur relatively rapidly, the horizon bounding two polarity zones may represent an almost isochronous level. It is therefore possible to use magnetostratigraphy in a lateral sense, in order to delineate isochronous horizons within a given package of sediments {cite:p}`behrensmeyer1982`. In [](#fig:isochron), we show the application of magnetostratigraphy for tracing isochrons in a series of stratigraphic sections. The small sand body (darker gray) labeled "A" appears to have removed the normal polarity zone seen in sequences on the right of the figure either by erosion or because of unsuitable paleomagnetic properties of sand. Sand bodies B and C appear to represent quasi-isochronous horizons.
 
-**SUPPLEMENTAL READINGS:** {cite:t}`opdyke1996`; {cite:t}`oreskes2001`; {cite:t}`glen1982`; {cite:t}`gradstein2004`; {cite:t}`gee2007`; <http://stratigraphy.org>.
+:::{seealso}
+**Supplemental readings:** {cite:t}`opdyke1996`; {cite:t}`oreskes2001`; {cite:t}`glen1982`; {cite:t}`gradstein2004`; {cite:t}`gee2007`; <http://stratigraphy.org>.
+:::
 
 :::{table} Composite GPTS of {cite:t}`gee2007`. *Chron names are repeated because the reverse polarity interval contains former cryptochrons that have been designated by Gee and Kent (2007) as new polarity sub-chrons.
 :label: tab:gpts
