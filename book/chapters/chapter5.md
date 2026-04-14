@@ -172,13 +172,13 @@ The most direct way to measure coercivity of remanence is the *backfield experim
 (sect:SP)=
 ### Superparamagnetic particles
 
-In superparamagnetic (SP) particles, the total magnetic energy $E_t=\epsilon_tv$ (where $v$ is volume) is balanced by thermal energy $k_BT$. This behavior can be modeled using statistical mechanics in a manner similar to that derived for paramagnetic grains in [Chapter 3](#chap:inducedremanent). In fact,
+In superparamagnetic (SP) particles, the total magnetic energy $E_t=\epsilon_tv$ (where $\epsilon_t$ is the total energy density from [Equation %s](#eq:Et) and $v$ is the particle volume) is balanced by thermal energy $k_BT$ (where $k_B$ is Boltzmann's constant and $T$ is the absolute temperature). This behavior can be modeled using statistical mechanics in a manner similar to that derived for paramagnetic grains in [Chapter 3](#chap:inducedremanent). A reasonable approximation is the Langevin function,
 
 $$
 \frac{M}{M_s} = N\left(\coth \gamma - \frac{1}{\gamma}\right),
 $$ (eq:Lang1)
 
-where $\gamma = M_sBv/(k_BT)$ and $N$ is the number of particles of volume $v$, is a reasonable approximation. The end result, [Equation %s](#eq:Lang1), is the familiar Langevin function from our discussion of paramagnetic behavior (see [Chapter 3](#chap:inducedremanent)); hence the term "superparamagnetic" for such particles.
+where $M$ is the magnetization, $M_s$ is the saturation magnetization, and $N$ is the number of particles of volume $v$. The argument $\gamma = M_sBv/(k_BT)$ is the ratio of magnetostatic to thermal energy, with $B$ the applied magnetic field (the remaining variables as defined above). [Equation %s](#eq:Lang1) is the familiar Langevin function from our discussion of paramagnetic behavior (see [Chapter 3](#chap:inducedremanent)); hence the term "superparamagnetic" for such particles.
 
 :::{figure} ../figures/chapter5/loops.png
 :name: fig:loops
@@ -196,7 +196,7 @@ $$
 \frac{M}{M_s} = \frac{1}{3} \frac{M_sBv}{k_BT}.
 $$
 
-If we substitute $\mu_o H$ for $B$ and rearrange this equation, we can get the superparamagnetic susceptibility $\chi_{sp}$ as:
+If we substitute $\mu_o H$ for $B$ (where $\mu_o$ is the permeability of free space and $H$ is the magnetic field strength) and rearrange this equation, we can get the superparamagnetic susceptibility $\chi_{sp}$ as:
 
 $$
 \frac{M}{H} = \frac{\mu_o M_s^2v}{3k_BT}.
@@ -205,8 +205,10 @@ $$ (eq:chiSP)
 We can rearrange [Equation %s](#eq:tau) in [Chapter 4](#chap:anisotropy) to solve for the volume at which a uniaxial grain passes through the superparamagnetic threshold:
 
 $$
-v_b = \frac{k_BT \ln (C\tau)}{K_u}.
+v_b = \frac{k_BT \ln (C\tau)}{K_u},
 $$
+
+where $K_u$ is the uniaxial anisotropy constant, $\tau$ is the relaxation time, and $C$ is the frequency factor (see [Chapter 4](#chap:anisotropy)).
 
 Finally, we can substitute this volume into [Equation %s](#eq:chiSP) as the maximum volume of an SP grain, giving us:
 
