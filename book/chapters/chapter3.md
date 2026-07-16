@@ -127,14 +127,6 @@ $$
 
 We learned in [Chapter 1](#chap:physics) that the proportionality between induced magnetization and the applied field is known as the *magnetic susceptibility*. The ratio $\M_I/\H$ for the response of the electronic orbitals is termed the *diamagnetic susceptibility* $\chi_d$; it is negative, essentially temperature independent and quite small. This diamagnetic response is a property of all matter, but for substances whose atoms possess atomic magnetic moments, diamagnetism is swamped by effects of magnetic fields on the atomic magnetic moments. In the absence of unpaired electronic spins, diamagnetic susceptibility dominates the magnetic response. Common diamagnetic substances include quartz (SiO$_2$), calcite (CaCO$_3$) and water (H$_2$O). The mass normalized susceptibility of quartz is -0.62 × 10$^{-9}$ m$^3$kg$^{-1}$ to give you an idea of the magnitudes of these things.
 
-:::{figure} ../figures/chapter3/para.png
-:name: fig:para
-:alt: Two plots: (a) Langevin function M/Ms rising from zero and saturating near 1 versus a, and (b) M/Ms versus T showing inverse-temperature Curie law decay.
-:width: 100%
-
-a) Paramagnetic magnetization (obtained from the Langevin function $\mathcal{L}(a)$ versus $a= mB/k_BT$.) b) Paramagnetic magnetization as a function of temperature (Curie Law).
-:::
-
 (sect:para)=
 ### Role of electronic spins and paramagnetism
 
@@ -172,7 +164,15 @@ $$ (eq:Lang)
 
 where $a=mB/k_BT$. The function enclosed in square brackets is known as the *Langevin function* ($\mathcal{L}$).
 
-[Equation %s](#eq:Lang) is plotted in [](#fig:para)a and predicts several intuitive results: 1) $M = 0$ when $B=0$ and 2) $M/M_s = 1$ when the applied magnetic field is infinite. Furthermore, $M$ is some 90% of $M_s$ when $mB$ is some 10-20 times $k_BT$. When $k_BT>> mB$, $\mathcal{L}(a)$ is approximately linear with a slope of $\sim 1/3$. At room temperature and fields up to many tesla, $\mathcal{L}(a)$ is approximately $mB/3k_BT$. If the moments are unpaired spins ($m=m_b$), then the maximum magnetization possible ($M_s$) is given by the number of moments $N$, their magnitude ($m_b$) normalized by the volume of the material $v$ or $M_s=Nm_b/v$, and
+:::{figure} ../figures/chapter3/langevin.png
+:name: fig:langevin
+:alt: The Langevin function rising from the origin with initial slope a over 3 and saturating toward M over Ms of 1, with the 90 percent saturation point at a of about 10 and the geomagnetic-field regime near the origin marked.
+:width: 80%
+
+The Langevin function $\mathcal{L}(a) = \coth a - 1/a$ giving the net alignment of an assemblage of independent magnetic moments as a function of $a = mB/k_BT$, the ratio of magnetic to thermal energy. The response is linear ($\mathcal{L}(a) \approx a/3$; dashed line) at low $a$ — geomagnetic fields at room temperature sit at $a \sim 10^{-4}$, deep in this regime — and saturation requires $a \gtrsim 10$, corresponding to fields of order 10$^3$ T at 300 K.
+:::
+
+[Equation %s](#eq:Lang) is plotted in [](#fig:langevin) and predicts several intuitive results: 1) $M = 0$ when $B=0$ and 2) $M/M_s = 1$ when the applied magnetic field is infinite. Furthermore, $M$ is some 90% of $M_s$ when $mB$ is some 10-20 times $k_BT$. When $k_BT>> mB$, $\mathcal{L}(a)$ is approximately linear with a slope of $\sim 1/3$. At room temperature and fields up to many tesla, $\mathcal{L}(a)$ is approximately $mB/3k_BT$. If the moments are unpaired spins ($m=m_b$), then the maximum magnetization possible ($M_s$) is given by the number of moments $N$, their magnitude ($m_b$) normalized by the volume of the material $v$ or $M_s=Nm_b/v$, and
 
 $$
 {M\over{M_s}} \simeq { { m_b \mu_o }\over {3k_BT} } H .
@@ -184,7 +184,15 @@ $$
 {M\over H} = {{m_b\mu_o}\over {3k_BT}}\cdot M_s = {{Nm_b^2\mu_o}\over{3k_Bv}}\cdot {1\over T} = \chi_p.
 $$ (eq:chip)
 
-To first order, paramagnetic susceptibility $\chi_p$ is positive, larger than diamagnetism and inversely proportional to temperature. This inverse T dependence (see [](#fig:para)b) is known as Curie's law of paramagnetism. The paramagnetic susceptibility of, for example, biotite is 790 × 10$^{-9}$ m$^3$ kg$^{-1}$, or about three orders of magnitude larger than quartz (and of the opposite sign!).
+:::{figure} ../figures/chapter3/curie_law.png
+:name: fig:curielaw
+:alt: Curie's law: paramagnetic susceptibility falling as one over temperature, normalized to its room-temperature value, with the 300 K reference point and a 150 K point at twice the susceptibility marked.
+:width: 80%
+
+Curie's law of paramagnetism: susceptibility is inversely proportional to temperature, shown here normalized to its room-temperature (300 K) value. Halving the temperature doubles $\chi_p$ — one reason low-temperature measurements are sensitive to paramagnetic Fe-bearing phases.
+:::
+
+To first order, paramagnetic susceptibility $\chi_p$ is positive, larger than diamagnetism and inversely proportional to temperature. This inverse T dependence (see [](#fig:curielaw)) is known as Curie's law of paramagnetism. The paramagnetic susceptibility of, for example, biotite is 790 × 10$^{-9}$ m$^3$ kg$^{-1}$, or about three orders of magnitude larger than quartz (and of the opposite sign!).
 
 We have considered the simplest case here in which $\chi$ can be treated as a scalar and is referred to as the *bulk magnetic susceptibility* $\chi_b$. In detail, magnetic susceptibility can be quite complicated. The relationship between induced magnetization and applied field can be affected by crystal shape, lattice structure, dislocation density, state of stress, etc., which give rise to possible anisotropy of the susceptibility. Furthermore, there are only a finite number of electronic moments within a given volume. When these are fully aligned, the magnetization reaches saturation. Thus, magnetic susceptibility is both anisotropic and non-linear with applied field.
 
