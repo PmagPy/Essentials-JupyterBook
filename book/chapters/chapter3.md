@@ -189,7 +189,7 @@ $$ (eq:chip)
 :alt: Curie's law: paramagnetic susceptibility falling as one over temperature, normalized to its room-temperature value, with the 300 K reference point and a 150 K point at twice the susceptibility marked.
 :width: 80%
 
-Curie's law of paramagnetism: susceptibility is inversely proportional to temperature, shown here normalized to its room-temperature (300 K) value. Halving the temperature doubles $\chi_p$ — one reason low-temperature measurements are sensitive to paramagnetic Fe-bearing phases.
+Curie's law of paramagnetism: susceptibility is inversely proportional to temperature, shown here normalized to its room-temperature (300 K) value. Halving the temperature doubles $\chi_p$. As a result,low-temperature measurements can be sensitive to paramagnetic Fe-bearing phases.
 :::
 
 To first order, paramagnetic susceptibility $\chi_p$ is positive, larger than diamagnetism and inversely proportional to temperature. This inverse T dependence (see [](#fig:curielaw)) is known as Curie's law of paramagnetism. The paramagnetic susceptibility of, for example, biotite is 790 × 10$^{-9}$ m$^3$ kg$^{-1}$, or about three orders of magnitude larger than quartz (and of the opposite sign!).
