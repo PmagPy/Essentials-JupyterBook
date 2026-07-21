@@ -80,7 +80,7 @@ def build_langevin():
                 arrowprops=dict(arrowstyle='->', color=MUTED, lw=1.1))
 
     # geological regime marker at the origin
-    ax.annotate('geomagnetic fields at 300 K:\n$a \\sim 10^{-4}$ — deep in the\nlinear regime',
+    ax.annotate('geomagnetic fields at 300 K:\n$a \\sim 10^{-6}$ — deep in the\nlinear regime',
                 xy=(0.12, 0.04), xytext=(3.6, 0.30),
                 fontsize=11.5, color=MUTED, ha='left',
                 arrowprops=dict(arrowstyle='->', color=MUTED, lw=1.1,
