@@ -412,7 +412,7 @@ def plot_hematite_anisotropy(K1, K3, radius_nm, temperature):
         z=z_blob, x=x_blob, y=y_blob,
         surfacecolor=E_norm,
         cmin=0,
-        colorscale='plasma',
+        colorscale='magma_r',
         colorbar=dict(title='Energy<br>Barrier (J)', len=0.5, thickness=15, x=0.9, exponentformat='e'),
         opacity=1.0,
         hoverinfo='none',
